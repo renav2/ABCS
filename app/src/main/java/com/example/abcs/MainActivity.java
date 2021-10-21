@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
    private EditText et_email;
    private EditText et_pass;
    private TextView tv_jump;
+   private TextView tv_jump2;
 
 
 
@@ -61,9 +62,10 @@ public class MainActivity extends AppCompatActivity {
         et_email=findViewById(R.id.txt_email);
         et_pass=findViewById(R.id.txt_password);
         tv_jump=findViewById(R.id.txt_view_jump);
+        tv_jump2=findViewById(R.id.txt_view_jump2);
 
 
-        tv_jump.setOnClickListener(new View.OnClickListener() {
+        tv_jump2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 createSignInIntent();

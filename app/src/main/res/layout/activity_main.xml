@@ -61,15 +61,28 @@
 
     <TextView
         android:id="@+id/txt_view_jump"
-        android:layout_width="234dp"
-        android:layout_height="37dp"
+        android:layout_width="176dp"
+        android:layout_height="28dp"
         android:layout_marginTop="24dp"
-        android:text="Don't have an account? Sign up"
+        android:text="Don't have an account? "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt_view_jump2"
+        android:layout_width="77dp"
+        android:layout_height="28dp"
+        android:text="Sign up"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
