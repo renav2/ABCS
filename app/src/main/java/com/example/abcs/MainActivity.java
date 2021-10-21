@@ -2,6 +2,10 @@ package com.example.abcs;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -23,7 +27,18 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
+
 public class MainActivity extends AppCompatActivity {
+    //delclaration
+   private  Button btn_login;
+   private EditText et_email;
+   private EditText et_pass;
+   private TextView tv_jump;
+
+
+
+
     // [START auth_fui_create_launcher]
     // See: https://developer.android.com/training/basics/intents/result
     private final ActivityResultLauncher<Intent> signInLauncher = registerForActivityResult(
@@ -41,7 +56,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        createSignInIntent();
+        //createSignInIntent();
+        btn_login=findViewById(R.id.btn_login);
+        et_email=findViewById(R.id.txt_email);
+        et_pass=findViewById(R.id.txt_password);
+        tv_jump=findViewById(R.id.txt_view_jump);
+
+
+        tv_jump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createSignInIntent();
+            }
+        });
+
+
+
     }
     public void createSignInIntent() {
         // [START auth_fui_create_intent]
