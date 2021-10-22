@@ -17,8 +17,8 @@
         android:layout_height="53dp"
         android:layout_marginTop="452dp"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -44,8 +44,8 @@
         android:layout_height="53dp"
         android:layout_marginTop="32dp"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/txt_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
         android:id="@+id/btn_login"
         android:layout_width="186dp"
         android:layout_height="51dp"
-        android:text="Button"
+        android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -89,5 +89,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.856" />
+
+    <TextView
+        android:id="@+id/txhome"
+        android:layout_width="330dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="48dp"
+        android:text="Note :temp button for home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_view_jump"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
