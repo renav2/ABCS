@@ -114,6 +114,8 @@ homejump.setOnClickListener(new View.OnClickListener() {
             // Successfully signed in
             Intent intent=new Intent(MainActivity.this,HomeActivity.class);
             startActivity(intent);
+
+
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
             // ...
