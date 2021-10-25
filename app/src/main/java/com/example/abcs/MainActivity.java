@@ -112,7 +112,7 @@ homejump.setOnClickListener(new View.OnClickListener() {
         IdpResponse response = result.getIdpResponse();
         if (result.getResultCode() == RESULT_OK) {
             // Successfully signed in
-            Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+            Intent intent=new Intent(MainActivity.this,RegisterActivity.class);
             startActivity(intent);
 
 

@@ -1,6 +1,7 @@
 package com.example.abcs;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -129,6 +130,9 @@ public class RegisterActivity extends AppCompatActivity {
                     savedata(text_name,text_email,txt_clgid,txt_dob,txt_gender,txt_mno,txt_add,txt_clg,txt_atyp,txt_cate,txt_bran,txt_yearn,txt_acdy,text_password);
                 }
 
+
+
+
             }
 
         });
@@ -160,6 +164,8 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Toast.makeText(RegisterActivity.this, " data save", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(RegisterActivity.this,HomeActivity.class);
+                startActivity(intent);
             }
         });
     }
