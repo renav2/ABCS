@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
    private EditText et_pass;
    private TextView tv_jump;
    private TextView tv_jump2;
+   private TextView homejump;
 
 
 
@@ -63,6 +64,19 @@ public class MainActivity extends AppCompatActivity {
         et_pass=findViewById(R.id.txt_password);
         tv_jump=findViewById(R.id.txt_view_jump);
         tv_jump2=findViewById(R.id.txt_view_jump2);
+
+       //temp jump page for testing purpose
+        homejump=findViewById(R.id.txhome);
+
+homejump.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+        startActivity(intent);
+    }
+});
+
+// END temp jump page for testing purpose
 
 
         tv_jump2.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +112,12 @@ public class MainActivity extends AppCompatActivity {
         IdpResponse response = result.getIdpResponse();
         if (result.getResultCode() == RESULT_OK) {
             // Successfully signed in
+            Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+            startActivity(intent);
+
+
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
             // ...
         } else {
             // Sign in failed. If response is null the user canceled the
