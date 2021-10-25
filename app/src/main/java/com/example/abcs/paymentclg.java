@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,14 +16,23 @@ import com.razorpay.PaymentResultWithDataListener;
 import org.json.JSONObject;
 
 public class paymentclg extends AppCompatActivity implements PaymentResultWithDataListener {
-
+String total;
     private Button pay;
+     EditText amount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paymentclg);
+        //refreance
         pay=findViewById(R.id.paynow);
+        amount=findViewById(R.id.txt_paynow);
+
+
+
+
+        //payment getway imp line
         Checkout.preload(getApplicationContext());
 
        pay.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +53,7 @@ public class paymentclg extends AppCompatActivity implements PaymentResultWithDa
         Checkout checkout = new Checkout();
 
         checkout.setKeyID("rzp_test_9nCAqrhuTfsGcZ");
+
         /**
          * Instantiate Checkout
          */

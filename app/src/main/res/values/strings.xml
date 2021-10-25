@@ -29,6 +29,7 @@
     <string-array name="adtype">
         <item>Admission Type</item>
         <item>TFWS</item>
+
     </string-array>
     <string-array name="ctype">
         <item>Select Category</item>
