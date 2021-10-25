@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity">
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/et_name"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="289dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="24dp"
+            android:text="Registeration  Form"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="61dp" />
+
+        <EditText
+            android:id="@+id/et_dob"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Enter Date of Birth"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/et_email"
+            app:layout_constraintStart_toStartOf="@+id/et_email"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/Ayear"
+            app:layout_constraintStart_toStartOf="@+id/Ayear"
+            app:layout_constraintTop_toBottomOf="@+id/Ayear"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/mno"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/gender"
+            app:layout_constraintStart_toStartOf="@+id/gender"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <Spinner
+            android:id="@+id/gender"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/gender"
+            app:layout_constraintEnd_toEndOf="@+id/et_dob"
+            app:layout_constraintStart_toStartOf="@+id/et_dob"
+            app:layout_constraintTop_toBottomOf="@+id/et_dob" />
+
+        <EditText
+            android:id="@+id/state"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Address"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/mno"
+            app:layout_constraintStart_toStartOf="@+id/mno"
+            app:layout_constraintTop_toBottomOf="@+id/mno" />
+
+        <Spinner
+            android:id="@+id/college"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/clgname"
+            app:layout_constraintEnd_toEndOf="@+id/state"
+            app:layout_constraintStart_toStartOf="@+id/state"
+            app:layout_constraintTop_toBottomOf="@+id/state" />
+
+        <Spinner
+            android:id="@+id/Atype"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/adtype"
+            app:layout_constraintEnd_toEndOf="@+id/college"
+            app:layout_constraintStart_toStartOf="@+id/college"
+            app:layout_constraintTop_toBottomOf="@+id/college" />
+
+        <Spinner
+            android:id="@+id/Ctype"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/ctype"
+            app:layout_constraintEnd_toEndOf="@+id/Atype"
+            app:layout_constraintStart_toStartOf="@+id/Atype"
+            app:layout_constraintTop_toBottomOf="@+id/Atype" />
+
+        <Spinner
+            android:id="@+id/branch"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/brname"
+            app:layout_constraintEnd_toEndOf="@+id/Ctype"
+            app:layout_constraintStart_toStartOf="@+id/Ctype"
+            app:layout_constraintTop_toBottomOf="@+id/Ctype" />
+
+        <Spinner
+            android:id="@+id/Ayear"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/ayear"
+            app:layout_constraintEnd_toEndOf="@+id/Cyear"
+            app:layout_constraintStart_toStartOf="@+id/Cyear"
+            app:layout_constraintTop_toBottomOf="@+id/Cyear" />
+
+        <Spinner
+            android:id="@+id/Cyear"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:entries="@array/cyear"
+            app:layout_constraintEnd_toEndOf="@+id/branch"
+            app:layout_constraintStart_toStartOf="@+id/branch"
+            app:layout_constraintTop_toBottomOf="@+id/branch" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="32dp"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_pass"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/et_pass"
+            app:layout_constraintTop_toBottomOf="@+id/et_pass"
+            app:layout_constraintVertical_bias="0.308" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
