@@ -144,7 +144,8 @@ homejump.setOnClickListener(new View.OnClickListener() {
         if (result.getResultCode() == RESULT_OK) {
             // Successfully signed in
 
-
+Intent intent=new Intent(this,RegisterActivity.class);
+startActivity(intent);
 
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             Toast.makeText(this, "succesfully sign in", Toast.LENGTH_SHORT).show();
