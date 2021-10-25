@@ -16,7 +16,8 @@ import com.razorpay.PaymentResultWithDataListener;
 import org.json.JSONObject;
 
 public class paymentclg extends AppCompatActivity implements PaymentResultWithDataListener {
-String total;
+int  total,fin;
+String inp;
     private Button pay;
      EditText amount;
 
@@ -28,7 +29,7 @@ String total;
         //refreance
         pay=findViewById(R.id.paynow);
         amount=findViewById(R.id.txt_paynow);
-
+//total=Integer.parseInt(amount.getText().toString());
 
 
 
@@ -81,7 +82,7 @@ String total;
             // options.put("order_id", "order_DBJOWzybf0sJbb");//from response of step 3.
             options.put("theme.color", "#3399cc");
             options.put("currency", "INR");
-            options.put("amount", 50000);//pass amount in currency subunits
+            options.put("amount",50000 );//pass amount in currency subunits
             options.put("prefill.email"," ");
             options.put("prefill.contact"," ");
             JSONObject retryObj = new JSONObject();
