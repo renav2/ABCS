@@ -30,8 +30,8 @@ private EditText txt_examamount;
         btn_exampay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String samount=txt_examamount.getText().toString();
-                int amount = Math.round(Float.parseFloat(samount) * 100);
+                String eamount=txt_examamount.getText().toString();
+                int amount = Math.round(Float.parseFloat(eamount) * 100);
                 makepay(amount);
             }
         });

@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PaymentActivity extends AppCompatActivity {
 private Button  clgpayjump;
 private  Button hostel_pay;
+private Button exam_pay;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +19,7 @@ private  Button hostel_pay;
         setContentView(R.layout.activity_payment);
 clgpayjump=findViewById(R.id.btn_clg_jump);
 hostel_pay=findViewById(R.id.btn_gohostel);
-
+exam_pay=findViewById(R.id.btn_goexamfee);
 
 
 
@@ -34,6 +36,14 @@ hostel_pay.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent=new Intent(PaymentActivity.this,Payment_hostel.class);
+        startActivity(intent);
+    }
+});
+
+exam_pay.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent= new Intent(PaymentActivity.this,payment_exam_fees.class);
         startActivity(intent);
     }
 });
