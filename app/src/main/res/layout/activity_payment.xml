@@ -16,13 +16,13 @@
         android:layout_marginBottom="331dp"
         app:icon="@drawable/clg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_gohostel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_gohostel"
         android:layout_width="104dp"
         android:layout_height="77dp"
         android:layout_marginStart="16dp"
@@ -31,13 +31,13 @@
         android:layout_marginBottom="331dp"
         app:icon="@drawable/hostel"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/btn_examfee"
         app:layout_constraintStart_toEndOf="@+id/btn_clg_jump"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_examfee"
         android:layout_width="103dp"
         android:layout_height="83dp"
         android:layout_marginStart="16dp"
@@ -47,7 +47,7 @@
         app:icon="@drawable/exam"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/btn_gohostel"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 

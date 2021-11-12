@@ -15,44 +15,30 @@ import com.razorpay.PaymentResultWithDataListener;
 
 import org.json.JSONObject;
 
-public class paymentclg extends AppCompatActivity implements PaymentResultWithDataListener {
-int  total,fin;
-String inp;
-    private Button pay;
-     EditText amount;
-
-
+public class Payment_hostel extends AppCompatActivity implements PaymentResultWithDataListener {
+private Button hos_pay;
+private EditText hos_a;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paymentclg);
-        //refreance
-        pay=findViewById(R.id.paynow);
-        amount=findViewById(R.id.txt_paynow);
-//total=Integer.parseInt(amount.getText().toString());
+        setContentView(R.layout.activity_payment_hostel);
+        hos_pay=findViewById(R.id.btn_hostelpay);
+        hos_a=findViewById(R.id.txt_hostelpay_amount);
 
 
+        hos_pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String samount=hos_a.getText().toString();
+                int amount = Math.round(Float.parseFloat(samount) * 100);
+                makepay(amount);
 
-        //payment getway imp line
-        Checkout.preload(getApplicationContext());
-
-       pay.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-              String samount=amount.getText().toString();
-               int amount = Math.round(Float.parseFloat(samount) * 100);
-               makepay(amount);
-
-
-           }
-       });
-
-
-
+            }
+        });
 
     }
 
-    public void makepay(int a) {
+    private void makepay(int amount) {
         Checkout checkout = new Checkout();
 
         checkout.setKeyID("rzp_test_9nCAqrhuTfsGcZ");
@@ -84,7 +70,7 @@ String inp;
             // options.put("order_id", "order_DBJOWzybf0sJbb");//from response of step 3.
             options.put("theme.color", "#3399cc");
             options.put("currency", "INR");
-            options.put("amount",a);//pass amount in currency subunits
+            options.put("amount",amount);//pass amount in currency subunits
             options.put("prefill.email"," ");
             options.put("prefill.contact"," ");
             JSONObject retryObj = new JSONObject();
@@ -100,6 +86,7 @@ String inp;
         }
 
     }
+
 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
