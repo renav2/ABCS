@@ -54,25 +54,25 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="186dp"
-        android:layout_height="51dp"
+        android:layout_width="240dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="527dp"
+        android:layout_marginBottom="100dp"
         android:text="Log in"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txhome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.775" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_view_jump"
-        android:layout_width="176dp"
-        android:layout_height="28dp"
+        android:layout_width="191dp"
+        android:layout_height="45dp"
         android:layout_marginTop="24dp"
         android:text="Don't have an account? "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login"
         app:layout_constraintVertical_bias="0.0" />
@@ -81,26 +81,27 @@
         android:id="@+id/txt_view_jump2"
         android:layout_width="77dp"
         android:layout_height="28dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="24dp"
         android:text="Sign up"
         android:textColor="@color/purple_500"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.784"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
+        app:layout_constraintBottom_toTopOf="@+id/txhome"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_view_jump"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txhome"
-        android:layout_width="330dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="350dp"
+        android:layout_height="34dp"
         android:text="Note :temp button for home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_view_jump"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
