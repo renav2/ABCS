@@ -1,6 +1,7 @@
 package com.example.abcs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -103,6 +104,8 @@ String inp;
 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
+        Intent intent =new Intent(paymentclg.this,payment_invoi.class);
+        startActivity(intent);
 
     }
 
