@@ -65,6 +65,9 @@ createSignInIntent();
         if (result.getResultCode() == RESULT_OK) {
             // Successfully signed in
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+           //jump
+            Intent intent =new Intent(social_media_login_Activity.this,RegisterActivity.class);
+            startActivity(intent);
             // ...
         } else {
             // Sign in failed. If response is null the user canceled the
