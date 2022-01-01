@@ -9,11 +9,37 @@
     android:background="#ECECEC"
     tools:context=".MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INVOICE NO :  "
+                android:textAlignment="gravity"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_invoiceno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Your Invoice No"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,15 +50,84 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="INVOICE NO :  "
+                android:text="Student Name:         "
                 android:textAlignment="gravity"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tv_invoiceno"
+                android:id="@+id/tv_StudentName"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textAlignment="gravity">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Your Invoice No"
+                android:text="Student class :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_Studentclass"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:hint="Student class"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student ID NO :        "
+                android:textAlignment="gravity"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_StudentID"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:hint="Your ID NO"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_amountpaid"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:hint="Amount Paid"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -40,55 +135,36 @@
         </LinearLayout>
 
 
+        //coppy
+
+        //coppy
+
+
         <LinearLayout
-            android:layout_width="363dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_width="351dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:orientation="horizontal">
 
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="10dp"
-                android:text="Student name: " />
+                android:paddingLeft="8dp">
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:text="game ">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp"/>
 
-            </TextView>
 
-            <TextView
+            </LinearLayout>
 
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:text="game ">
 
-            </TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:text="game ">
-
-            </TextView>
-
-            <TextView
-                android:layout_width="349dp"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:text="game ">
-
-            </TextView>
 
 
         </LinearLayout>
-
 
         <Button
             android:id="@+id/btn_print"
@@ -97,19 +173,11 @@
             android:padding="20dp"
             android:text="Button" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="30dp">
-
-            <ImageView
-                android:id="@+id/idIVQrcode"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:paddingLeft="150dp" />
-
-
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/idIVQrcode"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingLeft="150dp" />
 
 
     </LinearLayout>

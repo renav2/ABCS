@@ -176,7 +176,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(RegisterActivity.this, " ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "REgister succefully ", Toast.LENGTH_SHORT).show();
                 } else {
 
                     Toast.makeText(RegisterActivity.this, "register not succesfully", Toast.LENGTH_SHORT).show();

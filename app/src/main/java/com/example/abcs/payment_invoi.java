@@ -43,6 +43,7 @@ public class payment_invoi extends AppCompatActivity {
     String file_name = "collage payment section";
     File myPath;
     TextView tv_invoiceno;
+    TextView invoice_send_amount;
     Button btn;
 
 
@@ -51,7 +52,7 @@ public class payment_invoi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_invoi);
         tv_invoiceno=findViewById(R.id.tv_invoiceno);
-
+    invoice_send_amount=findViewById(R.id.tv_amountpaid);
 
         btn=findViewById(R.id.btn_print);
 
@@ -75,15 +76,22 @@ public class payment_invoi extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                invoice_no();
-                Print_Button_invisible();
 
+
+                invoice_no();
+
+                Print_Button_invisible();
+                String amount=getIntent().getStringExtra("amo");
+
+                 invoice_send_amount.setText(amount+"Only");
                 takeScreenShot();
 
             }
         });
 
     }
+
+
 
     private void Print_Button_invisible() {
         btn.setVisibility(View.INVISIBLE);

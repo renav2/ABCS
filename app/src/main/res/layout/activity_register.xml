@@ -15,7 +15,7 @@
         <EditText
             android:id="@+id/et_email"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
@@ -31,7 +31,7 @@
         <EditText
             android:id="@+id/et_name"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="20dp"
             android:ems="10"
@@ -64,7 +64,7 @@
         <EditText
             android:id="@+id/et_dob"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
@@ -96,7 +96,7 @@
         <EditText
             android:id="@+id/mno"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
@@ -111,7 +111,7 @@
         <Spinner
             android:id="@+id/gender"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:entries="@array/gender"
@@ -123,7 +123,7 @@
         <EditText
             android:id="@+id/state"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
@@ -137,7 +137,7 @@
         <Spinner
             android:id="@+id/college"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:entries="@array/clgname"
@@ -149,7 +149,7 @@
         <Spinner
             android:id="@+id/Atype"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="48dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:entries="@array/adtype"

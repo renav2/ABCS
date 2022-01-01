@@ -42,8 +42,14 @@ String inp;
            public void onClick(View v) {
               String samount=amount.getText().toString();
                int amount = Math.round(Float.parseFloat(samount) * 100);
-               makepay(amount);
 
+
+             Intent intent=new Intent(paymentclg.this,payment_invoi.class);
+             intent.putExtra("amo",samount);
+            startActivity(intent);
+
+
+            makepay(amount);
 
            }
        });

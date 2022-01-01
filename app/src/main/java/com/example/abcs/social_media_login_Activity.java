@@ -2,6 +2,7 @@ package com.example.abcs;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -70,6 +71,9 @@ createSignInIntent();
             startActivity(intent);
             // ...
         } else {
+
+
+            Toast.makeText(social_media_login_Activity.this, "Something went wrong. Please Try again", Toast.LENGTH_SHORT).show();
             // Sign in failed. If response is null the user canceled the
             // sign-in flow using the back button. Otherwise check
             // response.getError().getErrorCode() and handle the error.
