@@ -185,10 +185,19 @@
 
         <ImageView
             android:id="@+id/idIVQrcode"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="94dp"
+            android:layout_height="90dp"
+            android:background="@drawable/invoicesignature"
             android:paddingLeft="150dp" />
 
+        <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Collage Account Section"
+android:textStyle="bold"
+    >
+
+</TextView>
 
     </LinearLayout>
 
