@@ -96,6 +96,7 @@ public class payment_invoi extends AppCompatActivity {
     private void Print_Button_invisible() {
         btn.setVisibility(View.INVISIBLE);
 
+
     }
 
     private void invoice_no() {
