@@ -60,7 +60,13 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 String tex_email=et_email.getText().toString();
                                 String tex_pass=et_pass.getText().toString();
+                                if(tex_email.equals("Admin")&&  tex_pass.equals("admin")){
+                                    Intent intent=new Intent(MainActivity.this,Adminhome.class);
+                                    startActivity(intent);
+                                }
+                                else{
                                 loginuser(tex_email,tex_pass);
+                                }
                             }
                         });
 
