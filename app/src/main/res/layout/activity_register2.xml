@@ -1,69 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/etRegPass1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    tools:context=".RegisterActivity">
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
 
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        android:orientation="vertical">
+        tools:context=".RegisterActivity">
+
+        <EditText
+            android:id="@+id/etRegEmail"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_dob"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/et_name"
+            app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/etRegEmail"
+            app:layout_constraintEnd_toEndOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="16dp"
-            android:gravity="center_horizontal"
-            android:text="Register"
-            android:textColor="@color/teal_700"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:id="@+id/tv_title"
+            android:layout_width="289dp"
+            android:layout_height="56dp"
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <EditText
-                android:id="@+id/etRegEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp" >
-
-            <EditText
-                android:id="@+id/etRegPass19"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginStart="61dp"
             android:layout_marginTop="24dp"
-            android:text="Register" />
+            android:layout_marginEnd="61dp"
+            android:layout_marginBottom="10dp"
+            android:text="Registeration  Form"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
-    </LinearLayout>
+        <EditText
+            android:id="@+id/et_dob"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Enter Date of Birth"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/gender"
+            app:layout_constraintEnd_toEndOf="@+id/etRegEmail"
+            app:layout_constraintStart_toStartOf="@+id/etRegEmail"
+            app:layout_constraintTop_toBottomOf="@+id/etRegEmail" />
 
-</LinearLayout>
+
+        <EditText
+            android:id="@+id/etRegPass19"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+            app:layout_constraintEnd_toEndOf="@+id/Ayear"
+            app:layout_constraintStart_toStartOf="@+id/Ayear"
+            app:layout_constraintTop_toBottomOf="@+id/Ayear"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/mno"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Mobile Number"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/state"
+            app:layout_constraintEnd_toEndOf="@+id/gender"
+            app:layout_constraintStart_toStartOf="@+id/gender"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <Spinner
+            android:id="@+id/gender"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/gender"
+            app:layout_constraintBottom_toTopOf="@+id/mno"
+            app:layout_constraintEnd_toEndOf="@+id/et_dob"
+            app:layout_constraintStart_toStartOf="@+id/et_dob"
+            app:layout_constraintTop_toBottomOf="@+id/et_dob" />
+
+        <EditText
+            android:id="@+id/state"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Address"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/college"
+            app:layout_constraintEnd_toEndOf="@+id/mno"
+            app:layout_constraintStart_toStartOf="@+id/mno"
+            app:layout_constraintTop_toBottomOf="@+id/mno" />
+
+        <Spinner
+            android:id="@+id/college"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/clgname"
+            app:layout_constraintBottom_toTopOf="@+id/Atype"
+            app:layout_constraintEnd_toEndOf="@+id/state"
+            app:layout_constraintStart_toStartOf="@+id/state"
+            app:layout_constraintTop_toBottomOf="@+id/state" />
+
+        <Spinner
+            android:id="@+id/Atype"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/adtype"
+            app:layout_constraintBottom_toTopOf="@+id/Ctype"
+            app:layout_constraintEnd_toEndOf="@+id/college"
+            app:layout_constraintStart_toStartOf="@+id/college"
+            app:layout_constraintTop_toBottomOf="@+id/college" />
+
+        <Spinner
+            android:id="@+id/Ctype"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/ctype"
+            app:layout_constraintBottom_toTopOf="@+id/branch"
+            app:layout_constraintEnd_toEndOf="@+id/Atype"
+            app:layout_constraintStart_toStartOf="@+id/Atype"
+            app:layout_constraintTop_toBottomOf="@+id/Atype" />
+
+        <Spinner
+            android:id="@+id/branch"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/brname"
+            app:layout_constraintBottom_toTopOf="@+id/Cyear"
+            app:layout_constraintEnd_toEndOf="@+id/Ctype"
+            app:layout_constraintStart_toStartOf="@+id/Ctype"
+            app:layout_constraintTop_toBottomOf="@+id/Ctype" />
+
+        <Spinner
+            android:id="@+id/Ayear"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/ayear"
+            app:layout_constraintBottom_toTopOf="@+id/etRegPass19"
+            app:layout_constraintEnd_toEndOf="@+id/Cyear"
+            app:layout_constraintStart_toStartOf="@+id/Cyear"
+            app:layout_constraintTop_toBottomOf="@+id/Cyear" />
+
+        <Spinner
+            android:id="@+id/Cyear"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/cyear"
+            app:layout_constraintBottom_toTopOf="@+id/Ayear"
+            app:layout_constraintEnd_toEndOf="@+id/branch"
+            app:layout_constraintStart_toStartOf="@+id/branch"
+            app:layout_constraintTop_toBottomOf="@+id/branch" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="32dp"
+            android:text="Register now"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/etRegPass19"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/etRegPass19"
+            app:layout_constraintTop_toBottomOf="@+id/etRegPass19"
+            app:layout_constraintVertical_bias="0.308" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
