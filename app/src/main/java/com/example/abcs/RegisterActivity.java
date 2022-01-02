@@ -59,14 +59,14 @@ public class RegisterActivity extends AppCompatActivity {
         title = findViewById(R.id.tv_title);
         cgender = findViewById(R.id.gender);
         //button
-        register = findViewById(R.id.register);
+        register = findViewById(R.id.btnRegister1);
         //edit text
         name = findViewById(R.id.et_name);
-        email = findViewById(R.id.et_email);
+        email = findViewById(R.id.etem);
         //clgid = findViewById(R.id.et_clgid);
         mno = findViewById(R.id.mno);
 
-        password = findViewById(R.id.et_pass);
+        password = findViewById(R.id.etpass);
 
         //for only date
         eText = (EditText) findViewById(R.id.et_dob);

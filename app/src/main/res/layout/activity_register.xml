@@ -13,7 +13,7 @@
         tools:context=".RegisterActivity">
 
         <EditText
-            android:id="@+id/et_email"
+            android:id="@+id/etem"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
@@ -38,7 +38,7 @@
             android:hint="Full Name"
             android:inputType="textPersonName"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/et_email"
+            app:layout_constraintBottom_toTopOf="@+id/etem"
             app:layout_constraintEnd_toEndOf="@+id/tv_title"
             app:layout_constraintStart_toStartOf="@+id/tv_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -71,13 +71,13 @@
             android:hint="Enter Date of Birth"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/gender"
-            app:layout_constraintEnd_toEndOf="@+id/et_email"
-            app:layout_constraintStart_toStartOf="@+id/et_email"
-            app:layout_constraintTop_toBottomOf="@+id/et_email" />
+            app:layout_constraintEnd_toEndOf="@+id/etem"
+            app:layout_constraintStart_toStartOf="@+id/etem"
+            app:layout_constraintTop_toBottomOf="@+id/etem" />
 
 
         <EditText
-            android:id="@+id/et_pass"
+            android:id="@+id/etpass"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -86,7 +86,7 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/register"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegister1"
             app:layout_constraintEnd_toEndOf="@+id/Ayear"
             app:layout_constraintStart_toStartOf="@+id/Ayear"
             app:layout_constraintTop_toBottomOf="@+id/Ayear"
@@ -189,7 +189,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:entries="@array/ayear"
-            app:layout_constraintBottom_toTopOf="@+id/et_pass"
+            app:layout_constraintBottom_toTopOf="@+id/etpass"
             app:layout_constraintEnd_toEndOf="@+id/Cyear"
             app:layout_constraintStart_toStartOf="@+id/Cyear"
             app:layout_constraintTop_toBottomOf="@+id/Cyear" />
@@ -207,17 +207,17 @@
             app:layout_constraintTop_toBottomOf="@+id/branch" />
 
         <Button
-            android:id="@+id/register"
+            android:id="@+id/btnRegister1"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="32dp"
             android:text="Save"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/et_pass"
+            app:layout_constraintEnd_toEndOf="@+id/etpass"
             app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toStartOf="@+id/et_pass"
-            app:layout_constraintTop_toBottomOf="@+id/et_pass"
+            app:layout_constraintStart_toStartOf="@+id/etpass"
+            app:layout_constraintTop_toBottomOf="@+id/etpass"
             app:layout_constraintVertical_bias="0.308" />
 
 

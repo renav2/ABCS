@@ -27,8 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
 
     <EditText
         android:id="@+id/txt_email"
@@ -91,7 +90,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txt_email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_view_jump2" />
+        app:layout_constraintTop_toBottomOf="@+id/go" />
 
 
     android:layout_width="382dp"
@@ -114,6 +113,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/collage_logo" />
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="609dp"
+        android:layout_marginBottom="10dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/txhome"
+        app:layout_constraintStart_toStartOf="@+id/txt_view_jump2"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

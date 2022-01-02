@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     //delclaration
-   private  Button bt_login;
+   private  Button bt_login, reg;
    private EditText et_email;
    private EditText et_pass;
    private TextView tv_jump;
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                         et_pass=findViewById(R.id.txt_password);
                         tv_jump=findViewById(R.id.txt_view_jump);
                         tv_jump2=findViewById(R.id.txt_view_jump2);
+                        reg=findViewById(R.id.go);
 //firbase intialize
         auth = FirebaseAuth.getInstance();
 
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+
+                        reg.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent=new Intent(MainActivity.this,register2.class);
                                 startActivity(intent);
                             }
                         });

@@ -67,7 +67,7 @@ createSignInIntent();
             // Successfully signed in
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
            //jump
-            Intent intent =new Intent(social_media_login_Activity.this,RegisterActivity.class);
+            Intent intent =new Intent(social_media_login_Activity.this,register2.class);
             startActivity(intent);
             // ...
         } else {
