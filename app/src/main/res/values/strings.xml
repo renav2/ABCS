@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ABCS</string>
+
+
     <string-array name="clgname">
         <item>College Name</item>
         <item>SCOE</item>
@@ -10,6 +12,8 @@
         <item>SIT</item>
         <item>RMD</item>
     </string-array>
+
+
     <string-array name="brname">
         <item>Branch Name</item>
         <item>Mech</item>
@@ -20,27 +24,52 @@
         <item>Meta</item>
         <item>DDGM</item>
     </string-array>
+
+
     <string-array name="gender">
         <item>Gender</item>
         <item>Male</item>
         <item>Female</item>
     </string-array>
 
+
     <string-array name="adtype">
         <item>Admission Type</item>
+        <item>Capround</item>
+        <item>Management </item>
         <item>TFWS</item>
-
+        <item>In House Kota </item>
+        <item>j and k</item>
     </string-array>
+
+
     <string-array name="ctype">
         <item>Select Category</item>
         <item>Open</item>
+        <item>Open(EBC) </item>
+        <item>O.B.C</item>
+        <item>SC/NT</item>
     </string-array>
+
+
     <string-array name="ayear">
         <item>Academic year</item>
         <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
     </string-array>
+
+
     <string-array name="cyear">
         <item>Select class</item>
+        <item>BE</item>
         <item>TE</item>
+        <item>SE</item>
+        <item>FE</item>
     </string-array>
+
+
 </resources>

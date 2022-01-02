@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
@@ -156,12 +157,13 @@ public class register2 extends AppCompatActivity {
 
 
 
-        FirebaseFirestore.getInstance().collection("personal data").document("data").set(v).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseFirestore.getInstance().collection("personal data").add(v).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
-            public void onComplete(@NonNull Task<Void> task) {
+            public void onComplete(@NonNull Task<DocumentReference> task) {
                 Toast.makeText(register2.this, "data uploded", Toast.LENGTH_SHORT).show();
             }
         });
+
 
 
 
