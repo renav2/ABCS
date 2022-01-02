@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".test_data_uplod"
-            android:exported="false" />
-        <activity
             android:name=".register2"
             android:exported="false" />
         <activity

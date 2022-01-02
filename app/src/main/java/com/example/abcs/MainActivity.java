@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                         et_pass=findViewById(R.id.txt_password);
                         tv_jump=findViewById(R.id.txt_view_jump);
                         tv_jump2=findViewById(R.id.txt_view_jump2);
-                        reg=findViewById(R.id.go);
+
 //firbase intialize
         auth = FirebaseAuth.getInstance();
 
@@ -56,13 +56,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
 
-                        reg.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intent=new Intent(MainActivity.this,test_data_uplod.class);
-                                startActivity(intent);
-                            }
-                        });
+                 
 
                         bt_login.setOnClickListener(new View.OnClickListener() {
                             @Override

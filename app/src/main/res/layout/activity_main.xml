@@ -56,6 +56,7 @@
         android:text="Log in"
         app:layout_constraintBottom_toTopOf="@+id/txt_view_jump2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_password" />
 
@@ -85,12 +86,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="1dp"
         android:text="Note :temp button for home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txt_email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/go" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_view_jump2" />
 
 
     android:layout_width="382dp"
@@ -104,26 +106,16 @@
         android:layout_width="306dp"
         android:layout_height="162dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="45dp"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/txt_email"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/collage_logo" />
-
-    <Button
-        android:id="@+id/go"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="609dp"
-        android:layout_marginBottom="10dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/txhome"
-        app:layout_constraintStart_toStartOf="@+id/txt_view_jump2"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
