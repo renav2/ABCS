@@ -8,50 +8,168 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="126dp">
 
-
-    <TextView
-        android:id="@+id/user_email"
-        android:layout_width="230dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="225dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="32dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/profile_name"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="432dp"
+        android:layout_height="370dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="866dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558">
 
-    <TextView
-        android:id="@+id/profile_name"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="32dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/pro_email"
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="411dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="270dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/user_email"
-        app:layout_constraintTop_toBottomOf="@+id/user_email" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="289dp"
-        android:text="TextView"
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="172dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/tv_pro_rollno"
+            android:layout_width="126dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="273dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/textview32"
+            android:layout_width="172dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:text="Register email ID " />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="126dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="273dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="172dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:text="Roll number " />
+
+        <TextView
+            android:id="@+id/tv_pro_rollno1"
+            android:layout_width="126dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="273dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="172dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:text="Phone number " />
+
+        <TextView
+            android:id="@+id/tv_pro_phoneno"
+            android:layout_width="126dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="273dp"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="232dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pro_email" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
-    <TextView
-        android:id="@+id/pro_email"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="7dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_name" />
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="172dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:text="Department " />
 
+        <TextView
+            android:id="@+id/tv_pro_Department"
+            android:layout_width="126dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="273dp"
+            android:text="TextView" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
