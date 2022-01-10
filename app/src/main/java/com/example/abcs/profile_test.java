@@ -38,11 +38,34 @@ public class profile_test extends AppCompatActivity {
         reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-        String pro_name= documentSnapshot.getString("Name");
-        String pro_email=documentSnapshot.getString("Email");
-        String pro_rollno=documentSnapshot.getString("Rollno");
-        String pro_phoneno=documentSnapshot.getString("mobile no");
-        String pro_dept=documentSnapshot.getString("Branch");
+                //basic profile things
+                String pro_name= documentSnapshot.getString("Name");
+                String pro_email=documentSnapshot.getString("Email");
+                String pro_rollno=documentSnapshot.getString("Rollno");
+                String pro_phoneno=documentSnapshot.getString("mobile no");
+                String pro_dept=documentSnapshot.getString("Branch");
+
+                //for invoice
+
+                String pro_collagename=documentSnapshot.getString("College_name");
+                String pro_admisontype=documentSnapshot.getString("Admission_type");
+                String pro_categary=documentSnapshot.getString("Category");
+                //branch--->line no 46 profile activity
+                String pro_acadamicyear=documentSnapshot.getString("Academic_year");
+
+
+                //cu->current user
+
+//                Intent intent=new Intent(profile_test.this,paymentclg.class);
+//                intent.putExtra("cu_dept",pro_dept);
+//                intent.putExtra("cu_collagename",pro_collagename);
+//                intent.putExtra("cu_admisiontype",pro_admisontype);
+//                intent.putExtra("cu_categary",pro_categary);
+
+             //  startActivity(intent);
+
+
+
 
         //setdata
 
