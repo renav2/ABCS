@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class HomeActivity extends AppCompatActivity {
 private Button  paymentpage, profile
         ;
-TextView useremailid;
+//TextView useremailid;
 
 TextView r;
 
@@ -25,19 +25,15 @@ TextView r;
         setContentView(R.layout.activity_home);
         paymentpage=findViewById(R.id.btn_payment);
         profile=findViewById(R.id.profile);
-        useremailid=findViewById(R.id.home_current_user_emailid);
+
+
+        //currunt user id store in r  & for sring purpose
         r=findViewById(R.id.tp);
-        //reciver id
         FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
-r.setText(user1.getUid());
+        r.setText(user1.getUid());
+String User_ID=r.getText().toString();
 
 
-        String user=getIntent().getStringExtra("home_email");
-        useremailid.setText(user);
-
-        String pass=useremailid.getText().toString();
-
-       // fetchdata();
 
 
 
@@ -53,8 +49,8 @@ r.setText(user1.getUid());
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(HomeActivity.this,profile_test.class);
-                intent.putExtra("pro_email",pass);
-
+              //  intent.putExtra("pro_email",pass);
+                intent.putExtra("user_id_home",User_ID);
                 startActivity(intent);
             }
         });

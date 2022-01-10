@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".db_test"
-            android:exported="false" />
-        <activity
             android:name=".profile_test"
             android:exported="false" />
         <activity
