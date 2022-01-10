@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -74,6 +75,8 @@ public class register2 extends AppCompatActivity {
         userid=findViewById(R.id.tv_userid);
         String from_socialmedia_login_userid=getIntent().getStringExtra("userid");
         userid.setText(from_socialmedia_login_userid);
+        String pass=userid.getText().toString();
+
 
         adtype=findViewById(R.id.Atype);
         cname=findViewById(R.id.college);
@@ -127,11 +130,64 @@ public class register2 extends AppCompatActivity {
         });
 
         btnRegister.setOnClickListener(view ->{
-            uploddata();
-         //   createUser();
-//uploddatrealtime();
+
+           uploddataa(pass);
+           //uploddata();
+            // createUser();
+            // uploddatrealtime();
         });
 
+
+    }
+
+    private void uploddataa(String passss) {
+        String text_name=name.getText().toString();
+        String text_email = email.getText().toString();
+        String txt_dob= eText.getText().toString();
+        String txt_gender=cgender.getSelectedItem().toString();
+        String txt_mno=mno.getText().toString();
+        String value=name.getText().toString()+eText.getText().toString();
+        String txt_clgid=value.toString();
+        String text_rollno=rollno.getText().toString();
+        String txt_add=estate.getText().toString();
+        String txt_clg=cname.getSelectedItem().toString();
+        String txt_atyp=adtype.getSelectedItem().toString();
+        String txt_cate=cat.getSelectedItem().toString();
+        String txt_bran=br.getSelectedItem().toString();
+        String txt_yearn=year.getSelectedItem().toString();
+        String txt_acdy=acd.getSelectedItem().toString();
+        String text_password = password.getText().toString();
+
+
+        String pass_copy=passss;
+DocumentReference reference=fstore.collection("demo").document(pass_copy);
+        Map<String, String> v=new HashMap<>();
+        v.put("Rollno",text_rollno);
+        v.put("Name",text_name);
+        v.put("mobile no",txt_mno);
+        v.put("Email",text_email);
+        v.put("Unique_id",txt_clgid);
+        v.put("DOB",txt_dob);
+        v.put("Gender",txt_gender);
+        v.put("Address",txt_add);
+        v.put("College_name",txt_clg);
+        v.put("Admission_type",txt_atyp);
+        v.put("Category",txt_cate);
+        v.put("Branch",txt_bran);
+        v.put("Class",txt_yearn);
+        v.put("Academic_year",txt_acdy);
+        v.put("Password",text_password);
+
+
+
+        reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(register2.this, "You Are Successfully Registered ", Toast.LENGTH_SHORT).show();
+                Intent intent =new Intent(register2.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -159,6 +215,10 @@ public class register2 extends AppCompatActivity {
         String txt_yearn=year.getSelectedItem().toString();
         String txt_acdy=acd.getSelectedItem().toString();
         String text_password = password.getText().toString();
+
+
+
+
 
         Map<String, String> v=new HashMap<>();
         v.put("Rollno",text_rollno);

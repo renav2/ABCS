@@ -3,76 +3,58 @@ package com.example.abcs;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.airbnb.lottie.LottieAnimationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class profile_test extends AppCompatActivity {
-    LottieAnimationView loa;
-    TextView useremail,pro_name;
-   FirebaseUser users;
-   DatabaseReference reference;
-   FirebaseAuth auth;
-    String receiver_user_email;
-   String userID;
+    TextView name, email,roll_no,phone_no,dept;
+    String pro_userid;
+    FirebaseFirestore fstore;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_test);
 
-        useremail = findViewById(R.id.user_email);
-        pro_name =findViewById(R.id.profile_name);
+        //user id
+        pro_userid = getIntent().getStringExtra("user_id_home");
 
-        receiver_user_email=getIntent().getExtras().get("pro_email").toString();
-
-
-        String user=getIntent().getStringExtra("pro_email");
-        useremail.setText(user);
-
-   //get current user
-    users= FirebaseAuth.getInstance().getCurrentUser();
-
-    auth=FirebaseAuth.getInstance();
-    reference= FirebaseDatabase.getInstance().getReference("personal data");
-   // userID=users.getUid();
+        //declaration
+        fstore = FirebaseFirestore.getInstance();
+        name=findViewById(R.id.tv_pro_rollno);
+        email=findViewById(R.id.tv_email);
+        roll_no=findViewById(R.id.tv_pro_rollno1);
+        phone_no=findViewById(R.id.tv_pro_phoneno);
+        dept=findViewById(R.id.tv_pro_Department);
 
 
-        fetchdata();
-    }
-
-    private void fetchdata() {
-        reference.child("26o1Z51AF4yWAgaQIQjL").addListenerForSingleValueEvent(new ValueEventListener() {
+        //fetch data
+        DocumentReference reference = fstore.collection("demo").document(pro_userid);
+        reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String userName=dataSnapshot.child("Name").getValue().toString();
-//                String userStatus=dataSnapshot.child("status").getValue().toString();
-//                String userImage=dataSnapshot.child("image").getValue().toString();
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+        String pro_name= documentSnapshot.getString("Name");
+        String pro_email=documentSnapshot.getString("Email");
+        String pro_rollno=documentSnapshot.getString("Rollno");
+        String pro_phoneno=documentSnapshot.getString("mobile no");
+        String pro_dept=documentSnapshot.getString("Branch");
 
-                pro_name.setText(userName);
+        //setdata
 
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+        name.setText(pro_name);
+        email.setText(pro_email);
+        roll_no.setText(pro_rollno);
+        phone_no.setText(pro_phoneno);
+        dept.setText(pro_dept);
 
             }
         });
 
 
-
     }
-
-
-
-
 }
