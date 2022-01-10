@@ -20,6 +20,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -28,21 +31,34 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class register2 extends AppCompatActivity {
-
+    TextView userid;
     EditText etRegEmail;
     EditText etRegPassword;
     Button btnRegister;
-
+    FirebaseDatabase db;
     FirebaseAuth mAuth;
 
     private TextView title;
     private Button register;
     private FirebaseAuth auth;
     private FirebaseFirestore fstore;
-    private EditText name, email, clgid, dob, password, mno,estate;
+    private EditText name, email, clgid, dob, password, mno,estate,rollno;
     private Spinner cgender, adtype, cname, cat, year, acd, br;
     DatePickerDialog picker;
     EditText eText;
+    DatabaseReference reference;
+
+    // modification
+    FirebaseDatabase firebaseDatabase;
+
+    // creating a variable for our Database
+    // Reference for Firebase.
+    DatabaseReference databaseReference;
+
+    // creating a variable for
+    // our object class
+
+
 
 
     @Override
@@ -54,6 +70,11 @@ public class register2 extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         mAuth = FirebaseAuth.getInstance();
 
+        //user id
+        userid=findViewById(R.id.tv_userid);
+        String from_socialmedia_login_userid=getIntent().getStringExtra("userid");
+        userid.setText(from_socialmedia_login_userid);
+
         adtype=findViewById(R.id.Atype);
         cname=findViewById(R.id.college);
         cat=findViewById(R.id.Ctype);
@@ -61,7 +82,7 @@ public class register2 extends AppCompatActivity {
         acd=findViewById(R.id.Ayear);
         br=findViewById(R.id.branch);
         estate=findViewById(R.id.state);
-
+        rollno=findViewById(R.id.mno2);
         auth = FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         //lable
@@ -76,6 +97,11 @@ public class register2 extends AppCompatActivity {
         mno = findViewById(R.id.mno);
 
         password = findViewById(R.id.etRegPass19);
+
+            //current user
+        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+
+
 
         //for only date
         eText = (EditText) findViewById(R.id.et_dob);
@@ -100,23 +126,18 @@ public class register2 extends AppCompatActivity {
 
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
         btnRegister.setOnClickListener(view ->{
             uploddata();
-          //  createUser();
-
+         //   createUser();
+//uploddatrealtime();
         });
+
+
+    }
+
+    private void uploddatrealtime() {
+
+
 
 
     }
@@ -129,7 +150,7 @@ public class register2 extends AppCompatActivity {
         String txt_mno=mno.getText().toString();
         String value=name.getText().toString()+eText.getText().toString();
         String txt_clgid=value.toString();
-
+        String text_rollno=rollno.getText().toString();
         String txt_add=estate.getText().toString();
         String txt_clg=cname.getSelectedItem().toString();
         String txt_atyp=adtype.getSelectedItem().toString();
@@ -140,6 +161,7 @@ public class register2 extends AppCompatActivity {
         String text_password = password.getText().toString();
 
         Map<String, String> v=new HashMap<>();
+        v.put("Rollno",text_rollno);
         v.put("Name",text_name);
         v.put("mobile no",txt_mno);
         v.put("Email",text_email);
@@ -160,7 +182,10 @@ public class register2 extends AppCompatActivity {
         FirebaseFirestore.getInstance().collection("personal data").add(v).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
-                Toast.makeText(register2.this, "data uploded", Toast.LENGTH_SHORT).show();
+                Toast.makeText(register2.this, "Data Uploded", Toast.LENGTH_SHORT).show();
+                Intent intent =new Intent(register2.this,MainActivity.class);
+                startActivity(intent);
+finish();
             }
         });
 

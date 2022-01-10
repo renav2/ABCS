@@ -45,6 +45,8 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:8.0.0'
     implementation 'com.razorpay:checkout:1.6.15'
 
+    implementation "com.airbnb.android:lottie:4.2.2"
+
 
 
 }

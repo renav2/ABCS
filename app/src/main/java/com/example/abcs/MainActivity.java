@@ -63,9 +63,16 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(View v) {
                                 String tex_email=et_email.getText().toString();
                                 String tex_pass=et_pass.getText().toString();
+
+//                                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+//
+                               // startActivity(intent);
+
+
+
                                 if(tex_email.equals("Admin")&&  tex_pass.equals("admin")){
-                                    Intent intent=new Intent(MainActivity.this,Adminhome.class);
-                                    startActivity(intent);
+                                    Intent intent1=new Intent(MainActivity.this,Adminhome.class);
+                                    startActivity(intent1);
                                 }
                                 else{
                                 loginuser(tex_email,tex_pass);
@@ -93,11 +100,20 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(MainActivity.this, " login done bro :)", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+                intent.putExtra("home_email",_email);
+               intent.putExtra("home_pass",_pass);
+
+
+
                 startActivity(intent);
+
+
+
             }
         });
 
     }
+
 
 
 }

@@ -25,11 +25,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class social_media_login_Activity extends AppCompatActivity {
+    FirebaseAuth auth;
     private final ActivityResultLauncher<Intent> signInLauncher = registerForActivityResult(
             new FirebaseAuthUIActivityResultContract(),
             new ActivityResultCallback<FirebaseAuthUIAuthenticationResult>() {
                 @Override
                 public void onActivityResult(FirebaseAuthUIAuthenticationResult result) {
+                   auth=FirebaseAuth.getInstance();
                     onSignInResult(result);
                 }
             }
@@ -67,8 +69,11 @@ createSignInIntent();
         if (result.getResultCode() == RESULT_OK) {
             // Successfully signed in
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            String userid=auth.getCurrentUser().getUid();
+
            //jump
             Intent intent =new Intent(social_media_login_Activity.this,register2.class);
+            intent.putExtra("userid",userid);
             startActivity(intent);
             // ...
         } else {
