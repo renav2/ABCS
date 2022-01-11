@@ -6,55 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".PaymentActivity">
 
-    <Button
-        android:id="@+id/btn_clg_jump"
-        android:layout_width="107dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="24dp"
-        app:icon="@drawable/clg"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/btn_gohostel"
-        android:layout_width="97dp"
-        android:layout_height="61dp"
-        app:icon="@drawable/hostel"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_clg_jump"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.647"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.923"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/btn_goexamfee"
-        android:layout_width="136dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="356dp"
-        app:icon="@drawable/exam"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_gohostel"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="307dp"
-        android:layout_height="0dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="63dp"
-        android:layout_marginBottom="166dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="16dp"
         android:text="Payment Section"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_goexamfee"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="410dp"
+        android:layout_height="389dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="67dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="109dp"
+                android:layout_height="106dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clg_jump"
+                    android:layout_width="wrap_content"
+                    android:layout_height="88dp"
+                    android:padding="20dp"
+                    app:icon="@drawable/clg"
+
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="115dp"
+                android:layout_height="104dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_gohostel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+
+                    app:icon="@drawable/hostel"
+
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="112dp"
+                android:layout_height="102dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_goexamfee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    app:icon="@drawable/exam"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
