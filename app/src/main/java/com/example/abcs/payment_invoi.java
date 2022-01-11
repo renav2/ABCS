@@ -35,6 +35,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class payment_invoi extends AppCompatActivity {
@@ -83,7 +85,6 @@ public class payment_invoi extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
 fstore=FirebaseFirestore.getInstance();
 invo_userid=auth.getCurrentUser().getUid();
-
       //hidding data
         sign.setVisibility(View.INVISIBLE);
         section.setVisibility(View.INVISIBLE);
@@ -98,7 +99,6 @@ invo_userid=auth.getCurrentUser().getUid();
                 String pro_rollno=documentSnapshot.getString("Rollno");
                 String pro_dept=documentSnapshot.getString("Branch");
                 String pro_class=documentSnapshot.getString("Class");
-
                 //setdata
                 invoi_student_name.setText(pro_name);
                 invoice_student_rollno.setText(pro_rollno);
@@ -125,27 +125,50 @@ invo_userid=auth.getCurrentUser().getUid();
             public void onClick(View v) {
                 //callling method
                 invoice_no();
-
                 //visibility changes
                 Print_Button_invisible();
+
+                uplod_paymentdata(invo_userid,invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept,tv_invoiceno);
+
                 //amount getting from payment page
                 String amount=getIntent().getStringExtra("amo");
                  invoice_send_amount.setText(amount+" Only");
                 //takking screenshot and making pdf of its
                  takeScreenShot();
+            }
+        });
+    }
 
+    private void uplod_paymentdata(String nvo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno) {
+        String txt_na=nvoi_student_name.getText().toString();
+        String txt_class=nvoice_student_class.getText().toString();
+        String txt_roll=nvoice_student_rollno.getText().toString();
+        String  txt_dept=nvoice_student_dept.getText().toString();
+        String txt_invoic=tv_nvoiceno.getText().toString();
+
+        DocumentReference reference=fstore.collection("paymentdata").document(nvo_userid);
+
+
+    Map<String, String> v=new HashMap<>();
+        v.put("inroll",txt_roll);
+        v.put("inname",txt_na);
+
+
+        v.put("inclass",txt_class);
+        v.put("indept",txt_dept);
+        v.put("invoiceno",txt_invoic);
+        reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void unused) {
+                Toast.makeText(payment_invoi.this, "your payment record save", Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 
 
-
-
     private void Print_Button_invisible() {
-
         btn.setVisibility(View.INVISIBLE);
-
 
     }
 
@@ -160,6 +183,10 @@ invo_userid=auth.getCurrentUser().getUid();
         }
 
         tv_invoiceno.setText(Integer.toString(val));
+
+
+
+
 
     }
 
