@@ -146,17 +146,17 @@ invo_userid=auth.getCurrentUser().getUid();
         String  txt_dept=nvoice_student_dept.getText().toString();
         String txt_invoic=tv_nvoiceno.getText().toString();
 
-        DocumentReference reference=fstore.collection("paymentdata").document(nvo_userid);
+        DocumentReference reference=fstore.collection("collage_fees_paymentdata").document(nvo_userid);
 
 
     Map<String, String> v=new HashMap<>();
-        v.put("inroll",txt_roll);
-        v.put("inname",txt_na);
+        v.put("Student_roll_no",txt_roll);
+        v.put("Student_name",txt_na);
 
 
-        v.put("inclass",txt_class);
-        v.put("indept",txt_dept);
-        v.put("invoiceno",txt_invoic);
+        v.put("Student_class",txt_class);
+        v.put("Student_dept",txt_dept);
+        v.put("Student_invoiceno",txt_invoic);
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
