@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
@@ -83,8 +84,8 @@ public class Payment_Collage_invoice extends AppCompatActivity {
       //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
         //firbase instance
         auth=FirebaseAuth.getInstance();
-fstore=FirebaseFirestore.getInstance();
-invo_userid=auth.getCurrentUser().getUid();
+        fstore=FirebaseFirestore.getInstance();
+        invo_userid=auth.getCurrentUser().getUid();
       //hidding data
         sign.setVisibility(View.INVISIBLE);
         section.setVisibility(View.INVISIBLE);
@@ -95,6 +96,8 @@ invo_userid=auth.getCurrentUser().getUid();
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 //basic profile things
+
+
                 String pro_name= documentSnapshot.getString("Name");
                 String pro_rollno=documentSnapshot.getString("Rollno");
                 String pro_dept=documentSnapshot.getString("Branch");
@@ -128,43 +131,58 @@ invo_userid=auth.getCurrentUser().getUid();
                 //visibility changes
                 Print_Button_invisible();
 
-                uplod_paymentdata(invo_userid,invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept,tv_invoiceno);
 
                 //amount getting from payment page
                 String amount=getIntent().getStringExtra("amo");
-                 invoice_send_amount.setText(amount+" Only");
+                 invoice_send_amount.setText(amount);
+                 invoice_send_amount.getText().toString();
+                uplod_paymentdata(invo_userid,invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept,tv_invoiceno,invoice_send_amount);
+
+
+
                 //takking screenshot and making pdf of its
                  takeScreenShot();
             }
         });
     }
 
-    private void uplod_paymentdata(String nvo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno) {
+    private void uplod_paymentdata(String nvo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno, TextView nvoice_send_amount) {
+
+        String pass=getIntent().getStringExtra("wiseamount");
         String txt_na=nvoi_student_name.getText().toString();
         String txt_class=nvoice_student_class.getText().toString();
         String txt_roll=nvoice_student_rollno.getText().toString();
         String  txt_dept=nvoice_student_dept.getText().toString();
         String txt_invoic=tv_nvoiceno.getText().toString();
+        String txt_invamount=nvoice_send_amount.getText().toString();
+
+
+
 
         DocumentReference reference=fstore.collection("collage_fees_paymentdata").document(nvo_userid);
 
 
-    Map<String, String> v=new HashMap<>();
+        Map<String, String> v=new HashMap<>();
         v.put("Student_roll_no",txt_roll);
         v.put("Student_name",txt_na);
-
 
         v.put("Student_class",txt_class);
         v.put("Student_dept",txt_dept);
         v.put("Student_invoiceno",txt_invoic);
+        v.put("Student_total_fees",pass);
+        v.put("Student_payed_amount",txt_invamount);
+
+
+
+
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 Toast.makeText(Payment_Collage_invoice.this, "your payment record save", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
+
 
 
     private void Print_Button_invisible() {
@@ -297,5 +315,18 @@ invo_userid=auth.getCurrentUser().getUid();
         }catch (ActivityNotFoundException e){
             Toast.makeText(this, "No Apps to read PDF FIle", Toast.LENGTH_SHORT).show();
         }
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+
+                Intent intent1=new Intent(Payment_Collage_invoice.this,Payment_home_page.class);
+                startActivity(intent1);
+
+            }
+        }, 5000);
+
+
     }
 }

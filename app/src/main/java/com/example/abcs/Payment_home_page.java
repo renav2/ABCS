@@ -4,14 +4,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Payment_home_page extends AppCompatActivity {
 private Button  clgpayjump;
 private  Button hostel_pay;
 private Button exam_pay;
 
+TextView studentf;
+    FirebaseFirestore fstore;
+    FirebaseAuth auth;
+    String pro_userid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +31,33 @@ private Button exam_pay;
 clgpayjump=findViewById(R.id.btn_clg_jump);
 hostel_pay=findViewById(R.id.btn_gohostel);
 exam_pay=findViewById(R.id.btn_goexamfee);
+studentf=findViewById(R.id.tv_yourfees);
+        auth=FirebaseAuth.getInstance();
+
+
+        // pro_userid = getIntent().getStringExtra("user_id_home");
+        pro_userid=auth.getCurrentUser().getUid();
+        fstore=FirebaseFirestore.getInstance();
+        DocumentReference reference = fstore.collection("collage_fees_paymentdata").document(pro_userid);
+        reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                //basic profile things
+                String pay_yourfees= documentSnapshot.getString("Student_total_fees");
+
+
+
+
+                studentf.setText(pay_yourfees);
+
+
+            }
+        });
+
+
+
+
+
 
 
 

@@ -28,11 +28,9 @@ String inp;
     private Button pay;
      EditText amount;
      TextView unifee,medicfee,deptfee,tituionfee,totlef;
-
-FirebaseFirestore fstore;
-FirebaseAuth auth;
-
-     String pro_userid;
+        FirebaseFirestore fstore;
+        FirebaseAuth auth;
+        String pro_userid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,15 +46,15 @@ FirebaseAuth auth;
         deptfee=findViewById(R.id.tv_deppartmentfees);
         tituionfee=findViewById(R.id.tv_totalfees);
         totlef=findViewById(R.id.tv_totalfees1);
-auth=FirebaseAuth.getInstance();
+
+
+        auth=FirebaseAuth.getInstance();
 
 
        // pro_userid = getIntent().getStringExtra("user_id_home");
-    pro_userid=auth.getCurrentUser().getUid();
-fstore=FirebaseFirestore.getInstance();
-
-
-DocumentReference reference = fstore.collection("demo").document(pro_userid);
+         pro_userid=auth.getCurrentUser().getUid();
+         fstore=FirebaseFirestore.getInstance();
+         DocumentReference reference = fstore.collection("demo").document(pro_userid);
         reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -77,7 +75,7 @@ DocumentReference reference = fstore.collection("demo").document(pro_userid);
                     medicfee.setText("200");
                     deptfee.setText("3000");
                     tituionfee.setText("86000");//total 90k
-                    totlef.setText("90,000 only");
+                    totlef.setText("90000");
                 }
                 else if(pro_dept.equals("Comp") && pro_class.equals("BE") && pro_categary.equals("Open(EBC) ") && pro_admisontype.equals("Capround") ){
 
@@ -4549,22 +4547,10 @@ DocumentReference reference = fstore.collection("demo").document(pro_userid);
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //payment getway imp line
+
+
+
 
 
        pay.setOnClickListener(new View.OnClickListener() {
@@ -4573,10 +4559,12 @@ DocumentReference reference = fstore.collection("demo").document(pro_userid);
               String samount=amount.getText().toString();
                int amount = Math.round(Float.parseFloat(samount) * 100);
 
-
+               String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
              Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
+             intent.putExtra("wiseamount",cc);
+             intent.putExtra("orignalamount",amount);
              intent.putExtra("amo",samount);
-            startActivity(intent);
+             startActivity(intent);
 
 
             makepay(amount);

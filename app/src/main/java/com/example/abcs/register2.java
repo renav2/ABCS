@@ -131,10 +131,10 @@ public class register2 extends AppCompatActivity {
 
         btnRegister.setOnClickListener(view ->{
 
-           uploddataa(pass);
-           //uploddata();
-            // createUser();
-            // uploddatrealtime();
+                   uploddataa(pass);
+                   //uploddata();
+                    // createUser();
+                    // uploddatrealtime();
         });
 
 

@@ -10,15 +10,15 @@
         android:id="@+id/linearLayout8"
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="260dp"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/linearLayout5"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.006">
 
         <TextView
             android:id="@+id/textView37"
@@ -106,7 +106,7 @@
         android:id="@+id/linearLayout7"
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginTop="344dp"
+        android:layout_marginTop="320dp"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/txt_paynow"
@@ -213,13 +213,13 @@
         android:id="@+id/txt_paynow"
         android:layout_width="385dp"
         android:layout_height="62dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="70dp"
         android:ems="10"
         android:hint="Enter The Amount You Want To Pay Now"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/paynow"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="@+id/linearLayout7"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
         app:layout_constraintVertical_bias="0.0" />
