@@ -18,11 +18,10 @@
         <item>Branch Name</item>
         <item>Mech</item>
         <item>Civil</item>
-        <item>E_TC</item>
+        <item>ENTC</item>
         <item>IT</item>
         <item>Comp</item>
-        <item>Meta</item>
-        <item>DDGM</item>
+
     </string-array>
 
 
@@ -68,6 +67,7 @@
         <item>BE</item>
         <item>TE</item>
         <item>SE</item>
+        <item>SE(D.S.E)</item>
         <item>FE</item>
     </string-array>
 

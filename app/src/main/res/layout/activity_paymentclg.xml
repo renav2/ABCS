@@ -7,16 +7,21 @@
     tools:context=".paymentclg">
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="399dp"
+        android:id="@+id/linearLayout8"
+        android:layout_width="400dp"
         android:layout_height="50dp"
+        android:layout_marginTop="288dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="466dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textView35"
+            android:id="@+id/textView37"
             android:layout_width="172dp"
             android:layout_height="29dp"
             android:layout_weight="1"
@@ -24,28 +29,29 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_tution_fees"
+            android:id="@+id/tv_totalfees"
             android:layout_width="126dp"
             android:layout_height="30dp"
             android:layout_marginStart="69dp"
             android:layout_marginEnd="69dp"
-            android:layout_marginBottom="273dp"
-            android:text="TextView" />
+            android:layout_marginBottom="273dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="384dp"
+        android:layout_width="400dp"
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="189dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <TextView
             android:id="@+id/textView31"
-            android:layout_width="172dp"
+            android:layout_width="137dp"
             android:layout_height="29dp"
             android:layout_weight="1"
             android:text="Description"
@@ -67,12 +73,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="404dp"
-        android:layout_height="64dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="104dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="287dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <TextView
             android:id="@+id/textview32"
@@ -88,22 +98,26 @@
             android:layout_height="30dp"
             android:layout_marginStart="69dp"
             android:layout_marginEnd="69dp"
-            android:layout_marginBottom="273dp"
-            android:text="TextView" />
+            android:layout_marginBottom="273dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="390dp"
-        android:layout_height="44dp"
+        android:id="@+id/linearLayout7"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="344dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="526dp">
+        app:layout_constraintBottom_toTopOf="@+id/txt_paynow"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textView35"
+            android:id="@+id/textView38"
             android:layout_width="172dp"
             android:layout_height="29dp"
             android:layout_weight="1"
@@ -111,24 +125,28 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_tution_fees"
+            android:id="@+id/tv_totalfees1"
             android:layout_width="126dp"
             android:layout_height="30dp"
             android:layout_marginStart="69dp"
             android:layout_marginEnd="69dp"
-            android:layout_marginBottom="273dp"
-            android:text="TextView" />
+            android:layout_marginBottom="273dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="379dp"
-        android:layout_height="45dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="300dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="407dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555">
 
         <TextView
             android:id="@+id/textView34"
@@ -144,19 +162,22 @@
             android:layout_height="30dp"
             android:layout_marginStart="69dp"
             android:layout_marginEnd="69dp"
-            android:layout_marginBottom="273dp"
-            android:text="TextView" />
+            android:layout_marginBottom="273dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="380dp"
-        android:layout_height="51dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="160dp"
         android:orientation="horizontal"
         android:padding="10dp"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="351dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <TextView
             android:id="@+id/textView33"
@@ -172,36 +193,48 @@
             android:layout_height="30dp"
             android:layout_marginStart="69dp"
             android:layout_marginEnd="69dp"
-            android:layout_marginBottom="273dp"
-            android:text="TextView" />
+            android:layout_marginBottom="273dp" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/paynow"
-        android:layout_width="183dp"
-        android:layout_height="54dp"
+        android:layout_width="259dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="450dp"
         android:text="Pay  now"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="661dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_paynow"
+        app:layout_constraintStart_toStartOf="@+id/txt_paynow"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/txt_paynow"
         android:layout_width="385dp"
         android:layout_height="62dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Enter The Amount You Want To Pay Now"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="587dp" />
+        app:layout_constraintBottom_toTopOf="@+id/paynow"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="380dp"
         android:layout_height="64dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="31dp"
         android:text="Fee Structure"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
