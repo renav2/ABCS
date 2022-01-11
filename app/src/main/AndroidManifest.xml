@@ -23,7 +23,7 @@
             android:name=".Adminhome"
             android:exported="false" />
         <activity
-            android:name=".payment_invoi"
+            android:name=".Payment_Collage_invoice"
             android:exported="false" />
         <activity
             android:name=".payment_exam_fees"
@@ -35,13 +35,13 @@
             android:name=".social_media_login_Activity"
             android:exported="false" />
         <activity
-            android:name=".paymentclg"
+            android:name=".Payment_college_pay_page"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".PaymentActivity"
+            android:name=".Payment_home_page"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

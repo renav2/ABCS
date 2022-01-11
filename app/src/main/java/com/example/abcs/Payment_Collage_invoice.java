@@ -39,7 +39,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class payment_invoi extends AppCompatActivity {
+public class Payment_Collage_invoice extends AppCompatActivity {
     Display mDisplay;
     String imagesUri;
     String path;
@@ -160,7 +160,7 @@ invo_userid=auth.getCurrentUser().getUid();
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(payment_invoi.this, "your payment record save", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Payment_Collage_invoice.this, "your payment record save", Toast.LENGTH_SHORT).show();
             }
         });
 

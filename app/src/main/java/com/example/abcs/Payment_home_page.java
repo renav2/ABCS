@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PaymentActivity extends AppCompatActivity {
+public class Payment_home_page extends AppCompatActivity {
 private Button  clgpayjump;
 private  Button hostel_pay;
 private Button exam_pay;
@@ -26,7 +26,7 @@ exam_pay=findViewById(R.id.btn_goexamfee);
 clgpayjump.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent=new Intent(PaymentActivity.this,paymentclg.class);
+        Intent intent=new Intent(Payment_home_page.this, Payment_college_pay_page.class);
         startActivity(intent);
     }
 });
@@ -35,7 +35,7 @@ clgpayjump.setOnClickListener(new View.OnClickListener() {
 hostel_pay.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent=new Intent(PaymentActivity.this,Payment_hostel.class);
+        Intent intent=new Intent(Payment_home_page.this,Payment_hostel.class);
         startActivity(intent);
     }
 });
@@ -43,7 +43,7 @@ hostel_pay.setOnClickListener(new View.OnClickListener() {
 exam_pay.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent= new Intent(PaymentActivity.this,payment_exam_fees.class);
+        Intent intent= new Intent(Payment_home_page.this,payment_exam_fees.class);
         startActivity(intent);
     }
 });

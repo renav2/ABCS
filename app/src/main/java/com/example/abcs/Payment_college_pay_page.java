@@ -22,7 +22,7 @@ import com.razorpay.PaymentResultWithDataListener;
 
 import org.json.JSONObject;
 
-public class paymentclg extends AppCompatActivity implements PaymentResultWithDataListener {
+public class Payment_college_pay_page extends AppCompatActivity implements PaymentResultWithDataListener {
 int  total,fin;
 String inp;
     private Button pay;
@@ -4574,7 +4574,7 @@ DocumentReference reference = fstore.collection("demo").document(pro_userid);
                int amount = Math.round(Float.parseFloat(samount) * 100);
 
 
-             Intent intent=new Intent(paymentclg.this,payment_invoi.class);
+             Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
              intent.putExtra("amo",samount);
             startActivity(intent);
 
@@ -4640,7 +4640,7 @@ DocumentReference reference = fstore.collection("demo").document(pro_userid);
 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
-        Intent intent =new Intent(paymentclg.this,payment_invoi.class);
+        Intent intent =new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
         startActivity(intent);
 
     }

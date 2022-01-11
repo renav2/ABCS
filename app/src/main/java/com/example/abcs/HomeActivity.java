@@ -40,7 +40,7 @@ String User_ID=r.getText().toString();
         paymentpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,PaymentActivity.class);
+                Intent intent=new Intent(HomeActivity.this, Payment_home_page.class);
                 startActivity(intent);
             }
         });

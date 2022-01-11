@@ -58,7 +58,7 @@ public class profile_test extends AppCompatActivity {
 
                 //cu->current user
 
-//                Intent intent=new Intent(profile_test.this,paymentclg.class);
+//                Intent intent=new Intent(profile_test.this,Payment_college_pay_page.class);
 //                intent.putExtra("cu_dept",pro_dept);
 //                intent.putExtra("cu_collagename",pro_collagename);
 //                intent.putExtra("cu_admisiontype",pro_admisontype);
