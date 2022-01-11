@@ -12,6 +12,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class profile_test extends AppCompatActivity {
     TextView name, email,roll_no,phone_no,dept;
+
+
     String pro_userid;
     FirebaseFirestore fstore;
 

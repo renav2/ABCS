@@ -19,11 +19,18 @@ import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -39,12 +46,22 @@ public class payment_invoi extends AppCompatActivity {
     int totalHeight;
     int totalWidth;
 
+    //firbase declaration part
+    FirebaseAuth  auth;
+    String invo_userid;
+    FirebaseFirestore fstore;
+
+
     public static final int READ_PHONE = 110;
     String file_name = "collage payment section";
     File myPath;
     TextView tv_invoiceno;
     TextView invoice_send_amount;
     Button btn;
+    TextView section;
+    ImageView sign;
+
+    TextView invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept;
 
 
     @Override
@@ -52,15 +69,46 @@ public class payment_invoi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_invoi);
         tv_invoiceno=findViewById(R.id.tv_invoiceno);
-    invoice_send_amount=findViewById(R.id.tv_amountpaid);
-
+        invoice_send_amount=findViewById(R.id.tv_invoidept);
         btn=findViewById(R.id.btn_print);
+        sign=findViewById(R.id.idIVQrcode);
+        section=findViewById(R.id.tv_section);
+        invoi_student_name=findViewById(R.id.tv_StudentName);
+        invoice_student_class=findViewById(R.id.tv_Studentclass);
+        invoice_student_rollno=findViewById(R.id.tv_StudentID);
+        invoice_send_amount=findViewById(R.id.tv_invoidept);
+        invoice_student_dept=findViewById(R.id.tv_invoidept11);
+      //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
+        //firbase instance
+        auth=FirebaseAuth.getInstance();
+fstore=FirebaseFirestore.getInstance();
+invo_userid=auth.getCurrentUser().getUid();
 
+      //hidding data
+        sign.setVisibility(View.INVISIBLE);
+        section.setVisibility(View.INVISIBLE);
+        //pdf related data
+        //fetch data
+        DocumentReference reference = fstore.collection("demo").document(invo_userid);
+        reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                //basic profile things
+                String pro_name= documentSnapshot.getString("Name");
+                String pro_rollno=documentSnapshot.getString("Rollno");
+                String pro_dept=documentSnapshot.getString("Branch");
+                String pro_class=documentSnapshot.getString("Class");
 
+                //setdata
+                invoi_student_name.setText(pro_name);
+                invoice_student_rollno.setText(pro_rollno);
+                invoice_student_dept.setText(pro_dept);
+                invoice_student_class.setText(pro_class);
+
+            }
+        });
         WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         mDisplay = wm.getDefaultDisplay();
-
-
         if(Build.VERSION.SDK_INT >= 23){
             if(checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
                     && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -71,20 +119,20 @@ public class payment_invoi extends AppCompatActivity {
                         Manifest.permission.READ_EXTERNAL_STORAGE}, READ_PHONE);
             }
         }
-
+        //click event
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
+                //callling method
                 invoice_no();
 
+                //visibility changes
                 Print_Button_invisible();
+                //amount getting from payment page
                 String amount=getIntent().getStringExtra("amo");
-
-                 invoice_send_amount.setText(amount+"Only");
-                takeScreenShot();
+                 invoice_send_amount.setText(amount+" Only");
+                //takking screenshot and making pdf of its
+                 takeScreenShot();
 
             }
         });
@@ -93,13 +141,17 @@ public class payment_invoi extends AppCompatActivity {
 
 
 
+
     private void Print_Button_invisible() {
+
         btn.setVisibility(View.INVISIBLE);
 
 
     }
 
     private void invoice_no() {
+        sign.setVisibility(View.VISIBLE);
+        section.setVisibility(View.VISIBLE);
         Random random=new Random();
         int val=random.nextInt(1000000000);
         int val2=random.nextInt(1000000000);

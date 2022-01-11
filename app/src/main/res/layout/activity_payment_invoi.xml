@@ -18,8 +18,8 @@
         android:padding="30dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
             android:padding="30dp"
             android:textAlignment="gravity">
 
@@ -30,7 +30,7 @@
                 android:textAlignment="gravity"
                 android:textSize="20sp"
 
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_invoiceno"
@@ -46,7 +46,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="20dp"
+            android:padding="10dp"
             android:textAlignment="gravity">
 
             <TextView
@@ -71,7 +71,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="20dp"
+            android:padding="10dp"
             android:textAlignment="gravity">
 
             <TextView
@@ -97,17 +97,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="20dp"
+            android:padding="10dp"
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="162dp"
                 android:layout_height="wrap_content"
-                android:text="Student ID NO :        "
+                android:text="Student Roll NO :        "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_StudentID"
@@ -123,20 +122,44 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="20dp"
+            android:padding="10dp"
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:text="Student department:         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_invoidept11"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:hint="dept"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="171dp"
                 android:layout_height="wrap_content"
                 android:text="Amount Paid :         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_amountpaid"
+                android:id="@+id/tv_invoidept"
                 android:layout_width="153dp"
                 android:layout_height="wrap_content"
                 android:hint="Amount Paid"
@@ -178,26 +201,26 @@
 
         <Button
             android:id="@+id/btn_print"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            android:text="Button" />
+            android:layout_width="347dp"
+            android:layout_height="59dp"
+            android:padding="2dp"
+            android:text="Print invoice " />
 
         <ImageView
             android:id="@+id/idIVQrcode"
-            android:layout_width="94dp"
-            android:layout_height="90dp"
+            android:layout_width="103dp"
+            android:layout_height="77dp"
             android:background="@drawable/invoicesignature"
             android:paddingLeft="150dp" />
 
         <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Collage Account Section"
-android:textStyle="bold"
-    >
+            android:id="@+id/tv_section"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:text="Collage Account Section"
+            android:textStyle="bold">
 
-</TextView>
+        </TextView>
 
     </LinearLayout>
 
