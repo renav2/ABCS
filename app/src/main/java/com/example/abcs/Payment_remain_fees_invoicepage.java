@@ -40,7 +40,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Payment_Collage_invoice extends AppCompatActivity {
+public class Payment_remain_fees_invoicepage extends AppCompatActivity {
     Display mDisplay;
     String imagesUri;
     String path;
@@ -50,7 +50,7 @@ public class Payment_Collage_invoice extends AppCompatActivity {
     int totalWidth;
 
     //firbase declaration part
-    FirebaseAuth  auth;
+    FirebaseAuth auth;
     String invo_userid;
     FirebaseFirestore fstore;
 
@@ -65,12 +65,11 @@ public class Payment_Collage_invoice extends AppCompatActivity {
     ImageView sign;
 
     TextView invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_invoi);
+        setContentView(R.layout.activity_payment_remain_fees_invoicepage);
+
         tv_invoiceno=findViewById(R.id.tv_invoiceno);
         invoice_send_amount=findViewById(R.id.tv_invoidept);
         btn=findViewById(R.id.btn_print);
@@ -81,14 +80,14 @@ public class Payment_Collage_invoice extends AppCompatActivity {
         invoice_student_rollno=findViewById(R.id.tv_StudentID);
         invoice_send_amount=findViewById(R.id.tv_invoidept);
         invoice_student_dept=findViewById(R.id.tv_invoidept11);
-      //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
+        //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
 
         //firbase instance
         auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         invo_userid=auth.getCurrentUser().getUid();
 
-     //hidding data
+        //hidding data
         sign.setVisibility(View.INVISIBLE);
         section.setVisibility(View.INVISIBLE);
         //pdf related data
@@ -135,15 +134,12 @@ public class Payment_Collage_invoice extends AppCompatActivity {
 
 
                 //amount getting from payment page
-                String amount=getIntent().getStringExtra("amo");
-                 invoice_send_amount.setText(amount);
-                 invoice_send_amount.getText().toString();
-                uplod_paymentdata(invo_userid,invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept,tv_invoiceno,invoice_send_amount);
-
-
-
-                //takking screenshot and making pdf of its
-                 takeScreenShot();
+                String amount=getIntent().getStringExtra("amorem");
+                invoice_send_amount.setText(amount);
+                invoice_send_amount.getText().toString();
+              //  uplod_paymentdata(invo_userid,invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept,tv_invoiceno,invoice_send_amount);
+              //takking screenshot and making pdf of its
+                takeScreenShot();
             }
         });
     }
@@ -184,7 +180,7 @@ public class Payment_Collage_invoice extends AppCompatActivity {
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(Payment_Collage_invoice.this, "your payment record save", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Payment_remain_fees_invoicepage.this, "your payment record save", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -225,9 +221,9 @@ public class Payment_Collage_invoice extends AppCompatActivity {
         path = path + "/" + file_name + System.currentTimeMillis() + ".pdf";
 
 
-        View u = findViewById(R.id.ticket);
+        View u = findViewById(R.id.ticket2);
 
-        NestedScrollView z = findViewById(R.id.ticket);
+        NestedScrollView z = findViewById(R.id.ticket2);
         totalHeight = z.getChildAt(0).getHeight();
         totalWidth = z.getChildAt(0).getWidth();
 
@@ -327,7 +323,7 @@ public class Payment_Collage_invoice extends AppCompatActivity {
             public void run() {
 
 
-                Intent intent1=new Intent(Payment_Collage_invoice.this,Payment_home_page.class);
+                Intent intent1=new Intent(Payment_remain_fees_invoicepage.this,Payment_home_page.class);
                 startActivity(intent1);
 
             }
@@ -336,3 +332,7 @@ public class Payment_Collage_invoice extends AppCompatActivity {
 
     }
 }
+
+
+
+

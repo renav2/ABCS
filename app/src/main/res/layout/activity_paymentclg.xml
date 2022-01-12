@@ -93,7 +93,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_university_fees"
+            android:id="@+id/tv_rem_alrdypay"
             android:layout_width="126dp"
             android:layout_height="30dp"
             android:layout_marginStart="69dp"
@@ -188,7 +188,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_medical_fees"
+            android:id="@+id/tv_rem_remain"
             android:layout_width="126dp"
             android:layout_height="30dp"
             android:layout_marginStart="69dp"

@@ -41,8 +41,8 @@ String inp;
         //refreance
         pay=findViewById(R.id.paynow);
         amount=findViewById(R.id.txt_paynow);
-        unifee=findViewById(R.id.tv_university_fees);
-        medicfee=findViewById(R.id.tv_medical_fees);
+        unifee=findViewById(R.id.tv_rem_alrdypay);
+        medicfee=findViewById(R.id.tv_rem_remain);
         deptfee=findViewById(R.id.tv_deppartmentfees);
         tituionfee=findViewById(R.id.tv_totalfees);
         totlef=findViewById(R.id.tv_totalfees1);

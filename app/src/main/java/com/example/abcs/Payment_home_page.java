@@ -43,7 +43,7 @@ studentf=findViewById(R.id.tv_yourfees);
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 //basic profile things
-                String pay_yourfees= documentSnapshot.getString("Student_total_fees");
+                String pay_yourfees= documentSnapshot.getString("Student_remain_fees");
 
 
 
@@ -64,7 +64,7 @@ studentf=findViewById(R.id.tv_yourfees);
 clgpayjump.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent=new Intent(Payment_home_page.this, Payment_college_pay_page.class);
+        Intent intent=new Intent(Payment_home_page.this, Payment_collage_fullfee_or_remainfee.class);
         startActivity(intent);
     }
 });

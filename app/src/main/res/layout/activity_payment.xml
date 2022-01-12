@@ -190,7 +190,7 @@
                 android:layout_width="59dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Your college  fee "
+                android:text="Pending college fee"
                 android:textAlignment="center"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -216,7 +216,7 @@
                 android:layout_width="59dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Your hostel fee "
+                android:text="Pending hostel fee "
                 android:textAlignment="center"
                 android:textSize="18dp"
                 android:textStyle="bold" />
