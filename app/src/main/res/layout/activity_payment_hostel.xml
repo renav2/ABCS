@@ -31,14 +31,15 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
+        app:layout_constraintVertical_bias="0.658" />
 
     <LinearLayout
         android:id="@+id/linearLayout9"
-        android:layout_width="404dp"
-        android:layout_height="366dp"
+        android:layout_width="352dp"
+        android:layout_height="209dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="8dp"
@@ -51,140 +52,148 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="39dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="68dp"
+                android:layout_width="271dp"
+                android:layout_height="38dp"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="Room fee " />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
 
             <TextView
                 android:id="@+id/textView18"
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_width="112dp"
+                android:layout_height="38dp"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="5,500" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="74dp"
+            android:layout_height="39dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="38dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="271dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="Canteen fee " />
 
                 <TextView
                     android:id="@+id/textView21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="4500" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="39dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="43dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="271dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="Cleaning fee " />
 
                 <TextView
                     android:id="@+id/textView24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="500" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="41dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="39dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="271dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="Wi-Fi charges " />
 
                 <TextView
                     android:id="@+id/textView30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="500" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="42dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="39dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView32"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="271dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="Total fee " />
 
                 <TextView
                     android:id="@+id/textView35"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="11000" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="263dp"
-        android:layout_height="68dp"
+        android:layout_width="364dp"
+        android:layout_height="69dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="69dp"
         android:layout_marginEnd="132dp"
         android:layout_marginBottom="11dp"
-        android:text="TextView"
+        android:text="Hostel fee  structure "
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

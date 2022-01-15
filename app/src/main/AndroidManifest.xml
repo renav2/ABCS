@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Payment_hostel_fees_invoice"
+            android:exported="false" />
+        <activity
             android:name=".Payment_collage_fullfee_or_remainfee"
             android:exported="false" />
         <activity

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,8 +32,13 @@ private EditText hos_a;
             public void onClick(View v) {
                 String samount=hos_a.getText().toString();
                 int amount = Math.round(Float.parseFloat(samount) * 100);
-                makepay(amount);
-
+                
+                if(samount.equals("11000")) {
+                    makepay(amount);
+                }
+                else{
+                    Toast.makeText(Payment_hostel.this, "You need to pay full Hostel fees", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
