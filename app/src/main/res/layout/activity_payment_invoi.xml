@@ -44,8 +44,38 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="341dp"
             android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Installment :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_installment"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             android:textAlignment="gravity">
 
@@ -55,11 +85,16 @@
                 android:text="Student Name:         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
 
             <TextView
                 android:id="@+id/tv_StudentName"
-                android:layout_width="153dp"
+                android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:hint="Name"
                 android:textSize="15dp"
@@ -69,8 +104,8 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             android:textAlignment="gravity">
 
@@ -80,12 +115,16 @@
                 android:text="Student class :         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
 
             <TextView
                 android:id="@+id/tv_Studentclass"
-                android:layout_width="153dp"
+                android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:hint="Student class"
                 android:textSize="15dp"
@@ -95,22 +134,27 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="162dp"
+                android:layout_width="164dp"
                 android:layout_height="wrap_content"
                 android:text="Student Roll NO :        "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
             <TextView
                 android:id="@+id/tv_StudentID"
-                android:layout_width="153dp"
+                android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:hint="Your ID NO"
                 android:textSize="15dp"
@@ -120,13 +164,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
             android:padding="10dp"
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="168dp"
+                android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:text="Student department:         "
                 android:textAlignment="gravity"
@@ -135,7 +179,7 @@
 
             <TextView
                 android:id="@+id/tv_invoidept11"
-                android:layout_width="153dp"
+                android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:hint="dept"
                 android:textSize="15dp"
@@ -145,7 +189,37 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="341dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending fees "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="62dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/afterinstallment"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:hint="Pending fees"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
             android:layout_height="match_parent"
             android:padding="10dp"
             android:textAlignment="gravity">
@@ -159,8 +233,8 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_invoidept"
-                android:layout_width="153dp"
+                android:id="@+id/tv_studentalpayamo"
+                android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:hint="Amount Paid"
                 android:textSize="15dp"
@@ -201,7 +275,7 @@
 
         <Button
             android:id="@+id/btn_print"
-            android:layout_width="347dp"
+            android:layout_width="341dp"
             android:layout_height="59dp"
             android:padding="2dp"
             android:text="Print invoice " />

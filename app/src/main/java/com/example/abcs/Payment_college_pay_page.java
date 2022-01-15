@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,7 @@ String inp;
         FirebaseFirestore fstore;
         FirebaseAuth auth;
         String pro_userid;
+Spinner pay_instllmen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +50,41 @@ String inp;
         totlef=findViewById(R.id.tv_totalfees1);
 
 
+        pay_instllmen=findViewById(R.id.pay_in);
+
+
+
+
         auth=FirebaseAuth.getInstance();
 
 
        // pro_userid = getIntent().getStringExtra("user_id_home");
          pro_userid=auth.getCurrentUser().getUid();
          fstore=FirebaseFirestore.getInstance();
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String samount=amount.getText().toString();
+                int amount = Math.round(Float.parseFloat(samount) * 100);
+
+               String txt_installment=pay_instllmen.getSelectedItem().toString();
+
+                String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
+//               // Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
+//                intent.putExtra("wiseamount",cc);
+//                intent.putExtra("orignalamount",amount);
+//                intent.putExtra("amo",samount);
+//                intent.putExtra("installmenttype",txt_installment);
+//
+//                startActivity(intent);
+
+
+                makepay(amount);
+
+            }
+        });
+
+
          DocumentReference reference = fstore.collection("demo").document(pro_userid);
         reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -4553,24 +4584,7 @@ String inp;
 
 
 
-       pay.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-              String samount=amount.getText().toString();
-               int amount = Math.round(Float.parseFloat(samount) * 100);
 
-               String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
-             Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
-             intent.putExtra("wiseamount",cc);
-             intent.putExtra("orignalamount",amount);
-             intent.putExtra("amo",samount);
-             startActivity(intent);
-
-
-            makepay(amount);
-
-           }
-       });
 
 
 
@@ -4629,12 +4643,24 @@ String inp;
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
         Intent intent =new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
+        String samount=amount.getText().toString();
+        int amount = Math.round(Float.parseFloat(samount) * 100);
+
+        String txt_installment=pay_instllmen.getSelectedItem().toString();
+
+        String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
+        // Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
+        intent.putExtra("wiseamount",cc);
+        intent.putExtra("orignalamount",amount);
+        intent.putExtra("amo",samount);
+        intent.putExtra("installmenttype",txt_installment);
+
         startActivity(intent);
 
     }
 
     @Override
     public void onPaymentError(int i, String s, PaymentData paymentData) {
-
+finish();
     }
 }

@@ -4,4 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Adminhome"/>
+    tools:context=".Adminhome">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="110dp"
+        android:layout_height="101dp"
+        android:background="@drawable/hostel22"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="320dp"
+        android:padding="20dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

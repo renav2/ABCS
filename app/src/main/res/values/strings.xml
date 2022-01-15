@@ -71,5 +71,13 @@
         <item>FE</item>
     </string-array>
 
+    <string-array name="installment">
+        <item>Select Installment </item>
+        <item>First</item>
+        <item>Second</item>
+
+    </string-array>
+
+
 
 </resources>

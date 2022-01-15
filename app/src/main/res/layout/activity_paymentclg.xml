@@ -7,6 +7,30 @@
     tools:context=".Payment_college_pay_page">
 
     <LinearLayout
+        android:id="@+id/pay_installment"
+        android:layout_width="386dp"
+        android:layout_height="73dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_paynow"
+        app:layout_constraintEnd_toEndOf="@+id/pay_installment1"
+        app:layout_constraintStart_toStartOf="@+id/pay_installment1"
+        app:layout_constraintTop_toBottomOf="@+id/pay_installment1">
+
+        <Spinner
+            android:id="@+id/pay_in"
+            android:layout_width="351dp"
+            android:layout_height="60dp"
+
+            android:layout_weight="1"
+            android:entries="@array/installment"
+            app:layout_constraintBottom_toTopOf="@+id/mno"
+            app:layout_constraintEnd_toEndOf="@+id/et_dob"
+            app:layout_constraintStart_toStartOf="@+id/et_dob"
+            app:layout_constraintTop_toBottomOf="@+id/et_dob" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout8"
         android:layout_width="400dp"
         android:layout_height="50dp"
@@ -103,7 +127,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout7"
+        android:id="@+id/pay_installment1"
         android:layout_width="400dp"
         android:layout_height="50dp"
         android:layout_marginTop="320dp"
@@ -207,7 +231,7 @@
         app:layout_constraintEnd_toEndOf="@+id/txt_paynow"
         app:layout_constraintStart_toStartOf="@+id/txt_paynow"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <EditText
         android:id="@+id/txt_paynow"
@@ -218,11 +242,11 @@
         android:hint="Enter The Amount You Want To Pay Now"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/paynow"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
-        app:layout_constraintHorizontal_bias="0.266"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="@+id/pay_installment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pay_installment"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.833" />
 
     <TextView
         android:id="@+id/textView6"

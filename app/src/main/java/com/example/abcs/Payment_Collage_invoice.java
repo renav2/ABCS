@@ -53,6 +53,7 @@ public class Payment_Collage_invoice extends AppCompatActivity {
     FirebaseAuth  auth;
     String invo_userid;
     FirebaseFirestore fstore;
+TextView remamount;
 
 
     public static final int READ_PHONE = 110;
@@ -63,6 +64,7 @@ public class Payment_Collage_invoice extends AppCompatActivity {
     Button btn;
     TextView section;
     ImageView sign;
+TextView Insta;
 
     TextView invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept;
 
@@ -72,16 +74,19 @@ public class Payment_Collage_invoice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_invoi);
         tv_invoiceno=findViewById(R.id.tv_invoiceno);
-        invoice_send_amount=findViewById(R.id.tv_invoidept);
+        invoice_send_amount=findViewById(R.id.tv_studentalpayamo);
         btn=findViewById(R.id.btn_print);
         sign=findViewById(R.id.idIVQrcode);
         section=findViewById(R.id.tv_section);
         invoi_student_name=findViewById(R.id.tv_StudentName);
         invoice_student_class=findViewById(R.id.tv_Studentclass);
         invoice_student_rollno=findViewById(R.id.tv_StudentID);
-        invoice_send_amount=findViewById(R.id.tv_invoidept);
+        invoice_send_amount=findViewById(R.id.tv_studentalpayamo);
         invoice_student_dept=findViewById(R.id.tv_invoidept11);
       //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
+Insta=findViewById(R.id.tv_installment);
+
+remamount=findViewById(R.id.afterinstallment);
 
         //firbase instance
         auth=FirebaseAuth.getInstance();
@@ -93,6 +98,14 @@ public class Payment_Collage_invoice extends AppCompatActivity {
         section.setVisibility(View.INVISIBLE);
         //pdf related data
         //fetch data
+
+        String instaaaaaaa = getIntent().getStringExtra("installmenttype");
+        Insta.setText(instaaaaaaa);
+
+
+
+
+
         DocumentReference reference = fstore.collection("demo").document(invo_userid);
         reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -112,6 +125,11 @@ public class Payment_Collage_invoice extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
         WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         mDisplay = wm.getDefaultDisplay();
         if(Build.VERSION.SDK_INT >= 23){
@@ -125,11 +143,15 @@ public class Payment_Collage_invoice extends AppCompatActivity {
             }
         }
         //click event
+
+        invoice_no();
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //callling method
-                invoice_no();
+
                 //visibility changes
                 Print_Button_invisible();
 
@@ -138,8 +160,37 @@ public class Payment_Collage_invoice extends AppCompatActivity {
                 String amount=getIntent().getStringExtra("amo");
                  invoice_send_amount.setText(amount);
                  invoice_send_amount.getText().toString();
-                uplod_paymentdata(invo_userid,invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept,tv_invoiceno,invoice_send_amount);
 
+                String txt_forcon = Insta.getText().toString();
+
+                if (txt_forcon.equals("First") ) {
+                    uplod_paymentdata1st(invo_userid, invoi_student_name, invoice_student_class, invoice_student_rollno, invoice_student_dept, tv_invoiceno, invoice_send_amount);
+                }
+                else if(txt_forcon.equals("Second")){
+                   //fechdata from previous payment history
+                    DocumentReference reference = fstore.collection("collagefees_1_installment").document(invo_userid);
+                    reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            //basic profile things
+
+
+                            String pro_name= documentSnapshot.getString("1Student_remain_fees");
+
+
+
+                            //setdata
+                            remamount.setText(pro_name);
+                            int l=Integer.parseInt(remamount.getText().toString());
+
+
+
+                        }
+                    });
+                    uplod_paymentdata2nd(remamount,invo_userid, invoi_student_name, invoice_student_class, invoice_student_rollno, invoice_student_dept, tv_invoiceno, invoice_send_amount);
+
+
+                }
 
 
                 //takking screenshot and making pdf of its
@@ -148,38 +199,37 @@ public class Payment_Collage_invoice extends AppCompatActivity {
         });
     }
 
-    private void uplod_paymentdata(String nvo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno, TextView nvoice_send_amount) {
-
-        String pass=getIntent().getStringExtra("wiseamount");
-        String txt_na=nvoi_student_name.getText().toString();
-        String txt_class=nvoice_student_class.getText().toString();
-        String txt_roll=nvoice_student_rollno.getText().toString();
-        String  txt_dept=nvoice_student_dept.getText().toString();
-        String txt_invoic=tv_nvoiceno.getText().toString();
-        String txt_invamount=nvoice_send_amount.getText().toString();
 
 
-        int to=Integer.parseInt(pass);
-        int pay=Integer.parseInt(txt_invamount);
-        int rem=to-pay;
-        String txt_rem=Integer.toString(rem);
+    private void uplod_paymentdata2nd(TextView remamount,String invo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno, TextView nvoice_send_amount) {
+
+            String txt_r1=remamount.getText().toString();  //fetch 1
+        String curr = getIntent().getStringExtra("wiseamount");
 
 
-        DocumentReference reference=fstore.collection("collage_fees_paymentdata").document(nvo_userid);
-
-
-        Map<String, String> v=new HashMap<>();
-        v.put("Student_roll_no",txt_roll);
-        v.put("Student_name",txt_na);
-        v.put("Student_class",txt_class);
-        v.put("Student_dept",txt_dept);
-        v.put("Student_invoiceno",txt_invoic);
-        v.put("Student_total_fees",pass);
-        v.put("Student_payed_amount",txt_invamount);
-        v.put("Student_remain_fees",txt_rem);
+        String txt_na = nvoi_student_name.getText().toString();
+        String txt_class = nvoice_student_class.getText().toString();
+        String txt_roll = nvoice_student_rollno.getText().toString();
+        String txt_dept = nvoice_student_dept.getText().toString();
+        String txt_invoic = tv_nvoiceno.getText().toString();
+        String txt_invamount = nvoice_send_amount.getText().toString();
 
 
 
+
+
+
+
+        DocumentReference reference = fstore.collection("collagefees_2_installment").document(invo_userid);
+        Map<String, String> v = new HashMap<>();
+        v.put("1Student_roll_no", txt_roll);
+        v.put("1Student_name", txt_na);
+        v.put("1Student_class", txt_class);
+        v.put("1Student_dept", txt_dept);
+        v.put("1Student_invoiceno", txt_invoic);
+       // v.put("1Student_total_fees", pass);
+        v.put("1Student_payed_amount", txt_invamount);
+       // v.put("1Student_remain_fees", txt_rem);
 
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -187,7 +237,63 @@ public class Payment_Collage_invoice extends AppCompatActivity {
                 Toast.makeText(Payment_Collage_invoice.this, "your payment record save", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+
     }
+
+    private void uplod_paymentdata1st(String nvo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno, TextView nvoice_send_amount) {
+
+
+
+        String pass = getIntent().getStringExtra("wiseamount");
+        String txt_na = nvoi_student_name.getText().toString();
+        String txt_class = nvoice_student_class.getText().toString();
+        String txt_roll = nvoice_student_rollno.getText().toString();
+        String txt_dept = nvoice_student_dept.getText().toString();
+        String txt_invoic = tv_nvoiceno.getText().toString();
+        String txt_invamount = nvoice_send_amount.getText().toString();
+
+
+        int to = Integer.parseInt(pass);
+        int pay = Integer.parseInt(txt_invamount);
+        int curr=Integer.parseInt(pass);
+        int rem = to -pay;
+        String txt_rem = Integer.toString(rem);
+
+
+
+
+            DocumentReference reference = fstore.collection("collagefees_1_installment").document(nvo_userid);
+            Map<String, String> v = new HashMap<>();
+            v.put("1Student_roll_no", txt_roll);
+            v.put("1Student_name", txt_na);
+            v.put("1Student_class", txt_class);
+            v.put("1Student_dept", txt_dept);
+            v.put("1Student_invoiceno", txt_invoic);
+            v.put("1Student_total_fees", pass);
+            v.put("1Student_payed_amount", txt_invamount);
+            v.put("1Student_remain_fees", txt_rem);
+
+            reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                    Toast.makeText(Payment_Collage_invoice.this, "your payment record save", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        //seccon installment
+
+        }
+        ///fetch start
+
+
+
+
+
+
+
+
 
 
 

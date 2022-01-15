@@ -38,7 +38,25 @@ studentf=findViewById(R.id.tv_yourfees);
         // pro_userid = getIntent().getStringExtra("user_id_home");
         pro_userid=auth.getCurrentUser().getUid();
         fstore=FirebaseFirestore.getInstance();
-        DocumentReference reference = fstore.collection("collage_fees_paymentdata").document(pro_userid);
+
+//        DocumentReference reference99 = fstore.collection("collage_fees_paymentdata").document(pro_userid);
+//        reference99.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//            @Override
+//            public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                //basic profile things
+//                String pay_yourfees= documentSnapshot.getString("Student_remain_fees");
+//
+//
+//
+//
+//                studentf.setText(pay_yourfees);
+//
+//
+//            }
+//        });
+
+
+        DocumentReference reference = fstore.collection("collage_Remaining_fees_paymentdata").document(pro_userid);
         reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -65,6 +83,9 @@ clgpayjump.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent=new Intent(Payment_home_page.this, Payment_collage_fullfee_or_remainfee.class);
+       String mm= studentf.getText().toString();
+        intent.putExtra("rempasstorempay",mm);
+
         startActivity(intent);
     }
 });

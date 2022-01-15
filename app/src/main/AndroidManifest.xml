@@ -14,12 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".Payment_remain_fees_invoicepage"
-            android:exported="false" />
-        <activity
-            android:name=".Payment_remaining_fees_paypage"
-            android:exported="false" />
-        <activity
             android:name=".Payment_collage_fullfee_or_remainfee"
             android:exported="false" />
         <activity
