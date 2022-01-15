@@ -86,7 +86,7 @@ TextView Insta;
       //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
 Insta=findViewById(R.id.tv_installment);
 
-remamount=findViewById(R.id.afterinstallment);
+
 
         //firbase instance
         auth=FirebaseAuth.getInstance();
@@ -180,14 +180,14 @@ remamount=findViewById(R.id.afterinstallment);
 
 
                             //setdata
-                            remamount.setText(pro_name);
-                            int l=Integer.parseInt(remamount.getText().toString());
+//                            remamount.setText(pro_name);
+//                            int l=Integer.parseInt(remamount.getText().toString());
 
 
 
                         }
                     });
-                    uplod_paymentdata2nd(remamount,invo_userid, invoi_student_name, invoice_student_class, invoice_student_rollno, invoice_student_dept, tv_invoiceno, invoice_send_amount);
+                    uplod_paymentdata2nd(invo_userid, invoi_student_name, invoice_student_class, invoice_student_rollno, invoice_student_dept, tv_invoiceno, invoice_send_amount);
 
 
                 }
@@ -201,9 +201,9 @@ remamount=findViewById(R.id.afterinstallment);
 
 
 
-    private void uplod_paymentdata2nd(TextView remamount,String invo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno, TextView nvoice_send_amount) {
+    private void uplod_paymentdata2nd(String invo_userid, TextView nvoi_student_name, TextView nvoice_student_class, TextView nvoice_student_rollno, TextView nvoice_student_dept, TextView tv_nvoiceno, TextView nvoice_send_amount) {
 
-            String txt_r1=remamount.getText().toString();  //fetch 1
+
         String curr = getIntent().getStringExtra("wiseamount");
 
 
@@ -299,12 +299,12 @@ remamount=findViewById(R.id.afterinstallment);
 
     private void Print_Button_invisible() {
         btn.setVisibility(View.INVISIBLE);
-
+        sign.setVisibility(View.VISIBLE);
+        section.setVisibility(View.VISIBLE);
     }
 
     private void invoice_no() {
-        sign.setVisibility(View.VISIBLE);
-        section.setVisibility(View.VISIBLE);
+
         Random random=new Random();
         int val=random.nextInt(1000000000);
         int val2=random.nextInt(1000000000);

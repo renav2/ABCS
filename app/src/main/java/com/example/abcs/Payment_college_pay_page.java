@@ -33,7 +33,7 @@ String inp;
         FirebaseAuth auth;
         String pro_userid;
 Spinner pay_instllmen;
-
+    String txt_secondinstallmentm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,22 +52,26 @@ Spinner pay_instllmen;
 
         pay_instllmen=findViewById(R.id.pay_in);
 
-
-
-
         auth=FirebaseAuth.getInstance();
 
 
        // pro_userid = getIntent().getStringExtra("user_id_home");
          pro_userid=auth.getCurrentUser().getUid();
          fstore=FirebaseFirestore.getInstance();
+        String txt_installment=pay_instllmen.getSelectedItem().toString();
+
+
+
+
+
+
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String samount=amount.getText().toString();
                 int amount = Math.round(Float.parseFloat(samount) * 100);
 
-               String txt_installment=pay_instllmen.getSelectedItem().toString();
+
 
                 String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
 //               // Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);

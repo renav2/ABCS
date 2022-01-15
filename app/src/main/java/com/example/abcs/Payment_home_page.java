@@ -2,6 +2,7 @@ package com.example.abcs;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -39,38 +40,35 @@ studentf=findViewById(R.id.tv_yourfees);
         pro_userid=auth.getCurrentUser().getUid();
         fstore=FirebaseFirestore.getInstance();
 
-//        DocumentReference reference99 = fstore.collection("collage_fees_paymentdata").document(pro_userid);
-//        reference99.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-//            @Override
-//            public void onSuccess(DocumentSnapshot documentSnapshot) {
-//                //basic profile things
-//                String pay_yourfees= documentSnapshot.getString("Student_remain_fees");
-//
-//
-//
-//
-//                studentf.setText(pay_yourfees);
-//
-//
-//            }
-//        });
 
-
-        DocumentReference reference = fstore.collection("collage_Remaining_fees_paymentdata").document(pro_userid);
-        reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                //basic profile things
-                String pay_yourfees= documentSnapshot.getString("Student_remain_fees");
+            public void run() {
+
+                DocumentReference reference = fstore.collection("collagefees_1_installment").document(pro_userid);
+                reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        //basic profile things
+                        String pay_yourfees= documentSnapshot.getString("1Student_remain_fees");
 
 
 
 
-                studentf.setText(pay_yourfees);
+                        studentf.setText(pay_yourfees+" ₹");
+
+
+                    }
+                });
+
 
 
             }
-        });
+        }, 1000);
+
+
+
+
 
 
 
