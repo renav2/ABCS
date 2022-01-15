@@ -10,5 +10,7 @@ public class Payment_hostel_fees_invoice extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_hostel_fees_invoice);
+
+
     }
 }

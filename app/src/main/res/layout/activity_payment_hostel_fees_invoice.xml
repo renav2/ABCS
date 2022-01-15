@@ -1,9 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ticket3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Payment_hostel_fees_invoice">
+    android:background="#ECECEC"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/invoicebg"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INVOICE NO :  "
+                android:textAlignment="gravity"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_invoiceno3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Your Invoice No"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Name:         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_StudentName3"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student class :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="12dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_Studentclass3"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:hint="Student class"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:text="Student Roll NO :        "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_StudentID3"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:hint="Your ID NO"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Student department:         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_invoidept113"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:hint="dept"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_studentalpayamo3"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:hint="Amount Paid"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        //coppy
+
+        //coppy
+
+
+        <LinearLayout
+            android:layout_width="351dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_print3"
+            android:layout_width="341dp"
+            android:layout_height="59dp"
+            android:padding="2dp"
+            android:text="Print invoice " />
+
+        <ImageView
+            android:id="@+id/idIVQrcode3"
+            android:layout_width="103dp"
+            android:layout_height="77dp"
+            android:background="@drawable/invoicesignature"
+            android:paddingLeft="150dp" />
+
+        <TextView
+            android:id="@+id/tv_section3"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:text="Collage Account Section"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>
