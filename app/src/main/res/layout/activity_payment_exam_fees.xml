@@ -4,27 +4,229 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment_exam_fees">
+    tools:context=".payment_exam_fees"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="105dp">
 
     <Button
         android:id="@+id/btn_examfees"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_width="228dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="131dp"
         android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_examamount" />
 
     <EditText
         android:id="@+id/txt_examamount"
-        android:layout_width="261dp"
-        android:layout_height="48dp"
+        android:layout_width="336dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="29dp"
         android:ems="10"
+        android:hint="Enter the amount"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_examfees"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="391dp"
+        android:layout_height="367dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/txt_examamount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="name"
+                android:textStyle="bold"
+                android:padding="8dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_examname"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="294dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="class"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_exam_class"
+
+                    android:layout_width="100dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="154dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="branch"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_exam_branch"
+
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:padding="8dp"
+                            android:text="rollno"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_exam_rollno"
+
+                            android:layout_width="100dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="fee status"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_exam_feestatus"
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_exam_prn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter your  PRN NO"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_exam_formno"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Enter Exam  form no"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="390dp"
+        android:layout_height="58dp"
+        android:text="Exam section"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

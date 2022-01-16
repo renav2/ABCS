@@ -62,7 +62,7 @@ hospen=findViewById(R.id.tv_hostelpending);
                         //basic profile things
                         String pay_yourfees1 = documentSnapshot.getString("1Student_remain_fees");
                         studentf.setText(pay_yourfees1 + "₹");
-                        if(studentf.getText().toString().equals("0₹")||studentf.getText().toString().equals("null₹")){
+                        if(studentf.getText().toString().equals("0₹")){
                            // studentf.setVisibility(View.INVISIBLE);
                           //  txt_clgpen.setVisibility(View.INVISIBLE);
                             Toast.makeText(Payment_home_page.this, "rrrrrrrrrrr", Toast.LENGTH_SHORT).show();

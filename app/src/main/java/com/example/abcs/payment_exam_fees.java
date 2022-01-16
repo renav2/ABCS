@@ -33,6 +33,12 @@ private EditText txt_examamount;
                 String eamount=txt_examamount.getText().toString();
                 int amount = Math.round(Float.parseFloat(eamount) * 100);
                 makepay(amount);
+
+
+
+
+
+
             }
         });
 
