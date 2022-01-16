@@ -45,7 +45,7 @@ public class Payment_Collage_invoice extends AppCompatActivity {
     String imagesUri;
     String path;
     Bitmap bitmap;
-
+TextView flag;
     int totalHeight;
     int totalWidth;
 
@@ -74,7 +74,12 @@ TextView Insta;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_invoi);
         tv_invoiceno=findViewById(R.id.tv_invoiceno);
+
+        flag=findViewById(R.id.textView10);
+
         invoice_send_amount=findViewById(R.id.tv_studentalpayamo);
+
+
         btn=findViewById(R.id.btn_print);
         sign=findViewById(R.id.idIVQrcode);
         section=findViewById(R.id.tv_section);
@@ -161,6 +166,10 @@ Insta=findViewById(R.id.tv_installment);
                  invoice_send_amount.setText(amount);
                  invoice_send_amount.getText().toString();
 
+
+
+
+
                 String txt_forcon = Insta.getText().toString();
 
                 if (txt_forcon.equals("First") ) {
@@ -176,6 +185,11 @@ Insta=findViewById(R.id.tv_installment);
 
 
                             String pro_name= documentSnapshot.getString("1Student_remain_fees");
+
+
+
+
+
 
 
 
@@ -216,9 +230,7 @@ Insta=findViewById(R.id.tv_installment);
 
 
 
-
-
-
+String txt_rem="0";
 
         DocumentReference reference = fstore.collection("collagefees_2_installment").document(invo_userid);
         Map<String, String> v = new HashMap<>();
@@ -229,7 +241,7 @@ Insta=findViewById(R.id.tv_installment);
         v.put("1Student_invoiceno", txt_invoic);
        // v.put("1Student_total_fees", pass);
         v.put("1Student_payed_amount", txt_invamount);
-       // v.put("1Student_remain_fees", txt_rem);
+        v.put("1Student_remain_fees", txt_rem);
 
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

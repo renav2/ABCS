@@ -1,6 +1,7 @@
 package com.example.abcs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,11 +34,12 @@ private EditText hos_a;
                 String samount=hos_a.getText().toString();
                 int amount = Math.round(Float.parseFloat(samount) * 100);
                 
-                if(samount.equals("11000")) {
+                if(samount.equals("5000") ||samount.equals("6000") || samount.equals("11000")) {
                     makepay(amount);
                 }
                 else{
-                    Toast.makeText(Payment_hostel.this, "You need to pay full Hostel fees", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Payment_hostel.this, "You need to pay full Hostel fees" +
+                            " or 1st installment 5000 and second installment 6000", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -96,7 +98,20 @@ private EditText hos_a;
 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
+        Intent intent =new Intent(Payment_hostel.this, Payment_hostel_fees_invoice.class);
+        String samount3=hos_a.getText().toString();
+        int amount3 = Math.round(Float.parseFloat(samount3) * 100);
 
+
+
+
+        // Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
+
+        intent.putExtra("orignalamount3",amount3);
+        intent.putExtra("amo3",samount3);
+
+
+        startActivity(intent);
     }
 
     @Override

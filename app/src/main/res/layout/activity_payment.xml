@@ -15,7 +15,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="@+id/tv_hostelpending"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
@@ -61,13 +61,13 @@
 
         android:textSize="18dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
-        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_hostelpending"
+        app:layout_constraintEnd_toStartOf="@+id/tv_hostelpending"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tv_hostelpending"
         android:layout_width="100dp"
         android:layout_height="38dp"
         android:layout_marginTop="12dp"
@@ -111,7 +111,7 @@
         android:text=" All "
         android:textAlignment="center"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hostelpending"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toEndOf="@+id/textView14"

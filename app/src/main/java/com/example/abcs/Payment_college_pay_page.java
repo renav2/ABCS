@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,14 +27,16 @@ import org.json.JSONObject;
 public class Payment_college_pay_page extends AppCompatActivity implements PaymentResultWithDataListener {
 int  total,fin;
 String inp;
+
     private Button pay;
-     EditText amount;
-     TextView unifee,medicfee,deptfee,tituionfee,totlef;
+        EditText amount;
+        TextView unifee,medicfee,deptfee,tituionfee,totlef;
+        TextView c_flag;
         FirebaseFirestore fstore;
         FirebaseAuth auth;
         String pro_userid;
-Spinner pay_instllmen;
-    String txt_secondinstallmentm;
+        Spinner pay_instllmen;
+        String txt_secondinstallmentm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,46 +51,45 @@ Spinner pay_instllmen;
         deptfee=findViewById(R.id.tv_deppartmentfees);
         tituionfee=findViewById(R.id.tv_totalfees);
         totlef=findViewById(R.id.tv_totalfees1);
-
-
+        c_flag=findViewById(R.id.textView11);
         pay_instllmen=findViewById(R.id.pay_in);
-
         auth=FirebaseAuth.getInstance();
-
-
        // pro_userid = getIntent().getStringExtra("user_id_home");
          pro_userid=auth.getCurrentUser().getUid();
          fstore=FirebaseFirestore.getInstance();
-        String txt_installment=pay_instllmen.getSelectedItem().toString();
-
-
-
-
-
-
+         c_flag.setVisibility(View.INVISIBLE);
+        DocumentReference reference1 = fstore.collection("collagefees_1_installment").document(pro_userid);
+        reference1.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                //basic profile things
+                String pro_name= documentSnapshot.getString("1Student_remain_fees");
+                c_flag.setText(pro_name);
+            }
+        });
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String txt_installment=pay_instllmen.getSelectedItem().toString();
                 String samount=amount.getText().toString();
                 int amount = Math.round(Float.parseFloat(samount) * 100);
 
 
+                    if(txt_installment.equals("First")) {
+                    String cc = totlef.getText().toString().replaceAll("[^0-9]", "");
+                    makepay(amount);
+                }else if(txt_installment.equals("Second")){
+                    String txt_flag=c_flag.getText().toString();
+                if(samount.equals(txt_flag.toString())){
+                    makepay(amount);
+                }else{
+                    Toast.makeText(Payment_college_pay_page.this, "you need to pay all remain fees", Toast.LENGTH_SHORT).show();
+                }
 
-                String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
-//               // Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
-//                intent.putExtra("wiseamount",cc);
-//                intent.putExtra("orignalamount",amount);
-//                intent.putExtra("amo",samount);
-//                intent.putExtra("installmenttype",txt_installment);
-//
-//                startActivity(intent);
 
-
-                makepay(amount);
-
+}
             }
         });
-
 
          DocumentReference reference = fstore.collection("demo").document(pro_userid);
         reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -100,12 +102,8 @@ Spinner pay_instllmen;
                 String pro_categary=documentSnapshot.getString("Category");
                 String pro_class=documentSnapshot.getString("Class");
 
-
-
-
 //comp BE & capround
                 if(pro_dept.equals("Comp") && pro_class.equals("BE") && pro_categary.equals("Open") && pro_admisontype.equals("Capround") ){
-
                     unifee.setText("800");
                     medicfee.setText("200");
                     deptfee.setText("3000");
