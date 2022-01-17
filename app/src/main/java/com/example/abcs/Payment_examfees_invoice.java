@@ -21,7 +21,7 @@ public class Payment_examfees_invoice extends AppCompatActivity {
         roll=findViewById(R.id.tv_exam_rollno204);
 prn=findViewById(R.id.tv_examprn206);
 forno=findViewById(R.id.tv_examform_207);
-amo
+
 
         //int
         String ex1_amountpass = getIntent().getStringExtra("examamountint");
