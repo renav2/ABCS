@@ -274,7 +274,21 @@ String txt_rem="0";
         String txt_rem = Integer.toString(rem);
 
 
+        int fag=to/2;
+       String txtfag="";
+        if(fag==curr ){
+            String ele="Eligible";
+            txtfag=ele;
+        }
+        else if(fag<curr ){
+            String ele3="Eligible";
+            txtfag=ele3;
+        }
+        else {
+            String ele2="NOT Eligible";
+            txtfag=ele2;
 
+        }
 
             DocumentReference reference = fstore.collection("collagefees_1_installment").document(nvo_userid);
             Map<String, String> v = new HashMap<>();
@@ -286,6 +300,7 @@ String txt_rem="0";
             v.put("1Student_total_fees", pass);
             v.put("1Student_payed_amount", txt_invamount);
             v.put("1Student_remain_fees", txt_rem);
+            v.put("fag",txtfag.toString());
 
             reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
