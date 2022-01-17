@@ -36,7 +36,7 @@ amo=findViewById(R.id.textView42);
         String ex1_prn = getIntent().getStringExtra("examprn");
         String ex1_formno = getIntent().getStringExtra("exform");
 
-
+//adsadasdasjdkasdhkaslhdjashkldh
 //basic set
 
 
