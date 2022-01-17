@@ -275,15 +275,16 @@ String txt_rem="0";
 
 
         int fag=to/2;
+        int fag1=fag-1;
        String txtfag="";
-        if(fag==curr ){
+        if(fag1>curr  ){
             String ele="Eligible";
             txtfag=ele;
         }
-        else if(fag<curr ){
-            String ele3="Eligible";
-            txtfag=ele3;
-        }
+//        else if(fag<curr ){
+//            String ele3="2Eligible";
+//            txtfag=ele3;
+//        }
         else {
             String ele2="NOT Eligible";
             txtfag=ele2;

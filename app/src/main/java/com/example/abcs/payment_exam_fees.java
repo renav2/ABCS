@@ -1,12 +1,14 @@
 package com.example.abcs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -60,6 +62,8 @@ private EditText txt_examamount;
                 String pro_rollno=documentSnapshot.getString("Rollno");
                 String pro_dept=documentSnapshot.getString("Branch");
                 String pro_class=documentSnapshot.getString("Class");
+                String pro_phone=documentSnapshot.getString("mobile no");
+
                 //setdata
                 ex_name.setText(pro_name);
                 ex_rollno.setText(pro_rollno);
@@ -88,7 +92,14 @@ private EditText txt_examamount;
             public void onClick(View v) {
                 String eamount=txt_examamount.getText().toString();
                 int amount = Math.round(Float.parseFloat(eamount) * 100);
-                makepay(amount);
+
+                if(ex_status.getText().toString().equals("NOT Eligible")){
+                    Toast.makeText(payment_exam_fees.this, "You need to pay at least half college fee  ", Toast.LENGTH_LONG).show();
+            }else{
+                    makepay(amount);
+                }
+
+
             }
         });
 
@@ -144,7 +155,21 @@ private EditText txt_examamount;
 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
+        String samount=txt_examamount.getText().toString();
+        int amount = Math.round(Float.parseFloat(samount) * 100);
+String tx_pr=ex_prn.getText().toString();
+String tx_forno=ex_form.getText().toString();
 
+
+       // String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
+        Intent intent=new Intent(payment_exam_fees.this, Payment_examfees_invoice.class);
+
+        intent.putExtra("examamountint",amount);
+        intent.putExtra("examamount",samount);
+        intent.putExtra("examprn",tx_pr);
+        intent.putExtra("exform",tx_forno);
+
+        startActivity(intent);
     }
 
     @Override
