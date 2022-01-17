@@ -21,18 +21,28 @@ public class Payment_examfees_invoice extends AppCompatActivity {
         roll=findViewById(R.id.tv_exam_rollno204);
 prn=findViewById(R.id.tv_examprn206);
 forno=findViewById(R.id.tv_examform_207);
+amo=findViewById(R.id.textView42);
+
+
+
+
 
 
         //int
-        String ex1_amountpass = getIntent().getStringExtra("examamountint");
 
+
+        String ex1_amountpass = getIntent().getStringExtra("examamountint");
         String ex1_string_amountpass = getIntent().getStringExtra("examamount");
         String ex1_prn = getIntent().getStringExtra("examprn");
         String ex1_formno = getIntent().getStringExtra("exform");
 
 
+//basic set
 
 
+        amo.setText(ex1_string_amountpass);
+        forno.setText(ex1_formno);
+        prn.setText(ex1_prn);
 
 
 

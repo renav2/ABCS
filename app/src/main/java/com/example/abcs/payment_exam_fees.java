@@ -157,12 +157,22 @@ private EditText txt_examamount;
     public void onPaymentSuccess(String s, PaymentData paymentData) {
         String samount=txt_examamount.getText().toString();
         int amount = Math.round(Float.parseFloat(samount) * 100);
-String tx_pr=ex_prn.getText().toString();
-String tx_forno=ex_form.getText().toString();
+        String tx_pr=ex_prn.getText().toString();
+        String tx_forno=ex_form.getText().toString();
+        String tx_name= ex_name.getText().toString();
+        String tx_class= ex_class.getText().toString();
+        String tx_btran=ex_branch.getText().toString();
+       String  tx_roll =ex_rollno.getText().toString();
+
 
 
        // String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
         Intent intent=new Intent(payment_exam_fees.this, Payment_examfees_invoice.class);
+        intent.putExtra("examname",tx_name);
+        intent.putExtra("examclass",tx_class);
+        intent.putExtra("exambranch",tx_btran);
+        intent.putExtra("examrollno",tx_roll);
+
 
         intent.putExtra("examamountint",amount);
         intent.putExtra("examamount",samount);
