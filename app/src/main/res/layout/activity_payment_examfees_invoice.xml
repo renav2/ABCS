@@ -14,48 +14,31 @@
         android:layout_height="wrap_content"
         android:background="@drawable/invoicebg"
         android:orientation="vertical"
-        android:padding="3dp">
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="391dp"
-        android:layout_height="367dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="32dp"
-        android:orientation="vertical"
+        >
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
+            android:id="@+id/linearLayout7"
+            android:layout_width="393dp"
+            android:layout_height="581dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView36"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:padding="8dp"
-                android:text="Name"
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Exam section "
+                android:textSize="30dp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_examname201"
-                android:layout_width="100dp"
-                android:layout_height="45dp"
-                android:layout_weight="1"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="264dp"
-            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,26 +46,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView41"
+                    android:id="@+id/textView36"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:padding="8dp"
-                    android:text="Class"
+                    android:text="Name"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_exam_class202"
-
-                    android:layout_width="100dp"
-                    android:layout_height="45dp"
+                    android:id="@+id/tv_examname201"
+                    android:layout_width="103dp"
+                    android:layout_height="40dp"
                     android:layout_weight="1"
                     android:text="TextView" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="103dp"
+                android:layout_height="264dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -91,16 +73,16 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView43"
+                        android:id="@+id/textView41"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
                         android:padding="8dp"
-                        android:text="Branch"
+                        android:text="Class"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tv_exam_branch203"
+                        android:id="@+id/tv_exam_class202"
 
                         android:layout_width="100dp"
                         android:layout_height="45dp"
@@ -110,7 +92,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="51dp"
+                    android:layout_height="103dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -119,22 +101,57 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView45"
+                            android:id="@+id/textView43"
                             android:layout_width="100dp"
                             android:layout_height="50dp"
                             android:layout_weight="1"
                             android:padding="8dp"
-                            android:text="Rollno"
+                            android:text="Branch"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/tv_exam_rollno204"
+                            android:id="@+id/tv_exam_branch203"
 
                             android:layout_width="100dp"
-                            android:layout_height="50dp"
+                            android:layout_height="45dp"
                             android:layout_weight="1"
                             android:text="TextView" />
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView45"
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:padding="8dp"
+                                android:text="Rollno"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_exam_rollno204"
+
+                                android:layout_width="100dp"
+                                android:layout_height="50dp"
+                                android:layout_weight="1"
+                                android:text="TextView" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -142,116 +159,111 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="8dp"
+                            android:text="PRN number "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_examprn206"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="58dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="8dp"
+                                android:text="Exam form number "
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_examform_207"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="TextView" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="112dp"
+                android:layout_height="131dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="53dp"
+                    android:layout_height="59dp"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="100dp"
+                        android:id="@+id/textView40"
+                        android:layout_width="61dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="8dp"
-                        android:text="PRN number "
-                        android:textStyle="bold"/>
+                        android:text="Exam fees paid"
+                        android:textStyle="bold"
+
+                        />
 
                     <TextView
-                        android:id="@+id/tv_examprn206"
-                        android:layout_width="100dp"
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_weight="1"
                         android:text="TextView" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_examfees2"
+                    android:layout_width="228dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="82dp"
+                    android:layout_marginEnd="83dp"
+                    android:layout_marginBottom="131dp"
+                    android:text="Button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+                    app:layout_constraintVertical_bias="0.0" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textView22"
-                            android:layout_width="58dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:padding="8dp"
-                            android:textStyle="bold"
-                            android:text="Exam form number " />
-
-                        <TextView
-                            android:id="@+id/tv_examform_207"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="TextView" />
-                    </LinearLayout>
-                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView40"
-                    android:layout_width="61dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:textStyle="bold"
-                    android:text="Exam fees paid"
-
-                    />
-
-                <TextView
-                    android:id="@+id/textView42"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="TextView" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_examfees2"
-        android:layout_width="228dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginEnd="83dp"
-        android:layout_marginBottom="131dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
-        app:layout_constraintVertical_bias="0.0" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
