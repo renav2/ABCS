@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ticket4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Payment_examfees_invoice">
+    android:background="#ECECEC"
+    tools:context=".MainActivity">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/invoicebg"
+        android:orientation="vertical"
+        android:padding="3dp">
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="391dp"
@@ -15,7 +24,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="32dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/txt_examamount"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +41,7 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:padding="8dp"
-                android:text="name"
+                android:text="Name"
                 android:textStyle="bold" />
 
             <TextView
@@ -59,7 +68,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:padding="8dp"
-                    android:text="class"
+                    android:text="Class"
                     android:textStyle="bold" />
 
                 <TextView
@@ -87,7 +96,7 @@
                         android:layout_height="50dp"
                         android:layout_weight="1"
                         android:padding="8dp"
-                        android:text="branch"
+                        android:text="Branch"
                         android:textStyle="bold" />
 
                     <TextView
@@ -115,7 +124,7 @@
                             android:layout_height="50dp"
                             android:layout_weight="1"
                             android:padding="8dp"
-                            android:text="rollno"
+                            android:text="Rollno"
                             android:textStyle="bold" />
 
                         <TextView
@@ -153,10 +162,11 @@
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="100dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="8dp"
-                        android:text="PRN number " />
+                        android:text="PRN number "
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/tv_examprn206"
@@ -179,9 +189,10 @@
                         <TextView
                             android:id="@+id/textView22"
                             android:layout_width="58dp"
-                            android:layout_height="50dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:padding="8dp"
+                            android:textStyle="bold"
                             android:text="Exam form number " />
 
                         <TextView
@@ -208,9 +219,11 @@
 
                 <TextView
                     android:id="@+id/textView40"
-                    android:layout_width="wrap_content"
+                    android:layout_width="61dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:padding="8dp"
+                    android:textStyle="bold"
                     android:text="Exam fees paid"
 
                     />
@@ -235,21 +248,10 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="390dp"
-        android:layout_height="58dp"
-        android:padding="10dp"
-        android:text="Exam section"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
