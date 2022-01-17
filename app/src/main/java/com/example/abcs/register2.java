@@ -47,14 +47,14 @@ public class register2 extends AppCompatActivity {
     private Spinner cgender, adtype, cname, cat, year, acd, br;
     DatePickerDialog picker;
     EditText eText;
-    DatabaseReference reference;
+   // DatabaseReference reference;
 
     // modification
-    FirebaseDatabase firebaseDatabase;
+  //  FirebaseDatabase firebaseDatabase;
 
     // creating a variable for our Database
     // Reference for Firebase.
-    DatabaseReference databaseReference;
+    //DatabaseReference databaseReference;
 
     // creating a variable for
     // our object class
