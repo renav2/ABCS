@@ -10,15 +10,10 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.4" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.25" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_examfees_invoice.xml" value="0.2222222222222222" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_hostel.xml" value="0.264" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_hostel_fees_invoice.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_hostel.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_invoi.xml" value="0.264" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_invoice.xml" value="0.25" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_remain_fees_invoicepage.xml" value="0.4838709677419355" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_remaining_fees_paypage.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_paymentclg.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_profile_test.xml" value="0.264" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_register.xml" value="0.25" />
@@ -28,6 +23,12 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/payment_invoice.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/xml/provider_path.xml" value="0.25" />
         <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.19814814814814816" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment_hostel.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment_invoi.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_paymentclg.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_profile_test.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
       </map>
