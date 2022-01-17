@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".PreviousApplication"
+            android:exported="false" />
+        <activity
+            android:name=".CreateApplication"
+            android:exported="false" />
+        <activity
             android:name=".p12"
             android:exported="false" />
         <activity
