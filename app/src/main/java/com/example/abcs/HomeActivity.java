@@ -12,8 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile
-        ;
+private Button  paymentpage, profile, permission;
 //TextView useremailid;
 
 TextView r;
@@ -25,7 +24,7 @@ TextView r;
         setContentView(R.layout.activity_home);
         paymentpage=findViewById(R.id.btn_payment);
         profile=findViewById(R.id.profile);
-
+        permission=findViewById(R.id.peract);
 
         //currunt user id store in r  & for sring purpose
         r=findViewById(R.id.tp);
@@ -51,6 +50,14 @@ String User_ID=r.getText().toString();
                 Intent intent=new Intent(HomeActivity.this,profile_test.class);
               //  intent.putExtra("pro_email",pass);
                 intent.putExtra("user_id_home",User_ID);
+                startActivity(intent);
+            }
+        });
+
+        permission.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(HomeActivity.this, PermissionHome.class);
                 startActivity(intent);
             }
         });
