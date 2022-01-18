@@ -19,9 +19,7 @@
         <activity
             android:name=".CreateApplication"
             android:exported="false" />
-        <activity
-            android:name=".p12"
-            android:exported="false" />
+
         <activity
             android:name=".PermissionHome"
             android:exported="false" />
@@ -42,6 +40,15 @@
             android:exported="false" />
         <activity
             android:name=".Adminhome"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPermissionHome"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_View_Application"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Application_History"
             android:exported="false" />
         <activity
             android:name=".Payment_Collage_invoice"
