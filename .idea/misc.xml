@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ABCS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20185185185185187" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_permision_section.xml" value="0.20972222222222223" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_adminhome.xml" value="0.2359375" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_collage_fees_payment.xml" value="0.25416666666666665" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_db_test.xml" value="0.25" />
@@ -17,6 +18,7 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_invoi.xml" value="0.264" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_invoice.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_paymentclg.xml" value="0.25" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_permission_home.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_profile_test.xml" value="0.264" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_register2.xml" value="0.264" />
