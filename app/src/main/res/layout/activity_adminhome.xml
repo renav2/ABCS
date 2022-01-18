@@ -8,11 +8,25 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="110dp"
+        android:layout_width="0dp"
         android:layout_height="101dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="182dp"
         android:background="@drawable/hostel22"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="320dp"
         android:padding="20dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/adminper"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/adminper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="48dp"
+        android:text="Permission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
