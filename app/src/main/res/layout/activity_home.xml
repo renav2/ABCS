@@ -95,15 +95,15 @@
         android:id="@+id/textView3"
         android:layout_width="92dp"
         android:layout_height="23dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
         android:text="student"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/peract"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.081" />
 
     <TextView
         android:id="@+id/textView5"
@@ -123,16 +123,13 @@
     <TextView
         android:id="@+id/tp"
         android:layout_width="271dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="261dp"
-        android:layout_marginBottom="246dp"
+        android:layout_height="52dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/peract"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/profile"
@@ -154,13 +151,14 @@
         android:id="@+id/peract"
         android:layout_width="114dp"
         android:layout_height="65dp"
+        android:layout_marginTop="76dp"
         android:text="Permission"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
