@@ -8,24 +8,26 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="76dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="182dp"
+        android:layout_width="110dp"
+        android:layout_height="101dp"
         android:background="@drawable/hostel22"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/adminper"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/adminper"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="99dp"
-        android:text="Permission"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        android:layout_marginTop="128dp"
+        android:text="payment"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
