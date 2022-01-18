@@ -21,7 +21,7 @@ Button apermission;
             }
 
             private void openPermissiionActivity() {
-                Intent intent= new Intent(Adminhome.this , AdminPermissionHome.class);
+                Intent intent = new Intent(Adminhome.this, AdminPermissionHome.class);
                 startActivity(intent);
             }
         });
