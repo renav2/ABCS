@@ -17,6 +17,9 @@
             android:name=".Admin_payment_alldata"
             android:exported="false" />
         <activity
+            android:name=".Permission_View_Application"
+            android:exported="false" />
+        <activity
             android:name=".PreviousApplication"
             android:exported="false" />
         <activity

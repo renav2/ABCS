@@ -76,7 +76,6 @@ TextView Insta;
         tv_invoiceno=findViewById(R.id.tv_invoiceno);
 
         flag=findViewById(R.id.textView10);
-
         invoice_send_amount=findViewById(R.id.tv_studentalpayamo);
 
 
