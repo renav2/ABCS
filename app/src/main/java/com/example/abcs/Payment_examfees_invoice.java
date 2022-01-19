@@ -112,7 +112,7 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                 String txt_invamount = amo.getText().toString();
                 String txtprn=prn.getText().toString();
                 String txt_formno=forno.getText().toString();
-
+                String ex1_back=getIntent().getStringExtra("examback");
 
 
                 int to = 11000;
@@ -142,10 +142,13 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                 v.put("1Student_class", txt_class);
                 v.put("1Student_dept", txt_dept);
                 v.put("1Student_invoiceno", txt_invoic);
+                v.put("1Student_back_formno", ex1_back);
                 v.put("1Student_prnno",txtprn);
                 v.put("1Student_formno",txt_formno);
                 v.put("1Student_payed_amount", txt_invamount);
                 v.put("1Student_remain_fees", txt_rem);
+
+
 
                 reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
