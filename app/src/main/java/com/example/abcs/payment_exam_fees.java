@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,8 @@ private Button btn_exampay;
 private EditText txt_examamount;
     TextView ex_name,ex_class,ex_branch,ex_rollno,ex_status;
     EditText ex_prn,ex_form;
+Switch sw;
+EditText back;
 
     FirebaseAuth auth;
     String invo_userid;
@@ -38,6 +42,9 @@ private EditText txt_examamount;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_exam_fees);
+
+        sw=findViewById(R.id.switch1);
+        back=findViewById(R.id.et_backall);
 
         btn_exampay=findViewById(R.id.btn_examfees);
         txt_examamount=findViewById(R.id.txt_examamount);
@@ -51,6 +58,22 @@ private EditText txt_examamount;
         auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         invo_userid=auth.getCurrentUser().getUid();
+
+        back.setVisibility(View.INVISIBLE);
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                   back.setVisibility(View.VISIBLE);
+                   back.getText().toString();
+
+                } else {
+                    back.setVisibility(View.INVISIBLE);
+
+
+                }
+            }
+        });
+
 
 
         DocumentReference reference = fstore.collection("demo").document(invo_userid);
@@ -163,7 +186,7 @@ private EditText txt_examamount;
         String tx_class= ex_class.getText().toString();
         String tx_btran=ex_branch.getText().toString();
        String  tx_roll =ex_rollno.getText().toString();
-
+String tx_back=back.getText().toString();
 
 
        // String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
@@ -173,7 +196,7 @@ private EditText txt_examamount;
         intent.putExtra("exambranch",tx_btran);
         intent.putExtra("examrollno",tx_roll);
 
-
+        intent.putExtra("examback",tx_back);
         intent.putExtra("examamountint",amount);
         intent.putExtra("examamount",samount);
         intent.putExtra("examprn",tx_pr);

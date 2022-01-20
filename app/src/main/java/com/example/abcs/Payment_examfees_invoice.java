@@ -20,6 +20,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,7 +44,8 @@ public class Payment_examfees_invoice extends AppCompatActivity {
     String imagesUri;
     String path;
     Bitmap bitmap;
-
+    TextView section;
+    ImageView sign;
     int totalHeight;
     int totalWidth;
     String file_name = "collage payment section";
@@ -72,8 +74,12 @@ public class Payment_examfees_invoice extends AppCompatActivity {
         invo_userid=auth.getCurrentUser().getUid();
         invoicn=findViewById(R.id.textView46);
         btn=findViewById(R.id.btn_examfees2);
+        sign=findViewById(R.id.idIVQrcode222);
+        section=findViewById(R.id.tv_section222);
 
-
+        sign.setVisibility(View.INVISIBLE);
+        section.setVisibility(View.INVISIBLE);
+        
         String ex1_amountpass = getIntent().getStringExtra("examamountint");
         String ex1_string_amountpass = getIntent().getStringExtra("examamount");
         String ex1_prn = getIntent().getStringExtra("examprn");
@@ -104,6 +110,9 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                 String txt_dept = bran.getText().toString();
                String txt_invoic = invoicn.getText().toString();
                 String txt_invamount = amo.getText().toString();
+                String txtprn=prn.getText().toString();
+                String txt_formno=forno.getText().toString();
+                String ex1_back=getIntent().getStringExtra("examback");
 
 
                 int to = 11000;
@@ -126,21 +135,25 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                 }
 
 
-                DocumentReference reference = fstore.collection("Hostel_fees_data").document(invo_userid);
+                DocumentReference reference = fstore.collection("Exam_fees_data").document(invo_userid);
                 Map<String, String> v = new HashMap<>();
                 v.put("1Student_roll_no", txt_roll);
                 v.put("1Student_name", txt_na);
                 v.put("1Student_class", txt_class);
                 v.put("1Student_dept", txt_dept);
-               // v.put("1Student_invoiceno", txt_invoic);
-                //v.put("1Student_total_fees", pass);
+                v.put("1Student_invoiceno", txt_invoic);
+                v.put("1Student_back_formno", ex1_back);
+                v.put("1Student_prnno",txtprn);
+                v.put("1Student_formno",txt_formno);
                 v.put("1Student_payed_amount", txt_invamount);
                 v.put("1Student_remain_fees", txt_rem);
+
+
 
                 reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
-                   //     Toast.makeText(Payment_host.this, "your payment record save", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Payment_examfees_invoice.this, "your payment record save", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -152,12 +165,23 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     takeScreenShot();
+                    Print_Button_invisible();
+                    
+                    
+                    
                 }
             });
 
 
 
 
+    }
+
+    private void Print_Button_invisible() {
+
+        btn.setVisibility(View.INVISIBLE);
+        sign.setVisibility(View.VISIBLE);
+        section.setVisibility(View.VISIBLE);
     }
 
     private void takeScreenShot() {
