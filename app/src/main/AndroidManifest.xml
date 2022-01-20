@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".Test_main"
-            android:exported="false" />
-        <activity
             android:name=".test_uplodpdf"
             android:exported="false" />
         <activity

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -30,17 +31,25 @@ FirebaseAuth auth;
     FirebaseFirestore fstore;
     ImageView upload;
     Uri imageuri = null;
-
+Button b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_uplodpdf);
         upload = findViewById(R.id.uploadpdf);
+        b=findViewById(R.id.btm);
 auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         // After Clicking on this we will be
         // redirected to choose pdf
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            //    startActivity(new Intent(getApplicationContext(),Test_main.class));
+            }
+        });
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
