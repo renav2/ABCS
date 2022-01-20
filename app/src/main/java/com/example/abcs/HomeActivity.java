@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission;
+private Button  paymentpage, profile, permission, uplod;
 //TextView useremailid;
 
 TextView r;
@@ -31,9 +31,16 @@ TextView r;
         FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
         r.setText(user1.getUid());
 String User_ID=r.getText().toString();
+uplod=findViewById(R.id.uplod);
 
 
 
+uplod.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        startActivity(new Intent(getApplicationContext(),test_uplodpdf.class));
+    }
+});
 
 
         paymentpage.setOnClickListener(new View.OnClickListener() {
