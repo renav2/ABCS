@@ -43,7 +43,7 @@ public class PreviousApplication extends AppCompatActivity {
         setContentView(R.layout.activity_previous_application);
             l = findViewById(R.id.list);
             uid =auth.getCurrentUser().getUid();
-        final DocumentReference docRef = fs.collection("Permission_Applications").document(uid);
+         DocumentReference docRef = fs.collection("Permission_Applications").document(uid);
         docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot snapshot,

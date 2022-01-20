@@ -11,15 +11,17 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class Permission_View_Application extends AppCompatActivity {
-FirebaseFirestore fs;
-String uid;
-FirebaseAuth auth;
-TextView tnm,tsub,d1,d2,t1,t2,tdesc,tprn;
+public class Admin_View_Specific_User extends AppCompatActivity {
+    FirebaseFirestore fs;
+    String uid;
+   // FirebaseAuth auth;
+    Admin_Application_History ah;
+    TextView tnm,tsub,d1,d2,t1,t2,tdesc,tprn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_permission_view_application);
+        setContentView(R.layout.activity_admin_view_specific_user);
+
         tnm= findViewById(R.id.name);
         tprn= findViewById(R.id.prn);
         tsub= findViewById(R.id.subapp);
@@ -30,8 +32,8 @@ TextView tnm,tsub,d1,d2,t1,t2,tdesc,tprn;
         t2=findViewById(R.id.totm);
 
         fs= FirebaseFirestore.getInstance();
-        auth= FirebaseAuth.getInstance();
-        uid=auth.getCurrentUser().getUid();
+       // auth= FirebaseAuth.getInstance();
+
         DocumentReference docRef = fs.collection("Permission_Applications").document(uid);
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -56,15 +58,6 @@ TextView tnm,tsub,d1,d2,t1,t2,tdesc,tprn;
 
             }
         });
-        /*(fs, "Permission_Applications", uid);
-        DocumentSnapshot docSnap;
- docSnap =
 
-        if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
-        } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-        }*/
     }
 }
