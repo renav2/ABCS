@@ -106,6 +106,8 @@ auth=FirebaseAuth.getInstance();
                         String myurl;
                         myurl = uri.toString();
 
+
+                        //UPLOD FILE TO THE FIRE STORE
                         String invo_userid1=auth.getCurrentUser().getUid();
                         DocumentReference reference = fstore.collection("files").document(invo_userid1);
                         Map<String, String> v = new HashMap<>();
