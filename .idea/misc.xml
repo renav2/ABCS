@@ -6,7 +6,9 @@
         <entry key="..\:/ABCS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20185185185185187" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTactivity_main.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTelements.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_permision_section.xml" value="0.20972222222222223" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_permission_home.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_adminhome.xml" value="0.2359375" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_collage_fees_payment.xml" value="0.25416666666666665" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_create_application.xml" value="0.20416666666666666" />
@@ -29,7 +31,10 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_social_media_login.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_data_uplod.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_tst_adminpermisiion_grant.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/list_item_single.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/payment_invoice.xml" value="0.25" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/singlerow.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/test_element.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/xml/provider_path.xml" value="0.25" />
         <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.22" />
