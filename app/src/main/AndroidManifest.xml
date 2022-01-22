@@ -14,13 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".test_user_permision_ask"
+            android:exported="false" />
+        <activity
             android:name=".test_uplodpdf"
             android:exported="false" />
         <activity
             android:name=".Admin_View_Specific_User"
             android:exported="false" />
         <activity
-            android:name=".Admin_payment_alldata"
+            android:name=".Admin_all_user_data"
             android:exported="false" />
         <activity
             android:name=".Permission_View_Application"

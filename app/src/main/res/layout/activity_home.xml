@@ -171,7 +171,20 @@
         app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toEndOf="@+id/peract"
         app:layout_constraintTop_toBottomOf="@+id/btn_payment"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.402" />
+
+    <Button
+        android:id="@+id/test_permision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="RK"
+        app:layout_constraintBottom_toTopOf="@+id/uplod"
+        app:layout_constraintEnd_toEndOf="@+id/btn_payment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_payment"
+        app:layout_constraintTop_toBottomOf="@+id/btn_payment"
+        app:layout_constraintVertical_bias="0.8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,30 +9,96 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="328dp"
         android:padding="16dp">
 
 
         <TextView
+            android:id="@+id/t"
+            android:layout_width="358dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/t1"
+            android:layout_alignStart="@+id/t2"
+            android:layout_alignEnd="@+id/t2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="78dp"
+            android:layout_marginEnd="-3dp"
+            android:layout_marginBottom="70dp"
+            android:text="Description "
+            android:textSize="23dp" />
+
+        <Button
+            android:id="@+id/btn_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="236dp"
+            android:layout_marginTop="239dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/t1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:id="@+id/t1"
             android:text="Name"
-            android:textStyle="bold"
+            android:textColor="#000"
             android:textSize="25dp"
-            android:textColor="#000"/>
+            android:textStyle="bold" />
 
 
         <TextView
+            android:id="@+id/t2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/t2"
-            android:text="email"
-            android:textSize="23dp"
             android:layout_below="@+id/t1"
-            />
+            android:layout_centerHorizontal="true"
+            android:text="email"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t1"
+            android:layout_marginTop="37dp"
+            android:text="level"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/t6"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t1"
+
+            android:layout_alignBottom="@+id/t3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="184dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="-2dp"
+            android:text="Section"
+            android:textSize="23dp" />
+
+        <Button
+            android:id="@+id/btn_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="78dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="234dp"
+            android:layout_marginEnd="223dp"
+            android:layout_marginBottom="0dp"
+            android:text="Button" />
 
     </RelativeLayout>
 

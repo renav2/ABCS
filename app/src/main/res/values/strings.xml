@@ -107,4 +107,34 @@
     </string-array>
 
 
+
+    //all permision
+    <string-array name="PermiosonSection">
+        <item>Select section </item>
+        <item>Collage</item>
+        <item>hostel</item>
+        <item>dept</item>
+    </string-array>
+
+//collage
+    <string-array name="Permiosonforcollage">
+        <item>⭐Permioson for collage⭐</item>
+        <item>event</item>
+        <item>seminar</item>
+        <item>lab</item>
+        <item>⭐Permioson for Hostel⭐</item>
+        <item>vectorpermision</item>
+        <item>night out</item>
+        <item>day out</item>
+        <item>⭐Permioson for dept⭐</item>
+        <item>half day </item>
+        <item>leave</item>
+        <item>late in lecture  </item>
+
+    </string-array>
+
+
+
+
+
 </resources>

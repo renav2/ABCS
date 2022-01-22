@@ -32,7 +32,7 @@ Button apermission, btnpay;
         btnpay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent= new Intent(Adminhome.this,Admin_payment_alldata.class);
+               Intent intent= new Intent(Adminhome.this, Admin_all_user_data.class);
 
                startActivity(intent);
 

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
    private EditText et_pass;
    private TextView tv_jump;
    private TextView tv_jump2;
-   private TextView homejump;
+   private TextView homejump, adminhome;
    private FirebaseAuth auth;
 
 
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //createSignInIntent();
+                        adminhome=findViewById(R.id.textView39);
                         bt_login=findViewById(R.id.btn_login);
                         et_email=findViewById(R.id.txt_email);
                         et_pass=findViewById(R.id.txt_password);
@@ -48,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
        //temp jump page for testing purpose
         homejump=findViewById(R.id.txhome);
 //all button code
+
+        adminhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Adminhome.class);
+                startActivity(intent);
+            }
+        });
                         homejump.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {

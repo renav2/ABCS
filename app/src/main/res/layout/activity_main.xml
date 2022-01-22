@@ -225,5 +225,18 @@
         </LinearLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="335dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="adminshortcut"
+        app:layout_constraintBottom_toTopOf="@+id/txhome"
+        app:layout_constraintEnd_toEndOf="@+id/txhome"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="@+id/txhome"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        app:layout_constraintVertical_bias="0.105" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

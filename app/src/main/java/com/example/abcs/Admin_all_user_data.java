@@ -15,7 +15,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Admin_payment_alldata extends AppCompatActivity
+public class Admin_all_user_data extends AppCompatActivity
 {
     RecyclerView recview;
     ArrayList<model> datalist;
@@ -34,7 +34,7 @@ public class Admin_payment_alldata extends AppCompatActivity
         recview.setAdapter(adapter);
 
         db=FirebaseFirestore.getInstance();
-        db.collection("demo").get()
+        db.collection("student_req_permision_data").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
