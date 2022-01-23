@@ -1,5 +1,6 @@
 package com.example.abcs;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -20,6 +22,11 @@ import java.util.Map;
 
 public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
 {
+
+
+
+
+
     ArrayList<model> datalist;
 
     public myadapter(ArrayList<model> datalist) {
@@ -53,8 +60,8 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
         // add here
         TextView t1,t2,t3,t6,t;
         Button b1p,b2f;
-FirebaseFirestore fstore;
-
+        FirebaseFirestore fstore;
+        TextView permision_Status;
 
 
 
@@ -68,36 +75,68 @@ FirebaseFirestore fstore;
             b1p=itemView.findViewById(R.id.btn_pass);
             b2f=itemView.findViewById(R.id.btn_fail);
             fstore=FirebaseFirestore.getInstance();
+            permision_Status=itemView.findViewById(R.id.textView50);
+            String permision_Status1;
+
+
+
+
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    DocumentReference reference = fstore.collection("final_permision_status").document(t2.getText().toString());
+                    reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            //basic profile things
+                            String pr_name= documentSnapshot.getString("Name");
+                            String pr_email=documentSnapshot.getString("Email");
+                            String pr_comments=documentSnapshot.getString("Comments");
+                            String pr_section=documentSnapshot.getString("Section");
+                            String pro_level=documentSnapshot.getString("Level");
+                            String pro_status=documentSnapshot.getString("status");
+                            permision_Status.setText(pro_status);
+                            String sta1=permision_Status.getText().toString();
+                            if(sta1.equals("granted")){
+                                b1p.setVisibility(View.INVISIBLE);
+                                b2f.setVisibility(View.INVISIBLE);
+                            }else if(sta1.equals("NOT granted")){
+                                b1p.setVisibility(View.INVISIBLE);
+                                b2f.setVisibility(View.INVISIBLE);
+                            }
+                        }
+                    });
+                }
+            }, 100);
             b1p.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    uplodpass(t1,t2);
+                    uplod_permision_status_grant(t1,t2,t3,t,t6);
                 }
-
             });
             b2f.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    uplodfail(t1,t2);
-
+                    uplod_permision_status_fail(t1,t2,t3,t,t6);
                 }
             });
-
-
-
         }
+        private void uplod_permision_status_fail(TextView t1, TextView t2, TextView t3, TextView t, TextView t6) {
+            String txtt1=t1.getText().toString();
+            String txtt2=t2.getText().toString();
+            String txtt3=t3.getText().toString();
+            String txtt=t.getText().toString();
+            String txtt6=t6.getText().toString();
 
-        private void uplodfail(TextView t1, TextView t2) {
-            String user_name=t1.getText().toString();
-            String user_email=t2.getText().toString();
-            String grant="not granted";
-            DocumentReference reference = fstore.collection("permision  not grantde").document(user_email);
+            DocumentReference reference = fstore.collection("final_permision_status").document(txtt2);
             Map<String, String> v = new HashMap<>();
-            v.put("name11",user_name);
-            v.put("email11",user_email);
-            v.put("granted",grant);
-
-
+            v.put("Name", txtt1);
+            v.put("Email", txtt2);
+            v.put("Comments", txtt);
+            v.put("Section", txtt6);
+            v.put("Level", txtt3);
+            v.put("status","NOT granted");
 
 
 
@@ -105,25 +144,29 @@ FirebaseFirestore fstore;
             reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-                  //  Toast.makeText(myadapter.this, "permision granted", Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(test_user_permision_ask.this, "yor req is recorde", Toast.LENGTH_SHORT).show();
                 }
             });
+            b1p.setVisibility(View.INVISIBLE);
+            b2f.setVisibility(View.INVISIBLE);
+            permision_Status.setText("Permission granted ");
 
         }
+        private void uplod_permision_status_grant(TextView t1, TextView t2, TextView t3, TextView t, TextView t6) {
+            String txtt1=t1.getText().toString();
+            String txtt2=t2.getText().toString();
+            String txtt3=t3.getText().toString();
+            String txtt=t.getText().toString();
+            String txtt6=t6.getText().toString();
 
-        private void uplodpass(TextView t1, TextView t2) {
-
-
-            String user_name=t1.getText().toString();
-            String user_email=t2.getText().toString();
-            String grant="granted";
-            DocumentReference reference = fstore.collection("permision granted").document(user_email);
+            DocumentReference reference = fstore.collection("final_permision_status").document(t2.getText().toString());
             Map<String, String> v = new HashMap<>();
-            v.put("name11",user_name);
-            v.put("email11",user_email);
-            v.put("granted",grant);
-
-
+            v.put("Name", txtt1);
+            v.put("Email", txtt2);
+            v.put("Comments", txtt);
+            v.put("Section", txtt6);
+            v.put("Level", txtt3);
+            v.put("status","granted");
 
 
 
@@ -131,11 +174,12 @@ FirebaseFirestore fstore;
             reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-
-                   // Toast.makeText(myadapter.this, "permision granted", Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(test_user_permision_ask.this, "yor req is recorde", Toast.LENGTH_SHORT).show();
                 }
             });
-
+            b1p.setVisibility(View.INVISIBLE);
+            b2f.setVisibility(View.INVISIBLE);
+            permision_Status.setText("Permission Not granted ");
 
         }
     }

@@ -107,7 +107,6 @@
     </string-array>
 
 
-
     //all permision
     <string-array name="PermiosonSection">
         <item>Select section </item>
@@ -116,7 +115,7 @@
         <item>dept</item>
     </string-array>
 
-//collage
+    //collage
     <string-array name="Permiosonforcollage">
         <item>⭐Permioson for collage⭐</item>
         <item>event</item>
@@ -132,9 +131,6 @@
         <item>late in lecture  </item>
 
     </string-array>
-
-
-
 
 
 </resources>
