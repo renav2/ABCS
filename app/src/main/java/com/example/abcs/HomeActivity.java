@@ -70,7 +70,7 @@ uplod.setOnClickListener(new View.OnClickListener() {
         permission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(HomeActivity.this, PermissionHome.class);
+                Intent intent= new Intent(HomeActivity.this, user_permision_home.class);
                 startActivity(intent);
             }
         });

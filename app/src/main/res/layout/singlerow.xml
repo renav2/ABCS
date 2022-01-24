@@ -40,7 +40,7 @@
             android:layout_marginTop="259dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
-            android:text="yes" />
+            android:text="no" />
 
         <TextView
             android:id="@+id/t1"
@@ -98,7 +98,7 @@
             android:layout_marginTop="258dp"
             android:layout_marginEnd="258dp"
             android:layout_marginBottom="0dp"
-            android:text="no" />
+            android:text="yes" />
 
         <TextView
             android:id="@+id/textView50"

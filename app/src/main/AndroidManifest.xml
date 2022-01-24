@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".user_permision_home"
+            android:exported="false" />
+        <activity
             android:name=".test_user_permision_status"
             android:exported="false" />
         <activity

@@ -144,12 +144,12 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
             reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-                    // Toast.makeText(test_user_permision_ask.this, "yor req is recorde", Toast.LENGTH_SHORT).show();
+                    b1p.setVisibility(View.INVISIBLE);
+                    b2f.setVisibility(View.INVISIBLE);
+                    permision_Status.setText("Permission NOT granted ");
                 }
             });
-            b1p.setVisibility(View.INVISIBLE);
-            b2f.setVisibility(View.INVISIBLE);
-            permision_Status.setText("Permission granted ");
+
 
         }
         private void uplod_permision_status_grant(TextView t1, TextView t2, TextView t3, TextView t, TextView t6) {
@@ -175,11 +175,12 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
                 @Override
                 public void onSuccess(Void unused) {
                     // Toast.makeText(test_user_permision_ask.this, "yor req is recorde", Toast.LENGTH_SHORT).show();
+                    b1p.setVisibility(View.INVISIBLE);
+                    b2f.setVisibility(View.INVISIBLE);
+                    permision_Status.setText("Permission granted ");
+
                 }
             });
-            b1p.setVisibility(View.INVISIBLE);
-            b2f.setVisibility(View.INVISIBLE);
-            permision_Status.setText("Permission Not granted ");
 
         }
     }
