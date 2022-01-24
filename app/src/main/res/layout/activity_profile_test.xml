@@ -4,6 +4,152 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".profile_test">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="logout"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="@+id/pid"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="@+id/pid"
+        app:layout_constraintTop_toBottomOf="@+id/pid" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="117dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@+id/pname"
+        app:layout_constraintEnd_toEndOf="@+id/label"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="@+id/label"
+        app:layout_constraintTop_toBottomOf="@+id/label"
+        tools:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="16dp"
+        android:text="Profile"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pname"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="8dp"
+        android:hint=" Name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pemail"
+        app:layout_constraintEnd_toEndOf="@+id/profile"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+    <TextView
+        android:id="@+id/pemail"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint=" Email"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pcollege"
+        app:layout_constraintEnd_toEndOf="@+id/pname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pname"
+        app:layout_constraintTop_toBottomOf="@+id/pname" />
+
+    <TextView
+        android:id="@+id/pcollege"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint=" College"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pbranch"
+        app:layout_constraintEnd_toEndOf="@+id/pemail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pemail"
+        app:layout_constraintTop_toBottomOf="@+id/pemail" />
+
+    <TextView
+        android:id="@+id/pbranch"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint=" Branch"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pyear"
+        app:layout_constraintEnd_toEndOf="@+id/pcollege"
+        app:layout_constraintStart_toStartOf="@+id/pcollege"
+        app:layout_constraintTop_toBottomOf="@+id/pcollege" />
+
+    <TextView
+        android:id="@+id/pyear"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint=" Year"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pid"
+        app:layout_constraintEnd_toEndOf="@+id/pbranch"
+        app:layout_constraintStart_toStartOf="@+id/pbranch"
+        app:layout_constraintTop_toBottomOf="@+id/pbranch" />
+
+    <TextView
+        android:id="@+id/pid"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:hint=" Unique ID"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="@+id/pyear"
+        app:layout_constraintStart_toStartOf="@+id/pyear"
+        app:layout_constraintTop_toBottomOf="@+id/pyear" />
+
+    <Button
+        android:id="@+id/cimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="60dp"
+        android:text="Change Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/back"
+        app:layout_constraintStart_toStartOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- Profile code renav
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".profile_test"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="126dp">
@@ -172,4 +318,4 @@
             android:text="TextView" />
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>-->
