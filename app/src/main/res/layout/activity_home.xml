@@ -7,12 +7,39 @@
     tools:context=".HomeActivity">
 
     <TextView
+        android:id="@+id/textView48"
+        android:layout_width="92dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="8dp"
+        android:text="Payment"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/peract"
+        app:layout_constraintEnd_toEndOf="@+id/btn_payment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_payment"
+        app:layout_constraintTop_toBottomOf="@+id/btn_payment"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="113dp"
+        android:layout_height="23dp"
+        android:text="Permission "
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/uplod"
+        app:layout_constraintEnd_toEndOf="@+id/peract"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/peract"
+        app:layout_constraintTop_toBottomOf="@+id/peract"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/textView4"
         android:layout_width="92dp"
         android:layout_height="23dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="32dp"
-        android:text="collage"
+        android:text="Collage"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button4"
@@ -96,7 +123,7 @@
         android:layout_width="92dp"
         android:layout_height="23dp"
         android:layout_marginTop="8dp"
-        android:text="student"
+        android:text="Student"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/peract"
         app:layout_constraintEnd_toEndOf="@+id/button4"
@@ -162,8 +189,8 @@
 
     <Button
         android:id="@+id/uplod"
-        android:layout_width="85dp"
-        android:layout_height="52dp"
+        android:layout_width="102dp"
+        android:layout_height="66dp"
         android:layout_marginTop="76dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -171,20 +198,7 @@
         app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toEndOf="@+id/peract"
         app:layout_constraintTop_toBottomOf="@+id/btn_payment"
-        app:layout_constraintVertical_bias="0.402" />
-
-    <Button
-        android:id="@+id/test_permision"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="RK"
-        app:layout_constraintBottom_toTopOf="@+id/uplod"
-        app:layout_constraintEnd_toEndOf="@+id/btn_payment"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_payment"
-        app:layout_constraintTop_toBottomOf="@+id/btn_payment"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
