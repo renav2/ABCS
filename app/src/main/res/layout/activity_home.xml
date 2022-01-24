@@ -28,7 +28,7 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/uplod"
         app:layout_constraintEnd_toEndOf="@+id/peract"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/peract"
         app:layout_constraintTop_toBottomOf="@+id/peract"
         app:layout_constraintVertical_bias="0.0" />
