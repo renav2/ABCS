@@ -15,7 +15,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Admin_all_user_data extends AppCompatActivity
+public class Admin_all_user_permision_section extends AppCompatActivity
 {
     RecyclerView recview;
     ArrayList<model> datalist;

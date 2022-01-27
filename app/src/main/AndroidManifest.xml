@@ -26,7 +26,7 @@
             android:name=".test_uplodpdf"
             android:exported="false" />
         <activity
-            android:name=".Admin_all_user_data"
+            android:name=".Admin_all_user_permision_section"
             android:exported="false" />
         <activity
             android:name=".Payment_examfees_invoice"
