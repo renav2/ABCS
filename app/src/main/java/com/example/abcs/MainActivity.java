@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
             // User is signed in
             Intent intent=new Intent(MainActivity.this,HomeActivity.class);
             startActivity(intent);
+            finish();
 
         } else {
             // No user is signed in
