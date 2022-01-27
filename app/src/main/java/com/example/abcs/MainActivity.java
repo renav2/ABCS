@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         homejump=findViewById(R.id.txhome);
 //all button code
 
+        checkCurrentUser();
+
         adminhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
+
                         homejump.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -100,6 +108,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+    }
+
+    private void checkCurrentUser() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // User is signed in
+            Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+            startActivity(intent);
+
+        } else {
+            // No user is signed in
+
+            Toast.makeText(this, "login karna ", Toast.LENGTH_SHORT).show();
+        }
 
     }
 

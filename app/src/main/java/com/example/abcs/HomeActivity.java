@@ -39,6 +39,7 @@ uplod.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         startActivity(new Intent(getApplicationContext(),test_uplodpdf.class));
+        finish();
     }
 });
 
@@ -48,6 +49,7 @@ uplod.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(HomeActivity.this, Payment_home_page.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -58,6 +60,7 @@ uplod.setOnClickListener(new View.OnClickListener() {
               //  intent.putExtra("pro_email",pass);
                 intent.putExtra("user_id_home",User_ID);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -66,6 +69,8 @@ uplod.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent= new Intent(HomeActivity.this, user_permision_home.class);
                 startActivity(intent);
+
+                finish();
             }
         });
 

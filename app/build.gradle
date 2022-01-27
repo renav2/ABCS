@@ -46,16 +46,15 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:8.0.0'
     implementation 'com.razorpay:checkout:1.6.15'
     implementation 'com.firebaseui:firebase-ui-storage:8.0.0'
-
     implementation "com.airbnb.android:lottie:4.2.2"
-
     implementation 'com.firebaseui:firebase-ui-database:8.0.0'
-
+    implementation 'com.squareup.picasso:picasso:2.71828'
     // FirebaseUI for Cloud Firestore
     implementation 'com.firebaseui:firebase-ui-firestore:8.0.0'
-
     // FirebaseUI for Firebase Auth
     implementation 'com.firebaseui:firebase-ui-auth:8.0.0'
+    //qrcode
+
 
 
 

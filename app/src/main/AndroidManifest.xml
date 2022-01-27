@@ -26,22 +26,7 @@
             android:name=".test_uplodpdf"
             android:exported="false" />
         <activity
-            android:name=".Admin_View_Specific_User"
-            android:exported="false" />
-        <activity
             android:name=".Admin_all_user_data"
-            android:exported="false" />
-        <activity
-            android:name=".Permission_View_Application"
-            android:exported="false" />
-        <activity
-            android:name=".PreviousApplication"
-            android:exported="false" />
-        <activity
-            android:name=".CreateApplication"
-            android:exported="false" />
-        <activity
-            android:name=".PermissionHome"
             android:exported="false" />
         <activity
             android:name=".Payment_examfees_invoice"
@@ -60,15 +45,6 @@
             android:exported="false" />
         <activity
             android:name=".Adminhome"
-            android:exported="false" />
-        <activity
-            android:name=".AdminPermissionHome"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_View_Application"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_Application_History"
             android:exported="false" />
         <activity
             android:name=".Payment_Collage_invoice"
