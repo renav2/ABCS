@@ -44,6 +44,9 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/test_element.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/xml/provider_path.xml" value="0.25" />
         <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_permission_home.xml" value="0.15648148148148147" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_view_application.xml" value="0.1" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_create_application.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_main.xml" value="0.2" />
@@ -54,8 +57,13 @@
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment_invoi.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_paymentclg.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_permission_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_permission_view_application.xml" value="0.1" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_previous_application.xml" value="0.264" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_profile_test.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_register2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_social_media_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/psinglerow.xml" value="0.13503649635036497" />
+        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/singlerow.xml" value="0.13125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
       </map>

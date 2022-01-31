@@ -14,19 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".user_permision_home"
-            android:exported="false" />
-        <activity
-            android:name=".test_user_permision_status"
-            android:exported="false" />
-        <activity
-            android:name=".test_user_permision_ask"
-            android:exported="false" />
-        <activity
             android:name=".test_uplodpdf"
             android:exported="false" />
+
         <activity
             android:name=".Admin_all_user_permision_section"
+            android:exported="false" />
+
+      <activity
+        android:name=".test_user_permision_ask"
+        android:exported="false" />
+
+        <activity
+            android:name=".user_permision_home"
             android:exported="false" />
         <activity
             android:name=".Payment_examfees_invoice"
