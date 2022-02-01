@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_examamount"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.769" />
 
     <EditText
         android:id="@+id/txt_examamount"
@@ -33,6 +33,8 @@
         android:layout_marginBottom="72dp"
         android:ems="10"
         android:hint="Enter the amount"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,6 +66,7 @@
                 android:layout_weight="1"
                 android:padding="8dp"
                 android:text="name"
+                android:paddingStart="20dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -71,6 +74,7 @@
                 android:layout_width="100dp"
                 android:layout_height="45dp"
                 android:layout_weight="1"
+               android:paddingStart="20dp"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -91,13 +95,14 @@
                     android:layout_weight="1"
                     android:padding="8dp"
                     android:text="class"
+                    android:paddingStart="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_exam_class"
-
                     android:layout_width="100dp"
                     android:layout_height="45dp"
+                    android:paddingStart="20dp"
                     android:layout_weight="1"
                     android:text="TextView" />
             </LinearLayout>
@@ -119,6 +124,7 @@
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="branch"
+                        android:paddingStart="20dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -127,6 +133,7 @@
                         android:layout_width="100dp"
                         android:layout_height="45dp"
                         android:layout_weight="1"
+                        android:paddingStart="20dp"
                         android:text="TextView" />
                 </LinearLayout>
 
@@ -147,6 +154,7 @@
                             android:layout_weight="1"
                             android:padding="8dp"
                             android:text="rollno"
+                            android:paddingStart="20dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -155,6 +163,7 @@
                             android:layout_width="100dp"
                             android:layout_height="45dp"
                             android:layout_weight="1"
+                            android:paddingStart="20dp"
                             android:text="TextView" />
                     </LinearLayout>
                 </LinearLayout>
@@ -176,6 +185,7 @@
                         android:layout_weight="1"
                         android:padding="8dp"
                         android:text="fee status"
+                        android:paddingStart="20dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -183,6 +193,7 @@
                         android:layout_width="100dp"
                         android:layout_height="45dp"
                         android:layout_weight="1"
+                        android:paddingStart="20dp"
                         android:text="TextView" />
 
                 </LinearLayout>
@@ -195,6 +206,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Enter your  PRN NO"
+                android:textSize="15sp"
+                android:paddingStart="10dp"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
@@ -209,6 +222,8 @@
                     android:layout_height="50dp"
                     android:ems="10"
                     android:hint="Enter Exam  form no"
+                    android:textSize="15sp"
+                    android:paddingStart="10dp"
                     android:inputType="textPersonName" />
             </LinearLayout>
 
@@ -216,7 +231,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="104dp"
+            android:layout_height="120dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -226,26 +241,27 @@
 
                 <TextView
                     android:id="@+id/textView61"
-                    android:layout_width="166dp"
+                    android:layout_width="200dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
                     android:text="Select if you have a backlog " />
 
                 <Switch
                     android:id="@+id/switch1"
-                    android:layout_width="173dp"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:text="Switch" />
 
             </LinearLayout>
-
             <EditText
                 android:id="@+id/et_backall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Enter all  backlog exam form no"
+                android:textSize="15sp"
                 android:inputType="textPersonName"
+                android:paddingStart="10dp"
                 android:minHeight="48dp" />
 
         </LinearLayout>
@@ -259,6 +275,7 @@
         android:text="Exam section"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

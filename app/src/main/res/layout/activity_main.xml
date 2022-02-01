@@ -20,9 +20,6 @@
     tools:layout_editor_absoluteY="71dp">
 
 
-
-
-
     ]]>
 
     <TextView
@@ -58,11 +55,7 @@
             android:layout_height="55dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+
 
             <EditText
                 android:id="@+id/txt_email"
@@ -70,16 +63,13 @@
                 android:layout_height="48dp"
                 android:ems="10"
                 android:hint="Email"
-
+                android:layout_marginLeft="50dp"
                 android:inputType="textPersonName"
                 android:textColorHint="#673AB7"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck"
+                />
 
-            <TextView
-                android:id="@+id/textView52"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -92,11 +82,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView53"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <EditText
                     android:id="@+id/txt_password"
@@ -104,15 +89,11 @@
                     android:layout_height="48dp"
                     android:ems="10"
                     android:hint="Password"
-
+                    android:layout_marginLeft="50dp"
                     android:inputType="textPersonName"
                     android:textColorHint="#673AB7" />
 
-                <TextView
-                    android:id="@+id/textView54"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
             </LinearLayout>
         </LinearLayout>
 
