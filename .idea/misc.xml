@@ -6,8 +6,10 @@
         <entry key="..\:/ABCS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20185185185185187" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTactivity_main.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTelements.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_application_history.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_payment_home.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_permision_section.xml" value="0.20972222222222223" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_permission_home.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_view_application.xml" value="0.2222222222222222" />
@@ -41,6 +43,7 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_user_permision_status.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_user_permision_home.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/payment_invoice.xml" value="0.25" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/singlerow.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/test_element.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/xml/provider_path.xml" value="0.25" />
         <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.22" />
