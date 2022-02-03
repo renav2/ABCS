@@ -168,14 +168,14 @@ public class Payment_hostel_fees_invoice extends AppCompatActivity {
 
         DocumentReference reference = fstore.collection("Hostel_fees_data").document(invo_userid);
         Map<String, String> v = new HashMap<>();
-        v.put("1Student_roll_no", txt_roll);
-        v.put("1Student_name", txt_na);
-        v.put("1Student_class", txt_class);
-        v.put("1Student_dept", txt_dept);
-        v.put("1Student_invoiceno", txt_invoic);
+        v.put("_1Student_roll_no", txt_roll);
+        v.put("_1Student_name", txt_na);
+        v.put("_1Student_class", txt_class);
+        v.put("_1Student_dept", txt_dept);
+        v.put("_1Student_invoiceno", txt_invoic);
         //v.put("1Student_total_fees", pass);
-        v.put("1Student_payed_amount", txt_invamount);
-        v.put("1Student_remain_fees", txt_rem);
+        v.put("_1Student_payed_amount", txt_invamount);
+        v.put("_1Student_remain_fees", txt_rem);
 
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

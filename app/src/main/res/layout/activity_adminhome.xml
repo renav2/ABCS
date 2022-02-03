@@ -33,27 +33,38 @@
 
     <Button
         android:id="@+id/btn_viewallpay"
-        android:layout_width="217dp"
-        android:layout_height="0dp"
+        android:layout_width="215dp"
+        android:layout_height="103dp"
         android:layout_marginTop="395dp"
         android:layout_marginBottom="33dp"
         android:text="all user permision"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
+        app:layout_constraintVertical_bias="0.315"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="278dp"
         android:layout_height="56dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="4dp"
         android:layout_marginBottom="105dp"
         android:text="payment data"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btn_viewallpay"
         app:layout_constraintTop_toBottomOf="@+id/btn_viewallpay" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="2nd"
+        app:layout_constraintBottom_toTopOf="@+id/btn_viewallpay"
+        app:layout_constraintEnd_toEndOf="@+id/adminper"
+        app:layout_constraintStart_toEndOf="@+id/adminper"
+        app:layout_constraintTop_toBottomOf="@+id/adminper" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
