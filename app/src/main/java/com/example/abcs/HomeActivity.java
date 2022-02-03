@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +20,8 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission, uplod ;
+private Button  paymentpage, profile, permission, uplod,logout
+        ;
 //TextView useremailid;
 ImageView profilepic;
     FirebaseAuth fAuth;
@@ -37,6 +39,8 @@ TextView r;
         profilepic=findViewById(R.id.imageView);
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
+
+        logout=findViewById(R.id.button8);
         storageReference= FirebaseStorage.getInstance().getReference();
         //currunt user id store in r  & for sring purpose
         r=findViewById(R.id.tp);
@@ -45,12 +49,23 @@ TextView r;
         String User_ID=r.getText().toString();
         uplod=findViewById(R.id.uplod);
 
+logout.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        Toast.makeText(HomeActivity.this, "Logout Succesfully", Toast.LENGTH_SHORT).show();
+
+        finish();
+    }
+});
+
+
 
         StorageReference profileRef= storageReference.child("Users/"+fAuth.getCurrentUser().getUid()+"/Profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-
                 Picasso.get().load(uri).into(profilepic);
             }
         });

@@ -7,31 +7,30 @@
     tools:context=".HomeActivity">
 
     <TextView
-        android:id="@+id/textView48"
-        android:layout_width="92dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="8dp"
-        android:text="Payment"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/peract"
-        app:layout_constraintEnd_toEndOf="@+id/btn_payment"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_payment"
-        app:layout_constraintTop_toBottomOf="@+id/btn_payment"
-        app:layout_constraintVertical_bias="0.066" />
-
-    <TextView
-        android:id="@+id/textView51"
+        android:id="@+id/textView76"
         android:layout_width="113dp"
         android:layout_height="23dp"
         android:text="Permission "
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/uplod"
         app:layout_constraintEnd_toEndOf="@+id/peract"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/peract"
         app:layout_constraintTop_toBottomOf="@+id/peract"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="113dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="38dp"
+        android:text="Profile"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profile"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/profile" />
 
     <TextView
         android:id="@+id/textView4"
@@ -106,17 +105,17 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="92dp"
-        android:layout_height="23dp"
+        android:layout_height="0dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="218dp"
+        android:layout_marginBottom="259dp"
         android:text="payment "
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView48"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/btn_payment" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -149,14 +148,17 @@
 
     <TextView
         android:id="@+id/tp"
-        android:layout_width="271dp"
-        android:layout_height="52dp"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="84dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView48"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.549" />
 
     <Button
         android:id="@+id/profile"
@@ -165,7 +167,7 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="29dp"
-        android:text="Button"
+        android:text="profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button5"
         app:layout_constraintEnd_toStartOf="@+id/peract"
@@ -192,12 +194,36 @@
         android:layout_width="102dp"
         android:layout_height="66dp"
         android:layout_marginTop="76dp"
-        android:text="Button"
+        android:text="pdf uplod"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toEndOf="@+id/peract"
         app:layout_constraintTop_toBottomOf="@+id/btn_payment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="69dp"
+        android:layout_height="37dp"
+        android:text="UID:"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/tp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="43dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="300dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/btn_payment"
+        app:layout_constraintEnd_toEndOf="@+id/btn_payment"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
 
