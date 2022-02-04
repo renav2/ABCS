@@ -5,7 +5,7 @@ public class a_install_data {
 
 
     String _1Student_class,_1Student_dept,_1Student_invoiceno,_1Student_name,_1Student_payed_amount,_1Student_remain_fees,_1Student_roll_no;
-
+    //String _1Student_remain_fees;
    public  a_install_data(){
 
     }

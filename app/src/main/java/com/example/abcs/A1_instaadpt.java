@@ -21,18 +21,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder>
+public class A1_instaadpt extends RecyclerView.Adapter<A1_instaadpt.myviewholder>
 {
     ArrayList<a_install_data> datalist;
 
-    public A2_instaadpt(ArrayList<a_install_data> datalist) {
+    public A1_instaadpt(ArrayList<a_install_data> datalist) {
         this.datalist = datalist;
     }
 
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.adminpay_installment2_line,parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.adminpay_installment1_line,parent,false);
         return new myviewholder(view);
     }
     @Override
@@ -81,7 +81,7 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    DocumentReference reference = fstore.collection("collagefees_2_installment").document(t2.getText().toString());
+                    DocumentReference reference = fstore.collection("collagefees_1_installment").document(t2.getText().toString());
                     reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
