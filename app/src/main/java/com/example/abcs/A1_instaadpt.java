@@ -44,6 +44,11 @@ public class A1_instaadpt extends RecyclerView.Adapter<A1_instaadpt.myviewholder
 //        holder.t.setText(datalist.get(position).get_1Student_roll_no());
 //        holder.t.setText(datalist.get(position).get_1Student_remain_fees());
 //        holder.t.setText(datalist.get(position).get_1Student_name());
+        holder.rollno.setText(datalist.get(position).get_1Student_roll_no());
+//        holder.t.setText(datalist.get(position).get_1Student_remain_fees());
+        holder.name.setText(datalist.get(position).get_1Student_name());
+
+
 
     }
 
@@ -55,7 +60,7 @@ public class A1_instaadpt extends RecyclerView.Adapter<A1_instaadpt.myviewholder
     class myviewholder extends RecyclerView.ViewHolder
     {
         // add here
-        TextView t1,t2,t3,t6,t;
+        TextView t1,t2,t3,t6,t,name,rollno;
 
         FirebaseFirestore fstore;
         TextView permision_Status;
@@ -69,7 +74,8 @@ public class A1_instaadpt extends RecyclerView.Adapter<A1_instaadpt.myviewholder
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-
+            name=itemView.findViewById(R.id.tv_ad_name);
+            rollno=itemView.findViewById(R.id.tv_ad_rollno);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
