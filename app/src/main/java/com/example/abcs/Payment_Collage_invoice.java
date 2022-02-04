@@ -88,7 +88,7 @@ TextView Insta;
         invoice_send_amount=findViewById(R.id.tv_studentalpayamo);
         invoice_student_dept=findViewById(R.id.tv_invoidept11);
       //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
-Insta=findViewById(R.id.tv_installment);
+Insta=findViewById(R.id.tv_ad_rollno);
 
 
 

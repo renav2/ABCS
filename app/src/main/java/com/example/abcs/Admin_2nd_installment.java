@@ -27,14 +27,14 @@ public class Admin_2nd_installment extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin2nd_installment);
 
-        recview=(RecyclerView)findViewById(R.id.recview);
+        recview=(RecyclerView)findViewById(R.id.rv);
         recview.setLayoutManager(new LinearLayoutManager(this));
         datalist=new ArrayList<a_install_data>();
         adapter=new A2_instaadpt(datalist);
         recview.setAdapter(adapter);
 
         db=FirebaseFirestore.getInstance();
-        db.collection("student_req_permision_data").get()
+        db.collection("collagefees_2_installment").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {

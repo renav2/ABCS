@@ -23,11 +23,6 @@ import java.util.Map;
 
 public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder>
 {
-
-
-
-
-
     ArrayList<a_install_data> datalist;
 
     public A2_instaadpt(ArrayList<a_install_data> datalist) {
@@ -40,7 +35,6 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
         View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.adminpay_installment2_line,parent,false);
         return new myviewholder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
         holder.t1.setText(datalist.get(position).get_1Student_class());
@@ -62,7 +56,7 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
     {
         // add here
         TextView t1,t2,t3,t6,t;
-        Button b1p,b2f;
+
         FirebaseFirestore fstore;
         TextView permision_Status;
 
@@ -75,8 +69,7 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-            b1p=itemView.findViewById(R.id.btn_pass);
-            b2f=itemView.findViewById(R.id.btn_fail);
+
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
@@ -99,31 +92,33 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
                             String pr_section=documentSnapshot.getString("_1Student_name");
                             String pro_level=documentSnapshot.getString("_1Student_payed_amount");
                             String pro_status=documentSnapshot.getString("status");
-                            permision_Status.setText(pro_status);
-                            String sta1=permision_Status.getText().toString();
-                            if(sta1.equals("granted")){
-                                b1p.setVisibility(View.INVISIBLE);
-                                b2f.setVisibility(View.INVISIBLE);
-                            }else if(sta1.equals("NOT granted")){
-                                b1p.setVisibility(View.INVISIBLE);
-                                b2f.setVisibility(View.INVISIBLE);
-                            }
+//                            permision_Status.setText(pro_status);
+////                            String sta1=permision_Status.getText().toString();
+////                            if(sta1.equals("granted")){
+////
+////
+////
+////                            }else if(sta1.equals("NOT granted")){
+////
+////
+////
+////                            }
                         }
                     });
                 }
             }, 100);
-            b1p.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    uplod_permision_status_grant(t1,t2,t3,t,t6);
-                }
-            });
-            b2f.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    uplod_permision_status_fail(t1,t2,t3,t,t6);
-                }
-            });
+//            b1p.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    uplod_permision_status_grant(t1,t2,t3,t,t6);
+//                }
+//            });
+//            b2f.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    uplod_permision_status_fail(t1,t2,t3,t,t6);
+//                }
+//            });
         }
         private void uplod_permision_status_fail(TextView t1, TextView t2, TextView t3, TextView t, TextView t6) {
             String txtt1=t1.getText().toString();
@@ -147,8 +142,8 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
             reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-                    b1p.setVisibility(View.INVISIBLE);
-                    b2f.setVisibility(View.INVISIBLE);
+//                    b1p.setVisibility(View.INVISIBLE);
+//                    b2f.setVisibility(View.INVISIBLE);
                     permision_Status.setText("Permission NOT granted ");
                 }
             });
@@ -178,8 +173,8 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
                 @Override
                 public void onSuccess(Void unused) {
                     // Toast.makeText(test_user_permision_ask.this, "yor req is recorde", Toast.LENGTH_SHORT).show();
-                    b1p.setVisibility(View.INVISIBLE);
-                    b2f.setVisibility(View.INVISIBLE);
+//                    b1p.setVisibility(View.INVISIBLE);
+//                    b2f.setVisibility(View.INVISIBLE);
                     permision_Status.setText("Permission granted ");
 
                 }

@@ -8,112 +8,217 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="328dp"
-        android:padding="16dp">
+        android:layout_width="wrap_content"
+        android:layout_height="278dp"
+        android:padding="1dp">
 
 
-        <TextView
-            android:id="@+id/t"
-            android:layout_width="358dp"
-            android:layout_height="130dp"
-            android:layout_below="@+id/t1"
-            android:layout_alignStart="@+id/t2"
-            android:layout_alignEnd="@+id/t2"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-2dp"
-            android:layout_marginTop="78dp"
-            android:layout_marginEnd="-3dp"
-            android:layout_marginBottom="70dp"
-            android:text="Description "
-            android:textSize="23dp" />
-
-        <Button
-            android:id="@+id/btn_fail"
-            android:layout_width="96dp"
-            android:layout_height="48dp"
+        <LinearLayout
+            android:layout_width="401dp"
+            android:layout_height="33dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="274dp"
-            android:layout_marginTop="259dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="194dp"
             android:layout_marginEnd="0dp"
-            android:layout_marginBottom="0dp"
-            android:text="no" />
+            android:layout_marginBottom="50dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rollno :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ad_rollno"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="401dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="4dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="79dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ad_name"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="402dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="117dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:text="Amount paid :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/t6"
+                android:layout_width="219dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="403dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="4dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice No :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="227dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="401dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="1dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dept :         "
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="84dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="221dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/t1"
-            android:layout_width="match_parent"
+            android:layout_width="185dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Name"
-            android:textColor="#000"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/t2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/t1"
-            android:layout_centerHorizontal="true"
-            android:text="email"
-            android:textSize="23dp" />
-
-        <TextView
-            android:id="@+id/t3"
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/t1"
-            android:layout_marginTop="37dp"
-            android:text="level"
-            android:textSize="23dp" />
-
-        <TextView
-            android:id="@+id/t6"
-            android:layout_width="184dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/t1"
-
-            android:layout_alignBottom="@+id/t3"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="184dp"
-            android:layout_marginTop="39dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="-2dp"
-            android:text="Section"
-            android:textSize="23dp" />
-
-        <Button
-            android:id="@+id/btn_pass"
-            android:layout_width="97dp"
-            android:layout_height="48dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="258dp"
-            android:layout_marginEnd="258dp"
-            android:layout_marginBottom="0dp"
-            android:text="yes" />
-
-        <TextView
-            android:id="@+id/textView50"
-            android:layout_width="153dp"
-            android:layout_height="60dp"
-            android:layout_alignStart="@+id/t"
-            android:layout_alignTop="@+id/t1"
-            android:layout_alignEnd="@+id/t"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="114dp"
-            android:layout_marginTop="230dp"
-            android:layout_marginEnd="91dp"
-            android:layout_marginBottom="21dp"
-            android:text="TextView"
-            android:textAlignment="center" />
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="218dp"
+            android:layout_marginBottom="242dp"
+            android:text="year"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
