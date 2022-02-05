@@ -33,14 +33,12 @@ private EditText hos_a;
             public void onClick(View v) {
                 String samount=hos_a.getText().toString();
                 int amount = Math.round(Float.parseFloat(samount) * 100);
-                
-                if(samount.equals("5000") ||samount.equals("6000") || samount.equals("11000")) {
-                    makepay(amount);
-                }
-                else{
-                    Toast.makeText(Payment_hostel.this, "You need to pay full Hostel fees" +
-                            " or 1st installment 5000 and second installment 6000", Toast.LENGTH_LONG).show();
-                }
+               if(samount.equals("61500")){
+                   makepay(amount);
+
+               }else{
+                   Toast.makeText(Payment_hostel.this, "you nee to pay full fees", Toast.LENGTH_SHORT).show();
+               }
             }
         });
 

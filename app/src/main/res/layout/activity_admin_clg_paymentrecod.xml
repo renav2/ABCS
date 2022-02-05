@@ -14,17 +14,19 @@
         android:text="2nd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button11"
         app:layout_constraintVertical_bias="0.286" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="236dp"
-        android:layout_height="74dp"
+        android:layout_width="263dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginBottom="159dp"
         android:text="1ST"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,9 +39,24 @@
         android:layout_height="63dp"
         android:layout_marginTop="196dp"
         android:layout_marginBottom="204dp"
-        android:text="remaining pay"
+        android:text="remaining fees"
         app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="261dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="193dp"
+        android:layout_marginBottom="122dp"
+        android:text="fullpay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintStart_toStartOf="@+id/button10"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

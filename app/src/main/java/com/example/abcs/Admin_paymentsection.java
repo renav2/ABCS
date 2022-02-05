@@ -29,5 +29,14 @@ clgpayrecord.setOnClickListener(new View.OnClickListener() {
 });
 
 
+hostelrecord.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(Admin_paymentsection.this,Admin_hostel_payrecord.class);
+        startActivity(intent);
+    }
+});
+
+
     }
 }
