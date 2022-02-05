@@ -19,16 +19,16 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder>
+public class A_searchadpt extends RecyclerView.Adapter<A_searchadpt.myviewholder>
 {
-    ArrayList<a_install_data> datalist;
-    public A2_instaadpt(ArrayList<a_install_data> datalist) {
+    ArrayList<a_search_data> datalist;
+    public A_searchadpt(ArrayList<a_search_data> datalist) {
         this.datalist = datalist;
     }
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.adminpay_installment2_line,parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_search_,parent,false);
         return new myviewholder(view);
     }
     @Override
@@ -38,8 +38,9 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
         holder.t3.setText(datalist.get(position).get_1Student_invoiceno());
         holder.t6.setText(datalist.get(position).get_1Student_payed_amount());
         holder.rollno.setText(datalist.get(position).get_1Student_roll_no());
-//        holder.t.setText(datalist.get(position).get_1Student_remain_fees());
-       holder.name.setText(datalist.get(position).get_1Student_name());
+        holder.remain_.setText(datalist.get(position).get_1Student_remain_fees());
+        holder.name.setText(datalist.get(position).get_1Student_name());
+
     }
     @Override
     public int getItemCount() {
@@ -48,7 +49,7 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
     class myviewholder extends RecyclerView.ViewHolder
     {
         // add here
-        TextView t1,t2,t3,t6,t,name,rollno;
+        TextView t1,t2,t3,t6,t,name,rollno, remain_;
         FirebaseFirestore fstore;
         TextView permision_Status;
         public myviewholder(@NonNull View itemView) {
@@ -62,11 +63,14 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
             rollno=itemView.findViewById(R.id.tv_ad_rollno);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
+            remain_=itemView.findViewById(R.id.tv_remainpay211);
+
+
             String permision_Status1;
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    DocumentReference reference = fstore.collection("collagefees_2_installment").document(t2.getText().toString());
+                    DocumentReference reference = fstore.collection("_1Student_remain_fees").document(t2.getText().toString());
                     reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -81,7 +85,6 @@ public class A2_instaadpt extends RecyclerView.Adapter<A2_instaadpt.myviewholder
                     });
                 }
             }, 100);
-
         }
         private void uplod_permision_status_fail(TextView t1, TextView t2, TextView t3, TextView t, TextView t6) {
             String txtt1=t1.getText().toString();

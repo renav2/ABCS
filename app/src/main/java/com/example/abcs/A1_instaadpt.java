@@ -61,12 +61,8 @@ public class A1_instaadpt extends RecyclerView.Adapter<A1_instaadpt.myviewholder
     {
         // add here
         TextView t1,t2,t3,t6,t,name,rollno;
-
         FirebaseFirestore fstore;
         TextView permision_Status;
-
-
-
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             t1=itemView.findViewById(R.id.t1);
@@ -79,11 +75,6 @@ public class A1_instaadpt extends RecyclerView.Adapter<A1_instaadpt.myviewholder
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
-
-
-
-
-
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -113,18 +104,7 @@ public class A1_instaadpt extends RecyclerView.Adapter<A1_instaadpt.myviewholder
                     });
                 }
             }, 100);
-//            b1p.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    uplod_permision_status_grant(t1,t2,t3,t,t6);
-//                }
-//            });
-//            b2f.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    uplod_permision_status_fail(t1,t2,t3,t,t6);
-//                }
-//            });
+
         }
         private void uplod_permision_status_fail(TextView t1, TextView t2, TextView t3, TextView t, TextView t6) {
             String txtt1=t1.getText().toString();

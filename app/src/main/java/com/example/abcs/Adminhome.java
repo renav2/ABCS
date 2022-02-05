@@ -7,34 +7,30 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 public class Adminhome extends AppCompatActivity {
-Button apermission, btnpay,payhom,secondinsta,firstinsta;
+Button apermission, btnpay,secondinsta,firstinsta,admin_payhome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminhome);
         btnpay=findViewById(R.id.btn_viewallpay);
-        payhom=findViewById(R.id.button7);
-        firstinsta=findViewById(R.id.button10);
-        secondinsta=findViewById(R.id.button9);
-        apermission = (Button) findViewById(R.id.adminper);
+
+        admin_payhome=findViewById(R.id.admin_payhome);
+        apermission =  findViewById(R.id.adminper);
 
 
-        firstinsta.setOnClickListener(new View.OnClickListener() {
+
+
+        admin_payhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Adminhome.this, Admin_1st_installment.class);
+                Intent intent= new Intent(Adminhome.this,Admin_paymentsection.class);
                 startActivity(intent);
             }
         });
 
 
-        secondinsta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(Adminhome.this, Admin_2nd_installment.class);
-                startActivity(intent);
-            }
-        });
+
+
 
 
         btnpay.setOnClickListener(new View.OnClickListener() {
@@ -46,12 +42,6 @@ Button apermission, btnpay,payhom,secondinsta,firstinsta;
         });
 
 
-        payhom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Adminhome.this,Admin_payment_home.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }
