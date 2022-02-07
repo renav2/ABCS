@@ -6,57 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".Admin_clg_paymentrecod">
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="246dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="217dp"
-        android:text="2nd"
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="213dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="224dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:text="remaining fees" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="253dp"
+        android:layout_marginBottom="148dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button11"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="263dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="328dp"
-        android:layout_marginBottom="159dp"
-        android:text="1ST"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="1ST" />
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="220dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginBottom="204dp"
-        android:text="remaining fees"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="2nd" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="261dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginEnd="193dp"
-        android:layout_marginBottom="122dp"
-        android:text="fullpay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
-        app:layout_constraintStart_toStartOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="fullpay" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

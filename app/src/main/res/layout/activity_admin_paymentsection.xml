@@ -6,41 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".Admin_paymentsection">
 
-    <Button
-        android:id="@+id/Admin_clg_record"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="294dp"
-        android:layout_marginEnd="138dp"
-        android:text="College payment record "
-        app:layout_constraintBottom_toTopOf="@+id/admin_hostel_record"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/admin_hostel_record"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="7dp"
-        android:text="Hostal payment record "
-        app:layout_constraintBottom_toTopOf="@+id/admin_examrecord"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Admin_clg_record"
-        app:layout_constraintTop_toBottomOf="@+id/Admin_clg_record" />
-
-    <Button
-        android:id="@+id/admin_examrecord"
-        android:layout_width="243dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="143dp"
-        android:layout_marginBottom="277dp"
-        android:text="Exam payment record "
+    <LinearLayout
+        android:layout_width="389dp"
+        android:layout_height="105dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/admin_hostel_record"
-        app:layout_constraintTop_toBottomOf="@+id/admin_hostel_record" />
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685">
+
+        <Button
+            android:id="@+id/admin_examrecord"
+            android:layout_width="95dp"
+            android:layout_height="85dp"
+            android:text="Exam payment record " />
+
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="4dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/admin_hostel_record"
+            android:layout_width="95dp"
+            android:layout_height="85dp"
+            android:text="Hostal payment record " />
+
+        <TextView
+            android:id="@+id/textView89"
+            android:layout_width="4dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/Admin_clg_record"
+            android:layout_width="95dp"
+            android:layout_height="85dp"
+            android:text="College payment record " />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
