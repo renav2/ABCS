@@ -37,6 +37,14 @@ hostelrecord.setOnClickListener(new View.OnClickListener() {
     }
 });
 
+        examrecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Admin_paymentsection.this,Admin_exam_payrecord.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
