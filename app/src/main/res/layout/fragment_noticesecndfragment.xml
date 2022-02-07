@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".noticesecndfragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/dateholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/subholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateholder"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/descholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subholder"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/hiholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descholder"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/authholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hiholder"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="18sp" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

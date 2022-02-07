@@ -98,6 +98,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
                             String pro_status=documentSnapshot.getString("status");
                             permision_Status.setText(pro_status);
                             String sta1=permision_Status.getText().toString();
+                           /// his
                             if(sta1.equals("granted")){
                                 b1p.setVisibility(View.INVISIBLE);
                                 b2f.setVisibility(View.INVISIBLE);

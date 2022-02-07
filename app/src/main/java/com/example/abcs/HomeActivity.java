@@ -17,7 +17,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.squareup.picasso.Picasso;
+//import com.squareup.picass.Picasso;
+
 
 public class HomeActivity extends AppCompatActivity {
 private Button  paymentpage, profile, permission, uplod,logout
@@ -66,7 +67,7 @@ logout.setOnClickListener(new View.OnClickListener() {
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                Picasso.get().load(uri).into(profilepic);
+               // Picasso.get().load(uri).into(profilepic);
             }
         });
 

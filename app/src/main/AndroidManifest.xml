@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".ViewNotifications"
+            android:exported="false" />
+        <activity
+            android:name=".AdminNotificationHome"
+            android:exported="false" />
+        <activity
             android:name=".Admin_exam_payrecord"
             android:exported="false" />
         <activity
