@@ -32,7 +32,7 @@ public class AdminNotificationHome extends AppCompatActivity {
     Switch sw1;
     Spinner timelog;
     String txt_time;
-    TextView tt;
+    TextView tt,url;
 
     Calendar myCalendar= Calendar.getInstance();
     FirebaseFirestore fs = FirebaseFirestore.getInstance();
@@ -49,21 +49,21 @@ public class AdminNotificationHome extends AppCompatActivity {
             high=  findViewById(R.id.hi);
             aunm= findViewById(R.id.aut);
             n=findViewById(R.id.nb);
-
+url=findViewById(R.id.textView81);
 
             uploddoc=findViewById(R.id.button14);
-
            sw1=findViewById(R.id.switch2);
-
             timelog=findViewById(R.id.gender2);
-
+        timelog.setVisibility(View.INVISIBLE);
             //set data after uploddata
+        url.setText(getIntent().getStringExtra("pdfurl"));
             sub.setText(getIntent().getStringExtra("pdf_sub"));
         date1.setText(getIntent().getStringExtra("pdf_date"));
         descn.setText(getIntent().getStringExtra("pdf_desc"));
         high.setText(getIntent().getStringExtra("pdf_highlight"));
         aunm.setText(getIntent().getStringExtra("pdf_authrity"));
-        tt.setText(getIntent().getStringExtra("pdf_time"));
+
+        //tt.setText(getIntent().getStringExtra("pdf_time"));
 
 
 
@@ -72,7 +72,7 @@ public class AdminNotificationHome extends AppCompatActivity {
                 if (isChecked) {
                     timelog.setVisibility(View.VISIBLE);
                     txt_time=timelog.getSelectedItem().toString();
-            tt.setText(txt_time);
+           // tt.setText(txt_time);
                 } else {
                     timelog.setVisibility(View.INVISIBLE);
 
@@ -89,7 +89,7 @@ public class AdminNotificationHome extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent(AdminNotificationHome.this,test_uplodpdf.class);
-                    intent.putExtra("pdf_time",tt.getText().toString());
+                   // intent.putExtra("pdf_time",tt.getText().toString());
                     intent.putExtra("pdf_sub",sub.getText().toString());
                     intent.putExtra("pdf_desc",descn.getText().toString());
                     intent.putExtra("pdf_highlight",high.getText().toString());
@@ -114,13 +114,15 @@ public class AdminNotificationHome extends AppCompatActivity {
                     String s_desc= descn.getText().toString();
                     String s_hi= high.getText().toString();
                     String au = aunm.getText().toString();
+                    String pdfurl=url.getText().toString();
                     if(TextUtils.isEmpty(s_sub) || TextUtils.isEmpty(s_desc)|| TextUtils.isEmpty(s_dt)|| TextUtils.isEmpty(s_hi) || TextUtils.isEmpty(au))
                     {
                         Toast.makeText(AdminNotificationHome.this, "Please fill All the fields", Toast.LENGTH_SHORT).show();
                     }
                     else
                     {
-                        saveNotice(s_dt,s_sub,s_desc,s_hi,au);
+                       // saveNotice(s_dt,s_sub,s_desc,s_hi,au);
+                        saveNotice1(pdfurl,s_dt,s_sub,s_desc,s_hi,au);
                     }
                 }
             });
@@ -144,28 +146,34 @@ public class AdminNotificationHome extends AppCompatActivity {
             });
         }
 
-        private void saveNotice(String s_dt, String s_sub, String s_desc, String s_hi, String au) {
-            Map<String, String> application1 = new HashMap<>();
-            application1.put("Notice_Date", s_dt);
-            application1.put("Subject", s_sub);
-            application1.put("Description", s_desc);
-            application1.put("Highlight", s_hi);
-            application1.put("Authority", au);
-            fs.collection("Notices").document().set(application1)
-                    //fs.collection("Permission").document(uuid).set(application1)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Toast.makeText(AdminNotificationHome.this, " Notified Successfully", Toast.LENGTH_SHORT).show();
+    private void saveNotice1(String pdfurl, String s_dt, String s_sub, String s_desc, String s_hi, String au) {
+        Map<String, String> application1 = new HashMap<>();
+        application1.put("Notice_Date", s_dt);
+        application1.put("Subject", s_sub);
+        application1.put("Description", s_desc);
+        application1.put("Highlight", s_hi);
+        application1.put("Authority", au);
+        application1.put("pdfurl1",pdfurl);
+        fs.collection("Notices").document(s_sub).set(application1)
+                //fs.collection("Permission").document(uuid).set(application1)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(AdminNotificationHome.this, " Notified Successfully", Toast.LENGTH_SHORT).show();
 
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(AdminNotificationHome.this, " Notification failed Failed", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(AdminNotificationHome.this, " Notification failed Failed", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+    }
+
+    private void saveNotice(String s_dt, String s_sub, String s_desc, String s_hi, String au) {
+
         }
         private void updateLabel1() {
             String myFormat="MM/dd/yy";

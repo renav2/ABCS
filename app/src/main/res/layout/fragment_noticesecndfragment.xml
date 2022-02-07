@@ -9,61 +9,60 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        >
+        android:gravity="center_horizontal">
 
 
-        <TextView
-            android:id="@+id/dateholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:text=""
-            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="383dp"
+            android:layout_height="193dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="101dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="436dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/subholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/dateholder"
-            android:layout_marginTop="10dp"
-            android:text=""
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/subholder"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text=""
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/descholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/descholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/subholder"
-            android:layout_marginTop="10dp"
-            android:text=""
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/hiholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/authholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/hiholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/descholder"
-            android:layout_marginTop="10dp"
-            android:text=""
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/authholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/hiholder"
-            android:layout_marginTop="10dp"
-            android:text=""
-            android:textSize="18sp" />
-
-
-
-
+            <TextView
+                android:id="@+id/dateholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textSize="18sp" />
+        </LinearLayout>
 
 
     </RelativeLayout>

@@ -104,14 +104,21 @@ Button b;
                         //UPLOD FILE TO THE FIRE STORE
                         //String invo_userid1=auth.getCurrentUser().getUid();
                         String pdf_sub=getIntent().getStringExtra("pdf_sub");
+                        String pdf_date=getIntent().getStringExtra("pdf_date");
+                        String pdf_desc=getIntent().getStringExtra("pdf_desc");
+                        String pdf_highlight=getIntent().getStringExtra("pdf_highlight");
+                        String pdf_authrity=getIntent().getStringExtra("pdf_authrity");
+                        String pdf_time=getIntent().getStringExtra("pdf_time");
+
+
                         DocumentReference reference = fstore.collection("files").document(pdf_sub);
-                        Map<String, String> v = new HashMap<>();
-                        v.put("url", myurl);
+                        Map<String, String> v1 = new HashMap<>();
+                        v1.put("url", myurl);
+                         v1.put("sub",pdf_sub) ;
 
 
 
-
-                        reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        reference.set(v1).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
                                 Toast.makeText(test_uplodpdf.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
@@ -124,7 +131,27 @@ Button b;
 
                         Toast.makeText(test_uplodpdf.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(test_uplodpdf.this,AdminNotificationHome.class);
+                        //
+
+//                        String pdf_date=getIntent().getStringExtra("pdf_date");
+//                        String pdf_desc=getIntent().getStringExtra("pdf_desc");
+//                        String pdf_highlight=getIntent().getStringExtra("pdf_highlight");
+//                        String pdf_authrity=getIntent().getStringExtra("pdf_authrity");
+//                        String pdf_time=getIntent().getStringExtra("pdf_time");
+//
+
                        intent.putExtra("pdf_sub",pdf_sub);
+                        intent.putExtra("pdf_date",pdf_date);
+                        intent.putExtra("pdf_desc",pdf_desc);
+                        intent.putExtra("pdf_highlight",pdf_highlight);
+                        intent.putExtra("pdf_authrity",pdf_authrity);
+                        intent.putExtra("pdf_time",pdf_time);
+
+
+                 intent.putExtra("pdfurl",myurl);
+                       // v1.put("url", myurl);
+
+
                       startActivity(intent);
                     } else {
                        // dialog.dismiss();

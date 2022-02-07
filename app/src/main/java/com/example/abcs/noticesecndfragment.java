@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,14 +64,11 @@ public class noticesecndfragment extends Fragment {
         TextView hiholder =view.findViewById(R.id.hiholder);
         TextView authholder=view.findViewById(R.id.authholder);
 
-
-
         dateholder.setText(Notice_Date);
         subholder.setText(Subject);
         descholder.setText(Description);
         hiholder.setText(Highlight);
         authholder.setText(Authority);
-
         return view;
     }
     public void onBackPressed(){

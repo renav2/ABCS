@@ -90,8 +90,11 @@
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_adminhome.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_downlod_notice.xml" value="0.24074074074074073" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_downlodnotice.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_notice_downlod.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.25" />
@@ -108,16 +111,16 @@
         <entry key="..\:/aa/app/src/main/res/layout/activity_test_user_permision_ask.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_test_user_permision_status.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_user_permision_home.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/activity_view_notifications.xml" value="0.1" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_view_notifications.xml" value="0.16" />
         <entry key="..\:/aa/app/src/main/res/layout/admin_exampay_singleline.xml" value="0.24074074074074073" />
         <entry key="..\:/aa/app/src/main/res/layout/admin_search_.xml" value="0.536" />
         <entry key="..\:/aa/app/src/main/res/layout/adminpay_installment1_line.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/adminpay_installment2_line.xml" value="0.536" />
-        <entry key="..\:/aa/app/src/main/res/layout/fragment_noticesecndfragment.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/fragment_noticesecndfragment.xml" value="0.264" />
         <entry key="..\:/aa/app/src/main/res/layout/fragment_nrecfragment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/singlerownotice.xml" value="0.4" />
+        <entry key="..\:/aa/app/src/main/res/layout/singlerownotice.xml" value="0.536" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
       </map>
     </option>
