@@ -60,7 +60,7 @@ hospen=findViewById(R.id.tv_hostelpending);
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         //basic profile things
-                        String pay_yourfees1 = documentSnapshot.getString("1Student_remain_fees");
+                        String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
                         studentf.setText(pay_yourfees1 + "₹");
                         if(studentf.getText().toString().equals("0₹")){
                            // studentf.setVisibility(View.INVISIBLE);
@@ -77,7 +77,7 @@ hospen=findViewById(R.id.tv_hostelpending);
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         //basic profile things
-                        String pay_yourfees1 = documentSnapshot.getString("1Student_remain_fees");
+                        String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
                         studentf.setText(pay_yourfees1 + "₹");
 
 
@@ -99,7 +99,7 @@ hospen=findViewById(R.id.tv_hostelpending);
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 //basic profile things
-                String pay_yourfees1 = documentSnapshot.getString("1Student_remain_fees");
+                String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
 
 
               //  hospen.setText(pay_yourfees1 + "₹");
@@ -131,7 +131,7 @@ hospen=findViewById(R.id.tv_hostelpending);
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         //basic profile things
-                        String pay_yourfees1= documentSnapshot.getString("1Student_remain_fees");
+                        String pay_yourfees1= documentSnapshot.getString("_1Student_remain_fees");
 
 
 

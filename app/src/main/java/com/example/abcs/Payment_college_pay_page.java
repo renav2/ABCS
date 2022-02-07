@@ -63,7 +63,7 @@ String inp;
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 //basic profile things
-                String pro_name= documentSnapshot.getString("1Student_remain_fees");
+                String pro_name= documentSnapshot.getString("_1Student_remain_fees");
                 c_flag.setText(pro_name);
             }
         });

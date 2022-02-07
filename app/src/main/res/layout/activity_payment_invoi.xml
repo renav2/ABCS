@@ -63,7 +63,7 @@
                 android:orientation="horizontal"></LinearLayout>
 
             <TextView
-                android:id="@+id/tv_installment"
+                android:id="@+id/tv_ad_rollno"
                 android:layout_width="154dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
