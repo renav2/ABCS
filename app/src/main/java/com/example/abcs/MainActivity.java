@@ -91,6 +91,11 @@ public class MainActivity extends AppCompatActivity {
                                     Intent intent1=new Intent(MainActivity.this,Adminhome.class);
                                     startActivity(intent1);
                                 }
+
+                                else if(tex_email.equals("admin@gmail.com")&&  tex_pass.equals("admin1")){
+                                    Intent intent1=new Intent(MainActivity.this,Adminhome.class);
+                                    startActivity(intent1);
+                                }
                                 else{
                                 loginuser(tex_email,tex_pass);
                                 }

@@ -1,5 +1,4 @@
 package com.example.abcs;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,9 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -18,11 +15,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 //import com.squareup.picass.Picasso;
-
-
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission, uplod,logout
-        ;
+private Button  paymentpage, profile, permission, uplod,logout;
 //TextView useremailid;
 ImageView profilepic;
     FirebaseAuth fAuth;
@@ -49,8 +43,7 @@ TextView r;
         r.setText(user1.getUid());
         String User_ID=r.getText().toString();
         uplod=findViewById(R.id.uplod);
-
-logout.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         FirebaseAuth.getInstance().signOut();
@@ -58,11 +51,8 @@ logout.setOnClickListener(new View.OnClickListener() {
         Toast.makeText(HomeActivity.this, "Logout Succesfully", Toast.LENGTH_SHORT).show();
 
         finish();
-    }
-});
-
-
-
+        }
+         });
         StorageReference profileRef= storageReference.child("Users/"+fAuth.getCurrentUser().getUid()+"/Profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
@@ -70,19 +60,20 @@ logout.setOnClickListener(new View.OnClickListener() {
                // Picasso.get().load(uri).into(profilepic);
             }
         });
-
-
-
-
-uplod.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        startActivity(new Intent(getApplicationContext(),test_uplodpdf.class));
-        finish();
-    }
-});
-
-
+        uplod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ViewNotifications.class));
+                finish();
+            }
+        });
+//uplod.setOnClickListener(new View.OnClickListener() {
+//    @Override
+//    public void onClick(View v) {
+//        startActivity(new Intent(getApplicationContext(),test_uplodpdf.class));
+//        finish();
+//    }
+//});
         paymentpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,7 +82,6 @@ uplod.setOnClickListener(new View.OnClickListener() {
                 finish();
             }
         });
-
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +92,6 @@ uplod.setOnClickListener(new View.OnClickListener() {
                 finish();
             }
         });
-
         permission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,11 +101,8 @@ uplod.setOnClickListener(new View.OnClickListener() {
                 finish();
             }
         });
-
     }
-
     private void fetchdata() {
         String user=getIntent().getStringExtra("amo");
-
     }
 }

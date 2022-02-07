@@ -65,8 +65,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:8.0.0'
 
     //qr code
-    implementation 'com.google.zxing:core:3.3.2'
-    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.4'
+
 
 
 }

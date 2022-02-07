@@ -84,6 +84,7 @@
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_clg_paymentrecod.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_payment_home.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.25" />
@@ -94,6 +95,7 @@
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_payment_examfees_invoice.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_hostel.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_hostel_fees_invoice.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_invoi.xml" value="0.25" />
@@ -106,9 +108,12 @@
         <entry key="..\:/aa/app/src/main/res/layout/activity_test_user_permision_ask.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_test_user_permision_status.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_user_permision_home.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_view_notifications.xml" value="0.1" />
         <entry key="..\:/aa/app/src/main/res/layout/admin_search_.xml" value="0.536" />
         <entry key="..\:/aa/app/src/main/res/layout/adminpay_installment1_line.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/adminpay_installment2_line.xml" value="0.536" />
+        <entry key="..\:/aa/app/src/main/res/layout/fragment_noticesecndfragment.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/fragment_nrecfragment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />

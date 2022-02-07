@@ -7,6 +7,7 @@
     tools:context=".Adminhome">
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="343dp"
         android:layout_height="370dp"
         android:orientation="vertical"
@@ -33,8 +34,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:paddingStart="50dp"
                 android:layout_weight="1"
+                android:paddingStart="50dp"
                 android:text="TextView" />
 
         </LinearLayout>
@@ -74,9 +75,9 @@
                 android:id="@+id/textView91"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="10dp"
-               android:paddingStart="50dp"
+                android:layout_weight="1"
+                android:paddingStart="50dp"
                 android:text="TextView" />
         </LinearLayout>
 
@@ -95,11 +96,25 @@
                 android:id="@+id/textView92"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:paddingStart="50dp"
                 android:text="TextView" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="257dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="84dp"
+        android:text="notification admin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

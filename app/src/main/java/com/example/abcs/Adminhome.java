@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 public class Adminhome extends AppCompatActivity {
-Button apermission, btnpay,secondinsta,firstinsta,admin_payhome;
+Button apermission, btnpay,admin_payhome,notification;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,9 +16,15 @@ Button apermission, btnpay,secondinsta,firstinsta,admin_payhome;
 
         admin_payhome=findViewById(R.id.button12);
         apermission =  findViewById(R.id.adminper);
+        notification=findViewById(R.id.button13);
 
-
-
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(Adminhome.this,AdminNotificationHome.class);
+                startActivity(intent);
+            }
+        });
 
         admin_payhome.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -36,31 +36,25 @@ Button b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_uplodpdf);
-        upload = findViewById(R.id.uploadpdf);
-        b=findViewById(R.id.btm);
-auth=FirebaseAuth.getInstance();
+       // setContentView(R.layout.activity_admin_notification_home);
+       // upload = findViewById(R.id.uploadpdf);
+      //  b=findViewById(R.id.btm);
+        auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         // After Clicking on this we will be
         // redirected to choose pdf
 
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            //    startActivity(new Intent(getApplicationContext(),Test_main.class));
-            }
-        });
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent galleryIntent = new Intent();
-                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
 
-                // We will be redirected to choose pdf
-                galleryIntent.setType("application/pdf");
-                startActivityForResult(galleryIntent, 1);
-            }
-        });
+
+
+        Intent galleryIntent = new Intent();
+        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+
+        // We will be redirected to choose pdf
+        galleryIntent.setType("application/pdf");
+        startActivityForResult(galleryIntent, 1);
+
+
 
     }
 
@@ -108,8 +102,9 @@ auth=FirebaseAuth.getInstance();
 
 
                         //UPLOD FILE TO THE FIRE STORE
-                        String invo_userid1=auth.getCurrentUser().getUid();
-                        DocumentReference reference = fstore.collection("files").document(invo_userid1);
+                        //String invo_userid1=auth.getCurrentUser().getUid();
+                        String pdf_sub=getIntent().getStringExtra("pdf_sub");
+                        DocumentReference reference = fstore.collection("files").document(pdf_sub);
                         Map<String, String> v = new HashMap<>();
                         v.put("url", myurl);
 
@@ -120,6 +115,7 @@ auth=FirebaseAuth.getInstance();
                             @Override
                             public void onSuccess(Void unused) {
                                 Toast.makeText(test_uplodpdf.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
+
                             }
                         });
 
@@ -127,8 +123,11 @@ auth=FirebaseAuth.getInstance();
 
 
                         Toast.makeText(test_uplodpdf.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(test_uplodpdf.this,AdminNotificationHome.class);
+                       intent.putExtra("pdf_sub",pdf_sub);
+                      startActivity(intent);
                     } else {
-                        dialog.dismiss();
+                       // dialog.dismiss();
                         Toast.makeText(test_uplodpdf.this, "UploadedFailed", Toast.LENGTH_SHORT).show();
                     }
                 }

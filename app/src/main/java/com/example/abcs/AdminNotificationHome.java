@@ -1,6 +1,7 @@
 package com.example.abcs;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,7 +29,7 @@ public class AdminNotificationHome extends AppCompatActivity {
     FirebaseFirestore fs = FirebaseFirestore.getInstance();
     // FirebaseAuth fa= FirebaseAuth.getInstance();
     //  String upid=fs.getCurrentUser().getUid();
-    Button n;
+    Button n, uploddoc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,32 @@ public class AdminNotificationHome extends AppCompatActivity {
             high=  findViewById(R.id.hi);
             aunm= findViewById(R.id.aut);
             n=findViewById(R.id.nb);
+            uploddoc=findViewById(R.id.button14);
+
+            sub.setText(getIntent().getStringExtra("pdf_sub"));
+
+
+
+
+            uploddoc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(AdminNotificationHome.this,test_uplodpdf.class);
+                    intent.putExtra("pdf_sub",sub.getText().toString());
+                    intent.putExtra("pdf_desc",descn.getText().toString());
+                    intent.putExtra("pdf_highlight",high.getText().toString());
+                    intent.putExtra("pdf_authrity",aunm.getText().toString());
+                    //intent.putExtra("home_pass",_pass);
+                    intent.putExtra("pdf_date",date1.getText().toString());
+                    startActivity(intent);
+                }
+            });
+
+
+
+
+
+
             n.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
