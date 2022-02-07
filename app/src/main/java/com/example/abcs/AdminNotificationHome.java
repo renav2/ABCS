@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +29,11 @@ import java.util.Map;
 
 public class AdminNotificationHome extends AppCompatActivity {
     EditText date1,sub,high,descn,aunm;
+    Switch sw1;
+    Spinner timelog;
+    String txt_time;
+    TextView tt;
+
     Calendar myCalendar= Calendar.getInstance();
     FirebaseFirestore fs = FirebaseFirestore.getInstance();
     // FirebaseAuth fa= FirebaseAuth.getInstance();
@@ -40,9 +49,38 @@ public class AdminNotificationHome extends AppCompatActivity {
             high=  findViewById(R.id.hi);
             aunm= findViewById(R.id.aut);
             n=findViewById(R.id.nb);
+
+
             uploddoc=findViewById(R.id.button14);
 
+           sw1=findViewById(R.id.switch2);
+
+            timelog=findViewById(R.id.gender2);
+
+            //set data after uploddata
             sub.setText(getIntent().getStringExtra("pdf_sub"));
+        date1.setText(getIntent().getStringExtra("pdf_date"));
+        descn.setText(getIntent().getStringExtra("pdf_desc"));
+        high.setText(getIntent().getStringExtra("pdf_highlight"));
+        aunm.setText(getIntent().getStringExtra("pdf_authrity"));
+        tt.setText(getIntent().getStringExtra("pdf_time"));
+
+
+
+        sw1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    timelog.setVisibility(View.VISIBLE);
+                    txt_time=timelog.getSelectedItem().toString();
+            tt.setText(txt_time);
+                } else {
+                    timelog.setVisibility(View.INVISIBLE);
+
+
+                }
+            }
+        });
+
 
 
 
@@ -51,6 +89,7 @@ public class AdminNotificationHome extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent(AdminNotificationHome.this,test_uplodpdf.class);
+                    intent.putExtra("pdf_time",tt.getText().toString());
                     intent.putExtra("pdf_sub",sub.getText().toString());
                     intent.putExtra("pdf_desc",descn.getText().toString());
                     intent.putExtra("pdf_highlight",high.getText().toString());

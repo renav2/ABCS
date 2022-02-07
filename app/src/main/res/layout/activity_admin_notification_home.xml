@@ -5,15 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminNotificationHome">
+
+    <Spinner
+        android:id="@+id/gender2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="28dp"
+        android:entries="@array/Time_array"
+        app:layout_constraintBottom_toTopOf="@+id/textView81"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
     <EditText
         android:id="@+id/nsub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="94dp"
+        android:layout_marginBottom="29dp"
         android:ems="10"
         android:hint="Subject for notice"
         android:inputType="textPersonName"
         android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/ndesc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,12 +38,13 @@
         android:id="@+id/ndesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
+        android:layout_marginBottom="44dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Description of notice"
         android:inputType="textMultiLine"
         android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/hi"
         app:layout_constraintStart_toStartOf="@+id/nsub"
         app:layout_constraintTop_toBottomOf="@+id/nsub" />
 
@@ -35,65 +52,94 @@
         android:id="@+id/hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="29dp"
         android:ems="10"
         android:hint="Highlight of Notice"
         android:inputType="textPersonName"
         android:text=""
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/aut"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/aut"
+        app:layout_constraintTop_toBottomOf="@+id/ndesc" />
 
     <EditText
         android:id="@+id/aut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
         android:ems="10"
         android:hint="Issuing Athority"
         android:inputType="textPersonName"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ndt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/hi" />
 
     <EditText
         android:id="@+id/ndt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="9dp"
         android:ems="10"
         android:hint="Date"
         android:inputType="textPersonName"
         android:text=""
-        app:layout_constraintStart_toStartOf="@+id/nsub"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aut" />
 
     <Button
         android:id="@+id/nb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="26dp"
         android:text="Send Notice"
-        app:layout_constraintStart_toStartOf="@+id/aut"
-        app:layout_constraintTop_toBottomOf="@+id/aut" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView81" />
 
     <Button
         android:id="@+id/button14"
-        android:layout_width="165dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="45dp"
         android:text="uplod doc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nb"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="332dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="456dp"
+        android:layout_marginBottom="138dp"
+        android:text="if you want to give specific time "
+        app:layout_constraintBottom_toTopOf="@+id/button14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView81"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="51dp"
+        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/nb"
-        app:layout_constraintEnd_toEndOf="@+id/aut"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/aut"
-        app:layout_constraintTop_toBottomOf="@+id/aut"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/gender2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
