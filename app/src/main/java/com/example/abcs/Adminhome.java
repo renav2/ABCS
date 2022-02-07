@@ -14,7 +14,7 @@ Button apermission, btnpay,secondinsta,firstinsta,admin_payhome;
         setContentView(R.layout.activity_adminhome);
         btnpay=findViewById(R.id.btn_viewallpay);
 
-        admin_payhome=findViewById(R.id.admin_payhome);
+        admin_payhome=findViewById(R.id.button12);
         apermission =  findViewById(R.id.adminper);
 
 
