@@ -64,7 +64,7 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:padding="8dp"
+                android:padding="10dp"
                 android:text="name"
                 android:paddingStart="20dp"
                 android:textStyle="bold" />
@@ -93,7 +93,7 @@
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:padding="8dp"
+                    android:padding="10dp"
                     android:text="class"
                     android:paddingStart="20dp"
                     android:textStyle="bold" />
@@ -122,7 +122,7 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:padding="8dp"
+                        android:padding="10dp"
                         android:text="branch"
                         android:paddingStart="20dp"
                         android:textStyle="bold" />
@@ -152,7 +152,7 @@
                             android:layout_width="100dp"
                             android:layout_height="50dp"
                             android:layout_weight="1"
-                            android:padding="8dp"
+                            android:padding="10dp"
                             android:text="rollno"
                             android:paddingStart="20dp"
                             android:textStyle="bold" />
@@ -183,7 +183,7 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:padding="8dp"
+                        android:padding="10dp"
                         android:text="fee status"
                         android:paddingStart="20dp"
                         android:textStyle="bold" />

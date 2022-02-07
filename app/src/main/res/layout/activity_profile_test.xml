@@ -50,14 +50,13 @@
         android:id="@+id/cimage"
         android:layout_width="51dp"
         android:layout_height="48dp"
-        android:layout_marginTop="172dp"
-        android:background="@drawable/editprofilepic"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/ic_baseline_add_a_photo_24"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintHorizontal_bias="0.61"
+        app:layout_constraintHorizontal_bias="0.84"
         app:layout_constraintStart_toStartOf="@+id/profile"
         app:layout_constraintTop_toBottomOf="@+id/label"
-        app:layout_constraintVertical_bias="0.968"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <LinearLayout
