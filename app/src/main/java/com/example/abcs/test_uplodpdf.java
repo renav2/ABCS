@@ -146,10 +146,11 @@ Button b;
                         intent.putExtra("pdf_highlight",pdf_highlight);
                         intent.putExtra("pdf_authrity",pdf_authrity);
                         intent.putExtra("pdf_time",pdf_time);
+                        //url from test pdf
+                        intent.putExtra("pdfurl",myurl);
 
 
-                 intent.putExtra("pdfurl",myurl);
-                       // v1.put("url", myurl);
+                        // v1.put("url", myurl);
 
 
                       startActivity(intent);

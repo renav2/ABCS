@@ -43,9 +43,9 @@ public class noticeadapter extends FirestoreRecyclerAdapter<noticemodel, noticea
         protected void onBindViewHolder(@NonNull noticeadapter.noticeviewholder holder, int position, @NonNull noticemodel noticemodel) {
         holder.datetext.setText(noticemodel.getNotice_Date());
         holder.subtext.setText(noticemodel.getSubject());
+         //  holder.subtext.setText(noticemodel.ge());
         String sub= holder.subtext.getText().toString();
         holder.authtext.setText(noticemodel.getAuthority());
-
         holder.subtext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +60,7 @@ public class noticeadapter extends FirestoreRecyclerAdapter<noticemodel, noticea
         FirebaseFirestore fstore;
 
         TextView datetext,authtext,subtext,a_url;
-Button b1;
+        Button b1;
 
         public noticeviewholder(@NonNull View itemView) {
             super(itemView);
@@ -69,6 +69,7 @@ Button b1;
             authtext =itemView.findViewById(R.id.issuedby);
             b1=itemView.findViewById(R.id.button15);
             fstore=FirebaseFirestore.getInstance();
+            a_url=itemView.findViewById(R.id.textView86);
         
 
 
