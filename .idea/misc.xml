@@ -46,12 +46,29 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/singlerow.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/test_element.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/xml/provider_path.xml" value="0.25" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_clg_paymentrecod.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_exam_payrecord.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_hostel_payrecord.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_adminhome.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_downlod_notice.xml" value="0.2" />
         <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.22" />
-        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.2" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_profile_test.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_register2.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_social_media_login.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_test_uplodpdf.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_test_user_permision_ask.xml" value="0.16296296296296298" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_permission_home.xml" value="0.15648148148148147" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin_view_application.xml" value="0.1" />
-        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_adminhome.xml" value="0.23333333333333334" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_create_application.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_main.xml" value="0.2" />
@@ -67,12 +84,8 @@
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_profile_test.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_register2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_social_media_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_view_notifications.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/fragment_noticesecndfragment.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/fragment_nrecfragment.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/psinglerow.xml" value="0.13503649635036497" />
         <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/singlerow.xml" value="0.13125" />
-        <entry key="..\:/Users/sharayu/AndroidStudioProjects/ABCS/app/src/main/res/layout/singlerownotice.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Mobile/ABCS/app/src/main/res/layout/activity_admin1st_installment.xml" value="0.20416666666666666" />
@@ -84,21 +97,18 @@
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_clg_paymentrecod.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_admin_exam_payrecord.xml" value="0.25" />
+        <entry key="..\:/aa/app/src/main/res/layout/activity_admin_hostel_payrecord.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_payment_home.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_adminhome.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/activity_downlod_notice.xml" value="0.24074074074074073" />
-        <entry key="..\:/aa/app/src/main/res/layout/activity_downlodnotice.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/activity_notice_downlod.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/activity_payment_examfees_invoice.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_hostel.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_hostel_fees_invoice.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_payment_invoi.xml" value="0.25" />
@@ -111,16 +121,11 @@
         <entry key="..\:/aa/app/src/main/res/layout/activity_test_user_permision_ask.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_test_user_permision_status.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/activity_user_permision_home.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/activity_view_notifications.xml" value="0.16" />
-        <entry key="..\:/aa/app/src/main/res/layout/admin_exampay_singleline.xml" value="0.24074074074074073" />
         <entry key="..\:/aa/app/src/main/res/layout/admin_search_.xml" value="0.536" />
         <entry key="..\:/aa/app/src/main/res/layout/adminpay_installment1_line.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/adminpay_installment2_line.xml" value="0.536" />
-        <entry key="..\:/aa/app/src/main/res/layout/fragment_noticesecndfragment.xml" value="0.264" />
-        <entry key="..\:/aa/app/src/main/res/layout/fragment_nrecfragment.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
-        <entry key="..\:/aa/app/src/main/res/layout/singlerownotice.xml" value="0.536" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
       </map>
     </option>
