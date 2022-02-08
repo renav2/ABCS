@@ -52,8 +52,8 @@ public class AdminNotificationHome extends AppCompatActivity {
 url=findViewById(R.id.textView81);
 
             uploddoc=findViewById(R.id.button14);
-           sw1=findViewById(R.id.switch2);
-            timelog=findViewById(R.id.gender2);
+           //sw1=findViewById(R.id.switch2);
+            //timelog=findViewById(R.id.gender2);
         timelog.setVisibility(View.INVISIBLE);
             //set data after uploddata
         url.setText(getIntent().getStringExtra("pdfurl"));
@@ -67,7 +67,7 @@ url=findViewById(R.id.textView81);
 
 
 
-        sw1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*sw1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     timelog.setVisibility(View.VISIBLE);
@@ -79,7 +79,7 @@ url=findViewById(R.id.textView81);
 
                 }
             }
-        });
+        });*/
 
 
 

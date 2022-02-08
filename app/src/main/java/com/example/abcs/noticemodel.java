@@ -1,24 +1,19 @@
 package com.example.abcs;
 
 public class noticemodel {
-    String Notice_Date ,Subject,Description,Highlight,Authority;
+    String Notice_Date ,Subject,Description,Highlight,Authority,pdfurl1;
 
     public noticemodel() {
 
     }
 
-    public noticemodel(String notice_Date, String subject, String authority) {
-        Notice_Date = notice_Date;
-        Subject = subject;
-        Authority = authority;
-    }
-
-    public noticemodel(String notice_Date, String subject, String description, String highlight, String authority) {
+    public noticemodel(String notice_Date, String subject, String description, String highlight, String authority, String pdfurl1) {
         Notice_Date = notice_Date;
         Subject = subject;
         Description = description;
         Highlight = highlight;
         Authority = authority;
+        this.pdfurl1 = pdfurl1;
     }
 
     public String getNotice_Date() {
@@ -59,5 +54,13 @@ public class noticemodel {
 
     public void setAuthority(String authority) {
         Authority = authority;
+    }
+
+    public String getPdfurl1() {
+        return pdfurl1;
+    }
+
+    public void setPdfurl1(String pdfurl1) {
+        this.pdfurl1 = pdfurl1;
     }
 }
