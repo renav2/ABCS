@@ -41,7 +41,7 @@ TextView r;
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         logO=findViewById(R.id.logO);
-        logout=findViewById(R.id.button8);
+
         storageReference= FirebaseStorage.getInstance().getReference();
         //currunt user id store in r  & for sring purpose
         r=findViewById(R.id.tp);
@@ -49,16 +49,7 @@ TextView r;
         r.setText(user1.getUid());
         String User_ID=r.getText().toString();
         uplod=findViewById(R.id.uplod);
-        logout.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-        Toast.makeText(HomeActivity.this, "Logout Succesfully", Toast.LENGTH_SHORT).show();
 
-        finish();
-        }
-         });
         StorageReference profileRef= storageReference.child("Users/"+fAuth.getCurrentUser().getUid()+"/Profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
