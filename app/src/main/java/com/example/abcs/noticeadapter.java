@@ -50,6 +50,15 @@ public class noticeadapter extends FirestoreRecyclerAdapter<noticemodel, noticea
         holder.a_url.setText(noticemodel.getPdfurl1());
         //String a_ur= holder.a_url.getText().toString();
          //   a=a_url.getText().toString();
+            holder.b1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //downlod
+                    String a=holder.a_url.getText().toString();
+
+
+                }
+            });
         holder.subtext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
