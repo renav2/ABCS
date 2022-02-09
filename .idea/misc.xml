@@ -126,6 +126,10 @@
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerownotice.xml" value="0.4" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin1st_installment.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_clg_paymentrecod.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.24635416666666668" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_hostel.xml" value="0.2421875" />
