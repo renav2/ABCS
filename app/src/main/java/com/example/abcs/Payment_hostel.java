@@ -33,7 +33,7 @@ private EditText hos_a;
             public void onClick(View v) {
                 String samount=hos_a.getText().toString();
                 int amount = Math.round(Float.parseFloat(samount) * 100);
-               if(samount.equals("61500")){
+               if(samount.equals("41000")){
                    makepay(amount);
 
                }else{

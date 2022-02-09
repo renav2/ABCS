@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="343dp"
-        android:layout_height="370dp"
+        android:layout_width="342dp"
+        android:layout_height="535dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,20 +101,14 @@
                 android:paddingStart="50dp"
                 android:text="TextView" />
         </LinearLayout>
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="257dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="84dp"
-        android:text="notification admin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout6"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-        app:layout_constraintVertical_bias="1.0" />
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="264dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="84dp"
+            android:text="notification admin" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

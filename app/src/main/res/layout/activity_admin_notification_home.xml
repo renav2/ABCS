@@ -29,6 +29,7 @@
         android:gravity="start|top"
         android:hint="Description of notice"
         android:inputType="textMultiLine"
+        android:minHeight="48dp"
         android:text=""
         app:layout_constraintStart_toStartOf="@+id/nsub"
         app:layout_constraintTop_toBottomOf="@+id/nsub" />
@@ -37,43 +38,44 @@
         android:id="@+id/hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Highlight of Notice"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text=""
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/aut"
-        app:layout_constraintStart_toStartOf="@+id/aut" />
+        app:layout_constraintStart_toStartOf="@+id/ndesc"
+        app:layout_constraintTop_toBottomOf="@+id/ndesc" />
 
     <EditText
         android:id="@+id/aut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="7dp"
         android:ems="10"
         android:hint="Issuing Athority"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/ndt"
-        app:layout_constraintStart_toStartOf="@+id/ndt" />
+        app:layout_constraintEnd_toEndOf="@+id/hi"
+        app:layout_constraintTop_toBottomOf="@+id/hi" />
 
     <EditText
         android:id="@+id/ndt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="275dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="2dp"
         android:ems="10"
         android:hint="Date"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/aut"
+        app:layout_constraintTop_toBottomOf="@+id/aut" />
 
     <Button
         android:id="@+id/nb"
@@ -89,33 +91,40 @@
 
     <Button
         android:id="@+id/button14"
-        android:layout_width="174dp"
+        android:layout_width="0dp"
         android:layout_height="57dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
         android:text="uplod doc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ndt"
+        app:layout_constraintStart_toStartOf="@+id/ndt"
         app:layout_constraintTop_toBottomOf="@+id/ndt" />
 
     <TextView
         android:id="@+id/textView81"
-        android:layout_width="216dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginBottom="152dp"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="88dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView83"
-        app:layout_constraintTop_toBottomOf="@+id/textView85" />
+        app:layout_constraintBottom_toBottomOf="@+id/nb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button14"
+        app:layout_constraintTop_toTopOf="@+id/button14" />
 
     <TextView
         android:id="@+id/textView83"
         android:layout_width="110dp"
         android:layout_height="28dp"
-        android:layout_marginStart="29dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
         android:text="url"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView81"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView81"
+        app:layout_constraintEnd_toStartOf="@+id/textView81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView81" />
 
     <TextView
         android:id="@+id/textView84"
@@ -131,11 +140,9 @@
         android:id="@+id/textView85"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="27dp"
         android:layout_marginEnd="38dp"
-        android:layout_marginBottom="481dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView81"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

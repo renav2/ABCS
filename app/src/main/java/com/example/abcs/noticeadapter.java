@@ -49,7 +49,7 @@ public class noticeadapter extends FirestoreRecyclerAdapter<noticemodel, noticea
         holder.authtext.setText(noticemodel.getAuthority());
         holder.a_url.setText(noticemodel.getPdfurl1());
         //String a_ur= holder.a_url.getText().toString();
-            a=a_url.getText().toString();
+         //   a=a_url.getText().toString();
         holder.subtext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,20 +58,7 @@ public class noticeadapter extends FirestoreRecyclerAdapter<noticemodel, noticea
             }
         });
 
-       /* holder.a_url.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(a));
-                context.startActivity(intent);
-            }
-        });
-        holder.b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent
-            }
-        });*/
+
     }
 
     public class noticeviewholder extends RecyclerView.ViewHolder
