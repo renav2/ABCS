@@ -155,6 +155,7 @@
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="157dp"
+                        android:paddingTop="10dp"
                         android:layout_height="match_parent"
                         android:text="uplod documnet"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,8 +165,10 @@
                         android:id="@+id/button14"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="100dp"
-                        android:text="uplod doc" />
+                        android:text="Upload Document"
+                        app:icon="@drawable/ic_outline_cloud_upload_24"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                         />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
