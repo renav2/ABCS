@@ -130,8 +130,16 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.2421875" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.2421875" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_clg_paymentrecod.xml" value="0.4" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.264" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_exam_payrecord.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_hostel_payrecord.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.4" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.2421875" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.24635416666666668" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_downlod_notice.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_home.xml" value="0.2421875" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_hostel.xml" value="0.2421875" />
       </map>
     </option>
