@@ -66,19 +66,7 @@ url=findViewById(R.id.textView81);
 
 
 
-        sw1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    timelog.setVisibility(View.VISIBLE);
-                    txt_time=timelog.getSelectedItem().toString();
-           // tt.setText(txt_time);
-                } else {
-                    timelog.setVisibility(View.INVISIBLE);
 
-
-                }
-            }
-        });
 
 
 
