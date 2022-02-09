@@ -93,7 +93,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="230dp"
+            android:layout_width="241dp"
             android:layout_height="90dp"
             android:orientation="horizontal">
 
@@ -112,11 +112,6 @@
                 android:paddingStart="50dp"
                 android:text="TextView" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"/>
 
         <Button
             android:id="@+id/button13"
