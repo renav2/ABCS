@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
    private EditText et_pass;
    private TextView tv_jump;
    private TextView tv_jump2;
+
    private TextView homejump, adminhome;
    private FirebaseAuth auth;
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                         et_pass=findViewById(R.id.txt_password);
                         tv_jump=findViewById(R.id.txt_view_jump);
                         tv_jump2=findViewById(R.id.txt_view_jump2);
+
 
 //firbase intialize
         auth = FirebaseAuth.getInstance();

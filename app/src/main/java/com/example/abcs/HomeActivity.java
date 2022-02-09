@@ -2,11 +2,16 @@ package com.example.abcs;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,6 +22,7 @@ import com.google.firebase.storage.StorageReference;
 //import com.squareup.picass.Picasso;
 public class HomeActivity extends AppCompatActivity {
 private Button  paymentpage, profile, permission, uplod,logout;
+    TextView logO;
 //TextView useremailid;
 ImageView profilepic;
     FirebaseAuth fAuth;
@@ -34,7 +40,7 @@ TextView r;
         profilepic=findViewById(R.id.imageView);
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
-
+        logO=findViewById(R.id.logO);
         logout=findViewById(R.id.button8);
         storageReference= FirebaseStorage.getInstance().getReference();
         //currunt user id store in r  & for sring purpose
@@ -102,6 +108,39 @@ TextView r;
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+       switch (item.getItemId())
+       {
+
+
+
+           case R.id.logO:
+               signout();
+               return true;
+
+           default:
+               return super.onOptionsItemSelected(item);
+       }
+    }
+
+    private void signout() {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        Toast.makeText(HomeActivity.this, "Logout Succesfully", Toast.LENGTH_SHORT).show();
+
+        finish();
+    }
+
+
     private void fetchdata() {
         String user=getIntent().getStringExtra("amo");
     }
