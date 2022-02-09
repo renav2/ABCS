@@ -181,6 +181,7 @@
                 android:id="@+id/textView81"
                 android:layout_width="220dp"
                 android:layout_height="50dp"
+                android:paddingStart="20dp"
                 android:text="TextView" />
         </LinearLayout>
 
