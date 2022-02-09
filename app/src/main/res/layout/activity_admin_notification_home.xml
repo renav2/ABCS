@@ -6,33 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".AdminNotificationHome">
 
-    <TextView
-        android:id="@+id/textView85"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="315dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="2dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout17"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout17"
-        android:layout_width="380dp"
-        android:layout_height="494dp"
+        android:layout_width="400dp"
+        android:layout_height="451dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="177dp"
+        android:layout_marginBottom="128dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView85">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,7 +119,7 @@
 
             <TextView
                 android:id="@+id/textView96"
-                android:layout_width="150dp"
+                android:layout_width="152dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:paddingTop="10dp"
@@ -151,44 +137,69 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button14"
-                android:layout_width="180dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="157dp"
+                        android:layout_height="match_parent"
+                        android:text="uplod documnet"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/button14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="100dp"
+                        android:text="uplod doc" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="100dp"
-                android:text="uplod doc" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView83"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:paddingStart="5dp"
+                    android:text="Select URL" />
+
+                <TextView
+                    android:id="@+id/textView81"
+                    android:layout_width="226dp"
+                    android:layout_height="50dp"
+                    android:paddingStart="20dp"
+                    android:text="TextView" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView83"
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:paddingStart="5dp"
-                android:text="Select URL" />
-
-            <TextView
-                android:id="@+id/textView81"
-                android:layout_width="220dp"
-                android:layout_height="50dp"
-                android:paddingStart="20dp"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <Button
@@ -198,17 +209,31 @@
                 android:layout_marginLeft="100dp"
                 android:text="Send Notice" />
         </LinearLayout>
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView97"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="2dp"
-        android:text="TextView"
+    <LinearLayout
+        android:layout_width="389dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout17"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout17" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="Admin Notification Center "
+            android:textAlignment="center"
+            android:textSize="30dp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
