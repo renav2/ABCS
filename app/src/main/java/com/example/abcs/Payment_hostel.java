@@ -26,29 +26,22 @@ private EditText hos_a;
         setContentView(R.layout.activity_payment_hostel);
         hos_pay=findViewById(R.id.btn_hostelpay);
         hos_a=findViewById(R.id.txt_hostelpay_amount);
-
-
         hos_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String samount=hos_a.getText().toString();
                 int amount = Math.round(Float.parseFloat(samount) * 100);
-               if(samount.equals("61500")){
+               if(samount.equals("41000")){
                    makepay(amount);
-
                }else{
                    Toast.makeText(Payment_hostel.this, "you nee to pay full fees", Toast.LENGTH_SHORT).show();
                }
             }
         });
-
     }
-
     private void makepay(int amount) {
         Checkout checkout = new Checkout();
-
         checkout.setKeyID("rzp_test_9nCAqrhuTfsGcZ");
-
         /**
          * Instantiate Checkout
          */

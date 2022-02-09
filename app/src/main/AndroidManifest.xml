@@ -17,6 +17,9 @@
             android:name=".downlod_notice"
             android:exported="false" />
         <activity
+            android:name=".PdfViewer"
+            android:exported="false" />
+        <activity
             android:name=".ViewNotifications"
             android:exported="false" />
         <activity
