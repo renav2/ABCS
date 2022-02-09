@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout17"
-        android:layout_width="400dp"
-        android:layout_height="451dp"
+        android:layout_width="377dp"
+        android:layout_height="446dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="16dp"
@@ -35,7 +35,7 @@
 
             <EditText
                 android:id="@+id/nsub"
-                android:layout_width="220dp"
+                android:layout_width="241dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -58,7 +58,7 @@
 
             <EditText
                 android:id="@+id/ndesc"
-                android:layout_width="220dp"
+                android:layout_width="241dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="start|top"
@@ -81,7 +81,7 @@
 
             <EditText
                 android:id="@+id/hi"
-                android:layout_width="220dp"
+                android:layout_width="241dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -104,7 +104,7 @@
 
             <EditText
                 android:id="@+id/aut"
-                android:layout_width="220dp"
+                android:layout_width="239dp"
                 android:layout_height="match_parent"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -127,7 +127,7 @@
 
             <EditText
                 android:id="@+id/ndt"
-                android:layout_width="220dp"
+                android:layout_width="242dp"
                 android:layout_height="match_parent"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -190,7 +190,7 @@
 
                 <TextView
                     android:id="@+id/textView81"
-                    android:layout_width="226dp"
+                    android:layout_width="242dp"
                     android:layout_height="50dp"
                     android:paddingStart="20dp"
                     android:text="TextView" />

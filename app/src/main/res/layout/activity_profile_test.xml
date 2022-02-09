@@ -240,18 +240,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView70"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/profile"
-        app:layout_constraintEnd_toStartOf="@+id/label"
-        app:layout_constraintHorizontal_bias="0.145"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
