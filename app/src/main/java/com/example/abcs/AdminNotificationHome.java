@@ -53,8 +53,8 @@ url=findViewById(R.id.textView81);
 
             uploddoc=findViewById(R.id.button14);
 
-        timelog.setVisibility(View.INVISIBLE);
-            //set data after uploddata
+
+
         url.setText(getIntent().getStringExtra("pdfurl"));
             sub.setText(getIntent().getStringExtra("pdf_sub"));
         date1.setText(getIntent().getStringExtra("pdf_date"));
