@@ -33,9 +33,9 @@
         android:layout_marginBottom="72dp"
         android:ems="10"
         android:hint="Enter the amount"
-        android:textSize="15sp"
+        android:inputType="number"
         android:paddingStart="10dp"
-        android:inputType="textPersonName"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -204,12 +204,13 @@
                 android:id="@+id/et_exam_prn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
                 android:ems="10"
-                android:hint="Enter your  PRN NO"
-                android:textSize="15sp"
-                android:paddingStart="10dp"
+                android:hint="Enter your PRN No"
                 android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:maxLength="10"
+                android:minHeight="48dp"
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -220,11 +221,14 @@
                     android:id="@+id/et_exam_formno"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:digits="-1234567890"
                     android:ems="10"
                     android:hint="Enter Exam  form no"
-                    android:textSize="15sp"
+
+                    android:inputType="textPersonName"
+                    android:maxLength="10"
                     android:paddingStart="10dp"
-                    android:inputType="textPersonName" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -253,16 +257,24 @@
                     android:text="Switch" />
 
             </LinearLayout>
+
             <EditText
                 android:id="@+id/et_backall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:digits="-1234567890"
                 android:ems="10"
                 android:hint="Enter all  backlog exam form no"
-                android:textSize="15sp"
-                android:inputType="textPersonName"
+
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="8sp"
+                android:maxWidth="10dp"
+                android:minWidth="10dp"
+                android:minHeight="48dp"
+                android:minLines="1"
                 android:paddingStart="10dp"
-                android:minHeight="48dp" />
+                android:singleLine="true"
+                android:textSize="15sp" />
 
         </LinearLayout>
     </LinearLayout>

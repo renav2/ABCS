@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
                         homejump.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -129,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // No user is signed in
 
-            Toast.makeText(this, "login karna ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Login successfully", Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -138,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         auth.signInWithEmailAndPassword(_email,_pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                Toast.makeText(MainActivity.this, " login done bro :)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, " login", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(MainActivity.this,HomeActivity.class);
                 intent.putExtra("home_email",_email);
                intent.putExtra("home_pass",_pass);
