@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class downlodpdf extends AppCompatActivity {
     FirebaseFirestore db;
     RecyclerView mRecyclerView;
-    ArrayList<downlodpdf_data> downModelArrayList = new ArrayList<downlodpdf_data>();
+    ArrayList<downlodpdf_data> downModelArrayList = new ArrayList<>();
     downlodpdf_adpt myAdapter;
 
 

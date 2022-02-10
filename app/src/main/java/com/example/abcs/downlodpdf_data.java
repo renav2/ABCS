@@ -7,7 +7,7 @@ String pdfurl1,Subject;
 
     }
     public String getPdfurl1() {
-        return pdfurl1.trim();
+        return pdfurl1;
     }
 
     public void setPdfurl1(String pdfurl1) {

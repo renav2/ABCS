@@ -75,7 +75,9 @@ Button b;
             imageuri = data.getData();
             final String timestamp = "" + System.currentTimeMillis();
             StorageReference storageReference = FirebaseStorage.getInstance().getReference();
-            final String messagePushID = getIntent().getStringExtra("pdf_sub");;
+          //  final String messagePushID = getIntent().getStringExtra("pdf_sub");
+            final String messagePushID = getIntent().getStringExtra("pdf_sub");
+
             Toast.makeText(test_uplodpdf.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
 
             // Here we are uploading the pdf in firebase storage with the name of current time
@@ -98,7 +100,7 @@ Button b;
                         dialog.dismiss();
                         Uri uri = task.getResult();
                         String myurl;
-                        myurl = uri.toString();
+                      myurl = uri.toString();
 
 
                         //UPLOD FILE TO THE FIRE STORE

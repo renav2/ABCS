@@ -5,9 +5,13 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 
+import android.util.Log;
+import android.util.LogPrinter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 import androidx.annotation.NonNull;
@@ -19,6 +23,7 @@ public class downlodpdf_adpt extends RecyclerView.Adapter<pdfviewholder> {
 
     downlodpdf mainActivity;
     ArrayList<downlodpdf_data> downModels;
+    String bb;
 
     public downlodpdf_adpt(downlodpdf mainActivity, ArrayList<downlodpdf_data> downModels) {
         this.mainActivity = mainActivity;
@@ -40,10 +45,13 @@ public class downlodpdf_adpt extends RecyclerView.Adapter<pdfviewholder> {
 
         myViewHolder.mName.setText(downModels.get(i).getSubject());
         myViewHolder.mLink.setText(downModels.get(i).getPdfurl1());
+        bb=myViewHolder.mName.getText().toString();
         myViewHolder.mDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                downloadFile(myViewHolder.mName.getContext(),downModels.get(i).getSubject(),".pdf",DIRECTORY_DOWNLOADS,downModels.get(i).getPdfurl1());
+                downloadFile(myViewHolder.mName.getContext(),downModels.get(i).getSubject(),".pdf",DIRECTORY_DOWNLOADS,bb);
+
+                //Toast.makeText(mainActivity,myViewHolder.mName.getText().toString() , Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -68,7 +76,7 @@ public class downlodpdf_adpt extends RecyclerView.Adapter<pdfviewholder> {
 
         DownloadManager downloadmanager = (DownloadManager) context.
                 getSystemService(Context.DOWNLOAD_SERVICE);
-        Uri uri = Uri.parse(pdfurl1.trim());
+        Uri uri = Uri.parse(pdfurl1);
         DownloadManager.Request request = new DownloadManager.Request(uri);
 
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
