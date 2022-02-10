@@ -21,7 +21,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 //import com.squareup.picass.Picasso;
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission, uplod,logout;
+private Button  paymentpage, profile, permission, uplod,logout,collagenotoi;
     TextView logO;
 //TextView useremailid;
 ImageView profilepic;
@@ -41,7 +41,18 @@ TextView r;
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         logO=findViewById(R.id.logO);
+collagenotoi=findViewById(R.id.button5);
 
+
+
+
+collagenotoi.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(HomeActivity.this, downlodpdf.class);
+        startActivity(intent);
+    }
+});
         storageReference= FirebaseStorage.getInstance().getReference();
         //currunt user id store in r  & for sring purpose
         r=findViewById(R.id.tp);
