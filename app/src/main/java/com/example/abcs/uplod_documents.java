@@ -1,24 +1,31 @@
 package com.example.abcs;
 
+import static android.os.Environment.DIRECTORY_DOWNLOADS;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
+import android.app.DownloadManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class uplod_documents extends AppCompatActivity {
 Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
 TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
     FirebaseAuth auth;
     FirebaseFirestore fstore;
-
-
+    StorageReference storageReference;
+    String  _10,_12,_dip,_1,_2,_3,_4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,36 +70,339 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
 
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        storageReference= FirebaseStorage.getInstance().getReference();
 
 
+        //pdf link fetch **************************imp****************************************
+        StorageReference profileRef= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/10" + ".pdf");
+        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                _10=uri.toString();
+              //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
+                td10.setText(_10);
+            }
+        });
+
+        StorageReference profileRef1= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/12" + ".pdf");
+        profileRef1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                _12=uri.toString();
+                //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
+                td12.setText(_12);
+            }
+        });
+
+
+        StorageReference profileRef2= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/BE" + ".pdf");
+        profileRef2.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                _4=uri.toString();
+                //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
+                tddownbe.setText(_4);
+            }
+        });
+
+        StorageReference profileRef3= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/TE" + ".pdf");
+        profileRef3.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                _3=uri.toString();
+                //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
+                tdownte.setText(_3);
+            }
+        });
+
+
+        StorageReference profileRef4= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/SE" + ".pdf");
+        profileRef4.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                _2=uri.toString();
+                //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
+                tdownse.setText(_2);
+            }
+        });
+
+
+        StorageReference profileRef5= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/FE" + ".pdf");
+        profileRef5.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                _1=uri.toString();
+                //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
+                tdownfe.setText(_1);
+            }
+        });
+
+//
+
+        StorageReference profileRef7= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/diploma" + ".pdf");
+        profileRef7.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                _dip=uri.toString();
+                //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
+                tdowndip.setText(_dip);
+            }
+        });
+
+   //end*****************************************************************************************************
 
         u10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 Intent intent=new Intent(uplod_documents.this,doc_up_10_.class);
 startActivity(intent);
-
             }
         });
 
 u12.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-
+        Intent intent=new Intent(uplod_documents.this,doc_up_12.class);
+        startActivity(intent);
     }
 });
-
-
-
-
         updip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent=new Intent(uplod_documents.this,doc_up_diploma.class);
+                startActivity(intent);
+            }
+        });
 
 
+        upfe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(uplod_documents.this, BE_1.class);
+                startActivity(intent);
+            }
+        });
+
+        upse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(uplod_documents.this, BE_2.class);
+                startActivity(intent);
+            }
+        });
+
+        upte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(uplod_documents.this, BE_3.class);
+                startActivity(intent);
+            }
+        });
+
+        upbe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(uplod_documents.this, BE_4.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+// downlod
+
+
+        d10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                downloadFile10(uplod_documents.this,".pdf",DIRECTORY_DOWNLOADS,_10);
+
+            }
+
+            private void downloadFile10(uplod_documents uplod_documents, String s, String directoryDownloads, String s1) {
+String fileName="10";
+                DownloadManager downloadmanager = (DownloadManager) uplod_documents.
+                        getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse(s1);
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(uplod_documents, directoryDownloads, fileName + s);
+
+                downloadmanager.enqueue(request);
 
             }
         });
+
+
+
+        d12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                downloadFile12(uplod_documents.this,".pdf",DIRECTORY_DOWNLOADS,_12);
+
+            }
+
+            private void downloadFile12(uplod_documents uplod_documents, String s, String directoryDownloads, String s1) {
+                String fileName="12";
+                DownloadManager downloadmanager = (DownloadManager) uplod_documents.
+                        getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse(s1);
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(uplod_documents, directoryDownloads, fileName + s);
+
+                downloadmanager.enqueue(request);
+
+            }
+        });
+
+
+        downdip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                downloadFile10(uplod_documents.this,".pdf",DIRECTORY_DOWNLOADS,_dip);
+
+            }
+
+            private void downloadFile10(uplod_documents uplod_documents, String s, String directoryDownloads, String s1) {
+                String fileName="diploma";
+                DownloadManager downloadmanager = (DownloadManager) uplod_documents.
+                        getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse(s1);
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(uplod_documents, directoryDownloads, fileName + s);
+
+                downloadmanager.enqueue(request);
+
+            }
+        });
+
+
+
+        downfe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                downloadFile10(uplod_documents.this,".pdf",DIRECTORY_DOWNLOADS,_1);
+
+            }
+
+            private void downloadFile10(uplod_documents uplod_documents, String s, String directoryDownloads, String s1) {
+                String fileName="FE";
+                DownloadManager downloadmanager = (DownloadManager) uplod_documents.
+                        getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse(s1);
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(uplod_documents, directoryDownloads, fileName + s);
+
+                downloadmanager.enqueue(request);
+
+            }
+        });
+
+
+
+
+        downse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                downloadFile10(uplod_documents.this,".pdf",DIRECTORY_DOWNLOADS,_2);
+
+            }
+
+            private void downloadFile10(uplod_documents uplod_documents, String s, String directoryDownloads, String s1) {
+                String fileName="SE";
+                DownloadManager downloadmanager = (DownloadManager) uplod_documents.
+                        getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse(s1);
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(uplod_documents, directoryDownloads, fileName + s);
+
+                downloadmanager.enqueue(request);
+
+            }
+        });
+
+
+
+        downte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                downloadFile10(uplod_documents.this,".pdf",DIRECTORY_DOWNLOADS,_3);
+
+            }
+
+            private void downloadFile10(uplod_documents uplod_documents, String s, String directoryDownloads, String s1) {
+                String fileName="TE";
+                DownloadManager downloadmanager = (DownloadManager) uplod_documents.
+                        getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse(s1);
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(uplod_documents, directoryDownloads, fileName + s);
+
+                downloadmanager.enqueue(request);
+
+            }
+        });
+
+
+
+
+        ddownbe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                downloadFile10(uplod_documents.this,".pdf",DIRECTORY_DOWNLOADS,_4);
+
+            }
+
+            private void downloadFile10(uplod_documents uplod_documents, String s, String directoryDownloads, String s1) {
+                String fileName="BE";
+                DownloadManager downloadmanager = (DownloadManager) uplod_documents.
+                        getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse(s1);
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setDestinationInExternalFilesDir(uplod_documents, directoryDownloads, fileName + s);
+
+                downloadmanager.enqueue(request);
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 

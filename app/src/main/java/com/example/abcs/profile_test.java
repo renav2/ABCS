@@ -71,6 +71,10 @@ public class profile_test extends AppCompatActivity {
                 Picasso.get().load(uri).into(pimage);
             }
         });
+
+
+
+
         userID=fAuth.getCurrentUser().getUid();
         user=fAuth.getCurrentUser();
         DocumentReference documentReference=fstore.collection("demo").document(userID);

@@ -25,7 +25,7 @@ import com.google.firebase.storage.StorageReference;
 import java.util.HashMap;
 import java.util.Map;
 
-public class doc_up_FE_ extends uplod_documents {
+public class BE_1 extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseFirestore fstore;
@@ -65,7 +65,7 @@ public class doc_up_FE_ extends uplod_documents {
             //  final String messagePushID = getIntent().getStringExtra("pdf_sub");
             final String messagePushID = getIntent().getStringExtra("pdf_sub");
 
-            Toast.makeText(doc_up_FE_.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(BE_1.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
 
             // Here we are uploading the pdf in firebase storage with the name of current time
 
@@ -73,7 +73,7 @@ public class doc_up_FE_ extends uplod_documents {
 
             //--->patha
             final StorageReference filepath = storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/FE" + ".pdf");
-            Toast.makeText(doc_up_FE_.this, filepath.getName(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(BE_1.this, filepath.getName(), Toast.LENGTH_SHORT).show();
             filepath.putFile(imageuri).continueWithTask(new Continuation() {
                 @Override
                 public Object then(@NonNull Task task) throws Exception {
@@ -109,7 +109,7 @@ public class doc_up_FE_ extends uplod_documents {
                         reference.set(v1).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(doc_up_FE_.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(BE_1.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
 
                             }
                         });
@@ -117,7 +117,7 @@ public class doc_up_FE_ extends uplod_documents {
 
 
 
-                        Toast.makeText(doc_up_FE_.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BE_1.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
 //                        Intent intent=new Intent(doc_up_10_.this,AdminNotificationHome.class);
 
 
@@ -144,7 +144,7 @@ public class doc_up_FE_ extends uplod_documents {
 //                        startActivity(intent);
                     } else {
                         // dialog.dismiss();
-                        Toast.makeText(doc_up_FE_.this, "UploadedFailed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BE_1.this, "UploadedFailed", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

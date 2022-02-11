@@ -25,7 +25,7 @@ import com.google.firebase.storage.StorageReference;
 import java.util.HashMap;
 import java.util.Map;
 
-public class doc_up_SE_ extends uplod_documents {
+public class BE_3 extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseFirestore fstore;
@@ -65,15 +65,15 @@ public class doc_up_SE_ extends uplod_documents {
             //  final String messagePushID = getIntent().getStringExtra("pdf_sub");
             final String messagePushID = getIntent().getStringExtra("pdf_sub");
 
-            Toast.makeText(doc_up_SE_.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(BE_3.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
 
             // Here we are uploading the pdf in firebase storage with the name of current time
 
 
 
             //--->patha
-            final StorageReference filepath = storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/SE" + ".pdf");
-            Toast.makeText(doc_up_SE_.this, filepath.getName(), Toast.LENGTH_SHORT).show();
+            final StorageReference filepath = storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/TE" + ".pdf");
+            Toast.makeText(BE_3.this, filepath.getName(), Toast.LENGTH_SHORT).show();
             filepath.putFile(imageuri).continueWithTask(new Continuation() {
                 @Override
                 public Object then(@NonNull Task task) throws Exception {
@@ -94,7 +94,7 @@ public class doc_up_SE_ extends uplod_documents {
                         myurl = uri.toString();
                         //UPLOD FILE TO THE FIRE STORE
                         //String invo_userid1=auth.getCurrentUser().getUid();
-                        String pdf_sub="SE";
+                        String pdf_sub="TE";
 //                        String pdf_date=getIntent().getStringExtra("pdf_date");
 //                        String pdf_desc=getIntent().getStringExtra("pdf_desc");
 //                        String pdf_highlight=getIntent().getStringExtra("pdf_highlight");
@@ -104,12 +104,12 @@ public class doc_up_SE_ extends uplod_documents {
 
                         DocumentReference reference = fstore.collection("student_uplod_document").document(auth.getCurrentUser().getUid());
                         Map<String, String> v1 = new HashMap<>();
-                        v1.put("urlSE", myurl);
+                        v1.put("urlTE", myurl);
 
                         reference.set(v1).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(doc_up_SE_.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(BE_3.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
 
                             }
                         });
@@ -117,7 +117,7 @@ public class doc_up_SE_ extends uplod_documents {
 
 
 
-                        Toast.makeText(doc_up_SE_.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BE_3.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
 //                        Intent intent=new Intent(doc_up_10_.this,AdminNotificationHome.class);
 
 
@@ -144,7 +144,7 @@ public class doc_up_SE_ extends uplod_documents {
 //                        startActivity(intent);
                     } else {
                         // dialog.dismiss();
-                        Toast.makeText(doc_up_SE_.this, "UploadedFailed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BE_3.this, "UploadedFailed", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
