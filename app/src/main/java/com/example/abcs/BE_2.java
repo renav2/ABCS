@@ -34,7 +34,7 @@ public class BE_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_uplod_documents);
+        //setContentView(R.layout.activity_uplod_documents);
         // upload = findViewById(R.id.uploadpdf);
         //  b=findViewById(R.id.btm);
         auth=FirebaseAuth.getInstance();
@@ -140,7 +140,8 @@ public class BE_2 extends AppCompatActivity {
 //
 //                        // v1.put("url", myurl);
 
-
+                        Intent intent = new Intent(BE_2.this,uplod_documents.class);
+                        startActivity(intent);
 //                        startActivity(intent);
                     } else {
                         // dialog.dismiss();
