@@ -28,25 +28,26 @@
 
         <LinearLayout
             android:id="@+id/linearLayout23"
-            android:layout_width="411dp"
-            android:layout_height="1106dp"
+            android:layout_width="400dp"
+            android:layout_height="1025dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="2dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/btnRegister"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout19">
 
 
             <LinearLayout
-                android:layout_width="422dp"
+                android:layout_width="400dp"
                 android:layout_height="1115dp"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="362dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -57,17 +58,24 @@
 
                         <TextView
                             android:id="@+id/tenup"
-                            android:layout_width="8dp"
+                            android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="10th" />
 
                         <Button
                             android:id="@+id/uplod10"
-                            android:layout_width="19dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="uplod" />
+
+                        <Button
+                            android:id="@+id/downlod10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="down" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -84,22 +92,16 @@
                         <TextView
                             android:id="@+id/tendown"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="15dp"
                             android:layout_weight="1"
                             android:text="TextView" />
 
-                        <Button
-                            android:id="@+id/downlod10"
-                            android:layout_width="203dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="73dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -109,23 +111,30 @@
 
                         <TextView
                             android:id="@+id/up12"
-                            android:layout_width="wrap_content"
+                            android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="12th" />
 
                         <Button
                             android:id="@+id/uplod12"
-                            android:layout_width="203dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="uplod" />
+
+                        <Button
+                            android:id="@+id/downlod12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="down" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -136,22 +145,16 @@
                         <TextView
                             android:id="@+id/down12"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="15dp"
                             android:layout_weight="1"
                             android:text="TextView" />
 
-                        <Button
-                            android:id="@+id/downlod12"
-                            android:layout_width="203dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="58dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -161,23 +164,30 @@
 
                         <TextView
                             android:id="@+id/updip"
-                            android:layout_width="wrap_content"
+                            android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="uplod diploma" />
 
                         <Button
                             android:id="@+id/uploddip"
-                            android:layout_width="203dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="uplod" />
+
+                        <Button
+                            android:id="@+id/downloddip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="down" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -188,22 +198,16 @@
                         <TextView
                             android:id="@+id/downdip"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="15dp"
                             android:layout_weight="1"
                             android:text="TextView" />
 
-                        <Button
-                            android:id="@+id/downloddip"
-                            android:layout_width="203dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="63dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -213,17 +217,24 @@
 
                         <TextView
                             android:id="@+id/upfe"
-                            android:layout_width="wrap_content"
+                            android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="FE" />
 
                         <Button
                             android:id="@+id/uplodfe1"
-                            android:layout_width="203dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="uplod" />
+
+                        <Button
+                            android:id="@+id/downlodfe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="down" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -234,22 +245,16 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/downdfe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
                             android:layout_weight="1"
                             android:text="TextView" />
 
-                        <Button
-                            android:id="@+id/downlodfe"
-                            android:layout_width="203dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -260,28 +265,35 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/upse"
-                            android:layout_width="wrap_content"
+                            android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="SE" />
 
                         <Button
                             android:id="@+id/uplodse"
-                            android:layout_width="203dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="uplod" />
+
+                        <Button
+                            android:id="@+id/downlodse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="down" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -291,17 +303,11 @@
 
                         <TextView
                             android:id="@+id/downse"
-                            android:layout_width="wrap_content"
+                            android:layout_width="15dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
-                        <Button
-                            android:id="@+id/downlodse"
-                            android:layout_width="203dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -312,28 +318,35 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/upte"
-                            android:layout_width="wrap_content"
+                            android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TE" />
 
                         <Button
                             android:id="@+id/uplodte"
-                            android:layout_width="203dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="uplod" />
+
+                        <Button
+                            android:id="@+id/downlodte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="down" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -343,23 +356,17 @@
 
                         <TextView
                             android:id="@+id/downte"
-                            android:layout_width="wrap_content"
+                            android:layout_width="15dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
-                        <Button
-                            android:id="@+id/downlodte"
-                            android:layout_width="203dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="62dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -369,23 +376,30 @@
 
                         <TextView
                             android:id="@+id/upbe"
-                            android:layout_width="wrap_content"
+                            android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="BE" />
 
                         <Button
                             android:id="@+id/uplodbe"
-                            android:layout_width="203dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="uplod" />
+
+                        <Button
+                            android:id="@+id/downlodbe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="down" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -400,18 +414,12 @@
                             android:layout_weight="1"
                             android:text="TextView" />
 
-                        <Button
-                            android:id="@+id/downlodbe"
-                            android:layout_width="203dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Button" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="58dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -435,40 +443,37 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/downcustom"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="TextView" />
-
-                    <Button
-                        android:id="@+id/downlodecustom"
-                        android:layout_width="203dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Button" />
-                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView100"
-            android:layout_width="356dp"
-            android:layout_height="60dp"
-            android:text="TextView"
+        <LinearLayout
+            android:id="@+id/linearLayout19"
+            android:layout_width="403dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout23"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.324"
+            app:layout_constraintHorizontal_bias="0.375"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.627" />
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="391dp"
+                android:layout_height="85dp"
+                android:text="Document section"
+                android:textSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.47" />
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

@@ -47,7 +47,7 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         tupbe  =findViewById(R.id.upbe);
         tddownbe=findViewById(R.id.downbe);
         tupcustom=findViewById(R.id.upcostom);
-        tdowncoston=findViewById(R.id.downcustom);
+       // tdowncoston=findViewById(R.id.downcustom);
 
         //buttons
         u10=findViewById(R.id.uplod10);
@@ -65,13 +65,37 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         upbe=findViewById(R.id.uplodbe);
         ddownbe =findViewById(R.id.downlodbe);
         upcustom=findViewById(R.id.button20);
-        downcoston=findViewById(R.id.downlodecustom);
+    //    downcoston=findViewById(R.id.downlodecustom);
+
+      //  Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
+       //TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
+
+       td10.setVisibility(View.INVISIBLE);
+        td12.setVisibility(View.INVISIBLE);
+        tdowndip.setVisibility(View.INVISIBLE);
+        tdownfe.setVisibility(View.INVISIBLE);
+        tdownse.setVisibility(View.INVISIBLE);
+        tdownte.setVisibility(View.INVISIBLE);
+        tddownbe.setVisibility(View.INVISIBLE);
+       // tdowncoston.setVisibility(View.INVISIBLE);
+        d10.setVisibility(View.INVISIBLE);
+        d12.setVisibility(View.INVISIBLE);
+        downdip.setVisibility(View.INVISIBLE);
+        downfe.setVisibility(View.INVISIBLE);
+        downse.setVisibility(View.INVISIBLE);
+        downte.setVisibility(View.INVISIBLE);
+        ddownbe.setVisibility(View.INVISIBLE);
+     //   downcoston.setVisibility(View.INVISIBLE);
+
+
+
 //firebase
         auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference();
+
 
 
         //pdf link fetch **************************imp****************************************
@@ -82,6 +106,8 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
                 _10=uri.toString();
               //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
                 td10.setText(_10);
+                d10.setVisibility(View.VISIBLE);
+                u10.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -92,6 +118,8 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
                 _12=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
                 td12.setText(_12);
+                d12.setVisibility(View.VISIBLE);
+                u12.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -103,6 +131,9 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
                 _4=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
                 tddownbe.setText(_4);
+                ddownbe.setVisibility(View.VISIBLE);
+                upbe.setVisibility(View.INVISIBLE);
+
             }
         });
 
@@ -113,6 +144,9 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
                 _3=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
                 tdownte.setText(_3);
+
+                downte.setVisibility(View.VISIBLE);
+                upte.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -124,6 +158,11 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
                 _2=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
                 tdownse.setText(_2);
+
+
+                downse.setVisibility(View.VISIBLE);
+                upse.setVisibility(View.INVISIBLE);
+
             }
         });
 
@@ -135,6 +174,8 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
                 _1=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
                 tdownfe.setText(_1);
+                downfe.setVisibility(View.VISIBLE);
+                upfe.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -147,6 +188,9 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
                 _dip=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
                 tdowndip.setText(_dip);
+                downdip.setVisibility(View.VISIBLE);
+                updip.setVisibility(View.INVISIBLE);
+
             }
         });
 
@@ -157,6 +201,8 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
             public void onClick(View v) {
 Intent intent=new Intent(uplod_documents.this,doc_up_10_.class);
 startActivity(intent);
+finish();
+
             }
         });
 
@@ -165,6 +211,7 @@ u12.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
         Intent intent=new Intent(uplod_documents.this,doc_up_12.class);
         startActivity(intent);
+        finish();
     }
 });
         updip.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +219,7 @@ u12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(uplod_documents.this,doc_up_diploma.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -181,6 +229,7 @@ u12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(uplod_documents.this, BE_1.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -189,6 +238,7 @@ u12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(uplod_documents.this, BE_2.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -197,6 +247,7 @@ u12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(uplod_documents.this, BE_3.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -205,6 +256,7 @@ u12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(uplod_documents.this, BE_4.class);
                 startActivity(intent);
+                finish();
             }
         });
 
