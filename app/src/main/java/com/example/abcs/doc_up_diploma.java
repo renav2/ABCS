@@ -152,7 +152,7 @@ public class doc_up_diploma extends AppCompatActivity {
 //                        // v1.put("url", myurl);
                         Intent intent=new Intent(doc_up_diploma.this,uplod_documents.class);
                         startActivity(intent);
-
+finish();
 //                        startActivity(intent);
                     } else {
                         // dialog.dismiss();

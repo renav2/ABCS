@@ -145,7 +145,7 @@ public class doc_up_10_ extends AppCompatActivity {
                                 Intent intent=new Intent(doc_up_10_.this,uplod_documents.class);
                                 startActivity(intent);
 
-
+finish();
 
 
 

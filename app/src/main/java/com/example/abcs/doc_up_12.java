@@ -154,6 +154,7 @@ public class doc_up_12 extends AppCompatActivity {
 
                         Intent intent=new Intent(doc_up_12.this,uplod_documents.class);
                         startActivity(intent);
+                        finish();
 //                        startActivity(intent);
                     } else {
                         // dialog.dismiss();
