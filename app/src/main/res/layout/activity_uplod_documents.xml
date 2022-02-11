@@ -56,14 +56,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/tenup"
                             android:layout_width="8dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/uplod10"
                             android:layout_width="19dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -82,14 +82,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/tendown"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/downlod10"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -108,14 +108,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/up12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/uplod12"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -134,14 +134,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/down12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/downlod12"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -160,14 +160,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/updip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/uploddip"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -186,14 +186,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/downdip"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/downloddip"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -212,14 +212,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/upfe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/uplodfe1"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -238,14 +238,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/downdfe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/downlodfe"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -264,14 +264,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/upse"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/uplodse"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -290,14 +290,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/downse"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/downlodse"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -316,14 +316,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/upte"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/uplodte"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -342,14 +342,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/downte"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/downlodte"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -368,14 +368,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/upbe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/uplodbe"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -394,14 +394,14 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/downbe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
 
                         <Button
-                            android:id="@+id/button20"
+                            android:id="@+id/downlodbe"
                             android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -420,7 +420,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView99"
+                            android:id="@+id/upcostom"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -441,14 +441,14 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textView99"
+                        android:id="@+id/downcustom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="TextView" />
 
                     <Button
-                        android:id="@+id/button20"
+                        android:id="@+id/downlodecustom"
                         android:layout_width="203dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
