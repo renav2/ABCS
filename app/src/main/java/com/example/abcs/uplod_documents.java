@@ -2,14 +2,21 @@ package com.example.abcs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class uplod_documents extends AppCompatActivity {
 Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
 TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
-
+    FirebaseAuth auth;
+    FirebaseFirestore fstore;
 
 
 
@@ -17,6 +24,7 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uplod_documents);
+        //textview
         tu10 =findViewById(R.id.tenup);
         td10 =findViewById(R.id.tendown);
         tu12=findViewById(R.id.up12);
@@ -51,13 +59,52 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         ddownbe =findViewById(R.id.downlodbe);
         upcustom=findViewById(R.id.button20);
         downcoston=findViewById(R.id.downlodecustom);
-
-        //textview
-
-
-
+//firebase
+        auth=FirebaseAuth.getInstance();
+        fstore=FirebaseFirestore.getInstance();
 
 
+//        Intent galleryIntent = new Intent();
+//        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+//        galleryIntent.setType("application/pdf");
+//        startActivityForResult(galleryIntent, 1);
 
+        u10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+Intent intent=new Intent(uplod_documents.this,document_pdf_uplod.class);
+startActivity(intent);
+            }
+        });
+
+u12.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        String txt_12=tu12.getText().toString();
+
+        Intent intent=new Intent(uplod_documents.this,document_pdf_uplod.class);
+        intent.putExtra("12th",txt_12);
+
+        startActivity(intent);
     }
+});
+
+
+
+
+        updip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String diploma=tupdip.getText().toString();
+
+                Intent intent=new Intent(uplod_documents.this,document_pdf_uplod.class);
+                intent.putExtra("diploma",diploma);
+
+                startActivity(intent);
+            }
+        });
+    }
+
+
+
 }

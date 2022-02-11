@@ -60,7 +60,7 @@
                             android:layout_width="8dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="TextView" />
+                            android:text="10th" />
 
                         <Button
                             android:id="@+id/uplod10"
@@ -112,7 +112,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="TextView" />
+                            android:text="12th" />
 
                         <Button
                             android:id="@+id/uplod12"
@@ -164,7 +164,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="TextView" />
+                            android:text="uplod diploma" />
 
                         <Button
                             android:id="@+id/uploddip"
