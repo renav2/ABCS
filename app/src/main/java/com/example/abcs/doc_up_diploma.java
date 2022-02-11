@@ -128,7 +128,7 @@ public class doc_up_diploma extends AppCompatActivity {
 
 
 
-                   //     Toast.makeText(doc_up_12.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(doc_up_diploma.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
 //                        Intent intent=new Intent(doc_up_10_.this,AdminNotificationHome.class);
 
 
@@ -150,7 +150,8 @@ public class doc_up_diploma extends AppCompatActivity {
 //
 //
 //                        // v1.put("url", myurl);
-
+                        Intent intent=new Intent(doc_up_diploma.this,uplod_documents.class);
+                        startActivity(intent);
 
 //                        startActivity(intent);
                     } else {

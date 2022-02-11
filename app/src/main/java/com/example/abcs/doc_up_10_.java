@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -33,7 +34,7 @@ public class doc_up_10_ extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_uplod_documents);
+        //setContentView(R.layout.activity_uplod_documents);
         // upload = findViewById(R.id.uploadpdf);
         //  b=findViewById(R.id.btm);
         auth=FirebaseAuth.getInstance();
@@ -139,6 +140,13 @@ public class doc_up_10_ extends AppCompatActivity {
 //
 //
 //                        // v1.put("url", myurl);
+
+
+                                Intent intent=new Intent(doc_up_10_.this,uplod_documents.class);
+                                startActivity(intent);
+
+
+
 
 
 //                        startActivity(intent);

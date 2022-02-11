@@ -33,7 +33,7 @@ public class doc_up_12 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_uplod_documents);
+       // setContentView(R.layout.activity_uplod_documents);
         // upload = findViewById(R.id.uploadpdf);
         //  b=findViewById(R.id.btm);
         auth=FirebaseAuth.getInstance();
@@ -128,7 +128,7 @@ public class doc_up_12 extends AppCompatActivity {
 
 
 
-//                        Toast.makeText(doc_up_12.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(doc_up_12.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
 //                        Intent intent=new Intent(doc_up_10_.this,AdminNotificationHome.class);
 
 
@@ -152,6 +152,8 @@ public class doc_up_12 extends AppCompatActivity {
 //                        // v1.put("url", myurl);
 
 
+                        Intent intent=new Intent(doc_up_12.this,uplod_documents.class);
+                        startActivity(intent);
 //                        startActivity(intent);
                     } else {
                         // dialog.dismiss();
