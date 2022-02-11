@@ -64,28 +64,21 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         fstore=FirebaseFirestore.getInstance();
 
 
-//        Intent galleryIntent = new Intent();
-//        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-//        galleryIntent.setType("application/pdf");
-//        startActivityForResult(galleryIntent, 1);
+
 
         u10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-Intent intent=new Intent(uplod_documents.this,document_pdf_uplod.class);
+Intent intent=new Intent(uplod_documents.this,doc_up_10_.class);
 startActivity(intent);
+
             }
         });
 
 u12.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        String txt_12=tu12.getText().toString();
 
-        Intent intent=new Intent(uplod_documents.this,document_pdf_uplod.class);
-        intent.putExtra("12th",txt_12);
-
-        startActivity(intent);
     }
 });
 
@@ -95,12 +88,9 @@ u12.setOnClickListener(new View.OnClickListener() {
         updip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String diploma=tupdip.getText().toString();
 
-                Intent intent=new Intent(uplod_documents.this,document_pdf_uplod.class);
-                intent.putExtra("diploma",diploma);
 
-                startActivity(intent);
+
             }
         });
     }

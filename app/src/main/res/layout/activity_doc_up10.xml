@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".document_pdf_uplod">
+    tools:context=".doc_up_10_">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

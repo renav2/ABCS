@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".document_pdf_uplod"
+            android:name=".doc_up_10_"
             android:exported="false" />
         <activity
             android:name=".uplod_documents"
