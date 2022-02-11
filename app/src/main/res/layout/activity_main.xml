@@ -30,7 +30,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="34dp"
-        android:layout_marginBottom="59dp"
         android:text="Note :temp button for home"
         android:textColor="@color/purple_500"
         app:layout_constraintBottom_toTopOf="@+id/reset"
@@ -63,9 +62,9 @@
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
+                android:layout_weight="1"
                 android:ems="10"
                 android:hint="Email"
-                android:layout_weight="1"
                 android:inputType="textEmailAddress"
                 android:textColor="#0C0C0C"
                 android:textColorHint="#29292B"
@@ -85,19 +84,18 @@
                 android:orientation="horizontal">
 
 
-
                 <EditText
                     android:id="@+id/txt_password"
                     android:layout_width="290dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="Password"
-                    android:textColorHint="#29292B"
                     android:inputType="textPassword"
                     android:minHeight="48dp"
                     android:textColor="#0C0C0C"
-                    android:layout_marginHorizontal="40dp"
+                    android:textColorHint="#29292B"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -120,8 +118,8 @@
                     android:id="@+id/btn_login"
                     android:layout_width="255dp"
                     android:layout_height="48dp"
-                    android:text="Log in"
-                    android:layout_marginHorizontal="70dp"/>
+                    android:layout_marginHorizontal="70dp"
+                    android:text="Log in" />
 
 
             </LinearLayout>
@@ -144,7 +142,7 @@
                     android:layout_height="33dp"
                     android:layout_marginLeft="100dp"
                     android:text="Don't have an account? "
-                    android:textColor="#29292B"/>
+                    android:textColor="#29292B" />
 
                 <TextView
                     android:id="@+id/txt_view_jump2"
@@ -216,15 +214,15 @@
 
     <Button
         android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="41dp"
+        android:layout_width="254dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="74dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txhome"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="@+id/txhome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txhome" />
 
 
