@@ -23,7 +23,7 @@ import com.squareup.picasso.Picasso;
 
 //import com.squareup.picass.Picasso;
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission, uplod,logout,collagenotoi;
+private Button  paymentpage, profile, permission, uplod,logout,collagenotoi,studentdoc;
     TextView logO;
 //TextView useremailid;
 ImageView profilepic;
@@ -43,9 +43,16 @@ TextView r;
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         logO=findViewById(R.id.logO);
+        studentdoc=findViewById(R.id.button4);
 collagenotoi=findViewById(R.id.button5);
 
-
+studentdoc.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(HomeActivity.this, uplod_documents.class);
+        startActivity(intent);
+    }
+});
 
 
 collagenotoi.setOnClickListener(new View.OnClickListener() {

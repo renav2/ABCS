@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".uplod_documents">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginBottom="36dp"
+
+            android:text="Registeration  Form"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/etRegPass19"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ayear"
+            tools:ignore="MissingConstraints" />
+
+
+        <Spinner
+            android:id="@+id/Ctype"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="68dp"
+            android:entries="@array/ctype"
+            app:layout_constraintBottom_toTopOf="@+id/branch"
+            app:layout_constraintEnd_toEndOf="@+id/branch"
+            app:layout_constraintStart_toStartOf="@+id/branch"
+            app:layout_constraintTop_toBottomOf="@+id/tv_userid" />
+
+        <Spinner
+            android:id="@+id/branch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="53dp"
+            android:entries="@array/brname"
+            app:layout_constraintBottom_toTopOf="@+id/Cyear"
+            app:layout_constraintEnd_toEndOf="@+id/Ayear"
+            app:layout_constraintStart_toStartOf="@+id/Ayear"
+            app:layout_constraintTop_toBottomOf="@+id/Ctype" />
+
+        <Spinner
+            android:id="@+id/Ayear"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginBottom="330dp"
+            android:entries="@array/ayear"
+            app:layout_constraintBottom_toTopOf="@+id/etRegPass19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Cyear" />
+
+        <Spinner
+            android:id="@+id/Cyear"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="41dp"
+            android:entries="@array/cyear"
+            app:layout_constraintBottom_toTopOf="@+id/Ayear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/branch" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="40dp"
+            android:text="Register now"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRegPass19" />
+
+        <TextView
+            android:id="@+id/tv_userid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="129dp"
+            android:layout_marginBottom="173dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/Ctype"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView999"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="53dp"
+            android:text="ID:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout21"
+            app:layout_constraintEnd_toStartOf="@+id/tv_userid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout21"
+            android:layout_width="349dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="840dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView999">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="341dp"
+            android:layout_height="67dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/Cyear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintVertical_bias="0.501">
+
+            <TextView
+                android:id="@+id/textView85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
