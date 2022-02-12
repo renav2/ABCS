@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="362dp"
             android:layout_height="90dp"
             android:orientation="horizontal">
 
@@ -40,12 +40,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:paddingStart="50dp"
-                android:text="TextView" />
+                android:text="Hostel Payment" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="366dp"
             android:layout_height="90dp"
             android:orientation="horizontal">
 
@@ -53,7 +53,7 @@
                 android:id="@+id/button12"
                 android:layout_width="95dp"
                 android:layout_height="85dp"
-                android:text="payment" />
+                android:background="@drawable/ic_baseline_payment_24" />
 
             <TextView
                 android:id="@+id/textView90"
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingStart="50dp"
-                android:text="TextView" />
+                android:text="Payment" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,7 +80,8 @@
                 android:id="@+id/adminper"
                 android:layout_width="95dp"
                 android:layout_height="85dp"
-                android:text="Grant Permission" />
+                android:background="@drawable/ic_baseline_accessibility_new_24"
+                 />
 
             <TextView
                 android:id="@+id/textView91"
@@ -89,11 +90,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:paddingStart="50dp"
-                android:text="TextView" />
+                android:text="Grant Permission" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="241dp"
+            android:layout_width="365dp"
             android:layout_height="90dp"
             android:orientation="horizontal">
 
@@ -101,7 +102,7 @@
                 android:id="@+id/btn_viewallpay"
                 android:layout_width="95dp"
                 android:layout_height="85dp"
-                android:text="view all users" />
+                android:background="@drawable/ic_baseline_supervisor_account_24" />
 
             <TextView
                 android:id="@+id/textView92"
@@ -110,7 +111,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:paddingStart="50dp"
-                android:text="TextView" />
+                android:text="View All User" />
         </LinearLayout>
 
         <Button
