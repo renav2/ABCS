@@ -47,13 +47,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/cbt"
             android:layout_width="357dp"
             android:layout_height="107dp"
             android:text="Ask for permission" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/pbt"
             android:layout_width="356dp"
             android:layout_height="113dp"
             android:text="permission status" />

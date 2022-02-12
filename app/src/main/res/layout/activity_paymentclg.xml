@@ -175,6 +175,7 @@
         android:layout_width="363dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
+        android:digits="0123456789"
         android:ems="10"
         android:hint="Enter The Amount You Want To Pay Now"
         android:inputType="textPersonName"
