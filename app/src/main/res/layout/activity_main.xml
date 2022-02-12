@@ -63,10 +63,11 @@
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
+                android:layout_weight="1"
                 android:ems="10"
                 android:hint="Email"
-                android:layout_weight="1"
                 android:inputType="textEmailAddress"
+                android:minHeight="48dp"
                 android:textColor="#0C0C0C"
                 android:textColorHint="#29292B"
                 tools:ignore="TextContrastCheck" />
