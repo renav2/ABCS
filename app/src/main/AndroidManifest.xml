@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
+        <activity
+            android:name=".AdminViewApplication"
+            android:exported="false" />
+        <activity
+            android:name=".AdminApproveApplications"
+            android:exported="false" />
+        <activity
+            android:name=".AdminPermissionHome"
+            android:exported="false" />
+        <activity
+            android:name=".PreviousApplications"
+            android:exported="false" />
+        <activity
+            android:name=".CreateApplication"
+            android:exported="false" />
         <activity
             android:name=".doc_up_diploma"
             android:exported="false" />

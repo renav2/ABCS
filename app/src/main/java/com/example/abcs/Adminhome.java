@@ -42,7 +42,13 @@ Button apermission, btnpay,admin_payhome,notification;
             }
         });
 
-
+        apermission.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(Adminhome.this,AdminPermissionHome.class);
+                startActivity(intent);
+            }
+        });
 
 
 
