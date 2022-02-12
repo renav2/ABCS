@@ -1,16 +1,14 @@
+
 package com.example.abcs;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,17 +24,18 @@ import com.google.firebase.storage.StorageReference;
 import java.util.HashMap;
 import java.util.Map;
 
-public class test_uplodpdf extends AppCompatActivity {
-FirebaseAuth auth;
+public class BE_4 extends uplod_documents {
+
+    FirebaseAuth auth;
     FirebaseFirestore fstore;
     Uri imageuri = null;
-Button b;
+    Button b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_admin_notification_home);
-       // upload = findViewById(R.id.uploadpdf);
-      //  b=findViewById(R.id.btm);
+        //setContentView(R.layout.activity_uplod_documents);
+        // upload = findViewById(R.id.uploadpdf);
+        //  b=findViewById(R.id.btm);
         auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
 
@@ -62,18 +61,18 @@ Button b;
             imageuri = data.getData();
             final String timestamp = "" + System.currentTimeMillis();
             StorageReference storageReference = FirebaseStorage.getInstance().getReference();
-          //  final String messagePushID = getIntent().getStringExtra("pdf_sub");
+            //  final String messagePushID = getIntent().getStringExtra("pdf_sub");
             final String messagePushID = getIntent().getStringExtra("pdf_sub");
 
-            Toast.makeText(test_uplodpdf.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(BE_4.this, imageuri.toString(), Toast.LENGTH_SHORT).show();
 
             // Here we are uploading the pdf in firebase storage with the name of current time
 
 
 
-    //--->patha
-            final StorageReference filepath = storageReference.child(messagePushID + "." + "pdf");
-            Toast.makeText(test_uplodpdf.this, filepath.getName(), Toast.LENGTH_SHORT).show();
+            //--->patha
+            final StorageReference filepath = storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/BE" + ".pdf");
+            Toast.makeText(BE_4.this, filepath.getName(), Toast.LENGTH_SHORT).show();
             filepath.putFile(imageuri).continueWithTask(new Continuation() {
                 @Override
                 public Object then(@NonNull Task task) throws Exception {
@@ -91,23 +90,25 @@ Button b;
                         dialog.dismiss();
                         Uri uri = task.getResult();
                         String myurl;
-                      myurl = uri.toString();
+                        myurl = uri.toString();
                         //UPLOD FILE TO THE FIRE STORE
                         //String invo_userid1=auth.getCurrentUser().getUid();
-                        String pdf_sub=getIntent().getStringExtra("pdf_sub");
-                        String pdf_date=getIntent().getStringExtra("pdf_date");
-                        String pdf_desc=getIntent().getStringExtra("pdf_desc");
-                        String pdf_highlight=getIntent().getStringExtra("pdf_highlight");
-                        String pdf_authrity=getIntent().getStringExtra("pdf_authrity");
-                        String pdf_time=getIntent().getStringExtra("pdf_time");
-                        DocumentReference reference = fstore.collection("files").document(pdf_sub);
+                        String pdf_sub="BE";
+//                        String pdf_date=getIntent().getStringExtra("pdf_date");
+//                        String pdf_desc=getIntent().getStringExtra("pdf_desc");
+//                        String pdf_highlight=getIntent().getStringExtra("pdf_highlight");
+//                        String pdf_authrity=getIntent().getStringExtra("pdf_authrity");
+//                        String pdf_time=getIntent().getStringExtra("pdf_time");
+
+
+                        DocumentReference reference = fstore.collection("student_uplod_document").document(auth.getCurrentUser().getUid());
                         Map<String, String> v1 = new HashMap<>();
-                        v1.put("url", myurl);
-                         v1.put("sub",pdf_sub) ;
+                        v1.put("urlBE", myurl);
+
                         reference.set(v1).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
-                                Toast.makeText(test_uplodpdf.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(BE_4.this, "file uploded on fstore", Toast.LENGTH_SHORT).show();
 
                             }
                         });
@@ -115,9 +116,9 @@ Button b;
 
 
 
-                        Toast.makeText(test_uplodpdf.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
-                        Intent intent=new Intent(test_uplodpdf.this,AdminNotificationHome.class);
-                        //
+                        Toast.makeText(BE_4.this, "Uploaded Successfully", Toast.LENGTH_SHORT).show();
+//                        Intent intent=new Intent(doc_up_10_.this,AdminNotificationHome.class);
+
 
 //                        String pdf_date=getIntent().getStringExtra("pdf_date");
 //                        String pdf_desc=getIntent().getStringExtra("pdf_desc");
@@ -125,29 +126,32 @@ Button b;
 //                        String pdf_authrity=getIntent().getStringExtra("pdf_authrity");
 //                        String pdf_time=getIntent().getStringExtra("pdf_time");
 //
-
-                       intent.putExtra("pdf_sub",pdf_sub);
-                        intent.putExtra("pdf_date",pdf_date);
-                        intent.putExtra("pdf_desc",pdf_desc);
-                        intent.putExtra("pdf_highlight",pdf_highlight);
-                        intent.putExtra("pdf_authrity",pdf_authrity);
-                        intent.putExtra("pdf_time",pdf_time);
-                        //url from test pdf
-                        intent.putExtra("pdfurl",myurl);
-
-
-                        // v1.put("url", myurl);
-
-
-                      startActivity(intent);
+//
+//                        intent.putExtra("pdf_sub",pdf_sub);
+//                        intent.putExtra("pdf_date",pdf_date);
+//                        intent.putExtra("pdf_desc",pdf_desc);
+//                        intent.putExtra("pdf_highlight",pdf_highlight);
+//                        intent.putExtra("pdf_authrity",pdf_authrity);
+//                        intent.putExtra("pdf_time",pdf_time);
+//                        //url from test pdf
+//                        intent.putExtra("pdfurl",myurl);
+//
+//
+//                        // v1.put("url", myurl);
+                        Intent intent = new Intent(BE_4.this,uplod_documents.class);
+                        startActivity(intent);
                     } else {
-                       // dialog.dismiss();
-                        Toast.makeText(test_uplodpdf.this, "UploadedFailed", Toast.LENGTH_SHORT).show();
+                        // dialog.dismiss();
+                        Toast.makeText(BE_4.this, "UploadedFailed", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
     }
 }
+
+
+
+
 
 

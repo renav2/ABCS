@@ -14,11 +14,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".downlod_notice"
+            android:name=".doc_up_diploma"
             android:exported="false" />
         <activity
-            android:name=".PdfViewer"
+            android:name=".doc_up_12"
             android:exported="false" />
+
+
+        <activity
+            android:name=".BE_1"
+            android:exported="false" />
+        <activity
+        android:name=".BE_2"
+        android:exported="false" />
+        <activity
+        android:name=".BE_3"
+        android:exported="false" />
+        <activity
+        android:name=".BE_4"
+        android:exported="false" />
+
+
+        <activity
+            android:name=".doc_up_10_"
+            android:exported="false" />
+        <activity
+            android:name=".uplod_documents"
+            android:exported="false" />
+        <activity
+            android:name=".downlodpdf"
+            android:exported="false" />
+        <activity
+            android:name=".downlod_notice"
+            android:exported="false" />
+
         <activity
             android:name=".ViewNotifications"
             android:exported="false" />

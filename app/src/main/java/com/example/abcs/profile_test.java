@@ -28,7 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-//import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Picasso;
 
 public class profile_test extends AppCompatActivity {
 
@@ -68,9 +68,13 @@ public class profile_test extends AppCompatActivity {
             @Override
             public void onSuccess(Uri uri) {
 
-                //Picasso.get().load(uri).into(pimage);
+                Picasso.get().load(uri).into(pimage);
             }
         });
+
+
+
+
         userID=fAuth.getCurrentUser().getUid();
         user=fAuth.getCurrentUser();
         DocumentReference documentReference=fstore.collection("demo").document(userID);

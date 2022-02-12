@@ -19,9 +19,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
+
 //import com.squareup.picass.Picasso;
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission, uplod,logout;
+private Button  paymentpage, profile, permission, uplod,logout,collagenotoi,studentdoc;
     TextView logO;
 //TextView useremailid;
 ImageView profilepic;
@@ -41,7 +43,25 @@ TextView r;
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         logO=findViewById(R.id.logO);
+        studentdoc=findViewById(R.id.button4);
+collagenotoi=findViewById(R.id.button5);
 
+studentdoc.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(HomeActivity.this, uplod_documents.class);
+        startActivity(intent);
+    }
+});
+
+
+collagenotoi.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(HomeActivity.this, downlodpdf.class);
+        startActivity(intent);
+    }
+});
         storageReference= FirebaseStorage.getInstance().getReference();
         //currunt user id store in r  & for sring purpose
         r=findViewById(R.id.tp);
@@ -54,7 +74,7 @@ TextView r;
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-               // Picasso.get().load(uri).into(profilepic);
+                Picasso.get().load(uri).into(profilepic);
             }
         });
         uplod.setOnClickListener(new View.OnClickListener() {
