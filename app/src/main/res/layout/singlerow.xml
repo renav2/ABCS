@@ -10,21 +10,25 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="328dp"
-        android:padding="16dp">
+  >
 
 
         <TextView
+            android:id="@+id/textView70"
+            android:layout_width="213dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/t2"
+            android:layout_marginTop="42dp"
+            android:text="sections" />
+
+        <TextView
             android:id="@+id/t"
-            android:layout_width="358dp"
-            android:layout_height="130dp"
-            android:layout_below="@+id/t1"
-            android:layout_alignStart="@+id/t2"
-            android:layout_alignEnd="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="-2dp"
-            android:layout_marginTop="78dp"
-            android:layout_marginEnd="-3dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginTop="139dp"
+            android:layout_marginBottom="128dp"
             android:text="Description "
             android:textSize="23dp" />
 
@@ -42,78 +46,120 @@
             android:layout_marginBottom="0dp"
             android:text="no" />
 
+
         <TextView
             android:id="@+id/t1"
-            android:layout_width="match_parent"
+            android:layout_width="283dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
             android:text="Name"
             android:textColor="#000"
             android:textSize="25dp"
             android:textStyle="bold" />
-
 
         <TextView
             android:id="@+id/t2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/t1"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-1dp"
             android:text="email"
-            android:textSize="23dp" />
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/t3"
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
+            android:layout_width="180dp"
+            android:layout_height="29dp"
             android:layout_below="@+id/t1"
-            android:layout_marginTop="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="23dp"
             android:text="level"
-            android:textSize="23dp" />
+            android:textSize="11dp" />
 
         <TextView
             android:id="@+id/t6"
-            android:layout_width="184dp"
-            android:layout_height="wrap_content"
+            android:layout_width="180dp"
+            android:layout_height="29dp"
             android:layout_below="@+id/t1"
 
+            android:layout_alignStart="@+id/t3"
             android:layout_alignBottom="@+id/t3"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="184dp"
-            android:layout_marginTop="39dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="-2dp"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="-42dp"
             android:text="Section"
-            android:textSize="23dp" />
+            android:textSize="11dp" />
 
         <Button
             android:id="@+id/btn_pass"
-            android:layout_width="97dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="258dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="255dp"
             android:layout_marginEnd="258dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="2dp"
             android:text="yes" />
 
         <TextView
             android:id="@+id/textView50"
-            android:layout_width="153dp"
-            android:layout_height="60dp"
+            android:layout_width="131dp"
+            android:layout_height="44dp"
             android:layout_alignStart="@+id/t"
             android:layout_alignTop="@+id/t1"
             android:layout_alignEnd="@+id/t"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="114dp"
-            android:layout_marginTop="230dp"
-            android:layout_marginEnd="91dp"
-            android:layout_marginBottom="21dp"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="261dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginBottom="14dp"
             android:text="TextView"
             android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="114dp"
+            android:layout_height="33dp"
+            android:text="TextView" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="222dp"
+            android:layout_marginBottom="70dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="221dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/t2"
+            android:text="level"
+            android:layout_marginTop="3dp" />
+
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="255dp"
+            android:text="Techer side commnets" />
 
     </RelativeLayout>
 

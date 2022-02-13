@@ -60,7 +60,7 @@ public class advrecfragment extends Fragment {
 
 
         FirestoreRecyclerOptions<modelpermission> options = new FirestoreRecyclerOptions.Builder<modelpermission>()
-                .setQuery(FirebaseFirestore.getInstance().collectionGroup("Applications").whereNotEqualTo("Status","Pending"), modelpermission.class)
+                .setQuery(FirebaseFirestore.getInstance().collectionGroup("Applications").whereEqualTo("Status","Pending"), modelpermission.class)
                 .build();
         adapter=new adminaviewdapter(options);
         recview.setAdapter(adapter);

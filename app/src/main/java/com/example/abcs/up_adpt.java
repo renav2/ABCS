@@ -20,23 +20,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
+public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
 {
 
 
 
 
 
-    ArrayList<model> datalist;
+    ArrayList<up_model> datalist;
 
-    public myadapter(ArrayList<model> datalist) {
+    public up_adpt(ArrayList<up_model> datalist) {
         this.datalist = datalist;
     }
 
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.singlerow,parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.single_row_userviserper,parent,false);
         return new myviewholder(view);
     }
 
@@ -44,10 +44,11 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
         holder.t1.setText(datalist.get(position).getName());
         holder.t2.setText(datalist.get(position).getEmail());
-     holder.t3.setText(datalist.get(position).getLevel());
-       holder.t6.setText(datalist.get(position).getSection());
+        holder.t3.setText(datalist.get(position).getLevel());
+        holder.t6.setText(datalist.get(position).getSection());
         holder.t.setText(datalist.get(position).getComments());
         holder.id.setText(datalist.get(position).getPermissionid());
+        holder.permision_Status.setText(datalist.get(position).getStatus());
     }
 
     @Override
@@ -100,7 +101,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
                             String pro_status=documentSnapshot.getString("status");
 //                            permision_Status.setText("NOT granted");
                             String sta1=permision_Status.getText().toString();
-                           /// his
+                            /// his
                             if(sta1.equals("granted")){
                                 b1p.setVisibility(View.INVISIBLE);
                                 b2f.setVisibility(View.INVISIBLE);

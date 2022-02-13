@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class test_user_permision_ask extends AppCompatActivity {
 FirebaseFirestore fstore;
@@ -99,13 +100,17 @@ req.setOnClickListener(new View.OnClickListener() {
                 String tx_se=sec.getSelectedItem().toString();
                 String tx_clg=clg.getSelectedItem().toString();
        //add data to the firebase
-        DocumentReference reference = fstore.collection("student_req_permision_data").document(tx_em);
+        DocumentReference reference = fstore.collection("student_req_permision_data").document();
         Map<String, String> v = new HashMap<>();
         v.put("Name", tx_na);
         v.put("Email", tx_em);
         v.put("Comments", tx_comm);
         v.put("Section", tx_se);
         v.put("Level", tx_clg);
+        Random random=new Random();
+        int val=random.nextInt(1000000000);
+        String val2;
+        v.put("permissionid",Integer.toString(val));
 
 
 
