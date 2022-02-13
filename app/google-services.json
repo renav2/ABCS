@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "1063441324698",
+    "firebase_url": "https://do-not-touch-this-default-rtdb.firebaseio.com",
     "project_id": "do-not-touch-this",
     "storage_bucket": "do-not-touch-this.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1063441324698-m7u2e53merohtd2s7uqbisdg3j9phtpa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abcs",
+            "certificate_hash": "cb9f51d565805ccf69c7ca326f8d58e603e71291"
+          }
+        },
         {
           "client_id": "1063441324698-0egt2q87phm7rb3do7g9qsmuohot8425.apps.googleusercontent.com",
           "client_type": 3

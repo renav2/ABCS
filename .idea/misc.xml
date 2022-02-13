@@ -161,7 +161,10 @@
         <entry key="..\:/aa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_approve_applications.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_view_application.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up10.xml" value="0.16" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up12.xml" value="0.25" />
@@ -169,14 +172,19 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_document_pdf_uplod.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_downlodpdf.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_main.xml" value="0.23055555555555557" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_register2.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_test_user_permision_status.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_uplod_documents.xml" value="0.30592734225621415" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_userwiser_permision_fetch.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_view_notifications.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/elements.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/single_row_userviserper.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/singlerow.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/singlerownotice.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/singlerowpermission.xml" value="0.25" />
       </map>
     </option>
   </component>

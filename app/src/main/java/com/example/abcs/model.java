@@ -1,7 +1,19 @@
 package com.example.abcs;
 
 public class model {
-    String Name,Email,Comments,Section,Level;
+    String Name,Email,Comments,Section,Level,permissionid;
+
+    public model(String permissionid) {
+        this.permissionid = permissionid;
+    }
+
+    public String getPermissionid() {
+        return permissionid;
+    }
+
+    public void setPermissionid(String permissionid) {
+        this.permissionid = permissionid;
+    }
 
     public model() {
     }
