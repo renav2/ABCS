@@ -60,7 +60,7 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
     {
         // add here
         TextView t1,t2,t3,t6,t,id;
-        Button b1p,b2f;
+       // Button b1p,b2f;
         FirebaseFirestore fstore;
         TextView permision_Status;
 
@@ -74,8 +74,7 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-            b1p=itemView.findViewById(R.id.btn_pass);
-            b2f=itemView.findViewById(R.id.btn_fail);
+
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
@@ -103,28 +102,26 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
                             String sta1=permision_Status.getText().toString();
                             /// his
                             if(sta1.equals("granted")){
-                                b1p.setVisibility(View.INVISIBLE);
-                                b2f.setVisibility(View.INVISIBLE);
+
                             }else if(sta1.equals("NOT granted")){
-                                b1p.setVisibility(View.INVISIBLE);
-                                b2f.setVisibility(View.INVISIBLE);
+
                             }
                         }
                     });
                 }
             }, 100);
-            b1p.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    uplod_permision_status_grant(t1,t2,t3,t,t6,id);
-                }
-            });
-            b2f.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    uplod_permision_status_fail(t1,t2,t3,t,t6,id);
-                }
-            });
+//            b1p.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    uplod_permision_status_grant(t1,t2,t3,t,t6,id);
+//                }
+//            });
+//            b2f.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    uplod_permision_status_fail(t1,t2,t3,t,t6,id);
+//                }
+//            });
         }
         private void uplod_permision_status_fail(TextView t1, TextView t2, TextView t3, TextView t, TextView t6,TextView id) {
             String txtt1=t1.getText().toString();
@@ -151,8 +148,7 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
             reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
-                    b1p.setVisibility(View.INVISIBLE);
-                    b2f.setVisibility(View.INVISIBLE);
+
                     permision_Status.setText("Permission NOT granted ");
                 }
             });
@@ -182,8 +178,7 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
                 @Override
                 public void onSuccess(Void unused) {
                     // Toast.makeText(test_user_permision_ask.this, "yor req is recorde", Toast.LENGTH_SHORT).show();
-                    b1p.setVisibility(View.INVISIBLE);
-                    b2f.setVisibility(View.INVISIBLE);
+
                     permision_Status.setText("Permission granted ");
 
                 }
