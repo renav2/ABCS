@@ -1,6 +1,10 @@
 package com.example.abcs;
 
 import android.app.DatePickerDialog;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -14,6 +18,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,6 +45,10 @@ public class CreateApplication extends AppCompatActivity {
     String status="Pending";
     String Cmm="";
     String id= fs.collection("Permission").document().getId();
+    //Notification variables
+    NotificationManagerCompat notificationManagerCompat;
+    Notification notification;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +64,22 @@ public class CreateApplication extends AppCompatActivity {
         tm2 = findViewById(R.id.Etime);
         b1= findViewById(R.id.sbutton);
         email=findViewById(R.id.email);
+
+        //Notification Code Start
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("myCh","My channel", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        NotificationCompat.Builder builder =new NotificationCompat.Builder(this,"myCh")
+                .setSmallIcon(android.R.drawable.stat_notify_sync)
+                .setContentTitle("First Notification")
+                .setContentText("Message");
+
+        notification =builder.build();
+        notificationManagerCompat = NotificationManagerCompat.from(this);
+        //Notification Code End
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -92,6 +118,8 @@ public class CreateApplication extends AppCompatActivity {
                 String s_em= email.getText().toString();
                 String u =upid;
                 String did=id;
+
+
                 if(TextUtils.isEmpty(s_name) || TextUtils.isEmpty(s_prn) || TextUtils.isEmpty(s_subject)|| TextUtils.isEmpty(s_desc)|| TextUtils.isEmpty(s_sdt)|| TextUtils.isEmpty(s_edt) || TextUtils.isEmpty(s_tm1) || TextUtils.isEmpty(s_tm2)||TextUtils.isEmpty(s_em))
                 {
                     Toast.makeText(CreateApplication.this, "Please fill All the fields", Toast.LENGTH_SHORT).show();
@@ -103,8 +131,11 @@ public class CreateApplication extends AppCompatActivity {
                 else
                 {
                     saveApplication(s_name,s_prn,s_subject,s_desc,s_sdt,s_edt,s_tm1,s_tm2,s_em,u,status,did,Cmm);
+                    //Notification Code
+                    notificationManagerCompat.notify(0,notification);
                 }
             }
+
         });
         //FOR COMBOBOX
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
@@ -212,4 +243,6 @@ public class CreateApplication extends AppCompatActivity {
         SimpleDateFormat dateFormat=new SimpleDateFormat(myFormat, Locale.US);
         sdt.setText(dateFormat.format(myCalendar.getTime()));
     }
+
+
 }
