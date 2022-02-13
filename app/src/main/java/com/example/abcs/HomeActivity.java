@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,9 +24,10 @@ import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 //import com.squareup.picass.Picasso;
+
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission, uplod,logout,collagenotoi,studentdoc;
-    TextView logO;
+private Button  paymentpage, profile, permission, uplod,logout,collagenotoi,studentdoc,vereifyemail;
+    TextView logO,verifymsg;
 //TextView useremailid;
 ImageView profilepic;
     FirebaseAuth fAuth;
@@ -44,7 +47,37 @@ TextView r;
         fstore=FirebaseFirestore.getInstance();
         logO=findViewById(R.id.logO);
         studentdoc=findViewById(R.id.button4);
-collagenotoi=findViewById(R.id.button5);
+        collagenotoi=findViewById(R.id.button5);
+        vereifyemail=findViewById(R.id.resend_code);
+        verifymsg=findViewById(R.id.VerifyMsg);
+
+        String userID = fAuth.getCurrentUser().getUid();
+        FirebaseUser firebaseUser = fAuth.getCurrentUser();
+
+        //Start Email verification link sent
+        if (!firebaseUser.isEmailVerified()){
+                vereifyemail.setVisibility(View.VISIBLE);
+                verifymsg.setVisibility(View.VISIBLE);
+
+                vereifyemail.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        FirebaseUser firebaseUser = fAuth.getCurrentUser();
+                        firebaseUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(HomeActivity.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
+                             }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(HomeActivity.this, "Email not Sent."+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });
+        }
+        //End Email verification link sent
 
 studentdoc.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -114,7 +147,6 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent= new Intent(HomeActivity.this, user_permision_home.class);
                 startActivity(intent);
-
                 finish();
             }
         });
@@ -131,9 +163,6 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
     public boolean onOptionsItemSelected(MenuItem item) {
        switch (item.getItemId())
        {
-
-
-
            case R.id.logO:
                signout();
                return true;
@@ -147,7 +176,6 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(),MainActivity.class));
         Toast.makeText(HomeActivity.this, "Logout Succesfully", Toast.LENGTH_SHORT).show();
-
         finish();
     }
 
