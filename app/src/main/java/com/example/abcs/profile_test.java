@@ -52,6 +52,7 @@ public class profile_test extends AppCompatActivity {
         t3=findViewById(R.id.pcollege);
         t4=findViewById(R.id.pbranch);
         //t5=findViewById(R.id.pyear);
+        t5=findViewById(R.id.pclass);
         t6=findViewById(R.id.pid);
         b1=findViewById(R.id.back);
 
@@ -89,6 +90,7 @@ public class profile_test extends AppCompatActivity {
                 t3.setText(value.getString("mobile no"));
                 t4.setText(value.getString("Branch"));
    //             t5.setText(value.getString("Rollno"));
+                t5.setText(value.getString("Class"));
                 t6.setText(s1);
 
             }
