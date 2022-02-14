@@ -67,71 +67,71 @@ public class Admin_asper_dept_class extends AppCompatActivity
             txt_yr="FE";
         }
 //mech
-        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("Mech")){
+        if(_1.getText().toString().equals("BE") && mech.getText().toString().equals("Mech")){
             txt_dept="Mech";
             txt_yr="BE";
         }
-        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("Mech")){
+        if (_1.getText().toString().equals("SE") && mech.getText().toString().equals("Mech")){
             txt_dept="Mech";
             txt_yr="SE";
         }
-        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("Mech")){
+        if (_1.getText().toString().equals("TE") && mech.getText().toString().equals("Mech")){
             txt_dept="Mech";
             txt_yr="TE";
         }
-        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("Mech")){
+        if (_1.getText().toString().equals("FE") && mech.getText().toString().equals("Mech")){
             txt_dept="Mech";
             txt_yr="FE";
         }
 
 //civil
-        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("Civil")){
+        if(_1.getText().toString().equals("BE") && cvil.getText().toString().equals("Civil")){
             txt_dept="Civil";
             txt_yr="BE";
         }
-        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("Civil")){
+        if (_1.getText().toString().equals("SE") && cvil.getText().toString().equals("Civil")){
             txt_dept="Civil";
             txt_yr="SE";
         }
-        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("Civil")){
+        if (_1.getText().toString().equals("TE") && cvil.getText().toString().equals("Civil")){
             txt_dept="Civil";
             txt_yr="TE";
         }
-        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("Civil")){
+        if (_1.getText().toString().equals("FE") && cvil.getText().toString().equals("Civil")){
             txt_dept="Civil";
             txt_yr="FE";
         }
         //entc
-        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("ENTC")){
+        if(_1.getText().toString().equals("BE") && entc.getText().toString().equals("ENTC")){
             txt_dept="ENTC";
             txt_yr="BE";
         }
-        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("ENTC")){
+        if (_1.getText().toString().equals("SE") && entc.getText().toString().equals("ENTC")){
             txt_dept="ENTC";
             txt_yr="SE";
         }
-        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("ENTC")){
+        if (_1.getText().toString().equals("TE") && entc.getText().toString().equals("ENTC")){
             txt_dept="ENTC";
             txt_yr="TE";
         }
-        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("ENTC")){
+        if (_1.getText().toString().equals("FE") && entc.getText().toString().equals("ENTC")){
             txt_dept="ENTC";
             txt_yr="FE";
         }
 //it
-        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("IT")){
+        if(_1.getText().toString().equals("BE") && it.getText().toString().equals("IT")){
             txt_dept="IT";
             txt_yr="BE";
         }
-        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("IT")){
+        if (_1.getText().toString().equals("SE") && it.getText().toString().equals("IT")){
             txt_dept="IT";
             txt_yr="SE";
         }
-        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("IT")){
+        if (_1.getText().toString().equals("TE") && it.getText().toString().equals("IT")){
             txt_dept="IT";
             txt_yr="TE";
         }
-        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("IT")){
+        if (_1.getText().toString().equals("FE") && it.getText().toString().equals("IT")){
             txt_dept="IT";
             txt_yr="FE";
         }

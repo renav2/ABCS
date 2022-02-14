@@ -106,8 +106,12 @@ req.setOnClickListener(new View.OnClickListener() {
                 String tx_comm= comments.getText().toString();
                 String tx_se=sec.getSelectedItem().toString();
                 String tx_clg=clg.getSelectedItem().toString();
+        Random random=new Random();
+        int val=random.nextInt(1000000000);
+        String val2=Integer.toString(val);
+
        //add data to the firebase
-        DocumentReference reference = fstore.collection("student_req_permision_data").document();
+        DocumentReference reference = fstore.collection("student_req_permision_data").document(val2);
         Map<String, String> v = new HashMap<>();
         v.put("Name", tx_na);
         v.put("Email", tx_em);
@@ -117,10 +121,9 @@ req.setOnClickListener(new View.OnClickListener() {
         v.put("Section", tx_se);
         v.put("Level", tx_clg);
         v.put("status","pending");
-        Random random=new Random();
-        int val=random.nextInt(1000000000);
-        String val2;
-        v.put("permissionid",Integer.toString(val));
+
+
+        v.put("permissionid",val2);
 
 
 
