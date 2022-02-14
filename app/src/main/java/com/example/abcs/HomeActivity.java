@@ -103,7 +103,7 @@ TextView r;
             @Override
             public void run() {
 
-                DocumentReference documentReference=fstore.collection("Teacher_required_docs").document("123");
+                DocumentReference documentReference=fstore.collection("Teacher_required_docs").document(unicid.getText().toString());
                 documentReference.addSnapshotListener(HomeActivity.this, new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
