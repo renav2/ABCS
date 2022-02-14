@@ -1,22 +1,7 @@
 package com.example.abcs;
 
 public class model {
-    String Name,Email,Comments,Section,Level,permissionid;
-
-    public model(String permissionid) {
-        this.permissionid = permissionid;
-    }
-
-    public String getPermissionid() {
-        return permissionid;
-    }
-
-    public void setPermissionid(String permissionid) {
-        this.permissionid = permissionid;
-    }
-
-    public model() {
-    }
+    String Name,Email,Comments,Section,Level,permissionid,status;
 
     public String getName() {
         return Name;
@@ -58,14 +43,34 @@ public class model {
         Level = level;
     }
 
-    public model(String name, String email, String comments, String section, String level) {
-        this.Name = name;
-        this.Email = email;
-        this.Comments=comments;
-        this.Section=section;
-        this.Level=level;
+    public String getPermissionid() {
+        return permissionid;
     }
 
+    public void setPermissionid(String permissionid) {
+        this.permissionid = permissionid;
+    }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public model(String name, String email, String comments, String section, String level, String permissionid, String status) {
+        Name = name;
+        Email = email;
+        Comments = comments;
+        Section = section;
+        Level = level;
+        this.permissionid = permissionid;
+        this.status = status;
+    }
+
+    model(){
+
+    }
 
 }

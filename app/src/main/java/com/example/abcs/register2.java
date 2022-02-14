@@ -49,17 +49,6 @@ public class register2 extends AppCompatActivity {
     private Spinner cgender, adtype, cname, cat, year, acd, br;
     DatePickerDialog picker;
     EditText eText;
-   // DatabaseReference reference;
-
-    // modification
-  //  FirebaseDatabase firebaseDatabase;
-
-    // creating a variable for our Database
-    // Reference for Firebase.
-    //DatabaseReference databaseReference;
-
-    // creating a variable for
-    // our object class
 
 
 
@@ -75,9 +64,9 @@ public class register2 extends AppCompatActivity {
 
         //user id
         userid=findViewById(R.id.tv_userid);
-        String from_socialmedia_login_userid=getIntent().getStringExtra("userid");
-        userid.setText(from_socialmedia_login_userid);
-        String pass=userid.getText().toString();
+//        String from_socialmedia_login_userid=getIntent().getStringExtra("userid");
+//        userid.setText(from_socialmedia_login_userid);
+//        String pass=userid.getText().toString();
 
 
         adtype=findViewById(R.id.Atype);
@@ -133,6 +122,8 @@ public class register2 extends AppCompatActivity {
 
         btnRegister.setOnClickListener(view ->{
 
+userid.setText(auth.getCurrentUser().getUid());
+            String    pass=userid.getText().toString();
                    uploddataa(pass);
                    //uploddata();
                     // createUser();
@@ -161,8 +152,8 @@ public class register2 extends AppCompatActivity {
         String text_password = password.getText().toString();
 
 
-        String pass_copy=passss;
-DocumentReference reference=fstore.collection("demo").document(pass_copy);
+//        String pass_copy=passss;
+DocumentReference reference=fstore.collection("demo").document(passss);
         Map<String, String> v=new HashMap<>();
         v.put("Rollno",text_rollno);
         v.put("Name",text_name);
@@ -193,113 +184,8 @@ DocumentReference reference=fstore.collection("demo").document(pass_copy);
 
     }
 
-    private void uploddatrealtime() {
 
 
 
-
-    }
-
-    private void uploddata() {
-        String text_name=name.getText().toString();
-        String text_email = email.getText().toString();
-        String txt_dob= eText.getText().toString();
-        String txt_gender=cgender.getSelectedItem().toString();
-        String txt_mno=mno.getText().toString();
-        String value=name.getText().toString()+eText.getText().toString();
-        String txt_clgid=value.toString();
-        String text_rollno=rollno.getText().toString();
-        String txt_add=estate.getText().toString();
-        String txt_clg=cname.getSelectedItem().toString();
-        String txt_atyp=adtype.getSelectedItem().toString();
-        String txt_cate=cat.getSelectedItem().toString();
-        String txt_bran=br.getSelectedItem().toString();
-        String txt_yearn=year.getSelectedItem().toString();
-        String txt_acdy=acd.getSelectedItem().toString();
-        String text_password = password.getText().toString();
-
-
-
-
-
-        Map<String, String> v=new HashMap<>();
-        v.put("Rollno",text_rollno);
-        v.put("Name",text_name);
-        v.put("mobile no",txt_mno);
-        v.put("Email",text_email);
-        v.put("Unique_id",txt_clgid);
-        v.put("DOB",txt_dob);
-        v.put("Gender",txt_gender);
-        v.put("Address",txt_add);
-        v.put("College_name",txt_clg);
-        v.put("Admission_type",txt_atyp);
-        v.put("Category",txt_cate);
-        v.put("Branch",txt_bran);
-        v.put("Class",txt_yearn);
-        v.put("Academic_year",txt_acdy);
-        v.put("Password",text_password);
-
-
-
-        FirebaseFirestore.getInstance().collection("personal data").add(v).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentReference> task) {
-                Toast.makeText(register2.this, "Data Uploded", Toast.LENGTH_SHORT).show();
-                Intent intent =new Intent(register2.this,MainActivity.class);
-                startActivity(intent);
-finish();
-            }
-        });
-
-
-
-
-    }
-
-    private void createUser(){
-        String email = etRegEmail.getText().toString();
-        String password = etRegPassword.getText().toString();
-
-        if (TextUtils.isEmpty(email)){
-            etRegEmail.setError("Email cannot be empty");
-            etRegEmail.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
-            etRegPassword.setError("Password cannot be empty");
-            etRegPassword.requestFocus();
-        }else{
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
-
-                        //Send verify user email
-
-                        FirebaseUser user = mAuth.getCurrentUser();
-                        user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Toast.makeText(register2.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(register2.this, "Email not Sent."+e.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-
-
-
-                        Toast.makeText(register2.this, "User registered successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(register2.this, MainActivity.class));
-                    }else{
-                        Toast.makeText(register2.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-
-            });
-        }
-    }
 
 }

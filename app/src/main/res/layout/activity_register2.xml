@@ -91,10 +91,12 @@
             app:layout_constraintVertical_bias="0.046"
             tools:ignore="MissingConstraints" />
 
+
         <EditText
             android:id="@+id/et_dob"
             android:layout_width="300dp"
             android:layout_height="48dp"
+            android:layout_marginHorizontal="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
@@ -102,7 +104,6 @@
             android:clickable="false"
             android:cursorVisible="false"
             android:ems="10"
-            android:layout_marginHorizontal="40dp"
             android:focusable="false"
             android:hint="Enter Date of Birth"
             android:inputType="date"
@@ -111,7 +112,6 @@
             app:layout_constraintEnd_toEndOf="@+id/etRegEmail"
             app:layout_constraintStart_toStartOf="@+id/etRegEmail"
             app:layout_constraintTop_toBottomOf="@+id/etRegEmail" />
-
 
         <EditText
             android:id="@+id/etRegPass19"
@@ -251,6 +251,7 @@
             android:id="@+id/Ayear"
             android:layout_width="300dp"
             android:layout_height="45dp"
+            android:layout_marginHorizontal="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
@@ -259,9 +260,7 @@
             app:layout_constraintBottom_toTopOf="@+id/etRegPass19"
             app:layout_constraintEnd_toEndOf="@+id/Cyear"
             app:layout_constraintStart_toStartOf="@+id/Cyear"
-            app:layout_constraintTop_toBottomOf="@+id/Cyear"
-            android:layout_marginHorizontal="40dp"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/Cyear" />
 
         <Spinner
             android:id="@+id/Cyear"

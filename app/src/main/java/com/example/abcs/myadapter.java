@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,19 +15,16 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
 {
-
-
-
-
-
     ArrayList<model> datalist;
 
     public myadapter(ArrayList<model> datalist) {
@@ -48,6 +46,8 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
        holder.t6.setText(datalist.get(position).getSection());
         holder.t.setText(datalist.get(position).getComments());
         holder.id.setText(datalist.get(position).getPermissionid());
+        holder.permision_Status.setText(datalist.get(position).getStatus());
+
     }
 
     @Override
@@ -62,6 +62,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
         Button b1p,b2f;
         FirebaseFirestore fstore;
         TextView permision_Status;
+        EditText techeret;
 
 
 
@@ -78,38 +79,95 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
+            techeret=itemView.findViewById(R.id.editTextTextMultiLine);
 
 
-
-
+            b1p.setVisibility(View.VISIBLE);
+            b2f.setVisibility(View.VISIBLE);
 
 //for status
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    DocumentReference reference = fstore.collection("final_permision_status").document();
+                    DocumentReference reference = fstore.collection("final_permision_status").document(id.getText().toString());
                     reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             //basic profile things
-                            String pr_name= documentSnapshot.getString("Name");
-                            String pr_email=documentSnapshot.getString("Email");
-                            String pr_comments=documentSnapshot.getString("Comments");
-                            String pr_section=documentSnapshot.getString("Section");
-                            String pro_level=documentSnapshot.getString("Level");
+
                             String pro_status=documentSnapshot.getString("status");
-//                            permision_Status.setText("NOT granted");
-                            String sta1=permision_Status.getText().toString();
+                           permision_Status.setText(pro_status);
+if(permision_Status.getText().toString().equals("granted")||permision_Status.getText().toString().equals("NOT granted") ){
+    b1p.setVisibility(View.INVISIBLE);
+    b2f.setVisibility(View.INVISIBLE);
+}
+
                            /// his
-                            if(sta1.equals("granted")){
-                                b1p.setVisibility(View.INVISIBLE);
-                                b2f.setVisibility(View.INVISIBLE);
-                            }else if(sta1.equals("NOT granted")){
-                                b1p.setVisibility(View.INVISIBLE);
-                                b2f.setVisibility(View.INVISIBLE);
-                            }
+
                         }
                     });
+
+//                    fstore.collection("final_permision_status").whereEqualTo("status","pending").get()
+//                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                                @Override
+//                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                                    List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
+//                                    for(DocumentSnapshot d:list)
+//                                    {
+//                                        model obj=d.toObject(model.class);
+//                                        datalist.add(obj);
+//
+//                                        b1p.setVisibility(View.INVISIBLE);
+//                                        b2f.setVisibility(View.INVISIBLE);
+//
+//                                    }
+//
+//                                }
+//                            });
+
+//                    fstore.collection("final_permision_status").whereNotEqualTo("status","NOT granted").get()
+//                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                                @Override
+//                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                                    List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
+//                                    for(DocumentSnapshot d:list)
+//                                    {
+//                                        model obj=d.toObject(model.class);
+//                                        datalist.add(obj);
+//
+//                                        b1p.setVisibility(View.INVISIBLE);
+//                                        b2f.setVisibility(View.INVISIBLE);
+//
+//                                    }
+//
+//                                }
+//                            });
+
+//                    DocumentReference reference = fstore.collection("final_permision_status").document();
+//                    reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                        @Override
+//                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                            //basic profile things
+//
+//                            String pro_status=documentSnapshot.getString("status");
+//                           permision_Status.setText(pro_status);
+//
+//
+//                           /// his
+//                            if(permision_Status.getText().toString().equals("granted")){
+////                                Admin_all_user_permision_section mm=new Admin_all_user_permision_section();
+////                                mm.invisi(b1p,b2f);
+//                                b1p.setVisibility(View.INVISIBLE);
+//                                b2f.setVisibility(View.INVISIBLE);
+//                            }else if(permision_Status.getText().toString().equals("NOT granted")){
+//                                b1p.setVisibility(View.INVISIBLE);
+//                                b2f.setVisibility(View.INVISIBLE);
+//
+////                                Admin_all_user_permision_section mm=new Admin_all_user_permision_section();
+////                                mm.invisi(b1p,b2f);
+//                            }
+//                        }
+//                    });
                 }
             }, 100);
             b1p.setOnClickListener(new View.OnClickListener() {
@@ -134,7 +192,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
             String txid=id.getText().toString();
 
 
-            DocumentReference reference = fstore.collection("final_permision_status").document();
+            DocumentReference reference = fstore.collection("final_permision_status").document(txid);
             Map<String, String> v = new HashMap<>();
             v.put("Name", txtt1);
             v.put("Email", txtt2);
@@ -142,6 +200,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
             v.put("Section", txtt6);
             v.put("Level", txtt3);
             v.put("perid", txid);
+            v.put("techersidecomment",techeret.getText().toString() );
             v.put("status","NOT granted");
 
 
@@ -165,7 +224,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
             String txtt=t.getText().toString();
             String txtt6=t6.getText().toString();
             String txid=id.getText().toString();
-            DocumentReference reference = fstore.collection("final_permision_status").document();
+            DocumentReference reference = fstore.collection("final_permision_status").document(txid);
             Map<String, String> v = new HashMap<>();
             v.put("Name", txtt1);
             v.put("Email", txtt2);
@@ -173,6 +232,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
             v.put("Section", txtt6);
             v.put("Level", txtt3);
             v.put("status","granted");
+            v.put("techersidecomment",techeret.getText().toString() );
             v.put("perid", txid);
 
 

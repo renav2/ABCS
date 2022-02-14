@@ -25,7 +25,7 @@ public class test_user_permision_ask extends AppCompatActivity {
 FirebaseFirestore fstore;
 FirebaseAuth auth;
     TextView name;
-    TextView email;
+    TextView email,cls,brh;
     Button req;
     EditText comments;
     Spinner sec,clg,dept,hostel;
@@ -34,6 +34,8 @@ FirebaseAuth auth;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_user_permision_ask);
+        cls=findViewById(R.id.textView85);
+        brh=findViewById(R.id.textView97);
 
 auth=FirebaseAuth.getInstance();
 fstore=FirebaseFirestore.getInstance();
@@ -64,6 +66,11 @@ clg=findViewById(R.id.spi_Permiosonforcollage);
 
                         String pro_name= documentSnapshot.getString("Name");
                         String pro_class=documentSnapshot.getString("Email");
+                        String branch=documentSnapshot.getString("Branch");
+                        String pr_class=documentSnapshot.getString("Class");
+
+                     cls.setText(pr_class);
+                     brh.setText(branch);
                         //setdata
                         name.setText(pro_name);
                         email.setText(pro_class);
@@ -104,9 +111,12 @@ req.setOnClickListener(new View.OnClickListener() {
         Map<String, String> v = new HashMap<>();
         v.put("Name", tx_na);
         v.put("Email", tx_em);
+        v.put("brnach", brh.getText().toString());
+        v.put("class", cls.getText().toString());
         v.put("Comments", tx_comm);
         v.put("Section", tx_se);
         v.put("Level", tx_clg);
+        v.put("status","pending");
         Random random=new Random();
         int val=random.nextInt(1000000000);
         String val2;

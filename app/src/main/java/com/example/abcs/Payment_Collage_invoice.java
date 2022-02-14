@@ -1,6 +1,9 @@
 package com.example.abcs;
 
 import android.Manifest;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -25,6 +28,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.widget.NestedScrollView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -69,6 +74,9 @@ TextView Insta;
     TextView invoi_student_name,invoice_student_class,invoice_student_rollno,invoice_student_dept;
 
 
+        NotificationManagerCompat notificationManagerCompat;
+    Notification notification;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,7 +98,18 @@ TextView Insta;
       //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
 Insta=findViewById(R.id.tv_ad_rollno);
 
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("myCh","My channel", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        NotificationCompat.Builder builder =new NotificationCompat.Builder(this,"myCh")
+                .setSmallIcon(android.R.drawable.stat_notify_sync)
 
+                .setContentTitle("Collage payment section")
+                .setContentText("payment capture request send");
+        notification =builder.build();
+        notificationManagerCompat = NotificationManagerCompat.from(this);
 
         //firbase instance
         auth=FirebaseAuth.getInstance();
@@ -458,13 +477,13 @@ String txt_rem="0";
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
+                notificationManagerCompat.notify(0,notification);
 
                 Intent intent1=new Intent(Payment_Collage_invoice.this,Payment_home_page.class);
                 startActivity(intent1);
 
             }
-        }, 5000);
+        }, 1000);
 
 
     }

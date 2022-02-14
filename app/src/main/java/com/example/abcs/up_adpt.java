@@ -49,6 +49,8 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
         holder.t.setText(datalist.get(position).getComments());
         holder.id.setText(datalist.get(position).getPermissionid());
         holder.permision_Status.setText(datalist.get(position).getStatus());
+        holder.techercomm.setText(datalist.get(position).getTechersidecomment());
+
     }
 
     @Override
@@ -59,7 +61,7 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
     class myviewholder extends RecyclerView.ViewHolder
     {
         // add here
-        TextView t1,t2,t3,t6,t,id;
+        TextView t1,t2,t3,t6,t,id,techercomm;
        // Button b1p,b2f;
         FirebaseFirestore fstore;
         TextView permision_Status;
@@ -74,7 +76,7 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-
+            techercomm=itemView.findViewById(R.id.tech_comments);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;

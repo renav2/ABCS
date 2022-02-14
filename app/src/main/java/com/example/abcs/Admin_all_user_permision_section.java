@@ -2,6 +2,8 @@ package com.example.abcs;
 
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -47,5 +49,13 @@ public class Admin_all_user_permision_section extends AppCompatActivity
                         adapter.notifyDataSetChanged();
                     }
                 });
+    }
+
+
+
+    public void invisi(Button b1p, Button b2f) {
+
+        b1p.setVisibility(View.INVISIBLE);
+        b2f.setVisibility(View.INVISIBLE);
     }
 }
