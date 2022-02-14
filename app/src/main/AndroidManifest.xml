@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Teacher_required_docs"
+            android:exported="false" />
+        <activity
             android:name=".Admin_asper_dept_class"
             android:exported="false" />
         <activity

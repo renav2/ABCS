@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Teacher_required_docs">
+
+    <EditText
+        android:id="@+id/tname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Teacher Name"
+        app:layout_constraintBottom_toTopOf="@+id/srollno"
+        app:layout_constraintEnd_toEndOf="@+id/textView87"
+        app:layout_constraintStart_toStartOf="@+id/textView87"
+        app:layout_constraintTop_toBottomOf="@+id/textView87" />
+
+    <EditText
+        android:id="@+id/srollno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Roll No"
+        app:layout_constraintBottom_toTopOf="@+id/sbranch"
+        app:layout_constraintEnd_toEndOf="@+id/tname"
+        app:layout_constraintStart_toStartOf="@+id/tname"
+        app:layout_constraintTop_toBottomOf="@+id/tname" />
+
+    <Spinner
+        android:id="@+id/sbranch"
+        android:entries="@array/brname"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/sclass"
+        app:layout_constraintEnd_toEndOf="@+id/srollno"
+        app:layout_constraintStart_toStartOf="@+id/srollno"
+        app:layout_constraintTop_toBottomOf="@+id/srollno"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/sclass"
+        android:entries="@array/cyear"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/docs"
+        app:layout_constraintEnd_toEndOf="@+id/sbranch"
+        app:layout_constraintStart_toStartOf="@+id/sbranch"
+        app:layout_constraintTop_toBottomOf="@+id/sbranch"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/docs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="368dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sclass"
+        app:layout_constraintStart_toStartOf="@+id/sclass"
+        app:layout_constraintTop_toBottomOf="@+id/sclass" />
+
+    <TextView
+        android:id="@+id/textView87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="8dp"
+        android:text="Document Required"
+        app:layout_constraintBottom_toTopOf="@+id/tname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

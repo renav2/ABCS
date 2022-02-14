@@ -69,6 +69,12 @@
                 android:text="Grant Permission" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
         <LinearLayout
             android:layout_width="365dp"
             android:layout_height="90dp"
@@ -99,7 +105,7 @@
 
         <Button
             android:id="@+id/button18"
-            android:layout_width="match_parent"
+            android:layout_width="361dp"
             android:layout_height="wrap_content"
             android:text="Button" />
 
