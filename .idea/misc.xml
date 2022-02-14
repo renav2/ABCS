@@ -162,6 +162,9 @@
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_approve_applications.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_asper_dept_class.xml" value="0.264" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_class_wise_sort.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_dept_wise_sort.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_view_application.xml" value="0.25" />
@@ -182,6 +185,7 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_view_notifications.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/elements.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/single_row_admin_sortwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/single_row_userviserper.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/singlerow.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/singlerownotice.xml" value="0.25" />
