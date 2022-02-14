@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -22,6 +24,9 @@ import java.util.Map;
 
 public class UserDataAdpt extends RecyclerView.Adapter<UserDataAdpt.myviewholder> {
     ArrayList<UserData> datalist;
+FirebaseFirestore fstore;
+
+
 
     public UserDataAdpt(ArrayList<UserData> datalist) {
         this.datalist = datalist;
@@ -60,10 +65,35 @@ public class UserDataAdpt extends RecyclerView.Adapter<UserDataAdpt.myviewholder
         public myviewholder(@NonNull View itemView) {
             super(itemView);
 
-            tvv1 = itemView.findViewById(R.id.tvv1);
-            tvv2 = itemView.findViewById(R.id.tvv2);
-            tvv3 = itemView.findViewById(R.id.tvv3);
-            delete=itemView.findViewById(R.id.del);
+            tvv1 = itemView.findViewById(R.id.t1);
+            tvv2 = itemView.findViewById(R.id.t2);
+            tvv3 = itemView.findViewById(R.id.textView58);
+            delete=itemView.findViewById(R.id.btn_fail);
+fstore=FirebaseFirestore.getInstance();
+
+
+            delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    fstore.collection("demo").document("4J17vMShwsYYFBTQbJpoEIc8Wvd2")
+                            .delete()
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+
+                                }
+                            });
+                }
+            });
+
+
+
 
 //
 ////for status

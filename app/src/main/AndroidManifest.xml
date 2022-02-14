@@ -25,6 +25,12 @@
             android:name=".Support_section"
             android:exported="false" />
         <activity
+            android:name=".Admin_sort_studentdata_classwise"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_sort_studentdata_deptwise"
+            android:exported="false" />
+        <activity
             android:name=".Teacher_required_docs"
             android:exported="false" />
         <activity

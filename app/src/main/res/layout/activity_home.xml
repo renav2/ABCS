@@ -325,6 +325,8 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="9dp"
         android:text="TextView"
+        android:textSize="20dp"
+
         app:layout_constraintBottom_toTopOf="@+id/VerifyMsg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -338,6 +340,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="3dp"
+
         android:text="Unique identity ID "
         app:layout_constraintBottom_toTopOf="@+id/textView116"
         app:layout_constraintEnd_toEndOf="parent"

@@ -96,7 +96,9 @@ public class register2 extends AppCompatActivity {
             //current user
         FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
 
+        userid.setText(auth.getCurrentUser().getUid());
 
+        String    pass=userid.getText().toString();
 
         //for only date
         eText = (EditText) findViewById(R.id.et_dob);
@@ -123,9 +125,10 @@ public class register2 extends AppCompatActivity {
 
         btnRegister.setOnClickListener(view ->{
 
-userid.setText(auth.getCurrentUser().getUid());
-            String    pass=userid.getText().toString();
-                   uploddataa(pass);
+           // userid.setText(auth.getCurrentUser().getUid());
+
+            String    pass1=userid.getText().toString();
+                   uploddataa(pass1);
                    //uploddata();
                     // createUser();
                     // uploddatrealtime();
