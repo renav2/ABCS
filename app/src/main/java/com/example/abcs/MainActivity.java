@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         homejump=findViewById(R.id.txhome);
 //all button code
 
-      //  checkCurrentUser();
+        checkCurrentUser();
 
         adminhome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,21 +160,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    private void checkCurrentUser() {
-//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        if (user != null) {
-//            // User is signed in
-//            Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-//            startActivity(intent);
-//            finish();
-//
-//        } else {
-//            // No user is signed in
-//
-//            Toast.makeText(this, "Login successfully", Toast.LENGTH_SHORT).show();
-//        }
-//
-//    }
+    private void checkCurrentUser() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // User is signed in
+            Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+            startActivity(intent);
+            finish();
+
+        } else {
+            // No user is signed in
+
+            Toast.makeText(this, "Login successfully", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
     private void loginuser(String _email, String _pass) {
         auth.signInWithEmailAndPassword(_email,_pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
