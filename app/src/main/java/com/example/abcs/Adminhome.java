@@ -21,8 +21,7 @@ Button apermission, btnpay,admin_payhome,notification,tests;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminhome);
         btnpay=findViewById(R.id.btn_viewallpay);
-tests=findViewById(R.id.button18);
-
+        tests=findViewById(R.id.button18);
         admin_payhome=findViewById(R.id.button12);
         apermission =  findViewById(R.id.adminper);
         notification=findViewById(R.id.button13);
@@ -34,7 +33,6 @@ tests=findViewById(R.id.button18);
                 startActivity(intent);
             }
         });
-
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +40,6 @@ tests=findViewById(R.id.button18);
                 startActivity(intent);
             }
         });
-
         admin_payhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,13 +51,10 @@ tests=findViewById(R.id.button18);
         apermission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Adminhome.this,AdminPermissionHome.class);
+                Intent intent= new Intent(Adminhome.this,Admin_dept_wise_sort.class);
                 startActivity(intent);
             }
         });
-
-
-
 
         btnpay.setOnClickListener(new View.OnClickListener() {
             @Override

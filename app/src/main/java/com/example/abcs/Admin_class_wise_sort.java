@@ -19,30 +19,20 @@ TextView comp, it,entc,cvil,mech;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_class_wise_sort);
 
-
-    comp  =findViewById(R.id.textView99);
-    it=findViewById(R.id.textView101);
+        comp  =findViewById(R.id.textView99);
+        it=findViewById(R.id.textView101);
     entc =findViewById(R.id.textView103);
     cvil =findViewById(R.id.textView102);
     mech=findViewById(R.id.textView104);
-
-
     _1=findViewById(R.id._1st);
     _2=findViewById(R.id.button21);
     _3=findViewById(R.id.button22);
     _4=findViewById(R.id.button23);
-
-
-
-
     comp.setText(getIntent().getStringExtra("deptcomp"));
     it.setText(getIntent().getStringExtra("deptit"));
     entc.setText(getIntent().getStringExtra("deptentc"));
     cvil.setText(getIntent().getStringExtra("deptcvil"));
     mech.setText(getIntent().getStringExtra("deptmech"));
-
-
-
 
     _1.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -164,8 +154,6 @@ TextView comp, it,entc,cvil,mech;
                 intent.putExtra("deco5","Mech");
                 intent.putExtra("class1","BE");
             }
-
-
             startActivity(intent);
         }
     });
