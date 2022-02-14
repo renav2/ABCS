@@ -258,7 +258,8 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
                return true;
 
            case R.id.log1:
-             //  signout();
+               Intent intent= new Intent(HomeActivity.this, Support_section.class);
+               startActivity(intent);
                return true;
 
            default:

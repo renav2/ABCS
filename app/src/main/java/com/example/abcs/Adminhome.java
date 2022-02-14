@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Adminhome extends AppCompatActivity {
-Button apermission, btnpay,admin_payhome,notification,tests,teacher;
+Button apermission, btnpay,admin_payhome,notification,tests,teacher,userdata;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +26,16 @@ Button apermission, btnpay,admin_payhome,notification,tests,teacher;
         apermission =  findViewById(R.id.adminper);
         notification=findViewById(R.id.button13);
         teacher=findViewById(R.id.button19);
+        userdata=findViewById(R.id.button31);
+
+        userdata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(Adminhome.this,Admin_delete_user.class);
+                startActivity(intent);
+
+            }
+        });
 
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override

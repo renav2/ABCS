@@ -158,7 +158,7 @@ DocumentReference reference=fstore.collection("demo").document(passss);
         Map<String, String> v=new HashMap<>();
         v.put("Rollno",text_rollno);
         v.put("Name",text_name);
-        v.put("mobile no",txt_mno);
+        v.put("mobile_no",txt_mno);
         v.put("Email",text_email);
         v.put("Unique_id",txt_clgid);
         v.put("DOB",txt_dob);
