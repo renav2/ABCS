@@ -27,7 +27,7 @@ import com.squareup.picasso.Picasso;
 
 public class HomeActivity extends AppCompatActivity {
 private Button  paymentpage, profile, permission, uplod,logout,collagenotoi,studentdoc,vereifyemail;
-    TextView logO,verifymsg;
+    TextView logO,verifymsg,support;
 //TextView useremailid;
 ImageView profilepic;
     FirebaseAuth fAuth;
@@ -46,6 +46,8 @@ TextView r;
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         logO=findViewById(R.id.logO);
+
+        logO=findViewById(R.id.log1);
         studentdoc=findViewById(R.id.button4);
         collagenotoi=findViewById(R.id.button5);
         vereifyemail=findViewById(R.id.resend_code);
@@ -168,6 +170,10 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
        {
            case R.id.logO:
                signout();
+               return true;
+
+           case R.id.log1:
+             //  signout();
                return true;
 
            default:
