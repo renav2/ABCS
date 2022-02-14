@@ -176,7 +176,7 @@
             android:id="@+id/textView9"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
-            android:text="College" />
+            android:text="Noticebord" />
 
         <TextView
             android:id="@+id/textView51"
@@ -188,7 +188,7 @@
             android:id="@+id/textView25"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
-            android:text="Student" />
+            android:text="Document" />
 
         <TextView
             android:id="@+id/textView52"
@@ -226,9 +226,9 @@
         <TextView
             android:id="@+id/textView53"
             android:layout_width="95dp"
-            android:paddingStart="5dp"
             android:layout_height="wrap_content"
-            android:text="profile" />
+            android:paddingStart="5dp"
+            android:text="Profile" />
 
         <TextView
             android:id="@+id/textView78"
@@ -240,7 +240,7 @@
             android:id="@+id/textView54"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Permision " />
 
         <TextView
             android:id="@+id/textView77"

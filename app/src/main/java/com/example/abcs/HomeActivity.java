@@ -95,6 +95,9 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
         startActivity(intent);
     }
 });
+
+
+//profile pic
         storageReference= FirebaseStorage.getInstance().getReference();
         //currunt user id store in r  & for sring purpose
         r=findViewById(R.id.tp);
