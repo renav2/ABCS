@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Admin_asper_dept_class"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_class_wise_sort"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_dept_wise_sort"
+            android:exported="false" />
+        <activity
             android:name=".userwiser_permision_fetch"
             android:exported="false" />
         <activity
