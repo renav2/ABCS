@@ -1,7 +1,12 @@
 package com.example.abcs;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,22 +17,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 //import com.squareup.picass.Picasso;
 
 public class HomeActivity extends AppCompatActivity {
 private Button  paymentpage, profile, permission, uplod,logout,collagenotoi,studentdoc,vereifyemail;
-    TextView logO,verifymsg,support;
+    TextView logO,verifymsg,support, notificationtext,welcomename,unicid;
 //TextView useremailid;
 ImageView profilepic;
     FirebaseAuth fAuth;
@@ -35,6 +50,11 @@ ImageView profilepic;
 TextView r;
     StorageReference storageReference;
     String user;
+
+    NotificationManagerCompat notificationManagerCompat;
+    Notification notification;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,15 +66,80 @@ TextView r;
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         logO=findViewById(R.id.logO);
-
+        notificationtext=findViewById(R.id.textView2);
+        welcomename=findViewById(R.id.textView115);
+        unicid=findViewById(R.id.textView116);
         logO=findViewById(R.id.log1);
         studentdoc=findViewById(R.id.button4);
         collagenotoi=findViewById(R.id.button5);
         vereifyemail=findViewById(R.id.resend_code);
         verifymsg=findViewById(R.id.VerifyMsg);
-
         String userID = fAuth.getCurrentUser().getUid();
         FirebaseUser firebaseUser = fAuth.getCurrentUser();
+        welcomename.setText("Welcome "+fAuth.getCurrentUser().getDisplayName());
+        notificationtext.setVisibility(View.INVISIBLE);
+
+//fetchunic id
+        DocumentReference documentReference=fstore.collection("demo").document(userID);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+
+
+                unicid.setText(value.getString("assignno"));
+
+            }
+        });
+
+
+
+        // notifications fetch
+
+
+
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                DocumentReference documentReference=fstore.collection("Teacher_required_docs").document("123");
+                documentReference.addSnapshotListener(HomeActivity.this, new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                        String s,s1;
+
+                        notificationtext.setText(value.getString("reqdoc"));
+
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                NotificationChannel channel = new NotificationChannel("myCh", "My channel", NotificationManager.IMPORTANCE_DEFAULT);
+                                NotificationManager manager = getSystemService(NotificationManager.class);
+                                manager.createNotificationChannel(channel);
+                            }
+                            NotificationCompat.Builder builder = new NotificationCompat.Builder(HomeActivity.this, "myCh")
+                                    .setSmallIcon(android.R.drawable.stat_notify_sync)
+
+                                    .setContentTitle("documnet uplod")
+                                    .setContentText("document name :-" + notificationtext.getText().toString());
+                            notification = builder.build();
+                            notificationManagerCompat = NotificationManagerCompat.from(HomeActivity.this);
+
+                                        //String  bb=notificationtext.getText().toString();
+
+            if(notificationtext.getText().toString().equals("")){
+                Toast.makeText(HomeActivity.this, "no notifications", Toast.LENGTH_SHORT).show();
+            }else{
+                notificationManagerCompat.notify(0, notification);
+            }
+                                    //   notificationManagerCompat.notify(0, notification);
+
+                                }
+                            });
+                        }
+                    }, 1000);
+
+
+
 
         //Start Email verification link sent
         if (!firebaseUser.isEmailVerified()){

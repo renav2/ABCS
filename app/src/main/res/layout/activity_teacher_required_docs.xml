@@ -6,86 +6,162 @@
     android:layout_height="match_parent"
     tools:context=".Teacher_required_docs">
 
-    <EditText
-        android:id="@+id/tname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Teacher Name"
-        app:layout_constraintBottom_toTopOf="@+id/srollno"
-        app:layout_constraintEnd_toEndOf="@+id/textView87"
-        app:layout_constraintStart_toStartOf="@+id/textView87"
-        app:layout_constraintTop_toBottomOf="@+id/textView87" />
-
-    <EditText
-        android:id="@+id/srollno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Roll No"
-        app:layout_constraintBottom_toTopOf="@+id/sbranch"
-        app:layout_constraintEnd_toEndOf="@+id/tname"
-        app:layout_constraintStart_toStartOf="@+id/tname"
-        app:layout_constraintTop_toBottomOf="@+id/tname" />
-
-    <Spinner
-        android:id="@+id/sbranch"
-        android:entries="@array/brname"
-        android:layout_width="215dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/sclass"
-        app:layout_constraintEnd_toEndOf="@+id/srollno"
-        app:layout_constraintStart_toStartOf="@+id/srollno"
-        app:layout_constraintTop_toBottomOf="@+id/srollno"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Spinner
-        android:id="@+id/sclass"
-        android:entries="@array/cyear"
-        android:layout_width="215dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/docs"
-        app:layout_constraintEnd_toEndOf="@+id/sbranch"
-        app:layout_constraintStart_toStartOf="@+id/sbranch"
-        app:layout_constraintTop_toBottomOf="@+id/sbranch"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/docs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="368dp"
-        android:text="Button"
+    <LinearLayout
+        android:id="@+id/linearLayout24"
+        android:layout_width="382dp"
+        android:layout_height="544dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="127dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/sclass"
-        app:layout_constraintStart_toStartOf="@+id/sclass"
-        app:layout_constraintTop_toBottomOf="@+id/sclass" />
-
-    <TextView
-        android:id="@+id/textView87"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="8dp"
-        android:text="Document Required"
-        app:layout_constraintBottom_toTopOf="@+id/tname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView87"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:text="Document Required"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teacher Detail"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Teacher Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="requred document from student"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine4"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="document description"
+                android:inputType="textMultiLine" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="268dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Detail"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                tools:text="Student Detail" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11212"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Student branch" />
+
+                <Spinner
+                    android:id="@+id/sbranch"
+                    android:layout_width="215dp"
+                    android:layout_height="48dp"
+                    android:entries="@array/brname"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Student class" />
+
+                <Spinner
+                    android:id="@+id/sclass"
+                    android:layout_width="215dp"
+                    android:layout_height="48dp"
+                    android:entries="@array/cyear"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/srollno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Roll No"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView113"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/docs"
+                    android:layout_width="182dp"
+                    android:layout_height="79dp"
+                    android:text="Button" />
+
+                <TextView
+                    android:id="@+id/textView114"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

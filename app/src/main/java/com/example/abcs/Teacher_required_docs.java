@@ -21,7 +21,7 @@ import java.util.Map;
 
 public class Teacher_required_docs extends AppCompatActivity {
     
-    EditText tename,stroll;
+    EditText tename,stroll,reqdoc,docdesc;
     Button sub;
     Spinner branch,clas;
 
@@ -33,19 +33,15 @@ public class Teacher_required_docs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_required_docs);
-        
+        docdesc=findViewById(R.id.editTextTextMultiLine4);
         tename=findViewById(R.id.tname);
         stroll=findViewById(R.id.srollno);
-        
         branch=findViewById(R.id.sbranch);
         clas=findViewById(R.id.sclass);
-        
         sub=findViewById(R.id.docs);
-
         auth = FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
-
-
+        reqdoc=findViewById(R.id.editTextTextMultiLine2);
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,13 +58,19 @@ public class Teacher_required_docs extends AppCompatActivity {
         String txt_roll = stroll.getText().toString();
         String txt_branch = branch.getSelectedItem().toString();
         String txt_class = clas.getSelectedItem().toString();
+        String txt_reqdoc=reqdoc.getText().toString();
+String txt_docdesc=docdesc.getText().toString();
 
         DocumentReference reference=fstore.collection("Teacher_required_docs").document(txt_roll);
         Map<String, String> v=new HashMap<>();
         v.put("Teacher_Name",txt_name);
         v.put("Roll_No",txt_roll);
-        v.put("Mobile_Number",txt_branch);
-        v.put("Class",txt_class);
+        v.put("Branch",txt_branch);
+        v.put("class",txt_class);
+        v.put("reqdoc",txt_reqdoc);
+        v.put("docdesc",txt_docdesc);
+
+
 
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

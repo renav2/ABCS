@@ -32,6 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class register2 extends AppCompatActivity {
     TextView userid;
@@ -170,6 +171,28 @@ DocumentReference reference=fstore.collection("demo").document(passss);
         v.put("Class",txt_yearn);
         v.put("Academic_year",txt_acdy);
         v.put("Password",text_password);
+
+
+        Random random=new Random();
+        int val=random.nextInt(110);
+
+
+        if(txt_bran.equals("Comp")){
+            v.put("assignno","CO"+txt_yearn+val);
+        }
+        if(txt_bran.equals("IT")){
+            v.put("assignno","M"+txt_yearn+val);
+        }
+        if(txt_bran.equals("ENTC")){
+            v.put("assignno","E"+txt_yearn+val);
+        }
+        if(txt_bran.equals("Civil")){
+            v.put("assignno","CI"+txt_yearn+val);
+        }
+        if(txt_bran.equals("Mech")){
+            v.put("assignno","M"+txt_yearn+val);
+        }
+
 
 
 

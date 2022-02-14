@@ -106,18 +106,20 @@
 
     </LinearLayout>
 
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
         android:layout_width="153dp"
         android:layout_height="163dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="26dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toTopOf="@+id/tp"
+        app:layout_constraintEnd_toStartOf="@+id/VerifyMsg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
-
 
     <TextView
         android:id="@+id/textView5"
@@ -139,8 +141,8 @@
 
     <TextView
         android:id="@+id/tp"
-        android:layout_width="271dp"
-        android:layout_height="52dp"
+        android:layout_width="276dp"
+        android:layout_height="32dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="64dp"
@@ -274,16 +276,16 @@
         android:id="@+id/VerifyMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="10dp"
         android:text="Email Not Verify !"
         android:textSize="16sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/resend_code"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintEnd_toEndOf="@+id/textView115"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView115" />
 
     <Button
         android:id="@+id/resend_code"
@@ -294,10 +296,53 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/tp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/VerifyMsg"
-        app:layout_constraintVertical_bias="0.657" />
+        app:layout_constraintVertical_bias="0.7" />
+
+    <TextView
+        android:id="@+id/textView115"
+        android:layout_width="312dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="2dp"
+        android:textSize="20dp"
+        android:text="Welcome"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView116"
+        android:layout_width="164dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="9dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/VerifyMsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView117" />
+
+    <TextView
+        android:id="@+id/textView117"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="3dp"
+        android:text="Unique identity ID "
+        app:layout_constraintBottom_toTopOf="@+id/textView116"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView115" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
