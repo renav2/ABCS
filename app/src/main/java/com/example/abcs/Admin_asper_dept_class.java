@@ -67,10 +67,131 @@ String txt_yr,txt_dept;
 
 
         _1.setText(getIntent().getStringExtra("class1"));
+//        _2.setText(getIntent().getStringExtra("class2"));
+//        _3.setText(getIntent().getStringExtra("class3"));
+//        _4.setText(getIntent().getStringExtra("class4"));
 
 
 
-        db.collection("student_req_permision_data").whereEqualTo("class","BE").whereEqualTo("brnach","Comp").get()
+//        deit.setText(getIntent().getStringExtra("deptit"));
+//dpi.setText(getIntent().getStringExtra("deptnname"));
+      //  dpi.setText(getIntent().getStringExtra("deptit"));
+
+//
+//        if(_2.getText().toString().equals("FE")){
+//            gamechange="FE";
+//        }
+//        if(_2.getText().toString().equals("SE")){
+//        gamechange="SE";
+//    }
+//        if(_2.getText().toString().equals("TE")){
+//            gamechange="TE";
+//        }
+//        if(_2.getText().toString().equals("BE")){
+//            gamechange="BE";
+//        }
+
+
+        //comp
+        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("Comp")){
+            txt_dept="Comp";
+            txt_yr="BE";
+        }
+          if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("Comp")){
+              txt_dept="Comp";
+              txt_yr="SE";
+          }
+        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("Comp")){
+            txt_dept="Comp";
+            txt_yr="TE";
+        }
+        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("Comp")){
+            txt_dept="Comp";
+            txt_yr="FE";
+        }
+//mech
+        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("Mech")){
+            txt_dept="Mech";
+            txt_yr="BE";
+        }
+        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("Mech")){
+            txt_dept="Mech";
+            txt_yr="SE";
+        }
+        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("Mech")){
+            txt_dept="Mech";
+            txt_yr="TE";
+        }
+        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("Mech")){
+            txt_dept="Mech";
+            txt_yr="FE";
+        }
+
+//civil
+        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("Civil")){
+            txt_dept="Civil";
+            txt_yr="BE";
+        }
+        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("Civil")){
+            txt_dept="Civil";
+            txt_yr="SE";
+        }
+        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("Civil")){
+            txt_dept="Civil";
+            txt_yr="TE";
+        }
+        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("Civil")){
+            txt_dept="Civil";
+            txt_yr="FE";
+        }
+
+
+
+
+        //entc
+        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("ENTC")){
+            txt_dept="ENTC";
+            txt_yr="BE";
+        }
+        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("ENTC")){
+            txt_dept="ENTC";
+            txt_yr="SE";
+        }
+        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("ENTC")){
+            txt_dept="ENTC";
+            txt_yr="TE";
+        }
+        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("ENTC")){
+            txt_dept="ENTC";
+            txt_yr="FE";
+        }
+
+
+//it
+        if(_1.getText().toString().equals("BE") && comp.getText().toString().equals("IT")){
+            txt_dept="IT";
+            txt_yr="BE";
+        }
+        if (_1.getText().toString().equals("SE") && comp.getText().toString().equals("IT")){
+            txt_dept="IT";
+            txt_yr="SE";
+        }
+        if (_1.getText().toString().equals("TE") && comp.getText().toString().equals("IT")){
+            txt_dept="IT";
+            txt_yr="TE";
+        }
+        if (_1.getText().toString().equals("FE") && comp.getText().toString().equals("IT")){
+            txt_dept="IT";
+            txt_yr="FE";
+        }
+
+
+
+
+
+
+
+        db.collection("student_req_permision_data").whereEqualTo("class",txt_yr).whereEqualTo("brnach",txt_dept).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
