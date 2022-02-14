@@ -7,46 +7,49 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="394dp"
-        android:layout_height="131dp"
+        android:layout_width="335dp"
+        android:layout_height="76dp"
         android:layout_margin="10dp"
         app:cardElevation="7dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="320dp"
+            android:layout_height="67dp"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="199dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight=".75"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="248dp"
+                    android:layout_height="54dp"
                     android:text="Name"
                     android:textSize="20dp" />
 
                 <TextView
                     android:id="@+id/link"
-                    android:layout_width="match_parent"
-                    android:layout_height="53dp"
+                    android:layout_width="244dp"
+                    android:layout_height="10dp"
                     android:text="Download Link"
-                    android:textSize="15dp" />
+                    android:textSize="15dp"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/down"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="73dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight=".25"
+                android:background="@drawable/ic_baseline_arrow_circle_down_24"
                 android:elevation="7dp"
                 android:text="Down" />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

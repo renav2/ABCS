@@ -119,7 +119,6 @@ public class CreateApplication extends AppCompatActivity {
                 String u =upid;
                 String did=id;
 
-
                 if(TextUtils.isEmpty(s_name) || TextUtils.isEmpty(s_prn) || TextUtils.isEmpty(s_subject)|| TextUtils.isEmpty(s_desc)|| TextUtils.isEmpty(s_sdt)|| TextUtils.isEmpty(s_edt) || TextUtils.isEmpty(s_tm1) || TextUtils.isEmpty(s_tm2)||TextUtils.isEmpty(s_em))
                 {
                     Toast.makeText(CreateApplication.this, "Please fill All the fields", Toast.LENGTH_SHORT).show();

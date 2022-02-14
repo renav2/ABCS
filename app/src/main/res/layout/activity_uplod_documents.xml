@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".uplod_documents">
 
 
@@ -20,6 +20,7 @@
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="2dp"
             android:text="Register now"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -28,11 +29,11 @@
 
         <LinearLayout
             android:id="@+id/linearLayout23"
-            android:layout_width="400dp"
-            android:layout_height="1025dp"
-            android:layout_marginStart="3dp"
+            android:layout_width="380dp"
+            android:layout_height="667dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="2dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/btnRegister"
@@ -42,12 +43,12 @@
 
 
             <LinearLayout
-                android:layout_width="400dp"
-                android:layout_height="1115dp"
+                android:layout_width="369dp"
+                android:layout_height="675dp"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="364dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -61,12 +62,13 @@
                             android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="10th" />
+                            android:text="10th"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/uplod10"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="uplod" />
 
@@ -80,12 +82,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="359dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="362dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -100,26 +102,27 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="360dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="362dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/up12"
-                            android:layout_width="149dp"
+                            android:layout_width="151dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="12th" />
+                            android:text="12th"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/uplod12"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="uplod" />
 
@@ -133,12 +136,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="359dp"
                     android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="362dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -153,12 +156,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="364dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="362dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -167,7 +170,8 @@
                             android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="uplod diploma" />
+                            android:text="Diploma"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/uploddip"
@@ -186,12 +190,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="364dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="362dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -206,12 +210,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="364dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="364dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -220,7 +224,8 @@
                             android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="FE" />
+                            android:text="FE"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/uplodfe1"
@@ -239,12 +244,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="362dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="359dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -259,12 +264,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="365dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="364dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -273,7 +278,8 @@
                             android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="SE" />
+                            android:text="SE"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/uplodse"
@@ -292,12 +298,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="365dp"
                     android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="364dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -312,12 +318,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="362dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="360dp"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
@@ -326,7 +332,8 @@
                             android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="TE" />
+                            android:text="TE"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/uplodte"
@@ -345,18 +352,18 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="362dp"
                     android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="356dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/downte"
-                            android:layout_width="15dp"
+                            android:layout_width="368dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView" />
@@ -365,12 +372,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="359dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="360dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -379,7 +386,8 @@
                             android:layout_width="149dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="BE" />
+                            android:text="BE"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/uplodbe"
@@ -398,19 +406,19 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="362dp"
                     android:layout_height="15dp"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="356dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/downbe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="359dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="TextView" />
 
@@ -418,12 +426,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="364dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="362dp"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -432,11 +440,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="TextView" />
+                            android:text="TextView"
+                            android:textAlignment="center" />
 
                         <Button
                             android:id="@+id/button20"
-                            android:layout_width="203dp"
+                            android:layout_width="232dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Button" />
@@ -444,13 +453,12 @@
                 </LinearLayout>
 
             </LinearLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout19"
-            android:layout_width="403dp"
-            android:layout_height="96dp"
+            android:layout_width="349dp"
+            android:layout_height="69dp"
             android:layout_marginTop="32dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout23"
@@ -462,16 +470,18 @@
 
             <TextView
                 android:id="@+id/textView100"
-                android:layout_width="391dp"
-                android:layout_height="85dp"
+                android:layout_width="347dp"
+                android:layout_height="match_parent"
                 android:text="Document section"
-                android:textSize="40dp"
+                android:textSize="24sp"
+                android:textAlignment="center"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout23"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.47" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
