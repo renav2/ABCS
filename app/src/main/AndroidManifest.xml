@@ -16,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Admin_teachers_reg"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_support_solver"
+            android:exported="false" />
+        <activity
+            android:name=".Support_pay"
+            android:exported="false" />
+        <activity
             android:name=".uplod_teacher_reqdoc"
             android:exported="false" />
         <activity

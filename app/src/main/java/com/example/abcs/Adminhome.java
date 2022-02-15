@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Adminhome extends AppCompatActivity {
-Button apermission, btnpay,admin_payhome,notification,tests,teacher,userdata;
+Button apermission, btnpay,admin_payhome,notification,teacher,userdata,Support, regtech;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,28 @@ Button apermission, btnpay,admin_payhome,notification,tests,teacher,userdata;
         notification=findViewById(R.id.button13);
         teacher=findViewById(R.id.button19);
         userdata=findViewById(R.id.button31);
+Support=findViewById(R.id.button34);
+
+regtech=findViewById(R.id.button35);
+
+
+regtech.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent= new Intent(Adminhome.this,Admin_teachers_reg.class);
+        startActivity(intent);
+
+
+    }
+});
+Support.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent= new Intent(Adminhome.this,Admin_support_solver.class);
+        startActivity(intent);
+    }
+});
+
 
         userdata.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,13 +68,13 @@ Button apermission, btnpay,admin_payhome,notification,tests,teacher,userdata;
             }
         });
 
-        tests.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(Adminhome.this,Admin_dept_wise_sort.class);
-                startActivity(intent);
-            }
-        });
+//        tests.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(Adminhome.this,Admin_dept_wise_sort.class);
+//                startActivity(intent);
+//            }
+//        });
         notification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

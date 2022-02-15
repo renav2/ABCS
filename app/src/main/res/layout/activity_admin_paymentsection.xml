@@ -7,15 +7,18 @@
     tools:context=".Admin_paymentsection">
 
     <LinearLayout
-        android:layout_width="370dp"
-        android:layout_height="105dp"
+        android:id="@+id/linearLayout6"
+        android:layout_width="378dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="271dp"
+        android:layout_marginBottom="67dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button33"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685">
+        app:layout_constraintVertical_bias="0.429">
 
         <Button
             android:id="@+id/admin_examrecord"
@@ -33,7 +36,6 @@
             android:text="Hostal payment record " />
 
 
-
         <Button
             android:id="@+id/Admin_clg_record"
             android:layout_width="90dp"
@@ -43,5 +45,16 @@
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="112dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="198dp"
+        android:text="supportpay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

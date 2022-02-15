@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Support_pay">
+
+    <Spinner
+        android:id="@+id/pay_in2"
+        android:layout_width="348dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:entries="@array/installmentpart2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView90"
+        android:layout_width="256dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="15dp"
+        android:text="Payment support section"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView132"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="165dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="14dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/pay_in2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine5" />
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="347dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="15dp"
+
+        android:layout_marginEnd="33dp"
+        android:text="If you and your family  are facing any kind of financial issue then tell us we will definitely consider your issue and
+ we will  provide you installments  service for you "
+        app:layout_constraintBottom_toTopOf="@+id/textView133"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView90" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine5"
+        android:layout_width="364dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/button18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView133" />
+
+    <TextView
+        android:id="@+id/textView133"
+        android:layout_width="206dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="21dp"
+        android:text="Write your issue "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView132" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="348dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:hint="Enter your amount"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pay_in2" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="156dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="56dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

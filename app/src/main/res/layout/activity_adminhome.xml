@@ -150,7 +150,20 @@
 
             <TextView
                 android:id="@+id/textView92d"
-                android:layout_width="42dp"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button34"
+                android:layout_width="107dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Support  " />
+
+            <TextView
+                android:id="@+id/textView137"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
@@ -177,13 +190,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@color/black"
                     android:text="Notification  section"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/textView128dd"
-                    android:layout_width="5dp"
+                    android:layout_width="33dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView136"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="suppport" />
+
+                <TextView
+                    android:id="@+id/textView138"
+                    android:layout_width="29dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
@@ -345,6 +371,13 @@
                 android:layout_width="42dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
 
         </LinearLayout>
 
