@@ -21,7 +21,7 @@ Button apermission, btnpay,admin_payhome,notification,tests,teacher,userdata;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminhome);
         btnpay=findViewById(R.id.btn_viewallpay);
-        tests=findViewById(R.id.button18);
+//        tests=findViewById(R.id.button18);
         admin_payhome=findViewById(R.id.button12);
         apermission =  findViewById(R.id.adminper);
         notification=findViewById(R.id.button13);

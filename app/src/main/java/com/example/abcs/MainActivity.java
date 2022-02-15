@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         homejump=findViewById(R.id.txhome);
 //all button code
 
-        //checkCurrentUser();
+        checkCurrentUser();
 
         adminhome.setOnClickListener(new View.OnClickListener() {
             @Override

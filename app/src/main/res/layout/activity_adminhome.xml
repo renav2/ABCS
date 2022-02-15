@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,114 +7,381 @@
     tools:context=".Adminhome">
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="382dp"
-        android:layout_height="634dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="81dp"
+        android:id="@+id/linearLayout29zdggdad"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="22dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout29zdggd">
+
+        <TextView
+            android:id="@+id/hdsfhibfihssd"
+            android:layout_width="335dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="Permission   section"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView91qq"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_viewallpay"
+                android:layout_width="112dp"
+                android:layout_height="84dp"
+                android:background="@drawable/ic_baseline_supervisor_account_24" />
+
+            <TextView
+                android:id="@+id/textView131"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/adminper"
+                android:layout_width="wrap_content"
+                android:layout_height="74dp"
+                android:background="@drawable/ic_baseline_accessibility_new_24" />
+
+            <TextView
+                android:id="@+id/textView135"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView123c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView127p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="All permission"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/textView128o"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/textView134"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout29zdggdi"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout29zdggd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout28">
+
+        <TextView
+            android:id="@+id/hdsfhibfihsp"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Notification  section"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView91t"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="126dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_baseline_notifications_active_24" />
+
+            <TextView
+                android:id="@+id/textView92d"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView123dd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView127dd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="Notification  section"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textView128dd"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout28"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout29zdggdi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="366dp"
-            android:layout_height="90dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="95dp"
-                android:layout_height="85dp"
-                android:background="@drawable/ic_baseline_payment_24" />
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView90"
-                android:layout_width="match_parent"
+                android:id="@+id/hdsfhibfihsss"
+                android:layout_width="354dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:paddingStart="50dp"
-                android:text="Payment" />
+                android:text="User oprations"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="84dp"
                 android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView91aa"
+                    android:layout_width="29dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button31"
+                    android:layout_width="108dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_baseline_delete_forever_24" />
+
+                <TextView
+                    android:id="@+id/textView92aa"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_baseline_contact_mail_24" />
+
+                <TextView
+                    android:id="@+id/textView130"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView123xx"
+                        android:layout_width="128dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textView127vv"
+                        android:layout_width="141dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Delete user "
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView128jj"
+                        android:layout_width="127dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textView129"
+                        android:layout_width="193dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="Get required document "
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout29zdggd"
+        android:layout_width="380dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout29zdggdad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout29zdggdi">
+
+        <TextView
+            android:id="@+id/hdsfhibfihs"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Payment section"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView91"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_baseline_payment_24" />
+
+            <TextView
+                android:id="@+id/textView92"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView123"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView127"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="payment section"
+                    android:textColor="@color/black"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textView128"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
             </LinearLayout>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button31"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <LinearLayout
-            android:layout_width="366dp"
-            android:layout_height="102dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/adminper"
-                android:layout_width="95dp"
-                android:layout_height="85dp"
-                android:background="@drawable/ic_baseline_accessibility_new_24"
-                 />
-
-            <TextView
-                android:id="@+id/textView91"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:paddingStart="50dp"
-                android:text="Grant Permission" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <LinearLayout
-            android:layout_width="365dp"
-            android:layout_height="90dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_viewallpay"
-                android:layout_width="95dp"
-                android:layout_height="85dp"
-                android:background="@drawable/ic_baseline_supervisor_account_24" />
-
-            <TextView
-                android:id="@+id/textView92"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:paddingStart="50dp"
-                android:text="View All User" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button13"
-            android:layout_width="257dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="50dp"
-            android:text="notification admin" />
-
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="361dp"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
     </LinearLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
