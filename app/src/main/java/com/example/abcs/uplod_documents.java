@@ -22,6 +22,8 @@ import com.google.firebase.storage.StorageReference;
 public class uplod_documents extends AppCompatActivity {
 Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
 TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
+TextView supportui;
+
     FirebaseAuth auth;
     FirebaseFirestore fstore;
     StorageReference storageReference;
@@ -32,6 +34,7 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uplod_documents);
         //textview
+        supportui=findViewById(R.id.textView121);
         tu10 =findViewById(R.id.tenup);
         td10 =findViewById(R.id.tendown);
         tu12=findViewById(R.id.up12);
@@ -87,6 +90,8 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         ddownbe.setVisibility(View.INVISIBLE);
      //   downcoston.setVisibility(View.INVISIBLE);
 
+supportui.setText(getIntent().getStringExtra("assignno1"));
+
 
 
 //firebase
@@ -100,6 +105,9 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(uplod_documents.this,uplod_teacher_reqdoc.class);
+
+                intent.putExtra("uploddocto_specificuplod",supportui.getText().toString());
+
                 startActivity(intent);
             }
         });

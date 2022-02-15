@@ -170,6 +170,9 @@ studentdoc.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent=new Intent(HomeActivity.this, uplod_documents.class);
+
+        intent.putExtra("assignno1",unicid.getText().toString());
+
         startActivity(intent);
     }
 });

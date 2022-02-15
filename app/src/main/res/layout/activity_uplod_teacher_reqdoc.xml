@@ -7,6 +7,7 @@
     tools:context=".uplod_teacher_reqdoc">
 
     <LinearLayout
+        android:id="@+id/linearLayout22"
         android:layout_width="354dp"
         android:layout_height="500dp"
         android:layout_marginStart="3dp"
@@ -16,8 +17,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +32,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="teacher name" />
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Teacher name" />
 
             <TextView
                 android:id="@+id/tname"
@@ -49,6 +54,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="Requred document" />
 
             <TextView
@@ -69,6 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 android:text="Teacher side comments" />
 
         </LinearLayout>
@@ -89,6 +98,8 @@
             android:id="@+id/textView125"
             android:layout_width="match_parent"
             android:layout_height="36dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
             android:text="student side comments" />
 
         <EditText
@@ -104,5 +115,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="uplod" />
+
+        <TextView
+            android:id="@+id/textView126"
+            android:layout_width="260dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="14dp"
+            android:text="TextView" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

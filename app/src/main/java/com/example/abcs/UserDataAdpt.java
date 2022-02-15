@@ -75,6 +75,7 @@ fstore=FirebaseFirestore.getInstance();
             delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //delete user
                     fstore.collection("demo").document("4J17vMShwsYYFBTQbJpoEIc8Wvd2")
                             .delete()
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
