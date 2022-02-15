@@ -30,6 +30,7 @@
         android:ems="10"
         android:hint="Enter Amount "
         android:inputType="textPersonName"
+        android:textColorHint="#1B1A1A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
@@ -39,8 +40,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout9"
-        android:layout_width="352dp"
-        android:layout_height="209dp"
+        android:layout_width="356dp"
+        android:layout_height="225dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="8dp"
@@ -48,6 +49,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/txt_hostelpay_amount"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
@@ -58,10 +60,13 @@
 
             <TextView
                 android:id="@+id/textView15"
-                android:layout_width="271dp"
-                android:layout_height="38dp"
+                android:layout_width="213dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Room fee " />
+                android:background="#a2a2a2"
+                android:text=" Room Fee "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -71,15 +76,18 @@
 
             <TextView
                 android:id="@+id/textView18"
-                android:layout_width="112dp"
-                android:layout_height="38dp"
+                android:layout_width="147dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="35,500" />
+                android:background="#d0d0d0"
+                android:text=" 35,500"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="39dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -89,23 +97,29 @@
 
                 <TextView
                     android:id="@+id/textView19"
-                    android:layout_width="271dp"
-                    android:layout_height="38dp"
+                    android:layout_width="184dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Canteen fee " />
+                    android:background="#a2a2a2"
+                    android:text=" Canteen Fee "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textView21"
-                    android:layout_width="100dp"
-                    android:layout_height="38dp"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="4500" />
+                    android:background="#d0d0d0"
+                    android:text=" 4500"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="39dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -115,23 +129,29 @@
 
                 <TextView
                     android:id="@+id/textView23"
-                    android:layout_width="271dp"
-                    android:layout_height="38dp"
+                    android:layout_width="169dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Cleaning fee " />
+                    android:background="#a2a2a2"
+                    android:text=" Cleaning Fee "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textView24"
                     android:layout_width="100dp"
-                    android:layout_height="38dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="500" />
+                    android:background="#d0d0d0"
+                    android:text=" 500"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="41dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
@@ -141,23 +161,29 @@
 
                 <TextView
                     android:id="@+id/textView29"
-                    android:layout_width="271dp"
-                    android:layout_height="38dp"
+                    android:layout_width="171dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Wi-Fi charges " />
+                    android:background="#a2a2a2"
+                    android:text=" Wi-Fi Charges "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textView30"
                     android:layout_width="100dp"
-                    android:layout_height="38dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="500" />
+                    android:background="#d0d0d0"
+                    android:text=" 500"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="42dp"
+            android:layout_height="46dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -167,17 +193,23 @@
 
                 <TextView
                     android:id="@+id/textView32"
-                    android:layout_width="271dp"
-                    android:layout_height="38dp"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Total fee " />
+                    android:background="#a2a2a2"
+                    android:text=" Total Fee "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/textView35"
                     android:layout_width="100dp"
-                    android:layout_height="38dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="41000" />
+                    android:background="#d0d0d0"
+                    android:text=" 41000"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -191,6 +223,7 @@
         android:layout_marginEnd="132dp"
         android:layout_marginBottom="11dp"
         android:text="Hostel fee  structure "
+        android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
         app:layout_constraintEnd_toEndOf="parent"
