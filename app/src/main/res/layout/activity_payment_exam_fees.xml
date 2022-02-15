@@ -16,7 +16,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="83dp"
         android:layout_marginBottom="6dp"
-        android:text="Button"
+        android:text="Pay Exam Fee"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,6 +36,7 @@
         android:hint="Enter the amount"
         android:inputType="number"
         android:paddingStart="10dp"
+        android:textColorHint="#222020"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,20 +64,24 @@
             <TextView
                 android:id="@+id/textView36"
                 android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:padding="10dp"
-                android:text="name"
                 android:paddingStart="20dp"
-                android:textStyle="bold" />
+                android:text=" Name"
+                android:textSize="16sp"
+                android:background="#a2a2a2"
+                />
 
             <TextView
                 android:id="@+id/tv_examname"
                 android:layout_width="100dp"
-                android:layout_height="45dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-               android:paddingStart="20dp"
-                android:text="TextView" />
+                android:paddingStart="20dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                android:background="#d0d0d0"/>
         </LinearLayout>
 
         <LinearLayout
@@ -91,20 +97,23 @@
                 <TextView
                     android:id="@+id/textView41"
                     android:layout_width="100dp"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:padding="10dp"
-                    android:text="class"
                     android:paddingStart="20dp"
-                    android:textStyle="bold" />
+                    android:text=" Class"
+                    android:textSize="16sp"
+                    android:background="#a2a2a2" />
 
                 <TextView
                     android:id="@+id/tv_exam_class"
                     android:layout_width="100dp"
-                    android:layout_height="45dp"
-                    android:paddingStart="20dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:paddingStart="20dp"
+                    android:text="TextView"
+                    android:textSize="16sp"
+                    android:background="#d0d0d0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -120,26 +129,29 @@
                     <TextView
                         android:id="@+id/textView43"
                         android:layout_width="100dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="branch"
                         android:paddingStart="20dp"
-                        android:textStyle="bold" />
+                        android:text=" Branch"
+                        android:textSize="16sp"
+                        android:background="#a2a2a2"/>
 
                     <TextView
                         android:id="@+id/tv_exam_branch"
 
                         android:layout_width="100dp"
-                        android:layout_height="45dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:paddingStart="20dp"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:textSize="16sp"
+                        android:background="#d0d0d0"/>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="51dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -150,51 +162,52 @@
                         <TextView
                             android:id="@+id/textView45"
                             android:layout_width="100dp"
-                            android:layout_height="50dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:background="#a2a2a2"
                             android:padding="10dp"
-                            android:text="rollno"
                             android:paddingStart="20dp"
-                            android:textStyle="bold" />
+                            android:text=" Roll Number"
+                            android:textSize="16sp" />
 
                         <TextView
                             android:id="@+id/tv_exam_rollno"
 
                             android:layout_width="100dp"
-                            android:layout_height="45dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:background="#d0d0d0"
                             android:paddingStart="20dp"
-                            android:text="TextView" />
+                            android:text="TextView"
+                            android:textSize="16sp" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView47"
                         android:layout_width="100dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="#a2a2a2"
                         android:padding="10dp"
-                        android:text="fee status"
                         android:paddingStart="20dp"
-                        android:textStyle="bold" />
+                        android:text=" Fee Status"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/tv_exam_feestatus"
                         android:layout_width="100dp"
-                        android:layout_height="45dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:background="#d0d0d0"
                         android:paddingStart="20dp"
-                        android:text="TextView" />
+                        android:text="TextView"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -206,10 +219,11 @@
                 android:layout_height="wrap_content"
                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
                 android:ems="10"
-                android:hint="Enter your PRN No"
+                android:hint=" Enter your PRN No"
                 android:inputType="textPersonName"
                 android:maxLength="10"
                 android:minHeight="48dp"
+                android:textColorHint="#131313"
                 android:textSize="15sp" />
 
             <LinearLayout
@@ -228,6 +242,7 @@
                     android:inputType="textPersonName"
                     android:maxLength="10"
                     android:paddingStart="10dp"
+                    android:textColorHint="#272424"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -248,7 +263,9 @@
                     android:layout_width="200dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
-                    android:text="Select if you have a backlog " />
+                    android:text="   Select if you have a backlog "
+                    android:textColor="#151414"
+                    android:textColorHint="#1C1A1A" />
 
                 <Switch
                     android:id="@+id/switch1"
@@ -274,6 +291,7 @@
                 android:minLines="1"
                 android:paddingStart="10dp"
                 android:singleLine="true"
+                android:textColorHint="#151515"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -284,10 +302,11 @@
         android:layout_width="390dp"
         android:layout_height="58dp"
         android:padding="10dp"
-        android:text="Exam section"
+        android:text="Exam Fee section"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textAlignment="center"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
