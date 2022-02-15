@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Document_support"
+            android:exported="false" />
+        <activity
             android:name=".Admin_delete_user"
             android:exported="false" />
         <activity

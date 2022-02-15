@@ -43,7 +43,7 @@ public class Support_section extends AppCompatActivity {
         sdoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Support_section.this, register2.class);
+                Intent intent= new Intent(Support_section.this, Document_support.class);
                 startActivity(intent);
             }
         });
