@@ -65,7 +65,7 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         upbe=findViewById(R.id.uplodbe);
         ddownbe =findViewById(R.id.downlodbe);
         upcustom=findViewById(R.id.button20);
-    //    downcoston=findViewById(R.id.downlodecustom);
+        downcoston=findViewById(R.id.button20);
 
       //  Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
        //TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
@@ -96,7 +96,13 @@ TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,t
         FirebaseStorage storage = FirebaseStorage.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference();
 
-
+        downcoston.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(uplod_documents.this,uplod_teacher_reqdoc.class);
+                startActivity(intent);
+            }
+        });
 
         //pdf link fetch **************************imp****************************************
         StorageReference profileRef= storageReference.child("final student data/"+ "/"+auth.getCurrentUser().getUid()+"/10" + ".pdf");
