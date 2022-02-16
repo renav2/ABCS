@@ -11,6 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/border"
         android:padding="15dp">
 
 
@@ -20,8 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Name"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/emailtext"
@@ -30,19 +31,21 @@
             android:layout_below="@id/nametext"
             android:layout_marginLeft="10dp"
             android:text="Email"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="@color/black"
+            android:textSize="18sp"
+             />
 
         <TextView
             android:id="@+id/prntext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/emailtext"
-            android:textStyle="bold"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="1dp"
             android:text="Prn"
-            android:textSize="15sp" />
+            android:textColor="@color/black"
+            android:textSize="18sp"
+           />
 
         <TextView
             android:id="@+id/subtext"
@@ -52,8 +55,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
             android:text="Subject"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            />
 
 
     </RelativeLayout>
