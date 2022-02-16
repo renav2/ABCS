@@ -41,7 +41,7 @@
     <LinearLayout
         android:id="@+id/linearLayout8"
         android:layout_width="370dp"
-        android:layout_height="95dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -56,36 +56,29 @@
             android:id="@+id/btn_clg_jump"
             android:layout_width="95dp"
             android:layout_height="85dp"
-
+            android:layout_marginLeft="10dp"
             android:padding="20dp"
             app:icon="@drawable/clg"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-        <TextView
-            android:id="@+id/textView88"
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
 
         <Button
             android:id="@+id/btn_gohostel"
             android:layout_width="95dp"
             android:layout_height="85dp"
             android:padding="20dp"
+            android:layout_marginLeft="30dp"
             app:icon="@drawable/hostel"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
-        <TextView
-            android:id="@+id/textView89"
-            android:layout_width="10dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+
 
         <Button
             android:id="@+id/btn_goexamfee"
             android:layout_width="95dp"
             android:layout_height="85dp"
             app:icon="@drawable/exam"
+            android:layout_marginLeft="30dp"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
@@ -96,7 +89,7 @@
         android:layout_width="365dp"
         android:layout_height="37dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="22dp"
         android:orientation="horizontal"
@@ -110,7 +103,6 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingStart="15dp"
             android:text="College fee  "
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
@@ -138,9 +130,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout15"
-        android:layout_width="400dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="6dp"
         android:orientation="horizontal"
@@ -151,7 +143,7 @@
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="38dp"
             android:layout_weight="1"
             android:text="Pending fee after 1st Installment "
@@ -174,7 +166,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout16"
-        android:layout_width="400dp"
+        android:layout_width="wrap_content"
         android:layout_height="64dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="6dp"
@@ -188,7 +180,7 @@
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="38dp"
 
             android:layout_weight="1"

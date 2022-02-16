@@ -21,7 +21,7 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_p12.xml" value="0.20416666666666666" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.4" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_examfees_invoice.xml" value="0.4" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_hostel.xml" value="0.25" />
@@ -193,7 +193,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
