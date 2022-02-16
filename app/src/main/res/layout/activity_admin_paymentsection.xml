@@ -54,7 +54,8 @@
                 android:id="@+id/admin_examrecord"
                 android:layout_width="90dp"
                 android:layout_height="85dp"
-                android:text="Exam payment record " />
+                android:background="@drawable/exam"
+                />
 
             <TextView
                 android:id="@+id/textView57"
@@ -78,7 +79,7 @@
                 android:id="@+id/button33"
                 android:layout_width="90dp"
                 android:layout_height="85dp"
-                android:text="supportpay" />
+                android:background="@drawable/ic_outline_payments_24" />
 
             <TextView
                 android:id="@+id/textView58"
@@ -102,7 +103,7 @@
                 android:id="@+id/Admin_clg_record"
                 android:layout_width="90dp"
                 android:layout_height="85dp"
-                android:background="@drawable/clg" />
+                android:background="@drawable/ic_baseline_account_balance_24" />
 
             <TextView
                 android:id="@+id/textView59"
