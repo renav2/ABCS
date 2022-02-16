@@ -47,8 +47,8 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
     String name,email,unicid,branch,_class,aaaaa;
     Spinner installments;
 
-TextView vvasdaas,chutya;
-
+TextView vvasdaas,chutya,gul;
+    String pp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,24 +62,63 @@ TextView vvasdaas,chutya;
             auth=FirebaseAuth.getInstance();
             paybutton=findViewById(R.id.button32);
             installments=findViewById(R.id.pay_in2);
-
             vvasdaas=findViewById(R.id.l12);
-chutya=findViewById(R.id.textView77);
+            chutya=findViewById(R.id.textView77);
+gul=findViewById(R.id.textView133);
+
+
+            //support
             installments.setVisibility(View.INVISIBLE);
             enteramount.setVisibility(View.INVISIBLE);
             paybutton.setVisibility(View.INVISIBLE);
+            chutya.setVisibility(View.INVISIBLE);
+vvasdaas.setVisibility(View.INVISIBLE);
+//BASIC HANDLER
 
+        try{
 
+            DocumentReference documentReference=fstore.collection("demo").document(auth.getCurrentUser().getUid());
+            documentReference.addSnapshotListener(Support_pay.this, new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                    String s,s1;
+                    name=value.getString("Name");
+                    email=value.getString("Email");
+                    // unicid=value.getString("assignno");
+                    branch =value.getString("Branch");
+                    _class=value.getString("Class");
+                    vvasdaas.setText(value.getString("assignno"));
+                    pp=vvasdaas.getText().toString();
+                    //  vv.setText(unicid);
+                    fatke(pp);
+                }
+                private void fatke(String pp) {
+                    Toast.makeText(Support_pay.this, pp, Toast.LENGTH_SHORT).show();
+                    DocumentReference documentReference1= fstore.collection("Support_payment_issue").document(pp);
+                    documentReference1.addSnapshotListener(Support_pay.this, new EventListener<DocumentSnapshot>() {
+                        @Override
+                        public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                            String s,s1;
+                            chutya.setText(value.getString("game"));
+                            if (chutya.getText().toString().equals("YES")){
+                                installments.setVisibility(View.VISIBLE);
+                                enteramount.setVisibility(View.VISIBLE);
+                                paybutton.setVisibility(View.VISIBLE);
+                                sub.setVisibility(View.INVISIBLE);
+                                et1.setVisibility(View.INVISIBLE);
+                                vvasdaas.setVisibility(View.INVISIBLE);
+                                gul.setVisibility(View.INVISIBLE);
+                            }else{
+                                installments.setVisibility(View.INVISIBLE);
+                                enteramount.setVisibility(View.INVISIBLE);
+                                paybutton.setVisibility(View.INVISIBLE);
+                            }
+                        }
+                    });
+                }
+            });
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-
-            }
-        }, 1000);
-
-
+        }catch (Exception e){ Toast.makeText(Support_pay.this, "something went wrong", Toast.LENGTH_SHORT).show(); }
 
 
 
@@ -95,61 +134,6 @@ chutya=findViewById(R.id.textView77);
                 }
             });
 
-        DocumentReference documentReference=fstore.collection("demo").document(auth.getCurrentUser().getUid());
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                String s,s1;
-
-                name=value.getString("Name");
-                email=value.getString("Email");
-               // unicid=value.getString("assignno");
-                branch =value.getString("Branch");
-                _class=value.getString("Class");
-
-
-                vvasdaas.setText(value.getString("assignno"));
-
-              //  vv.setText(unicid);
-
-            }
-        });
-
-        //taking teacher side responce
-
-
-//        fstore.collection("Support_payment_issue").whereEqualTo("assignno",vvasdaas.getText().toString()).get()
-//                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                    @Override
-//                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                        List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
-//                        for(DocumentSnapshot d:list)
-//                        {
-//
-//                            chutya.setText(d.getString("game"));
-////                            a_search_data obj=d.toObject(a_search_data.class);
-////                            datalist.add(obj);
-//                        }
-//
-//                    }
-//                });
-
-
-//        DocumentReference pp=fstore.collection("Support_payment_issue").document(vvasdaas.getText().toString());
-//        pp.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-//            @Override
-//            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                String s;
-//
-//                chutya.setText(value.getString("game"));
-//                //  vv.setText(unicid);
-//
-//            }
-//        });
-
-
-
-
 //uplod data on new data set
 
         sub.setOnClickListener(new View.OnClickListener() {
@@ -157,7 +141,7 @@ chutya=findViewById(R.id.textView77);
             public void onClick(View v) {
                 DocumentReference d2=fstore.collection("Support_payment_issue").document(vvasdaas.getText().toString());
                 Map<String, String> vv=new HashMap<>();
-String gg=vvasdaas.getText().toString();
+                String gg=vvasdaas.getText().toString();
                 String no="no";
                 vv.put("Name",name);
                 vv.put("game","no");
@@ -166,9 +150,6 @@ String gg=vvasdaas.getText().toString();
                 vv.put("Branch",branch);
                 vv.put("_Class",_class);
                 vv.put("student_issue",et1.getText().toString());
-
-
-
                 d2.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
@@ -177,13 +158,8 @@ String gg=vvasdaas.getText().toString();
                         startActivity(intent);
                     }
                 });
-
-
             }
         });
-
-
-
     }
 
     private void makepay(int amount) {
@@ -240,13 +216,10 @@ String gg=vvasdaas.getText().toString();
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
         Intent intent =new Intent(Support_pay.this, Payment_Collage_invoice.class);
-
         int amount = Math.round(Float.parseFloat(samount) * 100);
         Toast.makeText(this, "paymentsuccesfull", Toast.LENGTH_SHORT).show();
-
         DocumentReference d3=fstore.collection("financial_problem_student_paymentdata").document();
         Map<String, String> vv=new HashMap<>();
-
         vv.put("Name",name);
         vv.put("assignno",unicid);
         vv.put("Email",email);
@@ -254,8 +227,6 @@ String gg=vvasdaas.getText().toString();
         vv.put("Class",_class);
         vv.put("installemt",installments.getSelectedItem().toString());
         vv.put("amountpaid",samount);
-
-
         d3.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
@@ -264,23 +235,7 @@ String gg=vvasdaas.getText().toString();
                 startActivity(intent);
             }
         });
-
-
-
-
-//        String txt_installment=pay_instllmen.getSelectedItem().toString();
-//
-//        String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
-//        // Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
-//        intent.putExtra("wiseamount",cc);
-//        intent.putExtra("orignalamount",amount);
-//        intent.putExtra("amo",samount);
-//        intent.putExtra("installmenttype",txt_installment);
-//
-//        startActivity(intent);
-
     }
-
     @Override
     public void onPaymentError(int i, String s, PaymentData paymentData) {
         Toast.makeText(this, "paymment fail ", Toast.LENGTH_SHORT).show();
