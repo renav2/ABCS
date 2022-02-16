@@ -8,71 +8,65 @@
 
     <Spinner
         android:id="@+id/pay_in2"
-        android:layout_width="348dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="30dp"
         android:layout_weight="1"
         android:entries="@array/installmentpart2"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.718"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout26"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView90"
-        android:layout_width="256dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="35dp"
         android:text="Payment support section"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/textView132"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button18"
+        app:layout_constraintStart_toStartOf="@+id/textView132"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button18"
         android:layout_width="165dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="14dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/pay_in2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout26"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine5" />
 
     <TextView
         android:id="@+id/textView132"
-        android:layout_width="347dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-        android:layout_marginEnd="33dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="9dp"
         android:text="If you and your family  are facing any kind of financial issue then tell us we will definitely consider your issue and
  we will  provide you installments  service for you "
         app:layout_constraintBottom_toTopOf="@+id/textView133"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView90" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine5"
-        android:layout_width="364dp"
-        android:layout_height="85dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="45dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
@@ -84,44 +78,74 @@
     <TextView
         android:id="@+id/textView133"
         android:layout_width="206dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="21dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
         android:text="Write your issue "
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView132"
         app:layout_constraintTop_toBottomOf="@+id/textView132" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="348dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="14dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="25dp"
         android:ems="10"
         android:hint="Enter your amount"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/button32"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pay_in2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout26" />
 
     <Button
         android:id="@+id/button32"
         android:layout_width="156dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="56dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="55dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout26"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button18">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/l12"
+                android:layout_width="204dp"
+                android:layout_height="match_parent"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
