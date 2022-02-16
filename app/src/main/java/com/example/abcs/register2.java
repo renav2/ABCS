@@ -171,7 +171,7 @@ DocumentReference reference=fstore.collection("demo").document(passss);
         v.put("Admission_type",txt_atyp);
         v.put("Category",txt_cate);
         v.put("Branch",txt_bran);
-        v.put("Class",txt_yearn);
+        v.put("_Class",txt_yearn);
         v.put("Academic_year",txt_acdy);
         v.put("Password",text_password);
 

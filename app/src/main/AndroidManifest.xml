@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".support_payment_record"
+            android:exported="false" />
+        <activity
             android:name=".Admin_tool_home"
             android:exported="false" />
         <activity

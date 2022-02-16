@@ -68,7 +68,11 @@ TextView r;
         logO=findViewById(R.id.logO);
         notificationtext=findViewById(R.id.textView2);
         welcomename=findViewById(R.id.textView115);
+
+
         unicid=findViewById(R.id.textView116);
+
+
         logO=findViewById(R.id.log1);
         studentdoc=findViewById(R.id.button4);
         collagenotoi=findViewById(R.id.button5);
@@ -221,8 +225,10 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(HomeActivity.this, Payment_home_page.class);
+               intent.putExtra("unicid",unicid.getText().toString());
+
                 startActivity(intent);
-                finish();
+
             }
         });
         profile.setOnClickListener(new View.OnClickListener() {
@@ -232,7 +238,7 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
               //  intent.putExtra("pro_email",pass);
                 intent.putExtra("user_id_home",User_ID);
                 startActivity(intent);
-                finish();
+
             }
         });
         permission.setOnClickListener(new View.OnClickListener() {
@@ -240,7 +246,7 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent= new Intent(HomeActivity.this, user_permision_home.class);
                 startActivity(intent);
-                finish();
+
             }
         });
     }

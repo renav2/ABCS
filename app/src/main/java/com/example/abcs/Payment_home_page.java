@@ -20,7 +20,7 @@ public class Payment_home_page extends AppCompatActivity {
 private Button  clgpayjump;
 private  Button hostel_pay;
 private Button exam_pay;
-TextView  txt_hospen,hospen,txt_clgpen;
+//TextView  txt_hospen,hospen,txt_clgpen;
 
 
 TextView studentf;
@@ -35,12 +35,18 @@ TextView studentf;
 clgpayjump=findViewById(R.id.btn_clg_jump);
 hostel_pay=findViewById(R.id.btn_gohostel);
 exam_pay=findViewById(R.id.btn_goexamfee);
-studentf=findViewById(R.id.tv_yourfees);
+studentf=findViewById(R.id.textView7);
+
+
+studentf.setText(getIntent().getStringExtra("unicid"));
+
+
+
         auth=FirebaseAuth.getInstance();
 
-txt_hospen=findViewById(R.id.textView16);
-txt_clgpen=findViewById(R.id.textView14);
-hospen=findViewById(R.id.tv_hostelpending);
+//txt_hospen=findViewById(R.id.textView16);
+//txt_clgpen=findViewById(R.id.textView14);
+//hospen=findViewById(R.id.tv_hostelpending);
 
 
 
@@ -55,62 +61,62 @@ hospen=findViewById(R.id.tv_hostelpending);
             @Override
             public void run() {
 
-                DocumentReference reference = fstore.collection("collagefees_1_installment").document(pro_userid);
-                reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        //basic profile things
-                        String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
-                        studentf.setText(pay_yourfees1 + "₹");
-                        if(studentf.getText().toString().equals("0₹")){
-                           // studentf.setVisibility(View.INVISIBLE);
-                          //  txt_clgpen.setVisibility(View.INVISIBLE);
-                            Toast.makeText(Payment_home_page.this, "rrrrrrrrrrr", Toast.LENGTH_SHORT).show();
-                        }else {
-                            studentf.setText(pay_yourfees1 + "₹");
-                        }
-                    }
-                });
+//                DocumentReference reference = fstore.collection("collagefees_1_installment").document(pro_userid);
+//                reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                        //basic profile things
+//                        String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
+//                        studentf.setText(pay_yourfees1 + "₹");
+//                        if(studentf.getText().toString().equals("0₹")){
+//                           // studentf.setVisibility(View.INVISIBLE);
+//                          //  txt_clgpen.setVisibility(View.INVISIBLE);
+//                            Toast.makeText(Payment_home_page.this, "rrrrrrrrrrr", Toast.LENGTH_SHORT).show();
+//                        }else {
+//                            studentf.setText(pay_yourfees1 + "₹");
+//                        }
+//                    }
+//                });
 
-                DocumentReference reference2 = fstore.collection("collagefees_2_installment").document(pro_userid);
-                reference2.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        //basic profile things
-                        String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
-                        studentf.setText(pay_yourfees1 + "₹");
-
-
-                        if(studentf.getText().toString().equals("0₹")){
-                            studentf.setVisibility(View.INVISIBLE);
-                            txt_clgpen.setVisibility(View.INVISIBLE);
-
-                        }else {
-                            studentf.setText(pay_yourfees1 + "₹");
-                        }
-
-                    }
-                });
+//                DocumentReference reference2 = fstore.collection("collagefees_2_installment").document(pro_userid);
+//                reference2.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                        //basic profile things
+//                        String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
+//                        studentf.setText(pay_yourfees1 + "₹");
+//
+//
+//                        if(studentf.getText().toString().equals("0₹")){
+//                            studentf.setVisibility(View.INVISIBLE);
+////                            txt_clgpen.setVisibility(View.INVISIBLE);
+//
+//                        }else {
+//                            studentf.setText(pay_yourfees1 + "₹");
+//                        }
+//
+//                    }
+//                });
             }
         }, 400);
-
-        DocumentReference reference = fstore.collection("collagefees_2_installment").document(pro_userid);
-        reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                //basic profile things
-                String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
-
-
-              //  hospen.setText(pay_yourfees1 + "₹");
-
-
-
-
-
-            }
-        });
-
+//
+//        DocumentReference reference = fstore.collection("collagefees_2_installment").document(pro_userid);
+//        reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//            @Override
+//            public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                //basic profile things
+//                String pay_yourfees1 = documentSnapshot.getString("_1Student_remain_fees");
+//
+//
+//              //  hospen.setText(pay_yourfees1 + "₹");
+//
+//
+//
+//
+//
+//            }
+//        });
+//
 
 
 
@@ -135,17 +141,17 @@ hospen=findViewById(R.id.tv_hostelpending);
 
 
 
-
-                        hospen.setText(pay_yourfees1+"₹");
-
-
-                        if(hospen.getText().toString().equals("0₹")||hospen.getText().toString().equals("null₹")){
-                            txt_hospen.setVisibility(View.INVISIBLE);
-                            hospen.setVisibility(View.INVISIBLE);
-                        }else{
-                            txt_hospen.setVisibility(View.VISIBLE);
-                            hospen.setVisibility(View.VISIBLE);
-                        }
+//
+//                        hospen.setText(pay_yourfees1+"₹");
+//
+//
+//                        if(hospen.getText().toString().equals("0₹")||hospen.getText().toString().equals("null₹")){
+//                            txt_hospen.setVisibility(View.INVISIBLE);
+//                            hospen.setVisibility(View.INVISIBLE);
+//                        }else{
+//                            txt_hospen.setVisibility(View.VISIBLE);
+//                            hospen.setVisibility(View.VISIBLE);
+//                        }
 
 
                     }
@@ -174,8 +180,12 @@ hospen=findViewById(R.id.tv_hostelpending);
     @Override
     public void onClick(View v) {
         Intent intent=new Intent(Payment_home_page.this, Payment_collage_fullfee_or_remainfee.class);
-       String mm= studentf.getText().toString();
-        intent.putExtra("rempasstorempay",mm);
+//       String mm= studentf.getText().toString();
+//        intent.putExtra("rempasstorempay",mm);
+
+        intent.putExtra("unicid1",studentf.getText().toString());
+
+
 
         startActivity(intent);
     }

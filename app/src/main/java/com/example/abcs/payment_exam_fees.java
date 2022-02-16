@@ -84,7 +84,7 @@ EditText back;
                 String pro_name= documentSnapshot.getString("Name");
                 String pro_rollno=documentSnapshot.getString("Rollno");
                 String pro_dept=documentSnapshot.getString("Branch");
-                String pro_class=documentSnapshot.getString("Class");
+                String pro_class=documentSnapshot.getString("_Class");
                 String pro_phone=documentSnapshot.getString("mobile no");
 
                 //setdata
