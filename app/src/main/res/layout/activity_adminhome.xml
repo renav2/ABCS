@@ -15,6 +15,7 @@
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="22dp"
         android:orientation="vertical"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,6 +99,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="4dp"
         android:orientation="vertical"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout29zdggd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -189,6 +191,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="167dp"
+            android:background="@drawable/border"
             android:orientation="vertical">
 
             <TextView
@@ -276,6 +279,8 @@
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/border"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout29zdggdad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
