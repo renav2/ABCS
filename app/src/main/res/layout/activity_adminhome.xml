@@ -227,7 +227,6 @@
                     />
 
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -334,9 +333,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="payment section"
-                   android:textAlignment="center"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                     />
+                    />
 
                 <TextView
                     android:id="@+id/textView128"
@@ -349,5 +348,25 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button37"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:text="admin tool"
+        android:paddingTop="10dp"
+        android:textSize="15sp"
+        app:icon="@drawable/ic_baseline_admin_panel_settings_24"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
