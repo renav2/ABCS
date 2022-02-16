@@ -2,15 +2,22 @@ package com.example.abcs;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,6 +27,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentData;
 import com.razorpay.PaymentResultWithDataListener;
@@ -27,6 +35,7 @@ import com.razorpay.PaymentResultWithDataListener;
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Support_pay extends AppCompatActivity implements PaymentResultWithDataListener {
@@ -35,8 +44,11 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
     Button sub,paybutton;
     FirebaseFirestore fstore;
     FirebaseAuth auth;
-    String name,email,unicid,branch,_class;
+    String name,email,unicid,branch,_class,aaaaa;
     Spinner installments;
+
+TextView vvasdaas,chutya;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +62,31 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
             auth=FirebaseAuth.getInstance();
             paybutton=findViewById(R.id.button32);
             installments=findViewById(R.id.pay_in2);
-            paybutton.setOnClickListener(new View.OnClickListener() {
+
+            vvasdaas=findViewById(R.id.l12);
+chutya=findViewById(R.id.textView77);
+            installments.setVisibility(View.INVISIBLE);
+            enteramount.setVisibility(View.INVISIBLE);
+            paybutton.setVisibility(View.INVISIBLE);
+
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+
+            }
+        }, 1000);
+
+
+
+
+
+
+
+
+        paybutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
              samount=enteramount.getText().toString();
@@ -67,23 +103,65 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
 
                 name=value.getString("Name");
                 email=value.getString("Email");
-                unicid=value.getString("assignno");
+               // unicid=value.getString("assignno");
                 branch =value.getString("Branch");
                 _class=value.getString("Class");
+
+
+                vvasdaas.setText(value.getString("assignno"));
+
+              //  vv.setText(unicid);
+
             }
         });
+
+        //taking teacher side responce
+
+
+//        fstore.collection("Support_payment_issue").whereEqualTo("assignno",vvasdaas.getText().toString()).get()
+//                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                    @Override
+//                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                        List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
+//                        for(DocumentSnapshot d:list)
+//                        {
+//
+//                            chutya.setText(d.getString("game"));
+////                            a_search_data obj=d.toObject(a_search_data.class);
+////                            datalist.add(obj);
+//                        }
+//
+//                    }
+//                });
+
+
+//        DocumentReference pp=fstore.collection("Support_payment_issue").document(vvasdaas.getText().toString());
+//        pp.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+//            @Override
+//            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+//                String s;
+//
+//                chutya.setText(value.getString("game"));
+//                //  vv.setText(unicid);
+//
+//            }
+//        });
+
+
+
+
 //uplod data on new data set
 
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DocumentReference reference=fstore.collection("Support_payment_issue").document(unicid);
+                DocumentReference d2=fstore.collection("Support_payment_issue").document(vvasdaas.getText().toString());
                 Map<String, String> vv=new HashMap<>();
-
+String gg=vvasdaas.getText().toString();
                 String no="no";
                 vv.put("Name",name);
                 vv.put("game","no");
-                vv.put("assignno",unicid);
+                vv.put("assignno",gg);
                 vv.put("Email",email);
                 vv.put("Branch",branch);
                 vv.put("_Class",_class);
@@ -91,7 +169,7 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
 
 
 
-                reference.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
+                d2.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(Support_pay.this, "Your request is send  ", Toast.LENGTH_SHORT).show();
@@ -166,7 +244,7 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
         int amount = Math.round(Float.parseFloat(samount) * 100);
         Toast.makeText(this, "paymentsuccesfull", Toast.LENGTH_SHORT).show();
 
-        DocumentReference reference=fstore.collection("financial_problem_student_paymentdata").document();
+        DocumentReference d3=fstore.collection("financial_problem_student_paymentdata").document();
         Map<String, String> vv=new HashMap<>();
 
         vv.put("Name",name);
@@ -178,7 +256,7 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
         vv.put("amountpaid",samount);
 
 
-        reference.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
+        d3.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 Toast.makeText(Support_pay.this, "Your request is send  ", Toast.LENGTH_SHORT).show();

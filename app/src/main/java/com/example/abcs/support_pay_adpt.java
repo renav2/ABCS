@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -29,6 +30,8 @@ import java.util.Map;
 
 public class support_pay_adpt extends RecyclerView.Adapter<support_pay_adpt.myviewholder>
 {
+    String aa;
+
     ArrayList<support_pay_data2> datalist;
 
     public support_pay_adpt(ArrayList<support_pay_data2> datalist) {
@@ -48,6 +51,9 @@ public class support_pay_adpt extends RecyclerView.Adapter<support_pay_adpt.myvi
         holder.cl.setText(datalist.get(position).get_Class());
         holder.nam.setText(datalist.get(position).getName());
         holder.iss.setText(datalist.get(position).getStudent_issue());
+            aa=datalist.get(position).getAssignno();
+
+
 
 
     }
@@ -58,7 +64,7 @@ public class support_pay_adpt extends RecyclerView.Adapter<support_pay_adpt.myvi
     class myviewholder extends RecyclerView.ViewHolder
     {
         // add here
-        TextView bra,cl,nam,iss;
+        TextView bra,cl,nam,iss,game;
         Button yes,no;
 
 //        TextView t1,t2,t3,t6,t,id;
@@ -71,6 +77,8 @@ public class support_pay_adpt extends RecyclerView.Adapter<support_pay_adpt.myvi
 
         public myviewholder(@NonNull View itemView) {
             super(itemView);
+
+
 //            id=itemView.findViewById(R.id.textView57);
 //            t1=itemView.findViewById(R.id.t1);
 //            t2=itemView.findViewById(R.id.t2);
@@ -87,12 +95,76 @@ public class support_pay_adpt extends RecyclerView.Adapter<support_pay_adpt.myvi
             iss=itemView.findViewById(R.id.textView139);
             yes=itemView.findViewById(R.id.button39);
             no=itemView.findViewById(R.id.button40);
+game=itemView.findViewById(R.id.textView143);
+
+
 
 
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
             techeret=itemView.findViewById(R.id.editTextTextMultiLine);
+
+
+
+            yes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    DocumentReference washingtonRef = fstore.collection("Support_payment_issue").document(aa);
+
+// Set the "isCapital" field of the city 'DC'
+                    washingtonRef
+                            .update("game", "YES")
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    game.setText("installment given");
+                                    yes.setVisibility(View.INVISIBLE);
+                                    no.setVisibility(View.INVISIBLE);
+
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    game.setText("some thing went wrong");
+                                }
+                            });
+
+
+
+
+                }
+            });
+
+
+            no.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DocumentReference washingtonRef = fstore.collection("Support_payment_issue").document(aa);
+
+// Set the "isCapital" field of the city 'DC'
+                    washingtonRef
+                            .update("game", "NO")
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    game.setText("installment NOT given");
+
+                                    yes.setVisibility(View.INVISIBLE);
+                                    no.setVisibility(View.INVISIBLE);
+
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    game.setText("some thing went wrong");
+                                }
+                            });
+                }
+            });
 
 
 //            b1p.setVisibility(View.VISIBLE);

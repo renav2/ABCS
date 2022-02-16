@@ -13,12 +13,7 @@ Button paymentissuesolve;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_support_solver);
-
-
         paymentissuesolve=findViewById(R.id.button36);
-
-
-
         paymentissuesolve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,8 +21,6 @@ Button paymentissuesolve;
                 startActivity(intent);
             }
         });
-
-
 
 
     }
