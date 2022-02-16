@@ -40,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="Teacher Detail"
                 android:textAlignment="center"
+                android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -48,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="  Teacher Name"
+                android:hint=" Teacher Name"
                 android:textSize="18sp"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
@@ -59,8 +60,8 @@
                 android:layout_height="51dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:textSize="20dp"
-                android:hint="  requred document from student"
+                android:textSize="18sp"
+                android:hint=" requred document from student"
                 android:inputType="textMultiLine" />
 
             <EditText
@@ -69,7 +70,8 @@
                 android:layout_height="51dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:hint="document description"
+                android:textSize="18sp"
+                android:hint=" document description"
                 android:inputType="textMultiLine" />
 
         </LinearLayout>
@@ -87,6 +89,7 @@
                 android:textAlignment="center"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 tools:text="Student Detail" />
 
             <LinearLayout
@@ -99,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Student branch" />
+                    android:text=" Student branch" />
 
                 <Spinner
                     android:id="@+id/sbranch"
@@ -119,7 +122,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Student class" />
+                    android:text=" Student class" />
 
                 <Spinner
                     android:id="@+id/sclass"
@@ -135,7 +138,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Roll No"
+                android:hint=" Roll No"
+                android:textSize="18sp"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
