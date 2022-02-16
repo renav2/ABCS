@@ -21,7 +21,7 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_hostelpay_amount"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <EditText
         android:id="@+id/txt_hostelpay_amount"
@@ -29,34 +29,62 @@
         android:layout_height="67dp"
         android:digits="0123456789"
         android:ems="10"
-        android:hint="Enter Amount "
+        android:hint="   Enter Amount "
         android:inputType="textPersonName"
-        android:textColorHint="#1B1A1A"
+        android:textColorHint="#7929292B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.658" />
+        app:layout_constraintVertical_bias="0.667" />
 
     <LinearLayout
         android:id="@+id/linearLayout9"
-        android:layout_width="356dp"
-        android:layout_height="225dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="26dp"
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="27dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/txt_hostelpay_amount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="39dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="147dp">
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="213dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#a2a2a2"
+                android:text=" Discription"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView180"
+                android:layout_width="148dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#d0d0d0"
+                android:text=" Amount"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <TextView
@@ -94,6 +122,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
+                android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -126,6 +155,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
+                android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -158,6 +188,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="39dp"
+                android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -190,6 +221,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="39dp"
+                android:layout_marginTop="2dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -199,9 +231,9 @@
                     android:layout_weight="1"
                     android:background="#a2a2a2"
                     android:text=" Total Fee "
-                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView35"
@@ -221,19 +253,19 @@
         android:id="@+id/textView8"
         android:layout_width="364dp"
         android:layout_height="69dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="21dp"
         android:text="Hostel Fee Section"
-        android:textStyle="bold"
         android:textAlignment="center"
-        android:textSize="30dp"
         android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

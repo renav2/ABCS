@@ -37,13 +37,14 @@
     <EditText
         android:id="@+id/txt_paynow"
         android:layout_width="363dp"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="48dp"
         android:digits="0123456789"
         android:ems="10"
+        android:textSize="18dp"
         android:hint="Enter The Amount You Want To Pay Now"
         android:inputType="textPersonName"
-        android:textColorHint="#232121"
+        android:textColorHint="#7929292B"
         app:layout_constraintBottom_toTopOf="@+id/paynow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
@@ -51,14 +52,15 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="322dp"
+        android:layout_width="364dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:paddingTop="5dp"
         android:text="College Fee Section"
-        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +122,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <TextView
@@ -146,6 +149,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <TextView
@@ -171,6 +175,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <TextView
@@ -197,6 +202,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <TextView
@@ -222,6 +228,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:layout_marginTop="2dp"
             android:orientation="horizontal">
 
             <TextView
