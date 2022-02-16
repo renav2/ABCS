@@ -26,43 +26,34 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:text="Permission   section"
-            android:textSize="30dp" />
+            android:paddingStart="20dp"
+            android:text="Permission section"
+            android:textSize="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="84dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView91qq"
-                android:layout_width="29dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+
 
             <Button
                 android:id="@+id/btn_viewallpay"
-                android:layout_width="112dp"
-                android:layout_height="84dp"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/ic_baseline_supervisor_account_24" />
 
-            <TextView
-                android:id="@+id/textView131"
-                android:layout_width="54dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+
 
             <Button
                 android:id="@+id/adminper"
-                android:layout_width="wrap_content"
-                android:layout_height="74dp"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/ic_baseline_accessibility_new_24" />
-
-            <TextView
-                android:id="@+id/textView135"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -76,11 +67,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView123c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/textView127p"
@@ -91,11 +77,6 @@
                     android:textAlignment="center"
                     android:textColor="@color/black" />
 
-                <TextView
-                    android:id="@+id/textView128o"
-                    android:layout_width="5dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
 
                 <TextView
@@ -128,44 +109,33 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:text="Notification  section"
-            android:textSize="30dp" />
+            android:paddingStart="20dp"
+            android:text="Notification section"
+            android:textSize="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="84dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView91t"
-                android:layout_width="29dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button13"
-                android:layout_width="126dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/ic_baseline_notifications_active_24" />
 
-            <TextView
-                android:id="@+id/textView92d"
-                android:layout_width="61dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button34"
-                android:layout_width="107dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Support  " />
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp" />
 
-            <TextView
-                android:id="@+id/textView137"
-                android:layout_width="26dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+
 
         </LinearLayout>
 
@@ -179,26 +149,17 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView123dd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
 
                 <TextView
                     android:id="@+id/textView127dd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Notification  section"
+                    android:text="Notification section"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
 
-                <TextView
-                    android:id="@+id/textView128dd"
-                    android:layout_width="33dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/textView136"
@@ -207,11 +168,6 @@
                     android:layout_weight="1"
                     android:text="suppport" />
 
-                <TextView
-                    android:id="@+id/textView138"
-                    android:layout_width="29dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
             </LinearLayout>
         </LinearLayout>
@@ -241,50 +197,36 @@
                 android:layout_height="wrap_content"
                 android:text="User oprations"
                 android:textStyle="bold"
+                android:paddingStart="20dp"
                 android:textColor="@color/black"
-                android:textSize="30dp" />
+                android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="84dp"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView91aa"
-                    android:layout_width="29dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
 
                 <Button
                     android:id="@+id/button31"
-                    android:layout_width="108dp"
+                    android:layout_width="95dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/ic_baseline_delete_forever_24" />
 
-                <TextView
-                    android:id="@+id/textView92aa"
-                    android:layout_width="42dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
 
                 <Button
                     android:id="@+id/button19"
-                    android:layout_width="wrap_content"
+                    android:layout_width="95dp"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="80dp"
                     />
 
-                <TextView
-                    android:id="@+id/textView130"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
-                <Button
-                    android:id="@+id/button37"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="admin tool" />
 
             </LinearLayout>
 
@@ -298,11 +240,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textView123xx"
-                        android:layout_width="128dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+
 
                     <TextView
                         android:id="@+id/textView127vv"
@@ -310,14 +248,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="Delete user "
+                        android:layout_marginLeft="20dp"
                         android:textColor="@color/black"
                         android:textAlignment="center" />
 
-                    <TextView
-                        android:id="@+id/textView128jj"
-                        android:layout_width="127dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1" />
+
 
                     <TextView
                         android:id="@+id/textView129"
@@ -354,37 +289,30 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:text="Payment section"
-            android:textSize="30dp" />
+            android:paddingStart="20dp"
+            android:textSize="25dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="84dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView91"
-                android:layout_width="29dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+
 
             <Button
                 android:id="@+id/button12"
-                android:layout_width="123dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
                 android:background="@drawable/ic_baseline_payment_24" />
 
-            <TextView
-                android:id="@+id/textView92"
-                android:layout_width="42dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <Button
                 android:id="@+id/button35"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Button" />
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"/>
 
         </LinearLayout>
 
@@ -398,11 +326,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView123"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
 
                 <TextView
                     android:id="@+id/textView127"
@@ -410,13 +334,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="payment section"
+                   android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textAlignment="center" />
+                     />
 
                 <TextView
                     android:id="@+id/textView128"
-                    android:layout_width="5dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="nnnnnnnnnnnnnnnnn"
                     android:layout_weight="1" />
 
             </LinearLayout>

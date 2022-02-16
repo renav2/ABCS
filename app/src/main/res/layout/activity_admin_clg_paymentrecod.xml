@@ -8,12 +8,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="223dp"
-        android:layout_height="343dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="277dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="111dp"
+        android:layout_width="238dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="139dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
