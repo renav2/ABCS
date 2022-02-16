@@ -271,7 +271,7 @@
                     android:id="@+id/button19"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/ic_baseline_contact_mail_24" />
+                    />
 
                 <TextView
                     android:id="@+id/textView130"
