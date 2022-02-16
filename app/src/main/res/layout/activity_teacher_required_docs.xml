@@ -48,7 +48,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Teacher Name"
+                android:hint="  Teacher Name"
+                android:textSize="18sp"
                 android:inputType="textPersonName"
                 android:minHeight="48dp" />
 
@@ -58,7 +59,8 @@
                 android:layout_height="51dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:hint="requred document from student"
+                android:textSize="20dp"
+                android:hint="  requred document from student"
                 android:inputType="textMultiLine" />
 
             <EditText
