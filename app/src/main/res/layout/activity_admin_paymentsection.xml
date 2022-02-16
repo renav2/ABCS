@@ -29,7 +29,8 @@
                 android:id="@+id/admin_hostel_record"
                 android:layout_width="90dp"
                 android:layout_height="85dp"
-                android:text="Hostal payment record " />
+                android:background="@drawable/hostel22"
+                 />
 
             <TextView
                 android:id="@+id/textView56"
@@ -46,6 +47,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <Button
@@ -69,6 +71,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <Button
@@ -92,13 +95,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/Admin_clg_record"
                 android:layout_width="90dp"
                 android:layout_height="85dp"
-                android:text="College payment record " />
+                android:background="@drawable/clg" />
 
             <TextView
                 android:id="@+id/textView59"
