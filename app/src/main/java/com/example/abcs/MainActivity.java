@@ -22,13 +22,13 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     //delclaration
-   private  Button bt_login, reg,resetpass;
+   private  Button bt_login, reg;
    private EditText et_email;
    private EditText et_pass;
    private TextView tv_jump;
    private TextView tv_jump2;
-
-   private TextView homejump, adminhome;
+   private TextView resetpass;
+   private TextView adminhome;
    private FirebaseAuth auth;
 
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
        //temp jump page for testing purpose
-        homejump=findViewById(R.id.txhome);
+
 //all button code
 
         checkCurrentUser();
@@ -109,13 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-                        homejump.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intent=new Intent(MainActivity.this,HomeActivity.class);
-                                startActivity(intent);
-                            }
-                        });
+
 
                  
 
