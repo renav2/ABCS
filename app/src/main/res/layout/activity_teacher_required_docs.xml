@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout24"
         android:layout_width="382dp"
-        android:layout_height="544dp"
+        android:layout_height="630dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
@@ -33,6 +33,11 @@
                 android:textAlignment="center"
                 android:textSize="25dp"
                 android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="268dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView110"
@@ -73,12 +78,14 @@
                 android:textSize="18sp"
                 android:hint=" document description"
                 android:inputType="textMultiLine" />
-
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="268dp"
+            android:background="@drawable/border"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -157,7 +164,7 @@
                 <Button
                     android:id="@+id/docs"
                     android:layout_width="182dp"
-                    android:layout_height="79dp"
+                    android:layout_height="50dp"
                     android:text="Button" />
 
                 <TextView

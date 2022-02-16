@@ -9,18 +9,19 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
+        android:background="@drawable/border"
         android:layout_height="101dp">
 
 
         <Button
             android:id="@+id/btn_fail"
             android:layout_width="127dp"
-            android:layout_height="37dp"
+            android:layout_height="45dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="261dp"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
             android:text="no" />
 
@@ -29,28 +30,34 @@
             android:layout_width="283dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:text="Name"
+            android:textAlignment="center"
             android:textColor="#000"
             android:textSize="25dp"
             android:textStyle="bold" />
 
+
         <TextView
             android:id="@+id/t2"
-            android:layout_width="match_parent"
+            android:layout_width="221dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/t1"
-            android:layout_marginTop="-1dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
             android:text="unicno"
-            android:textSize="14dp" />
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/textView58"
             android:layout_width="221dp"
             android:layout_height="30dp"
             android:layout_below="@+id/t2"
-            android:layout_marginTop="3dp"
-            android:text="mobile no" />
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:text="mobile no"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
