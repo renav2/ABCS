@@ -206,7 +206,7 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
         uplod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),ViewNotifications.class));
+           //     startActivity(new Intent(getApplicationContext(),ViewNotifications.class));
                 finish();
             }
         });

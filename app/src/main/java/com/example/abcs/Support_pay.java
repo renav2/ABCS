@@ -43,34 +43,21 @@ public class Support_pay extends AppCompatActivity implements PaymentResultWithD
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support_pay);
 
-et1=findViewById(R.id.editTextTextMultiLine5);
-enteramount=findViewById(R.id.editTextTextPersonName);
-
-sub=findViewById(R.id.button18);
-fstore=FirebaseFirestore.getInstance();
-auth=FirebaseAuth.getInstance();
-
-paybutton=findViewById(R.id.button32);
-
-installments=findViewById(R.id.pay_in2);
-
-
-
-
-paybutton.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-
- samount=enteramount.getText().toString();
-
-        int amount = Math.round(Float.parseFloat(samount) * 100);
-
-        makepay(amount);
-    }
-});
-
-
-
+            et1=findViewById(R.id.editTextTextMultiLine5);
+            enteramount=findViewById(R.id.editTextTextPersonName);
+            sub=findViewById(R.id.button18);
+            fstore=FirebaseFirestore.getInstance();
+            auth=FirebaseAuth.getInstance();
+            paybutton=findViewById(R.id.button32);
+            installments=findViewById(R.id.pay_in2);
+            paybutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+             samount=enteramount.getText().toString();
+                    int amount = Math.round(Float.parseFloat(samount) * 100);
+                    makepay(amount);
+                }
+            });
 
         DocumentReference documentReference=fstore.collection("demo").document(auth.getCurrentUser().getUid());
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
@@ -90,14 +77,19 @@ paybutton.setOnClickListener(new View.OnClickListener() {
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DocumentReference reference=fstore.collection("payment_support").document(unicid);
+                DocumentReference reference=fstore.collection("Support_payment_issue").document(unicid);
                 Map<String, String> vv=new HashMap<>();
 
+                String no="no";
                 vv.put("Name",name);
+                vv.put("game","no");
                 vv.put("assignno",unicid);
                 vv.put("Email",email);
                 vv.put("Branch",branch);
-                vv.put("Class",_class);
+                vv.put("_Class",_class);
+                vv.put("student_issue",et1.getText().toString());
+
+
 
                 reference.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
