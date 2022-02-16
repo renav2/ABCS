@@ -168,40 +168,28 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
 
-        <TextView
-            android:id="@+id/textView5511"
-            android:layout_width="5dp"
-            android:layout_height="30dp"
-            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:text="Noticebord" />
 
-        <TextView
-            android:id="@+id/textView51"
-            android:layout_width="5dp"
-            android:layout_height="30dp"
-            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/textView25"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Document" />
 
-        <TextView
-            android:id="@+id/textView52"
-            android:layout_width="5dp"
-            android:layout_height="30dp"
-            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Payment" />
     </LinearLayout>
 
@@ -219,41 +207,30 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/textView98"
-            android:layout_width="5dp"
-            android:layout_height="30dp"
-            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/textView53"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:paddingStart="5dp"
+            android:layout_marginLeft="20dp"
             android:text="Profile" />
 
-        <TextView
-            android:id="@+id/textView78"
-            android:layout_width="5dp"
-            android:layout_height="30dp"
-            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/textView54"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Permision " />
 
-        <TextView
-            android:id="@+id/textView77"
-            android:layout_width="5dp"
-            android:layout_height="30dp"
-            android:layout_weight="1" />
+
 
         <TextView
             android:id="@+id/textView76"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="notification" />
 
     </LinearLayout>
