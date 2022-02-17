@@ -9,7 +9,10 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="278dp"
+        android:layout_height="280dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/underline"
         android:padding="1dp">
 
 
@@ -211,9 +214,10 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="1dp"
+            android:layout_marginStart="100dp"
+            android:textAlignment="center"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="218dp"
+            android:layout_marginEnd="150dp"
             android:layout_marginBottom="242dp"
             android:text="year"
             android:textColor="#000"

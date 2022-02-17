@@ -9,7 +9,10 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="278dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/underline"
         android:padding="1dp">
 
 
@@ -33,7 +36,7 @@
                 android:text="Rollno :         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:layout_width="70dp"
@@ -45,8 +48,8 @@
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
 
         </LinearLayout>
@@ -71,7 +74,7 @@
                 android:text="Name:         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="79dp"
@@ -83,8 +86,8 @@
                 android:layout_width="218dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>
@@ -109,7 +112,7 @@
                 android:text="Amount paid :         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:layout_width="33dp"
@@ -121,8 +124,8 @@
                 android:layout_width="219dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>
@@ -147,7 +150,7 @@
                 android:text="Invoice No :         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:layout_width="33dp"
@@ -159,8 +162,8 @@
                 android:layout_width="227dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>
@@ -185,7 +188,7 @@
                 android:text="Dept :         "
                 android:textAlignment="gravity"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="84dp"
@@ -197,8 +200,8 @@
                 android:layout_width="221dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>
@@ -211,11 +214,12 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="1dp"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="218dp"
+            android:layout_marginEnd="150dp"
             android:layout_marginBottom="242dp"
             android:text="year"
+            android:textAlignment="center"
             android:textColor="#000"
             android:textSize="25dp"
             android:textStyle="bold" />
@@ -228,7 +232,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="237dp"
+            android:layout_marginTop="234dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="5dp"
             android:padding="5dp"
@@ -239,8 +243,8 @@
                 android:layout_height="wrap_content"
                 android:text="Remaining fees:         "
                 android:textAlignment="gravity"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -252,8 +256,8 @@
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
 
         </LinearLayout>

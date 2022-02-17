@@ -9,9 +9,9 @@
 
     <RelativeLayout
         android:layout_width="380dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/border"
+        android:background="@drawable/underline"
         android:layout_height="350dp">
 
 
@@ -54,10 +54,12 @@
             android:layout_width="283dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
+            android:paddingStart="100dp"
             android:text="Name"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="25dp"
+            android:layout_marginTop="5dp"
             android:textStyle="bold" />
 
         <TextView
@@ -80,6 +82,7 @@
             android:layout_marginStart="225dp"
             android:layout_marginTop="62dp"
             android:text="level"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -91,6 +94,7 @@
             android:layout_marginStart="225dp"
             android:layout_marginTop="95dp"
             android:text="level"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <Button

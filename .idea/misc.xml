@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/ABCS/app/src/main/res/drawable/border.xml" value="0.1805" />
         <entry key="..\:/ABCS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20185185185185187" />
+        <entry key="..\:/ABCS/app/src/main/res/drawable/underline.xml" value="0.1805" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTactivity_main.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTelements.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin1st_installment.xml" value="0.19583333333333333" />
@@ -95,7 +96,7 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/singlerow.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/singlerownotice.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/singlerowpermission.xml" value="0.19583333333333333" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/support_pay_singlerow21.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/support_pay_singlerow21.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/test_element.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/layout/userdata_singlerow.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/xml/provider_path.xml" value="0.25" />
