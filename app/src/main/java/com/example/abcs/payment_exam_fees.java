@@ -227,8 +227,6 @@ String tx_unid=unid.getText().toString();
         });
 
 
-
-
         // String cc=totlef.getText().toString().replaceAll("[^0-9]", "");
         Intent intent=new Intent(payment_exam_fees.this, Payment_examfees_invoice.class);
         intent.putExtra("examname",tx_name);
