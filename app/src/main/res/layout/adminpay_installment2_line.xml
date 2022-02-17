@@ -31,7 +31,7 @@
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="180"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:text="Rollno :         "
                 android:textAlignment="gravity"
