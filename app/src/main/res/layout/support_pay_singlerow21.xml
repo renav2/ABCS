@@ -16,16 +16,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
-            android:layout_width="398dp"
-            android:layout_height="205dp"
-            android:layout_marginLeft="5dp"
-
+            android:layout_width="375dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="5dp"
+           android:layout_marginStart="10dp"
+            android:background="@drawable/underline"
             android:padding="5dp">
 
             <LinearLayout
                 android:layout_width="388dp"
-                android:layout_height="200dp"
+                android:layout_height="280dp"
                 android:orientation="vertical"
+                android:layout_marginTop="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.52"
@@ -44,13 +46,20 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Branch"
-                        android:textSize="16dp" />
+                        android:layout_marginTop="2dp"
+                        android:paddingStart="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView142t"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
                         android:text="TextView" />
                 </LinearLayout>
 
@@ -62,16 +71,23 @@
                     <TextView
                         android:id="@+id/textView141t"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="class"
-                        android:textSize="16dp" />
+                        android:layout_marginTop="2dp"
+                        android:paddingStart="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/textView142tt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/black"
                         android:text="TextView" />
                 </LinearLayout>
 
@@ -85,6 +101,10 @@
                         android:layout_width="44dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:paddingStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/black"
                         android:text="Student name" />
 
                     <TextView
@@ -92,6 +112,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="30dp"
+                        android:textColor="@color/black"
                         android:text="TextView" />
                 </LinearLayout>
 
@@ -105,6 +129,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="16sp"
+                        android:paddingStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/black"
                         android:text="Student issue" />
 
                 </LinearLayout>
@@ -118,6 +146,11 @@
                         android:id="@+id/textView139"
                         android:layout_width="match_parent"
                         android:layout_height="65dp"
+                        android:textSize="16sp"
+                        android:background="@drawable/underline"
+                        android:paddingStart="18dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/black"
                         android:text="TextView" />
                 </LinearLayout>
 
@@ -137,6 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:textSize="16sp"
                         android:text="yes " />
 
                     <TextView
@@ -150,7 +184,8 @@
                         android:layout_width="65dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="no" />
+                        android:textSize="16sp"
+                        android:text="No" />
 
                     <TextView
                         android:id="@+id/textView144"
