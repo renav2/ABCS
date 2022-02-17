@@ -37,11 +37,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -107,7 +109,7 @@ Insta=findViewById(R.id.tv_ad_rollno);
                 .setSmallIcon(android.R.drawable.stat_notify_sync)
 
                 .setContentTitle("Collage payment section")
-                .setContentText("payment capture request send");
+                .setContentText("invoice is downloded");
         notification =builder.build();
         notificationManagerCompat = NotificationManagerCompat.from(this);
 
@@ -128,6 +130,34 @@ Insta=findViewById(R.id.tv_ad_rollno);
         String instaaaaaaa = getIntent().getStringExtra("instal");
         Insta.setText(instaaaaaaa);
 
+
+        fstore.collection("Final_paymnet_data").whereEqualTo("Email",auth.getCurrentUser().getEmail()).get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
+                        for(DocumentSnapshot d:list)
+                        {
+                            String totalfee=d.getString("paymentid");
+                            tv_invoiceno.setText(totalfee);
+//                            String alreadypay=d.getString("paidamount");
+//                            String year=d.getString("_class");
+//                            String branch=d.getString("branch");
+//                            String name=d.getString("Name");
+//                            String no=d.getString("mobile_no");
+//                            String uid=d.getString("unicid_assignno");
+//                            String remainfees_after1st_insatllment=d.getString("remaining_fees");
+
+
+                           // uplodseconinstallmentdata(totalfee,alreadypay,year,branch,name,no,uid,remainfees_after1st_insatllment);
+
+
+                            // Toast.makeText(Payment_college_pay_page.this,"you need to pay" +remainfees, Toast.LENGTH_SHORT).show();
+                            // cheksecondinstallment(remainfees,totalfee,alreadypay,year,branch,name,no,uid);
+
+                        }
+                    }
+                });
 
 
 
@@ -168,7 +198,7 @@ Insta=findViewById(R.id.tv_ad_rollno);
         }
         //click event
 
-        invoice_no();
+    //    invoice_no();
 
 
         btn.setOnClickListener(new View.OnClickListener() {

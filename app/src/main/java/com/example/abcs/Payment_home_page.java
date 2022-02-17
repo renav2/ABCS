@@ -196,6 +196,7 @@ hostel_pay.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent=new Intent(Payment_home_page.this,Payment_hostel.class);
+        intent.putExtra("unicid_for_Hostel",studentf.getText().toString());
         startActivity(intent);
     }
 });
@@ -204,6 +205,8 @@ exam_pay.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent= new Intent(Payment_home_page.this,payment_exam_fees.class);
+        intent.putExtra("unicid_for_exampay",studentf.getText().toString());
+
         startActivity(intent);
     }
 });

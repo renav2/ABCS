@@ -94,9 +94,9 @@ public class Payment_examfees_invoice extends AppCompatActivity {
         amo.setText(ex1_string_amountpass);
         forno.setText(ex1_formno);
         prn.setText(ex1_prn);
+        invoicn.setText(getIntent().getStringExtra("invoice_no"));
 
-
-        invoice_no();
+       // invoice_no();
 
 
         new Handler().postDelayed(new Runnable() {
@@ -135,7 +135,7 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                 }
 
 
-                DocumentReference reference = fstore.collection("Exam_fees_data").document(invo_userid);
+                DocumentReference reference = fstore.collection("Exam_fees_data").document(invoicn.getText().toString());
                 Map<String, String> v = new HashMap<>();
                 v.put("_1Student_roll_no", txt_roll);
                 v.put("_1Student_name", txt_na);
@@ -146,7 +146,6 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                 v.put("_1Student_prnno",txtprn);
                 v.put("_1Student_formno",txt_formno);
                 v.put("_1Student_payed_amount", txt_invamount);
-                v.put("_1Student_remain_fees", txt_rem);
 
 
 
@@ -154,6 +153,11 @@ public class Payment_examfees_invoice extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(Payment_examfees_invoice.this, "your payment record save", Toast.LENGTH_SHORT).show();
+
+
+
+
+
                     }
                 });
 

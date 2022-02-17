@@ -4727,6 +4727,10 @@ else{
 
 //unifee,medicfee,deptfee,tituionfee,totlef;
                 Intent intent=new Intent(Payment_college_pay_page.this,Payment_Collage_invoice.class);
+
+
+
+
                 if(pay_instllmen.getSelectedItem().toString().equals("First")) {
                     DocumentReference documentReference = fstore.collection("demo").document(auth.getCurrentUser().getUid());
                     documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
