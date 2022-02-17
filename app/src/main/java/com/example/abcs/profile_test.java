@@ -90,7 +90,7 @@ public class profile_test extends AppCompatActivity {
                 t3.setText(value.getString("mobile no"));
                 t4.setText(value.getString("Branch"));
    //             t5.setText(value.getString("Rollno"));
-                t5.setText(value.getString("Class"));
+                t5.setText(value.getString("_Class"));
                 t6.setText(s1);
 
             }

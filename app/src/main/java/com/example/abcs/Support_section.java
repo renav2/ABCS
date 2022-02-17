@@ -29,6 +29,7 @@ public class Support_section extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(Support_section.this, register2.class);
                 startActivity(intent);
+
             }
         });
 
@@ -37,6 +38,7 @@ public class Support_section extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(Support_section.this, Support_pay.class);
                 startActivity(intent);
+                finish();
             }
         });
 

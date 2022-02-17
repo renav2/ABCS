@@ -67,7 +67,7 @@ clg=findViewById(R.id.spi_Permiosonforcollage);
                         String pro_name= documentSnapshot.getString("Name");
                         String pro_class=documentSnapshot.getString("Email");
                         String branch=documentSnapshot.getString("Branch");
-                        String pr_class=documentSnapshot.getString("Class");
+                        String pr_class=documentSnapshot.getString("_Class");
 
                      cls.setText(pr_class);
                      brh.setText(branch);

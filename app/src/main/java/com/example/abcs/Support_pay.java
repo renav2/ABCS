@@ -233,6 +233,7 @@ vvasdaas.setVisibility(View.INVISIBLE);
                 Toast.makeText(Support_pay.this, "Your request is send  ", Toast.LENGTH_SHORT).show();
                 Intent intent =new Intent(Support_pay.this,MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -107,7 +107,7 @@ public class Payment_hostel_fees_invoice extends AppCompatActivity {
                 String pro_name= documentSnapshot.getString("Name");
                 String pro_rollno=documentSnapshot.getString("Rollno");
                 String pro_dept=documentSnapshot.getString("Branch");
-                String pro_class=documentSnapshot.getString("Class");
+                String pro_class=documentSnapshot.getString("_Class");
                 //setdata
                 invoi_student_name.setText(pro_name);
                 invoice_student_rollno.setText(pro_rollno);
