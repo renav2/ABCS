@@ -2,6 +2,7 @@ package com.example.abcs;
 
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ public class Admin_hostel_payrecord extends AppCompatActivity
     String txt_yr,txt_dept;
     TextView comp, it,entc,cvil,mech;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,6 +42,14 @@ public class Admin_hostel_payrecord extends AppCompatActivity
         datalist=new ArrayList<A_hos_data>();
         adapter=new A_hos_adpt(datalist);
         recview.setAdapter(adapter);
+
+
+                _1.setVisibility(View.INVISIBLE);
+                comp.setVisibility(View.INVISIBLE);
+                it .setVisibility(View.INVISIBLE);
+                        entc.setVisibility(View.INVISIBLE);
+                        cvil.setVisibility(View.INVISIBLE);
+                        mech.setVisibility(View.INVISIBLE);
 
 
         _1=findViewById(R.id._1);

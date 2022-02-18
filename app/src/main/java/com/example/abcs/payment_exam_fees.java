@@ -220,6 +220,8 @@ String tx_unid=unid.getText().toString();
         v.put("paymentid", val2);
         v.put("student_prn_no",tx_pr);
         v.put("remaining_fees","0");
+        v.put("status","no");
+
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
