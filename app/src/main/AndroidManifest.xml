@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -15,6 +17,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
+
+        <meta-data android:name="com.google.maps.android:android-maps-utils:2.3.0"
+            android:value="@string/map_key"/>
+
+        <activity
+            android:name=".Admin_delete_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherHome"
+            android:exported="false" />
         <activity
             android:name=".Student_payment_history"
             android:exported="false" />
@@ -23,6 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".Admin_tool_home"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_teacher_profile"
             android:exported="false" />
         <activity
             android:name=".Admin_Support_paymentsection"

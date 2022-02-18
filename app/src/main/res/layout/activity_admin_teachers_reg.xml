@@ -1,9 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Admin_teachers_reg">
 
+    <EditText
+        android:id="@+id/te_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:hint="Address"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/te_desg"
+        app:layout_constraintEnd_toEndOf="@+id/te_dob"
+        app:layout_constraintStart_toStartOf="@+id/te_dob"
+        app:layout_constraintTop_toBottomOf="@+id/te_dob" />
+
+    <EditText
+        android:id="@+id/te_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/te_email"
+        app:layout_constraintEnd_toEndOf="@+id/textView140"
+        app:layout_constraintStart_toStartOf="@+id/textView140"
+        app:layout_constraintTop_toBottomOf="@+id/textView140" />
+
+    <TextView
+        android:id="@+id/textView140"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="16dp"
+        android:text="Teacher Registration"
+        android:textColor="#090808"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/te_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <Button
+        android:id="@+id/te_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/te_pass"
+        app:layout_constraintStart_toStartOf="@+id/te_pass"
+        app:layout_constraintTop_toBottomOf="@+id/te_pass" />
+
+    <EditText
+        android:id="@+id/te_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Email"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/te_mno"
+        app:layout_constraintEnd_toEndOf="@+id/te_name"
+        app:layout_constraintStart_toStartOf="@+id/te_name"
+        app:layout_constraintTop_toBottomOf="@+id/te_name" />
+
+    <EditText
+        android:id="@+id/te_mno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:hint="Mobile Number"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/te_gender"
+        app:layout_constraintEnd_toEndOf="@+id/te_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/te_email"
+        app:layout_constraintTop_toBottomOf="@+id/te_email" />
+
+    <Spinner
+        android:id="@+id/te_gender"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/gender"
+        app:layout_constraintBottom_toTopOf="@+id/te_empno"
+        app:layout_constraintEnd_toEndOf="@+id/te_mno"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/te_mno"
+        app:layout_constraintTop_toBottomOf="@+id/te_mno" />
+
+    <TextView
+        android:id="@+id/te_empno"
+        android:layout_width="254dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Employee_No Auto Generate"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/te_dob"
+        app:layout_constraintEnd_toEndOf="@+id/te_gender"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/te_gender"
+        app:layout_constraintTop_toBottomOf="@+id/te_gender" />
+
+    <EditText
+        android:id="@+id/te_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:hint="DOB"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/te_add"
+        app:layout_constraintEnd_toEndOf="@+id/te_empno"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/te_empno"
+        app:layout_constraintTop_toBottomOf="@+id/te_empno" />
+
+    <Spinner
+        android:id="@+id/te_desg"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/desg"
+        app:layout_constraintBottom_toTopOf="@+id/te_br"
+        app:layout_constraintEnd_toEndOf="@+id/te_add"
+        app:layout_constraintStart_toStartOf="@+id/te_add"
+        app:layout_constraintTop_toBottomOf="@+id/te_add"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/te_br"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/brname"
+        app:layout_constraintBottom_toTopOf="@+id/te_pass"
+        app:layout_constraintEnd_toEndOf="@+id/te_desg"
+        app:layout_constraintStart_toStartOf="@+id/te_desg"
+        app:layout_constraintTop_toBottomOf="@+id/te_desg" />
+
+    <EditText
+        android:id="@+id/te_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Password"
+        android:textColorHint="@color/black"
+        android:inputType="textPassword"
+        android:minHeight="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/te_reg"
+        app:layout_constraintEnd_toEndOf="@+id/te_br"
+        app:layout_constraintStart_toStartOf="@+id/te_br"
+        app:layout_constraintTop_toBottomOf="@+id/te_br" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
