@@ -11,13 +11,16 @@ import android.widget.Toast;
 
 public class Admin_class_wise_sort extends AppCompatActivity {
 Button _1,_2,_3,_4;
-TextView comp, it,entc,cvil,mech;
+TextView comp, it,entc,cvil,mech,techdept;
 
 
 @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_class_wise_sort);
+
+techdept=findViewById(R.id.teacher_dept);
+
 
         comp  =findViewById(R.id.textView99);
         it=findViewById(R.id.textView101);

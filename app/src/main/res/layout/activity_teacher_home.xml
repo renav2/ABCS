@@ -8,56 +8,52 @@
 
     <Button
         android:id="@+id/tprofile"
-        android:layout_width="107dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="451dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="151dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="201dp"
         android:text="Profile"
-        app:layout_constraintBottom_toTopOf="@+id/uite"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button44"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/uite" />
 
     <Button
         android:id="@+id/button44"
-        android:layout_width="101dp"
+        android:layout_width="0dp"
         android:layout_height="79dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="451dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="201dp"
+        android:layout_marginEnd="22dp"
         android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button45"
         app:layout_constraintEnd_toStartOf="@+id/button45"
-        app:layout_constraintStart_toEndOf="@+id/tprofile"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/tprofile" />
 
     <Button
         android:id="@+id/button45"
-        android:layout_width="101dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="453dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="14dp"
         android:layout_marginBottom="201dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button44"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/uite" />
 
     <TextView
         android:id="@+id/uite"
-        android:layout_width="162dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="209dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="59dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tprofile" />
+        app:layout_constraintBottom_toTopOf="@+id/tprofile"
+        app:layout_constraintEnd_toEndOf="@+id/button45"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tprofile"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
