@@ -17,6 +17,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -34,7 +35,8 @@ import java.util.Map;
 
 public class Admin_teachers_reg extends AppCompatActivity {
 
-    EditText tname,temail,tmno,tempno,tdob,tadd,tpass;
+    EditText tname,temail,tmno,tdob,tadd,tpass;
+    TextView tempno;
     Spinner tgen,tdesg,tbr;
     Button treg;
     ImageView timage;
@@ -138,16 +140,16 @@ public class Admin_teachers_reg extends AppCompatActivity {
             }
         });
 
-        timage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //open gallery
-                Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(openGalleryIntent,100);
-            }
-        });
-
-    }
+//        timage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //open gallery
+//                Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//                startActivityForResult(openGalleryIntent,100);
+//            }
+//        });
+//
+   }
 
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

@@ -2,7 +2,6 @@
     <string name="app_name">ABCS</string>
 
 
-
     <string-array name="Time_array">
         <item>12 AM</item>
         <item>1 AM</item>

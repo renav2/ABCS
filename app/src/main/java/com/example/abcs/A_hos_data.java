@@ -1,73 +1,99 @@
 package com.example.abcs;
 
 public class A_hos_data {
+    String paymentid,paidamount,mobile_no,branch,_class,Section,Name,Email,remaining_fees,installment;
 
-    String _1Student_class,_1Student_dept,_1Student_invoiceno,_1Student_name,_1Student_payed_amount,_1Student_remain_fees,_1Student_roll_no;
-
-    public String get_1Student_class() {
-        return _1Student_class;
+    public A_hos_data(String paymentid, String paidamount, String mobile_no, String branch, String _class, String section, String name, String email, String remaining_fees, String installment) {
+        this.paymentid = paymentid;
+        this.paidamount = paidamount;
+        this.mobile_no = mobile_no;
+        this.branch = branch;
+        this._class = _class;
+        Section = section;
+        Name = name;
+        Email = email;
+        this.remaining_fees = remaining_fees;
+        this.installment = installment;
     }
 
-    public void set_1Student_class(String _1Student_class) {
-        this._1Student_class = _1Student_class;
+    public String getPaymentid() {
+        return paymentid;
     }
 
-    public String get_1Student_dept() {
-        return _1Student_dept;
+    public void setPaymentid(String paymentid) {
+        this.paymentid = paymentid;
     }
 
-    public void set_1Student_dept(String _1Student_dept) {
-        this._1Student_dept = _1Student_dept;
+    public String getPaidamount() {
+        return paidamount;
     }
 
-    public String get_1Student_invoiceno() {
-        return _1Student_invoiceno;
+    public void setPaidamount(String paidamount) {
+        this.paidamount = paidamount;
     }
 
-    public void set_1Student_invoiceno(String _1Student_invoiceno) {
-        this._1Student_invoiceno = _1Student_invoiceno;
+    public String getMobile_no() {
+        return mobile_no;
     }
 
-    public String get_1Student_name() {
-        return _1Student_name;
+    public void setMobile_no(String mobile_no) {
+        this.mobile_no = mobile_no;
     }
 
-    public void set_1Student_name(String _1Student_name) {
-        this._1Student_name = _1Student_name;
+    public String getBranch() {
+        return branch;
     }
 
-    public String get_1Student_payed_amount() {
-        return _1Student_payed_amount;
+    public void setBranch(String branch) {
+        this.branch = branch;
     }
 
-    public void set_1Student_payed_amount(String _1Student_payed_amount) {
-        this._1Student_payed_amount = _1Student_payed_amount;
+    public String get_class() {
+        return _class;
     }
 
-    public String get_1Student_remain_fees() {
-        return _1Student_remain_fees;
+    public void set_class(String _class) {
+        this._class = _class;
     }
 
-    public void set_1Student_remain_fees(String _1Student_remain_fees) {
-        this._1Student_remain_fees = _1Student_remain_fees;
+    public String getSection() {
+        return Section;
     }
 
-    public String get_1Student_roll_no() {
-        return _1Student_roll_no;
+    public void setSection(String section) {
+        Section = section;
     }
 
-    public void set_1Student_roll_no(String _1Student_roll_no) {
-        this._1Student_roll_no = _1Student_roll_no;
+    public String getName() {
+        return Name;
     }
 
-    public A_hos_data(String _1Student_class, String _1Student_dept, String _1Student_invoiceno, String _1Student_name, String _1Student_payed_amount, String _1Student_remain_fees, String _1Student_roll_no) {
-        this._1Student_class = _1Student_class;
-        this._1Student_dept = _1Student_dept;
-        this._1Student_invoiceno = _1Student_invoiceno;
-        this._1Student_name = _1Student_name;
-        this._1Student_payed_amount = _1Student_payed_amount;
-        this._1Student_remain_fees = _1Student_remain_fees;
-        this._1Student_roll_no = _1Student_roll_no;
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getRemaining_fees() {
+        return remaining_fees;
+    }
+
+    public void setRemaining_fees(String remaining_fees) {
+        this.remaining_fees = remaining_fees;
+    }
+
+    public String getInstallment() {
+        return installment;
+    }
+
+    public void setInstallment(String installment) {
+        this.installment = installment;
     }
 
     A_hos_data(){

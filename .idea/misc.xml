@@ -198,11 +198,15 @@
         <entry key="..\:/aa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_asper_dept_class.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_class_wise_sort.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_dept_wise_sort.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_hostel_payrecord.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_sort_studentdata_classwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_paymentsection.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_solver.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_teachers_reg.xml" value="0.25" />
@@ -214,6 +218,8 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_document_pdf_uplod.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_downlodpdf.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_hostelrecord_class_wise.xml" value="0.2359375" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_hotel_record_dept_wise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.6" />

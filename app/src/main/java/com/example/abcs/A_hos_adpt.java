@@ -32,13 +32,13 @@ public class A_hos_adpt extends RecyclerView.Adapter<A_hos_adpt.myviewholder>
     }
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
-        holder.t1.setText(datalist.get(position).get_1Student_class());
-        holder.t2.setText(datalist.get(position).get_1Student_dept());
-        holder.t3.setText(datalist.get(position).get_1Student_invoiceno());
-        holder.t6.setText(datalist.get(position).get_1Student_payed_amount());
-        holder.rollno.setText(datalist.get(position).get_1Student_roll_no());
+        holder.t1.setText(datalist.get(position).get_class());
+        holder.t2.setText(datalist.get(position).getBranch());
+        holder.t3.setText(datalist.get(position).getPaymentid());
+        holder.t6.setText(datalist.get(position).getPaidamount());
+      //  holder.rollno.setText(datalist.get(position).getPaymentid());
 //        holder.t.setText(datalist.get(position).get_1Student_remain_fees());
-        holder.name.setText(datalist.get(position).get_1Student_name());
+        holder.name.setText(datalist.get(position).getName());
     }
     @Override
     public int getItemCount() {
