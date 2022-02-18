@@ -73,6 +73,12 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    // Utilities for Maps SDK for Android (requires Google Play Services)
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+
+    // (Deprecated) Alternately - Utilities for Maps SDK v3 BETA for Android (does not require Google Play Services)
+    implementation 'com.google.maps.android:android-maps-utils-v3:2.3.0'
+
 
 
 

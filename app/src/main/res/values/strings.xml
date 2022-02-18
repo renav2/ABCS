@@ -2,6 +2,7 @@
     <string name="app_name">ABCS</string>
 
 
+
     <string-array name="Time_array">
         <item>12 AM</item>
         <item>1 AM</item>
@@ -57,6 +58,12 @@
         <item>Gender</item>
         <item>Male</item>
         <item>Female</item>
+    </string-array>
+
+    <string-array name="desg">
+        <item>Desgination</item>
+        <item>Head</item>
+        <item>TG</item>
     </string-array>
 
 
@@ -141,5 +148,6 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="map_key" translatable="false">AIzaSyBkoNZkDa8d86_6dq0ZBoxHg7a3GYO7r1U</string>
 
 </resources>

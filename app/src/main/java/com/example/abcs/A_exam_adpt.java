@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,8 +16,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 public class A_exam_adpt extends RecyclerView.Adapter<A_exam_adpt.myviewholder>
 {
     ArrayList<A_exam_data> datalist;
@@ -61,8 +59,8 @@ public class A_exam_adpt extends RecyclerView.Adapter<A_exam_adpt.myviewholder>
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-            name=itemView.findViewById(R.id.tv_ad_name);
-            rollno=itemView.findViewById(R.id.tv_ad_rollno);
+            name=itemView.findViewById(R.id.tv_arol);
+            rollno=itemView.findViewById(R.id.tv_de);
             fstore=FirebaseFirestore.getInstance();
            examform=itemView.findViewById(R.id.tv_ad_examformno);
             backlog=itemView.findViewById(R.id.tv_ad_backlog);

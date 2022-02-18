@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class Payment_home_page extends AppCompatActivity {
 private Button  clgpayjump;
 private  Button hostel_pay;
-private Button exam_pay;
+private Button exam_pay,payhis;
 //TextView  txt_hospen,hospen,txt_clgpen;
 
 
@@ -36,9 +36,11 @@ clgpayjump=findViewById(R.id.btn_clg_jump);
 hostel_pay=findViewById(R.id.btn_gohostel);
 exam_pay=findViewById(R.id.btn_goexamfee);
 studentf=findViewById(R.id.textView7);
-
+payhis=findViewById(R.id.paymenthistory);
 
 studentf.setText(getIntent().getStringExtra("unicid"));
+
+
 
 
 
@@ -170,7 +172,14 @@ studentf.setText(getIntent().getStringExtra("unicid"));
 
 
 
-
+        payhis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Payment_home_page.this, Student_payment_history.class);
+                intent.putExtra("unicid_payhistory",studentf.getText().toString());
+                startActivity(intent);
+            }
+        });
 
 
 

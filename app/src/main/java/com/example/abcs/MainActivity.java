@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +19,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
    private TextView resetpass;
    private TextView adminhome;
    private FirebaseAuth auth;
-
-
+    FirebaseFirestore fstore;
 
 
     // [END auth_fui_create_launcher]
@@ -39,16 +47,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //createSignInIntent();
-                        adminhome=findViewById(R.id.textView39);
-                        bt_login=findViewById(R.id.btn_login);
-                        et_email=findViewById(R.id.txt_email);
-                        et_pass=findViewById(R.id.txt_password);
-                        tv_jump=findViewById(R.id.txt_view_jump);
-                        tv_jump2=findViewById(R.id.txt_view_jump2);
-
-                        resetpass=findViewById(R.id.reset);
+        adminhome=findViewById(R.id.textView39);
+        bt_login=findViewById(R.id.btn_login);
+        et_email=findViewById(R.id.txt_email);
+        et_pass=findViewById(R.id.txt_password);
+        tv_jump=findViewById(R.id.txt_view_jump);
+        tv_jump2=findViewById(R.id.txt_view_jump2);
+        fstore=FirebaseFirestore.getInstance();
+        resetpass=findViewById(R.id.reset);
 
 //firbase intialize
         auth = FirebaseAuth.getInstance();
@@ -68,16 +75,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+
+
             resetpass.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     EditText resetMail = new EditText(v.getContext());
                     AlertDialog.Builder passwordResetDialog = new AlertDialog.Builder(v.getContext());
                     passwordResetDialog.setTitle("Reset Password");
                     passwordResetDialog.setMessage("Enter your email to received password reset link");
                     passwordResetDialog.setView(resetMail);
-
                     passwordResetDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -96,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
                             });
                         }
                     });
+
+
+
 
                     passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
@@ -123,6 +136,61 @@ public class MainActivity extends AppCompatActivity {
 //
                                // startActivity(intent);
 
+
+
+
+//techer login commited
+                                DocumentReference documentReference=fstore.collection("tdemo").document(tex_email);
+                                documentReference.addSnapshotListener(MainActivity.this, new EventListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                                        String s,s1;
+                                        String m=et_email.getText().toString();
+                                        String p=et_pass.getText().toString();
+
+
+                                        s=value.getString("Email");
+                                        s1=value.getString("Password");
+
+
+                                        if(m.equals(s)&&p.equals(s1)){
+                                            Toast.makeText(MainActivity.this, "teacher loging done", Toast.LENGTH_SHORT).show();
+                                            Intent intent1=new Intent(MainActivity.this,TeacherHome.class);
+                                            intent1.putExtra("Teacher",m);
+
+                                            startActivity(intent1);
+
+
+                                        }
+
+                                    }
+                                });
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                               fstore .collection("collagefees_1_installment").whereNotEqualTo("_1Student_remain_fees","0").get()
+//                                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+//                                            @Override
+//                                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+//                                                List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
+//                                                for(DocumentSnapshot d:list)
+//                                                {
+//                                                    a_search_data obj=d.toObject(a_search_data.class);
+//                                                    datalist.add(obj);
+//                                                }
+//                                                adapter.notifyDataSetChanged();
+//                                            }
+//                                        });
 
 
                                 if(tex_email.equals("Admin")&&  tex_pass.equals("admin")){

@@ -42,9 +42,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 public class Payment_Collage_invoice extends AppCompatActivity {
@@ -98,7 +96,7 @@ TextView Insta;
         invoice_send_amount=findViewById(R.id.tv_studentalpayamo);
         invoice_student_dept=findViewById(R.id.tv_invoidept11);
       //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
-Insta=findViewById(R.id.tv_ad_rollno);
+Insta=findViewById(R.id.tv_de);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel channel = new NotificationChannel("myCh","My channel", NotificationManager.IMPORTANCE_DEFAULT);

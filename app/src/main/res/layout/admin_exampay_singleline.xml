@@ -117,7 +117,7 @@
 
 
                 <TextView
-                    android:id="@+id/tv_ad_name"
+                    android:id="@+id/tv_arol"
                     android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:hint="installment no"
@@ -144,7 +144,7 @@
 
 
                 <TextView
-                    android:id="@+id/tv_ad_rollno"
+                    android:id="@+id/tv_de"
                     android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:hint="installment no"

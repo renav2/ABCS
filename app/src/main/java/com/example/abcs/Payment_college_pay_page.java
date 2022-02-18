@@ -4834,10 +4834,11 @@ else{
         int alreadypayaaa=Integer.parseInt(alreadypay);
         int Student_currentpay = Integer.parseInt(samount);
         int remain_fees = Student_totalfees - (alreadypayaaa+Student_currentpay);
-
-
         String remainfeea = Integer.toString(remain_fees);
 
+
+
+       String  txts=pay_instllmen.getSelectedItem().toString();
         Random random = new Random();
         int val = random.nextInt(1000000000);
         String val2 = Integer.toString(val);
@@ -4846,15 +4847,15 @@ else{
         v.put("unicid_assignno", uid);
         v.put("Name", name);
         v.put("mobile_no", no);
-
         v.put("branch", branch);
         v.put("_class", year);
         v.put("totalfees", totalfee);
         v.put("Section", "collagesection");
-        v.put("installment", txt_installment);
+        v.put("installment", txts);
         v.put("paidamount", samount);
-        v.put("remaining_fees", remainfeea);
+        v.put("remaining_fees", "0");
         v.put("paymentid", val2);
+        v.put("Email",auth.getCurrentUser().getEmail());
         reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {

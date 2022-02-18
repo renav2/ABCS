@@ -47,6 +47,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout14"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -64,19 +65,18 @@
             android:id="@+id/btn_gohostel"
             android:layout_width="95dp"
             android:layout_height="85dp"
-            android:padding="20dp"
             android:layout_marginLeft="30dp"
+            android:padding="20dp"
             app:icon="@drawable/hostel"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
-
 
 
         <Button
             android:id="@+id/btn_goexamfee"
             android:layout_width="95dp"
             android:layout_height="85dp"
-            app:icon="@drawable/exam"
             android:layout_marginLeft="30dp"
+            app:icon="@drawable/exam"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
@@ -144,6 +144,70 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="383dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="118dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/linearLayout8asdsadadasd"
+            android:layout_width="333dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <Button
+                android:id="@+id/paymenthistory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_baseline_content_paste_search_24"
+                android:padding="20dp"
+
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout14adsdadsadadadasad"
+            android:layout_width="365dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView27adasdadad"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="5dp"
+                android:text="payment history"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
