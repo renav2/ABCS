@@ -45,7 +45,7 @@
                 android:orientation="horizontal"></LinearLayout>
 
             <TextView
-                android:id="@+id/tv_ad_rollno"
+                android:id="@+id/tv_de"
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
@@ -83,7 +83,7 @@
                 android:orientation="horizontal"></LinearLayout>
 
             <TextView
-                android:id="@+id/tv_ad_name"
+                android:id="@+id/tv_arol"
                 android:layout_width="218dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"

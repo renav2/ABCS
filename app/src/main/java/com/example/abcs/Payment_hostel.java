@@ -7,25 +7,48 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentData;
 import com.razorpay.PaymentResultWithDataListener;
 
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
 public class Payment_hostel extends AppCompatActivity implements PaymentResultWithDataListener {
 private Button hos_pay;
 private EditText hos_a;
+TextView ii;
+FirebaseFirestore fstore;
+FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_hostel);
         hos_pay=findViewById(R.id.btn_hostelpay);
         hos_a=findViewById(R.id.txt_hostelpay_amount);
+fstore=FirebaseFirestore.getInstance();
+auth=FirebaseAuth.getInstance();
+
+        ii=findViewById(R.id.textView52);
+        ii.setText(getIntent().getStringExtra("unicid_for_Hostel"));
+
+
         hos_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,13 +117,69 @@ private EditText hos_a;
         int amount3 = Math.round(Float.parseFloat(samount3) * 100);
 
 
+        Random random = new Random();
+        int val = random.nextInt(1000000000);
+        String val2 = Integer.toString(val);
+
+
+        DocumentReference documentReference = fstore.collection("demo").document(auth.getCurrentUser().getUid());
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                String name, email, mobileno, branch, _class, unicid;
+                name = value.getString("Name");
+                email = value.getString("Email");
+                _class = value.getString("_Class");
+                mobileno = value.getString("mobile_no");
+                branch = value.getString("Branch");
+             //   unicid = c_flag.getText().toString();
+                uplodpayment(name, email, mobileno, branch, _class,samount3,val2);
+            }
+
+            private void uplodpayment(String name, String email, String mobileno, String branch, String _class,String amount,String va) {
+//                String txt_installment = pay_instllmen.getSelectedItem().toString();
+//                String cc = totlef.getText().toString().replaceAll("[^0-9]", "");
+//                int Student_totalfees = Integer.parseInt(cc);
+//                int Student_currentpay = Integer.parseInt(samount);
+//                int remain_fees = Student_totalfees - Student_currentpay;
+
+
+               // String remainfeea = Integer.toString(remain_fees);
+
+
+
+                DocumentReference reference = fstore.collection("Final_paymnet_data").document(va);
+                Map<String, String> v = new HashMap<>();
+                //v.put("unicid_assignno", unicid);
+                v.put("Name", name);
+                v.put("mobile_no", mobileno);
+                v.put("Email", email);
+                v.put("branch", branch);
+                v.put("_class", _class);
+                v.put("Section", "Hostel");
+               v.put("paidamount", amount);
+                v.put("paymentid", va);
+                v.put("remaining_fees","0");
+                reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(Payment_hostel.this, " tracnsaction Successfully ", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
+
+            }
+        });
+
+
 
 
         // Intent intent=new Intent(Payment_college_pay_page.this, Payment_Collage_invoice.class);
 
         intent.putExtra("orignalamount3",amount3);
         intent.putExtra("amo3",samount3);
-
+intent.putExtra("transactionid",val2);
 
         startActivity(intent);
     }

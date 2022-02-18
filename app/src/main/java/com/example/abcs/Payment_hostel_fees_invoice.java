@@ -93,7 +93,7 @@ public class Payment_hostel_fees_invoice extends AppCompatActivity {
         sign.setVisibility(View.INVISIBLE);
         section.setVisibility(View.INVISIBLE);
 
-
+//text set for invoice
      String    txt_remamount=getIntent().getStringExtra("amo3");
         invoice_send_amount.setText(txt_remamount);
 
@@ -116,6 +116,11 @@ public class Payment_hostel_fees_invoice extends AppCompatActivity {
 
             }
         });
+
+
+
+        //pdf size
+
         WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         mDisplay = wm.getDefaultDisplay();
         if(Build.VERSION.SDK_INT >= 23){
@@ -315,15 +320,15 @@ public class Payment_hostel_fees_invoice extends AppCompatActivity {
     }
 
     private void invoice_no() {
+//
+//        Random random=new Random();
+//        int val=random.nextInt(1000000000);
+//        int val2=random.nextInt(1000000000);
+//        if(val ==val2){
+//            tv_invoiceno.setText("E0"+val);
+//        }
 
-        Random random=new Random();
-        int val=random.nextInt(1000000000);
-        int val2=random.nextInt(1000000000);
-        if(val ==val2){
-            tv_invoiceno.setText("E0"+val);
-        }
-
-        tv_invoiceno.setText(Integer.toString(val));
+        tv_invoiceno.setText(getIntent().getStringExtra("transactionid"));
 
 
     }

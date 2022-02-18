@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -58,8 +57,8 @@ public class A_searchadpt extends RecyclerView.Adapter<A_searchadpt.myviewholder
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-            name=itemView.findViewById(R.id.tv_ad_name);
-            rollno=itemView.findViewById(R.id.tv_ad_rollno);
+            name=itemView.findViewById(R.id.tv_arol);
+            rollno=itemView.findViewById(R.id.tv_de);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             remain_=itemView.findViewById(R.id.tv_remainpay211);

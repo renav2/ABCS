@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Student_payment_history"
+            android:exported="false" />
+        <activity
             android:name=".support_payment_record"
             android:exported="false" />
         <activity
