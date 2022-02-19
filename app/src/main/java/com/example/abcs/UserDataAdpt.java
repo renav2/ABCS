@@ -1,25 +1,19 @@
 package com.example.abcs;
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class UserDataAdpt extends RecyclerView.Adapter<UserDataAdpt.myviewholder> {
@@ -65,8 +59,8 @@ FirebaseFirestore fstore;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
 
-            tvv1 = itemView.findViewById(R.id.t1);
-            tvv2 = itemView.findViewById(R.id.t2);
+            tvv1 = itemView.findViewById(R.id.year);
+            tvv2 = itemView.findViewById(R.id.dept);
             tvv3 = itemView.findViewById(R.id.textView58);
             delete=itemView.findViewById(R.id.btn_fail);
 fstore=FirebaseFirestore.getInstance();

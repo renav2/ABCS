@@ -7,20 +7,16 @@
 package com.example.abcs;
 
 import android.os.Handler;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -88,16 +84,16 @@ public class S_his_adpt extends RecyclerView.Adapter<S_his_adpt.myviewholder>
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             id=itemView.findViewById(R.id.textView57);
-            t1=itemView.findViewById(R.id.t1);
-            section=itemView.findViewById(R.id.t2);
+            t1=itemView.findViewById(R.id.year);
+            section=itemView.findViewById(R.id.dept);
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
 instalment=itemView.findViewById(R.id.ins);
 
             rem=itemView.findViewById(R.id.tv_remainpay211);
-            dep=itemView.findViewById(R.id.tv_de);
-            roll=itemView.findViewById(R.id.tv_arol);
+            dep=itemView.findViewById(R.id.mobile);
+            roll=itemView.findViewById(R.id.name);
 
 
             techercomm=itemView.findViewById(R.id.tech_comments);

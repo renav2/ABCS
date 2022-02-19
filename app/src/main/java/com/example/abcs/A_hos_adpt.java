@@ -27,7 +27,7 @@ public class A_hos_adpt extends RecyclerView.Adapter<A_hos_adpt.myviewholder>
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.adminpay_installment2_line,parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.hostelrecod_singlerow,parent,false);
         return new myviewholder(view);
     }
     @Override
@@ -37,7 +37,7 @@ public class A_hos_adpt extends RecyclerView.Adapter<A_hos_adpt.myviewholder>
         holder.t3.setText(datalist.get(position).getPaymentid());
         holder.t6.setText(datalist.get(position).getPaidamount());
       //  holder.rollno.setText(datalist.get(position).getPaymentid());
-//        holder.t.setText(datalist.get(position).get_1Student_remain_fees());
+     //  holder.t.setText(datalist.get(position).getRemaining_fees());
         holder.name.setText(datalist.get(position).getName());
     }
     @Override
@@ -52,13 +52,13 @@ public class A_hos_adpt extends RecyclerView.Adapter<A_hos_adpt.myviewholder>
         TextView permision_Status;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-            t1=itemView.findViewById(R.id.t1);
-            t2=itemView.findViewById(R.id.t2);
+            t1=itemView.findViewById(R.id.year);
+            t2=itemView.findViewById(R.id.dept);
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-            name=itemView.findViewById(R.id.tv_arol);
-            rollno=itemView.findViewById(R.id.tv_de);
+            name=itemView.findViewById(R.id.name);
+            rollno=itemView.findViewById(R.id.mobile);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;

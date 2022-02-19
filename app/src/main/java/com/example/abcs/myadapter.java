@@ -15,11 +15,9 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -69,8 +67,8 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             id=itemView.findViewById(R.id.textView57);
-            t1=itemView.findViewById(R.id.t1);
-            t2=itemView.findViewById(R.id.t2);
+            t1=itemView.findViewById(R.id.year);
+            t2=itemView.findViewById(R.id.dept);
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);

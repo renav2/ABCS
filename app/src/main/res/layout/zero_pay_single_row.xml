@@ -9,12 +9,48 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="208dp"
+        android:layout_height="228dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/underline"
         android:padding="1dp">
 
+        <LinearLayout
+            android:layout_width="391dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="1dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile NO :         "
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="401dp"
@@ -24,92 +60,28 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="158dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginTop="89dp"
+            android:layout_marginEnd="2dp"
             android:layout_marginBottom="4dp"
             android:padding="5dp"
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name:         "
                 android:textAlignment="gravity"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
+            <LinearLayout
+                android:layout_width="79dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
 
             <TextView
-                android:id="@+id/tv_arol"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:hint="installment no"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="402dp"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="120dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="5dp"
-            android:padding="5dp"
-            android:textAlignment="gravity">
-
-            <TextView
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:text="Amount paid :         "
-                android:textAlignment="gravity"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-
-            <TextView
-                android:id="@+id/t6"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:hint="installment no"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="403dp"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="43dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="4dp"
-            android:padding="5dp"
-            android:textAlignment="gravity">
-
-            <TextView
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:text="Invoice No :         "
-                android:textAlignment="gravity"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-
-            <TextView
-                android:id="@+id/t3"
-                android:layout_width="200dp"
+                android:id="@+id/name"
+                android:layout_width="218dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
                 android:textColor="@color/black"
@@ -125,25 +97,29 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="82dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="4dp"
             android:layout_marginBottom="1dp"
             android:padding="5dp"
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Dept :         "
                 android:textAlignment="gravity"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
+            <LinearLayout
+                android:layout_width="84dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
 
             <TextView
-                android:id="@+id/t2"
-                android:layout_width="200dp"
+                android:id="@+id/dept"
+                android:layout_width="221dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
                 android:textColor="@color/black"
@@ -153,22 +129,38 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/t1"
+            android:id="@+id/year"
             android:layout_width="185dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="150dp"
-            android:layout_marginBottom="172dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="236dp"
             android:text="year"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="25dp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/assignno"
+            android:layout_width="138dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:text="Assignno" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="101dp"
+            android:layout_marginBottom="7dp"
+            android:text="Call Now" />
 
     </RelativeLayout>
 

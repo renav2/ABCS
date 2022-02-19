@@ -4,7 +4,6 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -71,8 +70,8 @@ public class up_adpt extends RecyclerView.Adapter<up_adpt.myviewholder>
         public myviewholder(@NonNull View itemView) {
             super(itemView);
             id=itemView.findViewById(R.id.textView57);
-            t1=itemView.findViewById(R.id.t1);
-            t2=itemView.findViewById(R.id.t2);
+            t1=itemView.findViewById(R.id.year);
+            t2=itemView.findViewById(R.id.dept);
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);

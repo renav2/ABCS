@@ -130,12 +130,34 @@ public class register2 extends AppCompatActivity {
             String    pass1=userid.getText().toString();
                    uploddataa(pass1);
                    //uploddata();
-                    // createUser();
+                   // createUser(email.getText().toString(),password.getText().toString());
                     // uploddatrealtime();
         });
 
 
     }
+
+    private void createUser(String oString, String tString1) {
+        auth.createUserWithEmailAndPassword(oString,tString1)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        //checking if success
+                        if(task.isSuccessful()){
+                            finish();
+//                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                        }else{
+                            //display some message here
+//                            Toast.makeText(MainActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
+                        }
+//                        progressDialog.dismiss();
+                    }
+                });
+
+    }
+
+
+
 
     private void uploddataa(String passss) {
         String text_name=name.getText().toString();
@@ -174,6 +196,7 @@ DocumentReference reference=fstore.collection("demo").document(passss);
         v.put("_Class",txt_yearn);
         v.put("Academic_year",txt_acdy);
         v.put("Password",text_password);
+        v.put("collagepayemtfees____","0");
 
 
         Random random=new Random();
@@ -207,6 +230,12 @@ DocumentReference reference=fstore.collection("demo").document(passss);
                 startActivity(intent);
             }
         });
+
+
+
+
+
+
 
     }
 

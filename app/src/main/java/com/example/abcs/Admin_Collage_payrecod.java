@@ -1,15 +1,14 @@
 package com.example.abcs;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,35 +19,33 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Admin_hostel_payrecord extends AppCompatActivity
-{
+public class Admin_Collage_payrecod extends AppCompatActivity {
+
+
     RecyclerView recview;
-    ArrayList<A_hos_data> datalist;
+    ArrayList<Admin_Collage_payrecord_data> datalist;
     FirebaseFirestore db;
-    A_hos_adpt adapter;
+    Admin_Collage_payrecord_adpt adapter;
     TextView _1;
     String txt_yr,txt_dept;
     TextView comp, it,entc,cvil,mech;
-
-
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_hostel_payrecord);
-
-        recview=(RecyclerView)findViewById(R.id.rv99);
+        setContentView(R.layout.activity_admin_collage_payrecod);
+        recview=(RecyclerView)findViewById(R.id.rv990099);
         recview.setLayoutManager(new LinearLayoutManager(this));
-        datalist=new ArrayList<A_hos_data>();
-        adapter=new A_hos_adpt(datalist);
+        datalist=new ArrayList<Admin_Collage_payrecord_data>();
+        adapter=new Admin_Collage_payrecord_adpt(datalist);
         recview.setAdapter(adapter);
+
         _1=findViewById(R.id._1);
         comp  =findViewById(R.id.textView105);
         it=findViewById(R.id.textView106);
         entc =findViewById(R.id.textView107);
         cvil =findViewById(R.id.textView108);
         mech=findViewById(R.id.textView109);
-     //   recview=(RecyclerView)findViewById(R.id.rv999);
+        //   recview=(RecyclerView)findViewById(R.id.rv999);
 //        recview.setLayoutManager(new LinearLayoutManager(this));
 //        datalist=new ArrayList<A_hos_data>();
 //        adapter=new A_hos_adpt(datalist);
@@ -155,8 +152,8 @@ public class Admin_hostel_payrecord extends AppCompatActivity
             txt_yr="FE";
         }
 
-        Toast.makeText(Admin_hostel_payrecord.this, txt_dept, Toast.LENGTH_SHORT).show();
-        Toast.makeText(Admin_hostel_payrecord.this, txt_yr, Toast.LENGTH_SHORT).show();
+        Toast.makeText(Admin_Collage_payrecod.this, txt_dept, Toast.LENGTH_SHORT).show();
+        Toast.makeText(Admin_Collage_payrecod.this, txt_yr, Toast.LENGTH_SHORT).show();
         db.collection("Final_paymnet_data").whereEqualTo("Section","collagesection").whereEqualTo("_class",txt_yr).whereEqualTo("branch",txt_dept).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
@@ -164,11 +161,11 @@ public class Admin_hostel_payrecord extends AppCompatActivity
                         List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
                         for(DocumentSnapshot d:list)
                         {
-                            A_hos_data obj=d.toObject(A_hos_data.class);
+                            Admin_Collage_payrecord_data obj=d.toObject(Admin_Collage_payrecord_data.class);
 
                             datalist.add(obj);
                             String name=d.getString("Email");
-                       //     Toast.makeText(Admin_hostel_payrecord.this, name +d.getMessage(), Toast.LENGTH_SHORT).show();
+                            //     Toast.makeText(Admin_hostel_payrecord.this, name +d.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                         adapter.notifyDataSetChanged();
@@ -177,7 +174,7 @@ public class Admin_hostel_payrecord extends AppCompatActivity
             @Override
             public void onFailure(@NonNull Exception e) {
 
-                Toast.makeText(Admin_hostel_payrecord.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Admin_Collage_payrecod.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });

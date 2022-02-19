@@ -11,9 +11,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -4720,6 +4722,26 @@ else{
 
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
+
+        DocumentReference washingtonRef = fstore.collection("demo").document(auth.getCurrentUser().getUid());
+
+// Set the "isCapital" field of the city 'DC'
+        washingtonRef
+                .update("collagepayemtfees____", "1")
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+
+
          samount=amount.getText().toString();
         int amount = Math.round(Float.parseFloat(samount) * 100);
 

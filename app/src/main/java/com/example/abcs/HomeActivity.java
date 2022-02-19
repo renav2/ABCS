@@ -101,46 +101,48 @@ TextView r;
 
 
 
+try{
+    new Handler().postDelayed(new Runnable() {
+        @Override
+        public void run() {
+
+            DocumentReference documentReference=fstore.collection("Teacher_required_docs").document(unicid.getText().toString());
+            documentReference.addSnapshotListener(HomeActivity.this, new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                    String s,s1;
+
+                    notificationtext.setText(value.getString("reqdoc"));
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        NotificationChannel channel = new NotificationChannel("myCh", "My channel", NotificationManager.IMPORTANCE_DEFAULT);
+                        NotificationManager manager = getSystemService(NotificationManager.class);
+                        manager.createNotificationChannel(channel);
+                    }
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(HomeActivity.this, "myCh")
+                            .setSmallIcon(android.R.drawable.stat_notify_sync)
+
+                            .setContentTitle("documnet uplod")
+                            .setContentText("document name :-" + notificationtext.getText().toString());
+                    notification = builder.build();
+                    notificationManagerCompat = NotificationManagerCompat.from(HomeActivity.this);
+
+                    //String  bb=notificationtext.getText().toString();
+
+                    if(notificationtext.getText().toString().equals("")){
+                        Toast.makeText(HomeActivity.this, "no notifications", Toast.LENGTH_SHORT).show();
+                    }else{
+                        notificationManagerCompat.notify(0, notification);
+                    }
+                    //   notificationManagerCompat.notify(0, notification);
+
+                }
+            });
+        }
+    }, 1000);
+}catch (Exception e){}
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                DocumentReference documentReference=fstore.collection("Teacher_required_docs").document(unicid.getText().toString());
-                documentReference.addSnapshotListener(HomeActivity.this, new EventListener<DocumentSnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                        String s,s1;
-
-                        notificationtext.setText(value.getString("reqdoc"));
-
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                                NotificationChannel channel = new NotificationChannel("myCh", "My channel", NotificationManager.IMPORTANCE_DEFAULT);
-                                NotificationManager manager = getSystemService(NotificationManager.class);
-                                manager.createNotificationChannel(channel);
-                            }
-                            NotificationCompat.Builder builder = new NotificationCompat.Builder(HomeActivity.this, "myCh")
-                                    .setSmallIcon(android.R.drawable.stat_notify_sync)
-
-                                    .setContentTitle("documnet uplod")
-                                    .setContentText("document name :-" + notificationtext.getText().toString());
-                            notification = builder.build();
-                            notificationManagerCompat = NotificationManagerCompat.from(HomeActivity.this);
-
-                                        //String  bb=notificationtext.getText().toString();
-
-            if(notificationtext.getText().toString().equals("")){
-                Toast.makeText(HomeActivity.this, "no notifications", Toast.LENGTH_SHORT).show();
-            }else{
-                notificationManagerCompat.notify(0, notification);
-            }
-                                    //   notificationManagerCompat.notify(0, notification);
-
-                                }
-                            });
-                        }
-                    }, 1000);
 
 
 

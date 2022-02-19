@@ -18,6 +18,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Admin_Zero_pay_student"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Collage_payrecod"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Collage_payrecod_classwise"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Collage_payrecod_deptwise"
+            android:exported="false" />
+        <activity
             android:name=".hostelrecord_class_wise"
             android:exported="false" />
         <activity
@@ -152,19 +164,10 @@
             android:name=".Admin_hostel_payrecord"
             android:exported="false" />
         <activity
-            android:name=".Admin_remainpay"
-            android:exported="false" />
-        <activity
             android:name=".Admin_clg_paymentrecod"
             android:exported="false" />
         <activity
             android:name=".Admin_paymentsection"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_1st_installment"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_2nd_installment"
             android:exported="false" />
         <activity
             android:name=".user_permision_home"

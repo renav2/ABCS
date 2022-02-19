@@ -60,13 +60,13 @@ public class A_exam_adpt extends RecyclerView.Adapter<A_exam_adpt.myviewholder>
         TextView permision_Status;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-            t1=itemView.findViewById(R.id.t1);
-            t2=itemView.findViewById(R.id.t2);
+            t1=itemView.findViewById(R.id.year);
+            t2=itemView.findViewById(R.id.dept);
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-            name=itemView.findViewById(R.id.tv_arol);
-            rollno=itemView.findViewById(R.id.tv_de);
+            name=itemView.findViewById(R.id.name);
+            rollno=itemView.findViewById(R.id.mobile);
             fstore=FirebaseFirestore.getInstance();
            examform=itemView.findViewById(R.id.tv_ad_examformno);
             backlog=itemView.findViewById(R.id.tv_ad_backlog);

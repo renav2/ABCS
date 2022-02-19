@@ -96,7 +96,7 @@ TextView Insta;
         invoice_send_amount=findViewById(R.id.tv_studentalpayamo);
         invoice_student_dept=findViewById(R.id.tv_invoidept11);
       //  invoice_student_paidamount=findViewById(R.id.tv_amountpaid)
-Insta=findViewById(R.id.tv_de);
+Insta=findViewById(R.id.mobile);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             NotificationChannel channel = new NotificationChannel("myCh","My channel", NotificationManager.IMPORTANCE_DEFAULT);
