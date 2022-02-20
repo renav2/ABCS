@@ -18,7 +18,7 @@ import java.util.List;
 public class Teacher_asper_dept_permission extends AppCompatActivity
 {
     RecyclerView recview;
-    ArrayList<PermissonData> datalist;
+    ArrayList<model> datalist;
     FirebaseFirestore db;
     PermissionAdpt adapter;
     TextView _1;
@@ -37,7 +37,7 @@ public class Teacher_asper_dept_permission extends AppCompatActivity
         mech=findViewById(R.id.textView109);
         recview=(RecyclerView)findViewById(R.id.teper);
         recview.setLayoutManager(new LinearLayoutManager(this));
-        datalist=new ArrayList<PermissonData>();
+        datalist=new ArrayList<model>();
         adapter=new PermissionAdpt(datalist);
         recview.setAdapter(adapter);
         db=FirebaseFirestore.getInstance();
@@ -141,7 +141,7 @@ public class Teacher_asper_dept_permission extends AppCompatActivity
                         List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
                         for(DocumentSnapshot d:list)
                         {
-                            PermissonData obj=d.toObject(PermissonData.class);
+                            model obj=d.toObject(model.class);
                             datalist.add(obj);
                         }
                         adapter.notifyDataSetChanged();

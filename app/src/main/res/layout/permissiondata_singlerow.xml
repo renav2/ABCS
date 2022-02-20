@@ -7,178 +7,164 @@
     android:elevation="4dp"
     app:cardUseCompatPadding="true">
 
-    <LinearLayout
-        android:layout_width="383dp"
-        android:layout_height="220dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
+    <RelativeLayout
+        android:layout_width="380dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/underline"
-        android:orientation="vertical">
+        android:layout_height="350dp">
 
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView70"
+            android:layout_width="221dp"
+            android:layout_height="29dp"
+            android:layout_below="@+id/dept"
+            android:layout_marginTop="75dp"
+            android:paddingStart="20dp"
+            android:text="sections"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="170dp"
+            android:paddingStart="20dp"
+            android:text="Description "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_fail"
+            android:layout_width="127dp"
+            android:layout_height="41dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="2dp"
+            android:text="No" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="100dp"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_below="@+id/year"
+            android:layout_marginTop="-1dp"
+            android:paddingStart="20dp"
+            android:text="email"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/t1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:text="Name"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="180dp"
+            android:layout_height="29dp"
+            android:layout_below="@+id/year"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="62dp"
+            android:text="level"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/t6"
+            android:layout_width="180dp"
+            android:layout_height="29dp"
+            android:layout_below="@+id/year"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="95dp"
+            android:text="level"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_pass"
+            android:layout_width="137dp"
+            android:layout_height="41dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="259dp"
+            android:text="yes" />
+
+        <TextView
+            android:id="@+id/textView50"
+            android:layout_width="124dp"
+            android:layout_height="37dp"
+            android:layout_alignStart="@+id/t"
+            android:layout_alignTop="@+id/year"
+            android:layout_alignEnd="@+id/t"
+            android:layout_marginStart="147dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginEnd="133dp"
+            android:text="TextView"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="114dp"
+            android:layout_height="33dp"
+            android:layout_below="@+id/dept"
+            android:layout_marginTop="5dp"
+            android:paddingStart="20dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:orientation="vertical">
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="240dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
 
-            <TextView
-                android:id="@+id/textView88"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_weight="1"
-                android:text="Permission Details"
-                android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="221dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/dept"
+            android:layout_marginTop="40dp"
+            android:paddingStart="20dp"
+            android:text="level"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="210dp"
+            android:text="Techer side comments" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView130"
-                android:layout_width="197dp"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                android:text="Email" />
-
-            <TextView
-                android:id="@+id/u3"
-                android:layout_width="223dp"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/u1"
-                android:layout_alignParentStart="true"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView131"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                android:text="Section" />
-
-            <TextView
-                android:id="@+id/u4"
-                android:layout_width="222dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/u2"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/u3"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView135"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                android:text="Level" />
-
-            <TextView
-                android:id="@+id/u5"
-                android:layout_width="220dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/u3"
-                android:layout_alignParentStart="true"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView137"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                android:text="PermissionID" />
-
-            <TextView
-                android:id="@+id/u6"
-                android:layout_width="220dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/u4"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/u5"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView138"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                android:text="Status" />
-
-            <TextView
-                android:id="@+id/u7"
-                android:layout_width="219dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/u5"
-                android:layout_alignParentStart="true"
-                android:text="TextView" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView146"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                android:text="Comments" />
-
-            <TextView
-                android:id="@+id/u1"
-                android:layout_width="216dp"
-                android:layout_height="25dp"
-                android:layout_below="@+id/t1"
-                android:layout_alignParentStart="true"
-                android:text="Thank you" />
-        </LinearLayout>
-
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
