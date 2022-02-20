@@ -1,64 +1,79 @@
 package com.example.abcs;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+
+import android.Manifest;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.graphics.pdf.PdfDocument;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Environment;
+import android.os.Handler;
+import android.view.Display;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.WindowManager;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.razorpay.Checkout;
-import com.razorpay.PaymentData;
-import com.razorpay.PaymentResultWithDataListener;
 
-import org.json.JSONObject;
-
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
-public class Payment_college_pay_page extends AppCompatActivity implements PaymentResultWithDataListener {
-int  total,fin;
-String inp;
-
-    private Button pay;
-        EditText amount;
-        TextView unifee,medicfee,deptfee,tituionfee,totlef;
-        TextView c_flag;
-        FirebaseFirestore fstore;
-        FirebaseAuth auth;
-        String pro_userid;
-        Spinner pay_instllmen;
-        String txt_secondinstallmentm;
+public class Feesructure_issue extends AppCompatActivity {
+    TextView unifee,medicfee,deptfee,tituionfee,totlef;
+    TextView c_flag;
+    FirebaseFirestore fstore;
+    FirebaseAuth auth;
+    String pro_userid;
+    Spinner pay_instllmen;
+    String txt_secondinstallmentm;
     String txt_installment,newroll;
     String samount;
+    String imagesUri;
+
+    Bitmap bitmap;
+    Display mDisplay;
+    TextView n,c,yaaa,b,data;
+    File myPath;
+    String file_name = "feestucture_CollageDocument_section";
+    public static final int READ_PHONE = 110;
+    int totalHeight;
+    int totalWidth;
+    String path;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paymentclg);
+        setContentView(R.layout.activity_feesructure_issue);
 
-        Checkout.preload(getApplicationContext());
-        //refreance
-        pay=findViewById(R.id.paynow);
-        amount=findViewById(R.id.txt_paynow);
+        data=findViewById(R.id.date);
+        n=findViewById(R.id.fname);
+        c=findViewById(R.id.fcolg);
+        yaaa=findViewById(R.id.textView165);
+        b=findViewById(R.id.fdept);
+
+
 
         unifee=findViewById(R.id.tv_rem_alrdypay);
         medicfee=findViewById(R.id.tv_rem_remain);
@@ -66,20 +81,45 @@ String inp;
         tituionfee=findViewById(R.id.tv_totalfees);
         totlef=findViewById(R.id.tv_totalfees1);
 
-
-        c_flag=findViewById(R.id.textView11);
-        pay_instllmen=findViewById(R.id.pay_in);
         auth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
-        pro_userid=auth.getCurrentUser().getUid();
-        fstore=FirebaseFirestore.getInstance();
-        c_flag.setText(getIntent().getStringExtra("unid2"));
+
+
+
+        long date = System.currentTimeMillis();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MMM/yyyy");
+        String dateString = sdf.format(date);
+        data.setText(dateString);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
 
 
 
+                WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+                mDisplay = wm.getDefaultDisplay();
+                if(Build.VERSION.SDK_INT >= 23){
+                    if(checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
+                            && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                            == PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                            == PackageManager.PERMISSION_GRANTED){
+                    }else{
+                        requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE}, READ_PHONE);
+                    }
+                }
 
-//cast dept etc wise payment stucture
+                takeScreenShot();
+
+
+
+            }
+        }, 3000);
+
+
+
+
         DocumentReference reference = fstore.collection("demo").document(auth.getCurrentUser().getUid());
         reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -90,6 +130,31 @@ String inp;
                 String pro_admisontype=documentSnapshot.getString("Admission_type");
                 String pro_categary=documentSnapshot.getString("Category");
                 String pro_class=documentSnapshot.getString("_Class");
+String assignno=documentSnapshot.getString("assignno");
+                n.setText(documentSnapshot.getString("Name"));
+                c.setText(documentSnapshot.getString("College_name"));
+                yaaa.setText(documentSnapshot.getString("_Class"));
+                b.setText(documentSnapshot.getString("Branch"));
+
+
+                DocumentReference reference=fstore.collection("document_issue_by_clg").document();
+                Map<String, String> v=new HashMap<>();
+                v.put("assignno",assignno);
+                v.put("Name",n.getText().toString());
+                v.put("dept",b.getText().toString());
+                v.put("yr",yaaa.getText().toString());
+                v.put("date",data.getText().toString());
+                v.put("collagename",c.getText().toString());
+                v.put("documentname","feestucture");
+
+                reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(Feesructure_issue.this, "You Are Successfully Registered ", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
 
 //comp BE & capround
                 if(pro_dept.equals("Comp") && pro_class.equals("BE") && pro_categary.equals("Open") && pro_admisontype.equals("Capround") ){
@@ -4562,339 +4627,129 @@ String inp;
             }
         });
 
-        txt_installment=pay_instllmen.getSelectedItem().toString();
 
+
+    }
+
+    private void takeScreenShot() {
+
+        File folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/ScreenShot/");
+
+        if(!folder.exists()){
+            boolean success = folder.mkdir();
+        }
+
+        path = folder.getAbsolutePath();
+        path = path + "/" + file_name + System.currentTimeMillis() + ".pdf";
+
+
+        View u = findViewById(R.id.ticket52020);
+
+        NestedScrollView z = findViewById(R.id.ticket52020);
+        totalHeight = z.getChildAt(0).getHeight();
+        totalWidth = z.getChildAt(0).getWidth();
+
+
+
+
+        String extr = Environment.getExternalStorageDirectory() + "/Flight Ticket/";
+        File file = new File(extr);
+        if(!file.exists())
+            file.mkdir();
+        String fileName = file_name + ".jpg";
+        myPath = new File(extr, fileName);
+        imagesUri = myPath.getPath();
+        bitmap = getBitmapFromView(u, totalHeight, totalWidth);
+
+        try{
+            FileOutputStream fos = new FileOutputStream(myPath);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            fos.flush();
+            fos.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        createPdf();
+    }
+
+    private Bitmap getBitmapFromView(View u, int totalHeight, int totalWidth) {
+        Bitmap returnedBitmap = Bitmap.createBitmap(totalWidth, totalHeight, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(returnedBitmap);
+        Drawable bgDrawable = u.getBackground();
+
+        if(bgDrawable != null){
+            bgDrawable.draw(canvas);
+        }else{
+            canvas.drawColor(Color.WHITE);
+        }
+
+        u.draw(canvas);
+        return returnedBitmap;
+
+    }
+
+    private void createPdf() {
+        PdfDocument document = new PdfDocument();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(bitmap.getWidth(), bitmap.getHeight(), 1).create();
+        PdfDocument.Page page = document.startPage(pageInfo);
+
+        Canvas canvas = page.getCanvas();
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#ffffff"));
+        canvas.drawPaint(paint);
+
+        Bitmap bitmap = Bitmap.createScaledBitmap(this.bitmap, this.bitmap.getWidth(), this.bitmap.getHeight(), true);
+
+        paint.setColor(Color.BLUE);
+        canvas.drawBitmap(bitmap, 0, 0, null);
+        document.finishPage(page);
+        File filePath = new File(path);
+        try{
+            document.writeTo(new FileOutputStream(filePath));
+        }catch (IOException e){
+            e.printStackTrace();
+            Toast.makeText(this, "Something Wrong: "+e.toString(), Toast.LENGTH_SHORT).show();
+        }
+
+        document.close();
+
+        if (myPath.exists())
+            myPath.delete();
+
+        openPdf(path);
+
+    }
+
+    private void openPdf(String path) {
+        File file = new File(path);
+        Intent target = new Intent(Intent.ACTION_VIEW);
+        target.setDataAndType(Uri.fromFile(file), "application/pdf");
+        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+        Intent intent = Intent.createChooser(target, "Open FIle");
         try{
 
 
 
-
-//            DocumentReference documentReference=fstore.collection("Final_paymnet_data").document(c_flag.getText().toString());
-//            documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-//                @Override
-//                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                    String s,s1;
-//                    s=userID.toUpperCase();
-//                    s1=userID.substring(1,7);
-//                    t1.setText(value.getString("Name"));
-//                    t2.setText(value.getString("Email"));
-//                    t3.setText(value.getString("mobile no"));
-//                    t4.setText(value.getString("Branch"));
-//                    //             t5.setText(value.getString("Rollno"));
-//                    t5.setText(value.getString("_Class"));
-//                    t6.setText(s1);
-//
-//                }
-//            });
-
-
-        }
-        catch (Exception e){
-
+            startActivity(intent);
+        }catch (ActivityNotFoundException e){
+            Toast.makeText(this, "No Apps to read PDF FIle", Toast.LENGTH_SHORT).show();
         }
 
-
-
-
-       // Toast.makeText(Payment_college_pay_page.this, c_flag.getText().toString(), Toast.LENGTH_SHORT).show();
-
-
-
-        pay.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-
-                String txt_installment=pay_instllmen.getSelectedItem().toString();
-                String samount=amount.getText().toString();
-                int amount = Math.round(Float.parseFloat(samount) * 100);
-
-                if(txt_installment.equals("First")) {
-                    makepay(amount);
-                }else if(txt_installment.equals("Second")){
+            public void run() {
 
 
-                    fstore.collection("Final_paymnet_data").whereEqualTo("Email",auth.getCurrentUser().getEmail()).get()
-                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                                @Override
-                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                    List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
-                                    for(DocumentSnapshot d:list)
-                                    {
-                                        String totalfee=d.getString("totalfees");
-                                        String alreadypay=d.getString("paidamount");
-                                        String year=d.getString("_class");
-                                          String branch=d.getString("branch");
-                                          String name=d.getString("Name");
-                                            String no=d.getString("mobile_no");
-                                            String uid=d.getString("unicid_assignno");
+//                Intent intent1=new Intent(Payment_examfees_invoice.this,Payment_home_page.class);
+//                startActivity(intent1);
 
-
-                                       String remainfees=d.getString("remaining_fees");
-
-
-
-                                       // Toast.makeText(Payment_college_pay_page.this,"you need to pay" +remainfees, Toast.LENGTH_SHORT).show();
-                                    cheksecondinstallment(remainfees,totalfee,alreadypay,year,branch,name,no,uid);
-
-                                    }
-                                }
-                            });
-
-
-
-
-
-                }
             }
-        });
+        }, 5000);
 
-        //payment getway imp line
 
-    }
 
-    private void cheksecondinstallment(String remainfees, String totalfee, String alreadypay, String year, String branch, String name, String no, String uid) {
-if(!amount.getText().toString().equals(remainfees))
-        {
-            Toast.makeText(this, "you need to pay "+remainfees, Toast.LENGTH_SHORT).show();
-        }
-else{
-    String txt_installment=pay_instllmen.getSelectedItem().toString();
-    String samount=amount.getText().toString();
-    int amount = Math.round(Float.parseFloat(samount) * 100);
-    makepay(amount);
-
-}
-
-
-
-
-
-
-
-        Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
-    }
-
-    public void makepay(int a) {
-        Checkout checkout = new Checkout();
-
-        checkout.setKeyID("rzp_test_9nCAqrhuTfsGcZ");
-
-        /**
-         * Instantiate Checkout
-         */
-
-
-        /**
-         * Set your logo here
-         */
-
-
-        /**
-         * Reference to current activity
-         */
-        final Activity activity = this;
-
-        /**
-         * Pass your payment options to the Razorpay Checkout as a JSONObject
-         */
-        try {
-            JSONObject options = new JSONObject();
-
-            options.put("name", "sinhagad");
-            options.put("description", "Reference No. #123456");
-            options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
-            // options.put("order_id", "order_DBJOWzybf0sJbb");//from response of step 3.
-            options.put("theme.color", "#3399cc");
-            options.put("currency", "INR");
-            options.put("amount",a);//pass amount in currency subunits
-            options.put("prefill.email"," ");
-            options.put("prefill.contact"," ");
-            JSONObject retryObj = new JSONObject();
-            retryObj.put("enabled", true);
-            retryObj.put("max_count", 4);
-            options.put("retry", retryObj);
-
-            checkout.open(activity, options);
-
-
-        } catch(Exception e) {
-            Log.e("TAG", "Error in starting Razorpay Checkout", e);
-        }
-
-    }
-
-    @Override
-    public void onPaymentSuccess(String s, PaymentData paymentData) {
-
-        DocumentReference washingtonRef = fstore.collection("demo").document(auth.getCurrentUser().getUid());
-
-// Set the "isCapital" field of the city 'DC'
-        washingtonRef
-                .update("collagepayemtfees____", "1")
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-
-                    }
-                });
-
-
-         samount=amount.getText().toString();
-        int amount = Math.round(Float.parseFloat(samount) * 100);
-
-       String in= pay_instllmen.getSelectedItem().toString();
-
-//unifee,medicfee,deptfee,tituionfee,totlef;
-                Intent intent=new Intent(Payment_college_pay_page.this,Payment_Collage_invoice.class);
-
-
-
-
-                if(pay_instllmen.getSelectedItem().toString().equals("First")) {
-                    DocumentReference documentReference = fstore.collection("demo").document(auth.getCurrentUser().getUid());
-                    documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-                        @Override
-                        public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                            String name, email, mobileno, branch, _class, unicid;
-                            name = value.getString("Name");
-                            email = value.getString("Email");
-                            _class = value.getString("_Class");
-                            mobileno = value.getString("mobile_no");
-                            branch = value.getString("Branch");
-                            unicid = c_flag.getText().toString();
-                            uplodpayment(name, email, mobileno, branch, _class, unicid);
-                        }
-
-                        private void uplodpayment(String name, String email, String mobileno, String branch, String _class, String unicid) {
-                            String txt_installment = pay_instllmen.getSelectedItem().toString();
-                            String cc = totlef.getText().toString().replaceAll("[^0-9]", "");
-                            int Student_totalfees = Integer.parseInt(cc);
-                            int Student_currentpay = Integer.parseInt(samount);
-                            int remain_fees = Student_totalfees - Student_currentpay;
-
-
-                            String remainfeea = Integer.toString(remain_fees);
-
-
-                            Random random = new Random();
-                            int val = random.nextInt(1000000000);
-                            String val2 = Integer.toString(val);
-                            DocumentReference reference = fstore.collection("Final_paymnet_data").document(val2);
-                            Map<String, String> v = new HashMap<>();
-                            v.put("unicid_assignno", unicid);
-                            v.put("Name", name);
-                            v.put("mobile_no", mobileno);
-                            v.put("Email", email);
-                            v.put("branch", branch);
-                            v.put("_class", _class);
-                            v.put("totalfees", cc);
-                            v.put("Section", "collagesection");
-                            v.put("installment", txt_installment);
-                            v.put("paidamount", samount);
-                            v.put("remaining_fees", remainfeea);
-                            v.put("paymentid", val2);
-                            reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void unused) {
-                                    Toast.makeText(Payment_college_pay_page.this, "You Are Successfully Registered ", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-
-
-
-                        }
-                    });
-
-
-                }
-                else
-                {
-                    fstore.collection("Final_paymnet_data").whereEqualTo("Email",auth.getCurrentUser().getEmail()).get()
-                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                                @Override
-                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                    List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
-                                    for(DocumentSnapshot d:list)
-                                    {
-                                        String totalfee=d.getString("totalfees");
-                                        String alreadypay=d.getString("paidamount");
-                                        String year=d.getString("_class");
-                                        String branch=d.getString("branch");
-                                        String name=d.getString("Name");
-                                        String no=d.getString("mobile_no");
-                                        String uid=d.getString("unicid_assignno");
-                                        String remainfees_after1st_insatllment=d.getString("remaining_fees");
-
-
-                                        uplodseconinstallmentdata(totalfee,alreadypay,year,branch,name,no,uid,remainfees_after1st_insatllment);
-
-
-                                        // Toast.makeText(Payment_college_pay_page.this,"you need to pay" +remainfees, Toast.LENGTH_SHORT).show();
-                                       // cheksecondinstallment(remainfees,totalfee,alreadypay,year,branch,name,no,uid);
-
-                                    }
-                                }
-                            });
-                }
-
-                intent.putExtra("amount",samount);
-                intent.putExtra("instal",in);
-
-
-
-                startActivity(intent);
-
-    }
-
-    private void uplodseconinstallmentdata(String totalfee, String alreadypay, String year, String branch, String name, String no, String uid, String remainfees_after1st_insatllment) {
-        samount=amount.getText().toString();
-        int amount = Math.round(Float.parseFloat(samount) * 100);
-        int Student_totalfees = Integer.parseInt(totalfee);
-        int alreadypayaaa=Integer.parseInt(alreadypay);
-        int Student_currentpay = Integer.parseInt(samount);
-        int remain_fees = Student_totalfees - (alreadypayaaa+Student_currentpay);
-        String remainfeea = Integer.toString(remain_fees);
-
-
-
-       String  txts=pay_instllmen.getSelectedItem().toString();
-        Random random = new Random();
-        int val = random.nextInt(1000000000);
-        String val2 = Integer.toString(val);
-        DocumentReference reference = fstore.collection("Final_paymnet_data").document(val2);
-        Map<String, String> v = new HashMap<>();
-        v.put("unicid_assignno", uid);
-        v.put("Name", name);
-        v.put("mobile_no", no);
-        v.put("branch", branch);
-        v.put("_class", year);
-        v.put("totalfees", totalfee);
-        v.put("Section", "collagesection");
-        v.put("installment", txts);
-        v.put("paidamount", samount);
-        v.put("remaining_fees", "0");
-        v.put("paymentid", val2);
-        v.put("Email",auth.getCurrentUser().getEmail());
-        reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                Toast.makeText(Payment_college_pay_page.this, "You Are Successfully Registered ", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-
-
-    }
-
-    @Override
-    public void onPaymentError(int i, String s, PaymentData paymentData) {
-finish();
     }
 }

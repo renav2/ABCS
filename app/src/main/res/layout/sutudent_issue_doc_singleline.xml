@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/underline"
+        android:padding="1dp">
+
+        <LinearLayout
+            android:layout_width="391dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginEnd="1dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="document :         "
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="401dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="4dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:         "
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="79dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="401dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="1dp"
+            android:padding="5dp"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dept :         "
+                android:textAlignment="gravity"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="84dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"></LinearLayout>
+
+            <TextView
+                android:id="@+id/dept"
+                android:layout_width="221dp"
+                android:layout_height="wrap_content"
+                android:hint="installment no"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="281dp"
+            android:text="year"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/assignno"
+            android:layout_width="110dp"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="9dp"
+            android:text="Assignno" />
+
+        <TextView
+            android:id="@+id/date123131"
+            android:layout_width="136dp"
+            android:layout_height="32dp"
+
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="13dp"
+            android:layout_toStartOf="@+id/assignno"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

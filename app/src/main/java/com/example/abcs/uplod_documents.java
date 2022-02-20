@@ -26,6 +26,7 @@ TextView supportui;
 
 
 Button  domesile;
+Button feesturct;
 
 
 
@@ -41,6 +42,7 @@ Button  domesile;
         setContentView(R.layout.activity_uplod_documents);
         //textview
         supportui=findViewById(R.id.textView121);
+        feesturct=findViewById(R.id.button43);
         tu10 =findViewById(R.id.tenup);
         td10 =findViewById(R.id.tendown);
         tu12=findViewById(R.id.up12);
@@ -152,6 +154,22 @@ domesile.setOnClickListener(new View.OnClickListener() {
                 td12.setText(_12);
                 d12.setVisibility(View.VISIBLE);
                 u12.setVisibility(View.INVISIBLE);
+            }
+        });
+
+
+
+        feesturct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(uplod_documents.this,Feesructure_issue.class);
+
+                intent.putExtra("uploddocto_specificuplod",supportui.getText().toString());
+
+                startActivity(intent);
+
+
             }
         });
 
