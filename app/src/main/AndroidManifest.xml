@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Bonafide_issue_"
+            android:exported="false" />
+        <activity
             android:name=".Admin_Zero_pay_student"
             android:exported="false" />
         <activity

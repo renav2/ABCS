@@ -24,6 +24,12 @@ Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,dd
 TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
 TextView supportui;
 
+
+Button  domesile;
+
+
+
+
     FirebaseAuth auth;
     FirebaseFirestore fstore;
     StorageReference storageReference;
@@ -69,6 +75,8 @@ TextView supportui;
         ddownbe =findViewById(R.id.downlodbe);
         upcustom=findViewById(R.id.button20);
         downcoston=findViewById(R.id.button20);
+        domesile=findViewById(R.id.button11);
+
 
       //  Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
        //TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
@@ -90,7 +98,17 @@ TextView supportui;
         ddownbe.setVisibility(View.INVISIBLE);
      //   downcoston.setVisibility(View.INVISIBLE);
 
-supportui.setText(getIntent().getStringExtra("assignno1"));
+        supportui.setText(getIntent().getStringExtra("assignno1"));
+
+
+
+domesile.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(uplod_documents.this,Bonafide_issue_.class);
+        startActivity(intent);
+    }
+});
 
 
 

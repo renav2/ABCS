@@ -220,6 +220,7 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_view_application.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_zero_pay_student.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.264" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_bonafide_issue.xml" value="0.3276699029126214" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_collage_payrecod_sorted_adpt.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_collage_payrecord_sorted_data.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up10.xml" value="0.16" />
@@ -233,6 +234,7 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.6" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_examfees_invoice.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_hostel.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_invoi.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_paymentclg.xml" value="0.25" />
