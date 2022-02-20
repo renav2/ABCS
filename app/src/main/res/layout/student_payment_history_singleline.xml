@@ -70,15 +70,15 @@
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="141dp"
                 android:layout_height="wrap_content"
-                android:text="Roll no:         "
+                android:text="Installment no:         "
                 android:textAlignment="gravity"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <LinearLayout
-                android:layout_width="79dp"
+                android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"></LinearLayout>
 
@@ -86,7 +86,7 @@
                 android:id="@+id/name"
                 android:layout_width="218dp"
                 android:layout_height="wrap_content"
-                android:hint="installment no"
+                android:hint="Installment Not Availabel"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -241,7 +241,7 @@
             android:textAlignment="gravity">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="158dp"
                 android:layout_height="wrap_content"
                 android:text="Remaining fees:         "
                 android:textAlignment="gravity"

@@ -87,7 +87,7 @@ public class profile_test extends AppCompatActivity {
                 s1=userID.substring(1,7);
                 t1.setText(value.getString("Name"));
                 t2.setText(value.getString("Email"));
-                t3.setText(value.getString("mobile no"));
+                t3.setText(value.getString("mobile_no"));
                 t4.setText(value.getString("Branch"));
    //             t5.setText(value.getString("Rollno"));
                 t5.setText(value.getString("_Class"));

@@ -149,8 +149,7 @@ try{
 
         //Start Email verification link sent
         if (!firebaseUser.isEmailVerified()){
-                vereifyemail.setVisibility(View.VISIBLE);
-                verifymsg.setVisibility(View.VISIBLE);
+
 
                 vereifyemail.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -159,11 +158,17 @@ try{
                         firebaseUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
+
+                                vereifyemail.setVisibility(View.INVISIBLE);
+                                verifymsg.setVisibility(View.INVISIBLE);
                                 Toast.makeText(HomeActivity.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
                              }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
+
+                                vereifyemail.setVisibility(View.VISIBLE);
+                                verifymsg.setVisibility(View.VISIBLE);
                                 Toast.makeText(HomeActivity.this, "Email not Sent."+e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });

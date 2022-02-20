@@ -174,6 +174,7 @@
             android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
             android:text="Noticebord" />
 
 
@@ -182,6 +183,7 @@
             android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
             android:text="Document" />
 
 
@@ -190,6 +192,7 @@
             android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
             android:text="Payment" />
     </LinearLayout>
 
@@ -214,6 +217,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="5dp"
             android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
             android:text="Profile" />
 
 
@@ -222,8 +226,9 @@
             android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="Permision " />
-
+            android:text="Permision "
+            android:textColor="@color/black"
+            />
 
 
         <TextView
@@ -231,6 +236,7 @@
             android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
             android:text="notification" />
 
     </LinearLayout>
@@ -288,6 +294,7 @@
         android:layout_marginBottom="2dp"
         android:textSize="20dp"
         android:text="Welcome"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -303,7 +310,7 @@
         android:layout_marginBottom="9dp"
         android:text="TextView"
         android:textSize="20dp"
-
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/VerifyMsg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -317,7 +324,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="3dp"
-
+        android:textColor="@color/black"
         android:text="Unique identity ID "
         app:layout_constraintBottom_toTopOf="@+id/textView116"
         app:layout_constraintEnd_toEndOf="parent"

@@ -65,8 +65,6 @@ String inp;
         deptfee=findViewById(R.id.tv_deppartmentfees);
         tituionfee=findViewById(R.id.tv_totalfees);
         totlef=findViewById(R.id.tv_totalfees1);
-
-
         c_flag=findViewById(R.id.textView11);
         pay_instllmen=findViewById(R.id.pay_in);
         auth=FirebaseAuth.getInstance();
@@ -4675,6 +4673,7 @@ else{
     }
 
     public void makepay(int a) {
+
         Checkout checkout = new Checkout();
 
         checkout.setKeyID("rzp_test_9nCAqrhuTfsGcZ");

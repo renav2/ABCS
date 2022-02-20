@@ -103,6 +103,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#a2a2a2"
+                android:textAlignment="center"
                 android:text=" Description"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -113,6 +114,7 @@
                 android:layout_width="191dp"
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
+                android:textAlignment="center"
                 android:text=" Amount"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -141,6 +143,7 @@
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
                 android:paddingStart="15dp"
+                android:textAlignment="textEnd"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="SpeakableTextPresentCheck" />
@@ -168,6 +171,7 @@
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
                 android:textColor="@color/black"
+                android:textAlignment="textEnd"
                 android:textSize="16sp"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
@@ -194,6 +198,7 @@
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
                 android:paddingStart="20dp"
+                android:textAlignment="textEnd"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="SpeakableTextPresentCheck" />
@@ -222,6 +227,7 @@
                 android:background="#d0d0d0"
                 android:textColor="@color/black"
                 android:textSize="16sp"
+                android:textAlignment="textEnd"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
@@ -249,6 +255,7 @@
                 android:background="#d0d0d0"
                 android:textColor="@color/black"
                 android:textSize="16sp"
+                android:textAlignment="textEnd"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
     </LinearLayout>
