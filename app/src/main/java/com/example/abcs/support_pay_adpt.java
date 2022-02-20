@@ -4,6 +4,7 @@
 //}
 package com.example.abcs;
 
+import android.content.Context;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,13 +14,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -31,6 +35,7 @@ import java.util.Map;
 public class support_pay_adpt extends RecyclerView.Adapter<support_pay_adpt.myviewholder>
 {
     String aa;
+Context context;
 
     ArrayList<support_pay_data2> datalist;
 
@@ -95,15 +100,59 @@ public class support_pay_adpt extends RecyclerView.Adapter<support_pay_adpt.myvi
             iss=itemView.findViewById(R.id.textView139);
             yes=itemView.findViewById(R.id.button39);
             no=itemView.findViewById(R.id.button40);
-game=itemView.findViewById(R.id.textView143);
-
-
-
-
+            game=itemView.findViewById(R.id.textView143);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
             techeret=itemView.findViewById(R.id.editTextTextMultiLine);
+//
+//            new Handler().postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    DocumentReference reference = fstore.collection("final_permision_status").document(id.getText().toString());
+//                    reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                        @Override
+//                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                            //basic profile things
+//
+//                            String pro_status=documentSnapshot.getString("status");
+//                            permision_Status.setText(pro_status);
+//                            if(permision_Status.getText().toString().equals("granted")||permision_Status.getText().toString().equals("NOT granted") ){
+//                                b1p.setVisibility(View.INVISIBLE);
+//                                b2f.setVisibility(View.INVISIBLE);
+//                            }
+//
+//                            /// his
+//
+//                        }
+//                    });
+//
+//
+//                }
+//            }, 100);
+
+
+
+            fstore.collection("final_permision_status").whereEqualTo("Name",nam.getText().toString()).get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
+                            for(DocumentSnapshot d:list)
+                            {
+                                game.setText(d.getString("game"));
+
+//                                if(game.getText().toString().equals("YES")){
+//                                yes.setVisibility(View.INVISIBLE);
+//                                no.setVisibility(View.INVISIBLE);
+
+//                                }
+
+
+                            }
+
+                        }
+                    });
 
 
 

@@ -222,13 +222,32 @@
             android:name=".Bonafide_issue_"
             android:exported="false" />
 
+        <activity
+            android:name=".Admin_Zero_pay_student"
+            android:exported="true" />
+        <activity
+        android:name=".Payment_home_page"
+        android:exported="true" />
+        <activity
+            android:name=".Admin_Collage_payrecod_deptwise"
+            android:exported="true" />
 
+        <activity
+            android:name=".hotel_record_dept_wise"
+            android:exported="true" />
+        <activity
+            android:name=".hostelrecord_class_wise"
+            android:exported="true" />
+        <activity
+            android:name=".Admin_Collage_payrecod"
+            android:exported="true" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".Payment_home_page"
+            android:name=".Admin_Collage_payrecod_classwise"
             android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
