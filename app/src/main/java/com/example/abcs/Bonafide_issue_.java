@@ -42,6 +42,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class Bonafide_issue_ extends AppCompatActivity {
 TextView data, studentname,orignal,year,deptname;
@@ -61,16 +62,13 @@ FirebaseAuth auth;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonafide_issue);
 
-data=findViewById(R.id.date);
-orignal=findViewById(R.id.orignreg);
-year=findViewById(R.id.yr);
-studentname=findViewById(R.id.Student_name);
-deptname=findViewById(R.id.textView161);
-fstore=FirebaseFirestore.getInstance();
-auth=FirebaseAuth.getInstance();
-
-
-
+            data=findViewById(R.id.date);
+            orignal=findViewById(R.id.orignreg);
+            year=findViewById(R.id.yr);
+            studentname=findViewById(R.id.Student_name);
+            deptname=findViewById(R.id.textView161);
+            fstore=FirebaseFirestore.getInstance();
+            auth=FirebaseAuth.getInstance();
 
         long date = System.currentTimeMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MMM/yyyy");
@@ -87,6 +85,29 @@ auth=FirebaseAuth.getInstance();
                 studentname.setText(value.getString("Name"));
                 deptname.setText(value.getString("Branch"));
                 year.setText(value.getString("_Class"));
+
+
+
+                DocumentReference reference=fstore.collection("document_issue_by_clg").document();
+                Map<String, String> v=new HashMap<>();
+                v.put("Rollno",orignal.getText().toString());
+                v.put("Name",studentname.getText().toString());
+                v.put("dept",deptname.getText().toString());
+                v.put("yr",year.getText().toString());
+                v.put("date",data.getText().toString());
+                v.put("documentname","bonafide");
+
+
+
+                reference.set(v).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(Bonafide_issue_.this, "You Are Successfully Registered ", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+
 
 
             }
@@ -119,7 +140,7 @@ auth=FirebaseAuth.getInstance();
 
 
             }
-        }, 1000);
+        }, 3000);
 
 
 
@@ -131,7 +152,7 @@ auth=FirebaseAuth.getInstance();
 
     private void takeScreenShot() {
         File folder = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/ScreenShot/");
-
+       // File folder = new File(Environment.getExternalStorageDirectory()+(Environment.DIRECTORY_DOWNLOADS));
         if(!folder.exists()){
             boolean success = folder.mkdir();
         }

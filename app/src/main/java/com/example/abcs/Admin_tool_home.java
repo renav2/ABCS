@@ -9,12 +9,13 @@ import android.widget.Button;
 
 public class Admin_tool_home extends AppCompatActivity {
 
-    Button teacher_add,teacher_delete,teacher_remove,teacher_log;
+    Button teacher_add,teacher_delete,teacher_remove,teacher_log,issuedoc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_tool_home);
+issuedoc=findViewById(R.id.button41);
 
         teacher_add=findViewById(R.id.button38);
         teacher_delete=findViewById(R.id.button42);
@@ -29,6 +30,14 @@ public class Admin_tool_home extends AppCompatActivity {
             }
         });
 
+
+        issuedoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Admin_tool_home.this,Admin_document_issued.class);
+                startActivity(intent);
+            }
+        });
         teacher_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
