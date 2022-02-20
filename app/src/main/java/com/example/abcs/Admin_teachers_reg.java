@@ -40,6 +40,7 @@ public class Admin_teachers_reg extends AppCompatActivity {
     Spinner tgen,tdesg,tbr;
     Button treg;
     ImageView timage;
+    //TextView tempno;
     DatePickerDialog picker;
     FirebaseFirestore fstore;
     FirebaseAuth auth;
@@ -108,7 +109,7 @@ public class Admin_teachers_reg extends AppCompatActivity {
                 String t_gen=tgen.getSelectedItem().toString();
                 String t_desg =tdesg.getSelectedItem().toString();
                 String t_br=tbr.getSelectedItem().toString();
-                String tuid=b+a+t_br;
+                String tuid=a+b+t_br;
                 DocumentReference treference=fstore.collection("tdemo").document(t_email);
                 Map<String, String> ve=new HashMap<>();
                 ve.put("Name",t_name);
@@ -129,6 +130,7 @@ public class Admin_teachers_reg extends AppCompatActivity {
                         Toast.makeText(Admin_teachers_reg.this, "Teacher Successfully Registered ", Toast.LENGTH_SHORT).show();
                         Intent intent =new Intent(Admin_teachers_reg.this,Admin_tool_home.class);
                         startActivity(intent);
+                        finish();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override

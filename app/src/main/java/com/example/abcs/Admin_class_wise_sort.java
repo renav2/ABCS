@@ -7,11 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Admin_class_wise_sort extends AppCompatActivity {
 Button _1,_2,_3,_4;
-TextView comp, it,entc,cvil,mech,techdept;
+TextView comp, it,entc,cvil,mech,techdept,techdesg,techemail;
 
 
 @Override
@@ -20,7 +19,8 @@ TextView comp, it,entc,cvil,mech,techdept;
         setContentView(R.layout.activity_admin_class_wise_sort);
 
 techdept=findViewById(R.id.teacher_dept);
-
+techdesg=findViewById(R.id.teacher_desg);
+techemail=findViewById(R.id.teacher_email);
 
         comp  =findViewById(R.id.textView99);
         it=findViewById(R.id.textView101);
@@ -37,6 +37,12 @@ techdept=findViewById(R.id.teacher_dept);
     cvil.setText(getIntent().getStringExtra("deptcvil"));
     mech.setText(getIntent().getStringExtra("deptmech"));
 
+    //test code for teacher
+    techdept.setText(getIntent().getStringExtra("Department"));
+    techdesg.setText(getIntent().getStringExtra("Designation"));
+    techemail.setText(getIntent().getStringExtra("Email"));
+
+
     _1.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -47,7 +53,7 @@ techdept=findViewById(R.id.teacher_dept);
             if(comp.getText().toString().equals("Comp")){
                 intent.putExtra("deco1","Comp");
                 intent.putExtra("class1","FE");
-            }else if(it.getText().toString().equals("IT")){
+            }else if(it.getText().toString().equals("IT") && techdesg.getText().toString().equals("TG")){
                 intent.putExtra("deco2","IT");
                 intent.putExtra("class1","FE");
             }

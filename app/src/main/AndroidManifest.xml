@@ -7,8 +7,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -17,31 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
-        <activity
-            android:name=".Bonafide_issue_"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_Zero_pay_student"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_Collage_payrecod"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_Collage_payrecod_classwise"
-            android:exported="false" />
-        <activity
-            android:name=".Admin_Collage_payrecod_deptwise"
-            android:exported="false" />
-        <activity
-            android:name=".hostelrecord_class_wise"
-            android:exported="false" />
-        <activity
-            android:name=".hotel_record_dept_wise"
-            android:exported="false" />
 
-        <meta-data
-            android:name="com.google.maps.android:android-maps-utils:2.3.0"
-            android:value="@string/map_key" />
+        <meta-data android:name="com.google.maps.android:android-maps-utils:2.3.0"
+            android:value="@string/map_key"/>
 
         <activity
             android:name=".Admin_delete_teacher"
@@ -166,6 +144,7 @@
         <activity
             android:name=".Admin_hostel_payrecord"
             android:exported="false" />
+
         <activity
             android:name=".Admin_clg_paymentrecod"
             android:exported="false" />
@@ -220,6 +199,30 @@
         <activity
             android:name=".Payment_college_pay_page"
             android:exported="false" />
+
+        <activity
+            android:name=".Teacher_class_wise_sort"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_asper_dept_class"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_payment_wise_sort"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_asper_dept_payment"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_permission_wise_sort"
+            android:exported="false" />
+        <activity
+            android:name=".Teacher_asper_dept_permission"
+            android:exported="false" />
+        <activity
+            android:name=".Bonafide_issue_"
+            android:exported="false" />
+
+
         <activity
             android:name=".HomeActivity"
             android:exported="false" />

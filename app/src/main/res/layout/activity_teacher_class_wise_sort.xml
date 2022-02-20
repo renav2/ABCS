@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin_class_wise_sort">
+    tools:context=".Teacher_class_wise_sort">
 
     <LinearLayout
-        android:layout_width="231dp"
-        android:layout_height="591dp"
+        android:layout_width="254dp"
+        android:layout_height="609dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="108dp"
