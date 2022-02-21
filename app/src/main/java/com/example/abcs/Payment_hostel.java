@@ -52,13 +52,20 @@ auth=FirebaseAuth.getInstance();
         hos_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String samount=hos_a.getText().toString();
-                int amount = Math.round(Float.parseFloat(samount) * 100);
-               if(samount.equals("41000")){
-                   makepay(amount);
-               }else{
-                   Toast.makeText(Payment_hostel.this, "you nee to pay full fees", Toast.LENGTH_SHORT).show();
-               }
+                if (hos_a.getText().toString().equals("")) {
+                    Toast.makeText(Payment_hostel.this, "enter amount", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+
+                    String samount = hos_a.getText().toString();
+                    int amount = Math.round(Float.parseFloat(samount) * 100);
+                    if (samount.equals("41000")) {
+                        makepay(amount);
+                    } else {
+                        Toast.makeText(Payment_hostel.this, "you nee to pay full fees", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
     }

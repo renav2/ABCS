@@ -92,7 +92,7 @@ TextView  unid;
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 //basic profile things
                 String pro_name= documentSnapshot.getString("Name");
-                String pro_rollno=documentSnapshot.getString("Rollno");
+                String pro_rollno=documentSnapshot.getString("assignno");
                 String pro_dept=documentSnapshot.getString("Branch");
                 String pro_class=documentSnapshot.getString("_Class");
                 String pro_phone=documentSnapshot.getString("mobile no");
@@ -123,15 +123,23 @@ TextView  unid;
         btn_exampay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String eamount=txt_examamount.getText().toString();
-                int amount = Math.round(Float.parseFloat(eamount) * 100);
 
-                if(ex_status.getText().toString().equals("NOT Eligible")){
-                    Toast.makeText(payment_exam_fees.this, "You need to pay at least half college fee  ", Toast.LENGTH_LONG).show();
-            }else{
-                    makepay(amount);
+                if (ex_prn.getText().toString().equals("") || ex_form.getText().toString().equals("")) {
+                    Toast.makeText(payment_exam_fees.this, "fill form properly", Toast.LENGTH_SHORT).show();
+                } else if (txt_examamount.getText().toString().equals("")) {
+                    Toast.makeText(payment_exam_fees.this, "Enter  Amount", Toast.LENGTH_SHORT).show();
+                } else {
+                    String eamount = txt_examamount.getText().toString();
+                    int amount = Math.round(Float.parseFloat(eamount) * 100);
+
+                    if (ex_status.getText().toString().equals("NOT Eligible")) {
+                        Toast.makeText(payment_exam_fees.this, "You need to pay at least half college fee  ", Toast.LENGTH_LONG).show();
+                    } else {
+                        makepay(amount);
+                    }
+
+
                 }
-
 
             }
         });

@@ -87,7 +87,23 @@ req.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
         //add all field
 
+        // Spinner sec,clg,dept,hostel;
+
+
+      if(sec.getSelectedItem().toString().equals("Select section "))  {
+            Toast.makeText(test_user_permision_ask.this, "Select Correct Section ", Toast.LENGTH_SHORT).show();
+
+        }else  if(clg.getSelectedItem().toString().equals("⭐Permioson for dept⭐")||clg.getSelectedItem().toString().equals("⭐Permioson for Hostel⭐")||clg.getSelectedItem().toString().equals("⭐Permioson for collage⭐")) {
+
+          Toast.makeText(test_user_permision_ask.this, "Select Correct spinner", Toast.LENGTH_SHORT).show();
+      }else if(comments.getText().toString().equals("")){
+          Toast.makeText(test_user_permision_ask.this, "Enter some description ", Toast.LENGTH_SHORT).show();
+      }
+
+
+      else{
         uplodreq(name,email,comments,sec,clg);
+    }
     }
 
 

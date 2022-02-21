@@ -55,6 +55,8 @@ TextView vvasdaas,chutya,gul;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support_pay);
 
+
+
             et1=findViewById(R.id.editTextTextMultiLine5);
             enteramount=findViewById(R.id.editTextTextPersonName);
             sub=findViewById(R.id.button18);
@@ -128,9 +130,16 @@ vvasdaas.setVisibility(View.INVISIBLE);
         paybutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-             samount=enteramount.getText().toString();
-                    int amount = Math.round(Float.parseFloat(samount) * 100);
-                    makepay(amount);
+
+
+
+                        samount=enteramount.getText().toString();
+                        int amount = Math.round(Float.parseFloat(samount) * 100);
+                        makepay(amount);
+
+
+
+
                 }
             });
 
@@ -139,25 +148,32 @@ vvasdaas.setVisibility(View.INVISIBLE);
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DocumentReference d2=fstore.collection("Support_payment_issue").document(vvasdaas.getText().toString());
-                Map<String, String> vv=new HashMap<>();
-                String gg=vvasdaas.getText().toString();
-                String no="no";
-                vv.put("Name",name);
-                vv.put("game","no");
-                vv.put("assignno",gg);
-                vv.put("Email",email);
-                vv.put("Branch",branch);
-                vv.put("_Class",_class);
-                vv.put("student_issue",et1.getText().toString());
-                d2.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(Support_pay.this, "Your request is send  ", Toast.LENGTH_SHORT).show();
-                        Intent intent =new Intent(Support_pay.this,MainActivity.class);
-                        startActivity(intent);
-                    }
-                });
+
+                if (et1.getText().toString().equals("")) {
+                    Toast.makeText(Support_pay.this, "Enter Discription ", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+                    DocumentReference d2 = fstore.collection("Support_payment_issue").document(vvasdaas.getText().toString());
+                    Map<String, String> vv = new HashMap<>();
+                    String gg = vvasdaas.getText().toString();
+                    String no = "no";
+                    vv.put("Name", name);
+                    vv.put("game", "no");
+                    vv.put("assignno", gg);
+                    vv.put("Email", email);
+                    vv.put("Branch", branch);
+                    vv.put("_Class", _class);
+                    vv.put("student_issue", et1.getText().toString());
+                    d2.set(vv).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void unused) {
+                            Toast.makeText(Support_pay.this, "Your request is send  ", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(Support_pay.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }
             }
         });
     }
