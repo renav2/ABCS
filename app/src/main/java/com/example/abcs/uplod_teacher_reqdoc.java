@@ -34,14 +34,15 @@ import java.util.List;
 import java.util.Map;
 
 public class uplod_teacher_reqdoc extends AppCompatActivity {
-TextView tname,tdoc,tcom,support1211;
+TextView tname,tdoc,tcom,support1211,vid;
 EditText  etstudcomm;
 Button uplodcos;
 FirebaseFirestore fstore;
 
 FirebaseAuth auth;
     Uri imageuri = null;
-
+    String uservid;
+    String abcd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ FirebaseAuth auth;
         etstudcomm=findViewById(R.id.editTextTextMultiLine3);
         uplodcos=findViewById(R.id.uplodcos);
         support1211=findViewById(R.id.textView126);
+        vid=findViewById(R.id.vid);
     support1211.setText(getIntent().getStringExtra("uploddocto_specificuplod"));
     String ss=support1211.getText().toString();
     Toast.makeText(this, ss, Toast.LENGTH_SHORT).show();
@@ -68,9 +70,12 @@ FirebaseAuth auth;
                 tname.setText(value.getString("Teacher_Name"));
                 tdoc.setText(value.getString("reqdoc"));
                 tcom.setText(value.getString("docdesc"));
+                vid.setText(value.getString("Branch"));
+                uservid=vid.getText().toString();
 
             }
         });
+
 
 //        f.collection("final_permision_status").whereEqualTo("Email",currrrem).get()
 //                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -156,16 +161,18 @@ FirebaseAuth auth;
                         dialog.dismiss();
                         Uri uri = task.getResult();
                         String myurl;
+                       // String usid=vid.getText().toString();
                         myurl = uri.toString();
-
                         String pdf_sub="10th";
 
 
 
-                        DocumentReference reference =   fstore.collection("student_uplod_document").document(auth.getCurrentUser().getUid());
+                        DocumentReference reference =   fstore.collection("shubham").document(auth.getCurrentUser().getUid());
                         Map<String, String> v1 = new HashMap<>();
                         v1.put("url10", myurl);
-                        v1.put("uid",auth.getCurrentUser().getUid());
+                        v1.put("uid",auth.getCurrentUser().getDisplayName());
+                        v1.put("vid",uservid);
+
 
                         reference.set(v1).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

@@ -23,6 +23,7 @@ public class uplod_documents extends AppCompatActivity {
 Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
 TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
 TextView supportui;
+String s;
 
 
 Button  domesile;

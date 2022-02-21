@@ -13,14 +13,13 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="153dp"
+        android:layout_marginBottom="76dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,9 +31,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:text="Teacher name"
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Teacher name" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tname"
@@ -54,9 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:text="Requred document"
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Requred document" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tdoc"
@@ -76,9 +75,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:text="Teacher side comments"
                 android:textSize="16dp"
-                android:textStyle="bold"
-                android:text="Teacher side comments" />
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:visibility="invisible" />
 
         </LinearLayout>
 
@@ -98,9 +105,9 @@
             android:id="@+id/textView125"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:textStyle="bold"
+            android:text="student side comments"
             android:textSize="16dp"
-            android:text="student side comments" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine3"
