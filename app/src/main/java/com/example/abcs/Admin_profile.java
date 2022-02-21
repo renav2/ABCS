@@ -34,7 +34,7 @@ public class Admin_profile extends AppCompatActivity {
 
     //add qr code to profile
 
-    TextView e1,e2,e3,e4,e5,e6,h;
+    TextView e21,e22,e23,e24,e25,e26,h;
     Button eb1,echangeProfile;
     ImageView epimage,eqr;
     FirebaseAuth fAuth;
@@ -49,13 +49,13 @@ public class Admin_profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_profile);
         h=findViewById(R.id.label);
-        e1=findViewById(R.id.o_email);
-        e2=findViewById(R.id.o_name);
-        e3=findViewById(R.id.o_mno);
-        e4=findViewById(R.id.o_desg);
+        e21=findViewById(R.id.o_email);
+        e22=findViewById(R.id.o_name);
+        e23=findViewById(R.id.o_mno);
+        e24=findViewById(R.id.o_desg);
         //t5=findViewById(R.id.pyear);
-        e5=findViewById(R.id.o_br);
-        e6=findViewById(R.id.o_uid);
+        e25=findViewById(R.id.o_br);
+        e26=findViewById(R.id.o_uid);
         eb1=findViewById(R.id.logot);
 
         eqr=findViewById(R.id.qrcode);
@@ -65,7 +65,7 @@ public class Admin_profile extends AppCompatActivity {
         fAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference();
-        a=e6.getText().toString();
+        a=e26.getText().toString();
 
 
 
@@ -89,7 +89,7 @@ public class Admin_profile extends AppCompatActivity {
 
 
 
-        String s=getIntent().getStringExtra("TeacherID");
+        String s=getIntent().getStringExtra("Account");
 
 
         DocumentReference tReference=fstore.collection("Ademo").document(s);
@@ -98,20 +98,20 @@ public class Admin_profile extends AppCompatActivity {
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
 
 
-                e1.setText(value.getString("Name"));
-                e2.setText(value.getString("Email"));
-                e3.setText(value.getString("Mobile_No"));
-                e4.setText(value.getString("DOB"));
+                e21.setText(value.getString("Name"));
+                e22.setText(value.getString("Email"));
+                e23.setText(value.getString("Mobile_No"));
+                e24.setText(value.getString("DOB"));
                 //t5.setText(value.getString("Rollno"));
-                e5.setText(value.getString("Gender"));
-                e6.setText(value.getString("Empolyee_No"));
+                e25.setText(value.getString("Gender"));
+                e26.setText(value.getString("Empolyee_No"));
 
             }
         });
 
-        teuid=e2.getText().toString();
+        teuid=e22.getText().toString();
 
-        StorageReference profileRef= storageReference.child("Teachers/"+teuid+"/"+"/Profile.jpg");
+        StorageReference profileRef= storageReference.child("Account/"+teuid+"/"+"/Profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {

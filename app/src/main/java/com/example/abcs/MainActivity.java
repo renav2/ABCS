@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                                         if(m.equals(s)&&p.equals(s1)){
                                             Toast.makeText(MainActivity.this, "Account user loging done", Toast.LENGTH_SHORT).show();
                                             Intent intent1=new Intent(MainActivity.this,Account_Home.class);
-                                            intent1.putExtra("Teacher",m);
+                                            intent1.putExtra("Teacher_email",m);
 
                                             startActivity(intent1);
 
