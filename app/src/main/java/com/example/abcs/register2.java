@@ -50,6 +50,7 @@ public class register2 extends AppCompatActivity {
     private Spinner cgender, adtype, cname, cat, year, acd, br;
     DatePickerDialog picker;
     EditText eText;
+FirebaseUser uu;
 
 
 
@@ -68,7 +69,6 @@ public class register2 extends AppCompatActivity {
 //        String from_socialmedia_login_userid=getIntent().getStringExtra("userid");
 //        userid.setText(from_socialmedia_login_userid);
 //        String pass=userid.getText().toString();
-
 
         adtype=findViewById(R.id.Atype);
         cname=findViewById(R.id.college);
@@ -90,12 +90,33 @@ public class register2 extends AppCompatActivity {
         email = findViewById(R.id.etRegEmail);
         //clgid = findViewById(R.id.et_clgid);
         mno = findViewById(R.id.mno);
+        rollno.setVisibility(View.INVISIBLE);
 
+
+
+
+
+
+
+        try {
+            email.setText(auth.getCurrentUser().getEmail());
+            mno.setText(auth.getCurrentUser().getPhoneNumber());
+            if(!mno.getText().toString().equals("")){
+                uu=auth.getCurrentUser();
+                uu.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(register2.this, "dltuser", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+            }
+        }catch (Exception e){
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
+        }
         password = findViewById(R.id.etRegPass19);
-
             //current user
         FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
-
         userid.setText(auth.getCurrentUser().getUid());
 
         String    pass=userid.getText().toString();
@@ -127,15 +148,76 @@ public class register2 extends AppCompatActivity {
 
            // userid.setText(auth.getCurrentUser().getUid());
 
-            String    pass1=userid.getText().toString();
-                   uploddataa(pass1);
+
                    //uploddata();
-                   // createUser(email.getText().toString(),password.getText().toString());
+            phonechak(mno.getText().toString());
+
+
                     // uploddatrealtime();
+
+
         });
 
 
     }
+
+    private void phonechak(String toString) {
+
+if(toString.length()<10){
+    Toast.makeText(this, "phonelength is short", Toast.LENGTH_SHORT).show();
+}else{
+
+   chkvalid();
+
+
+}
+    }
+
+    private void chkvalid() {
+
+        String text_name=name.getText().toString();
+        String text_email = email.getText().toString();
+        String txt_dob= eText.getText().toString();
+        String txt_gender=cgender.getSelectedItem().toString();
+
+        String txt_mno=mno.getText().toString();
+        String value=name.getText().toString()+eText.getText().toString();
+        String txt_clgid=value.toString();
+        String text_rollno=rollno.getText().toString();
+        String txt_add=estate.getText().toString();
+        String txt_clg=cname.getSelectedItem().toString();
+        String txt_atyp=adtype.getSelectedItem().toString();
+
+        //    private Spinner cgender, adtype, cname, cat, year, acd, br;
+
+        String txt_cate=cat.getSelectedItem().toString();
+
+        String txt_bran=br.getSelectedItem().toString();
+
+
+        String txt_yearn=year.getSelectedItem().toString();
+
+        String txt_acdy=acd.getSelectedItem().toString();
+
+        String text_password = password.getText().toString();
+
+        if(txt_gender.equals("Gender")||txt_cate.equals("Select Category")||txt_atyp.equals("Branch Name") ||  txt_yearn.equals("Select class")|| txt_atyp.equals("Academic year")  ){
+            Toast.makeText(this, "Select currect spinner", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            pas();
+        }
+
+
+    }
+
+    private void pas() {
+        String    pass1=userid.getText().toString();
+        uploddataa(pass1);
+        createUser(email.getText().toString(),password.getText().toString());
+
+    }
+
 
     private void createUser(String oString, String tString1) {
         auth.createUserWithEmailAndPassword(oString,tString1)
@@ -164,6 +246,9 @@ public class register2 extends AppCompatActivity {
         String text_email = email.getText().toString();
         String txt_dob= eText.getText().toString();
         String txt_gender=cgender.getSelectedItem().toString();
+        if(txt_gender.equals("Gender")){
+            Toast.makeText(this, "Select gender", Toast.LENGTH_SHORT).show();
+        }
         String txt_mno=mno.getText().toString();
         String value=name.getText().toString()+eText.getText().toString();
         String txt_clgid=value.toString();
@@ -171,17 +256,37 @@ public class register2 extends AppCompatActivity {
         String txt_add=estate.getText().toString();
         String txt_clg=cname.getSelectedItem().toString();
         String txt_atyp=adtype.getSelectedItem().toString();
+        if(txt_atyp.equals("Admission Type")){
+            Toast.makeText(this, "Select Admisiontype", Toast.LENGTH_SHORT).show();
+        }
+
+        //    private Spinner cgender, adtype, cname, cat, year, acd, br;
+
         String txt_cate=cat.getSelectedItem().toString();
+
+        if(txt_cate.equals("Select Category")){
+            Toast.makeText(this, "Select Admisiontype", Toast.LENGTH_SHORT).show();
+        }
         String txt_bran=br.getSelectedItem().toString();
+
+        if(txt_atyp.equals("Branch Name")){
+            Toast.makeText(this, "Select Branch", Toast.LENGTH_SHORT).show();
+        }
         String txt_yearn=year.getSelectedItem().toString();
+        if(txt_yearn.equals("Select class")){
+            Toast.makeText(this, "Select Class", Toast.LENGTH_SHORT).show();
+        }
         String txt_acdy=acd.getSelectedItem().toString();
+        if(txt_atyp.equals("Academic year")){
+            Toast.makeText(this, "Select Acedemic Year", Toast.LENGTH_SHORT).show();
+        }
         String text_password = password.getText().toString();
 
 
 //        String pass_copy=passss;
 DocumentReference reference=fstore.collection("demo").document(passss);
         Map<String, String> v=new HashMap<>();
-        v.put("Rollno",text_rollno);
+
         v.put("Name",text_name);
         v.put("mobile_no",txt_mno);
         v.put("Email",text_email);

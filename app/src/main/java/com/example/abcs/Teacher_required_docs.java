@@ -59,8 +59,7 @@ public class Teacher_required_docs extends AppCompatActivity {
         String txt_branch = branch.getSelectedItem().toString();
         String txt_class = clas.getSelectedItem().toString();
         String txt_reqdoc=reqdoc.getText().toString();
-String txt_docdesc=docdesc.getText().toString();
-
+        String txt_docdesc=docdesc.getText().toString();
         DocumentReference reference=fstore.collection("Teacher_required_docs").document(txt_roll);
         Map<String, String> v=new HashMap<>();
         v.put("Teacher_Name",txt_name);

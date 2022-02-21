@@ -8,16 +8,5 @@
      android:id="@+id/log1"
      android:title="support"
      />
- <item
-     android:id="@+id/log2"
-     android:title="LogOut"
-     />
- <item
-     android:id="@+id/log3"
-     android:title="LogOut"
-     />
- <item
-     android:id="@+id/log4"
-     android:title="LogOut"
-     />
+
 </menu>

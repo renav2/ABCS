@@ -10,10 +10,8 @@
         android:id="@+id/textView110"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="79dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="23dp"
         android:text="We Are  Here To Help You"
         android:textAlignment="center"
         android:textSize="22sp"
@@ -26,74 +24,57 @@
     <TextView
         android:id="@+id/textView111"
         android:layout_width="240dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="48dp"
         android:text="For support related button click"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/textView110"
-        app:layout_constraintStart_toStartOf="@+id/textView110"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView110" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
         android:text="Register"
         app:layout_constraintBottom_toTopOf="@+id/button24"
-        app:layout_constraintEnd_toEndOf="@+id/textView111"
-        app:layout_constraintStart_toStartOf="@+id/textView111"
+        app:layout_constraintEnd_toEndOf="@+id/button24"
+        app:layout_constraintStart_toStartOf="@+id/button24"
         app:layout_constraintTop_toBottomOf="@+id/textView111" />
 
     <Button
         android:id="@+id/button24"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
         android:text="Payment"
         app:layout_constraintBottom_toTopOf="@+id/button25"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/button25"
+        app:layout_constraintStart_toStartOf="@+id/button25"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button25"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
         android:text="Document"
-        app:layout_constraintBottom_toTopOf="@+id/button26"
-        app:layout_constraintEnd_toEndOf="@+id/button24"
-        app:layout_constraintStart_toStartOf="@+id/button24"
-        app:layout_constraintTop_toBottomOf="@+id/button24" />
-
-    <Button
-        android:id="@+id/button26"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Permission"
         app:layout_constraintBottom_toTopOf="@+id/button27"
-        app:layout_constraintEnd_toEndOf="@+id/button25"
-        app:layout_constraintStart_toStartOf="@+id/button25"
-        app:layout_constraintTop_toBottomOf="@+id/button25" />
+        app:layout_constraintEnd_toEndOf="@+id/button27"
+        app:layout_constraintStart_toStartOf="@+id/button27"
+        app:layout_constraintTop_toBottomOf="@+id/button24" />
 
     <Button
         android:id="@+id/button27"
         android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="172dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="160dp"
         android:text="Contact"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button26"
-        app:layout_constraintStart_toStartOf="@+id/button26"
-        app:layout_constraintTop_toBottomOf="@+id/button26" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button25" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
