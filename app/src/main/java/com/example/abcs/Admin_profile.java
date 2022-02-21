@@ -147,7 +147,7 @@ public class Admin_profile extends AppCompatActivity {
     }
     private void uploadImageFirebase(Uri imageUri) {
         //upload image to firebase storage
-        StorageReference fileref = storageReference.child("Teachers/"+teuid+"/"+"/Profile.jpg");
+        StorageReference fileref = storageReference.child("Account/"+teuid+"/"+"/Profile.jpg");
         fileref.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
