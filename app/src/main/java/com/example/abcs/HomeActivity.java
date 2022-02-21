@@ -151,6 +151,8 @@ try{
         if (!firebaseUser.isEmailVerified()){
 
 
+            vereifyemail.setVisibility(View.VISIBLE);
+            verifymsg.setVisibility(View.VISIBLE);
                 vereifyemail.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -159,8 +161,6 @@ try{
                             @Override
                             public void onSuccess(Void unused) {
 
-                                vereifyemail.setVisibility(View.INVISIBLE);
-                                verifymsg.setVisibility(View.INVISIBLE);
                                 Toast.makeText(HomeActivity.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
                              }
                         }).addOnFailureListener(new OnFailureListener() {

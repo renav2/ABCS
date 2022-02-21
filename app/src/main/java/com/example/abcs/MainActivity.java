@@ -254,6 +254,12 @@ public class MainActivity extends AppCompatActivity {
 finish();
 
             }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(MainActivity.this, "login Fail", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Enter Correct Username And Password", Toast.LENGTH_SHORT).show();
+            }
         });
 
     }

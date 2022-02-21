@@ -80,8 +80,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout25"
-        android:layout_width="369dp"
-        android:layout_height="293dp"
+        android:layout_width="372dp"
+        android:layout_height="319dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="21dp"
@@ -103,8 +103,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#a2a2a2"
-                android:textAlignment="center"
                 android:text=" Description"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -114,8 +114,8 @@
                 android:layout_width="191dp"
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
-                android:textAlignment="center"
                 android:text=" Amount"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -170,8 +170,8 @@
                 android:layout_width="191dp"
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
-                android:textColor="@color/black"
                 android:textAlignment="textEnd"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
@@ -225,9 +225,9 @@
                 android:layout_width="191dp"
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
+                android:textAlignment="textEnd"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textAlignment="textEnd"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
@@ -253,11 +253,17 @@
                 android:layout_width="191dp"
                 android:layout_height="match_parent"
                 android:background="#d0d0d0"
+                android:textAlignment="textEnd"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textAlignment="textEnd"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView152"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="TextView" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
