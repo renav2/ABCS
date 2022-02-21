@@ -136,31 +136,31 @@ public class MainActivity extends AppCompatActivity {
 //
                                // startActivity(intent);
 //Admin login
-//                                DocumentReference documentReference=fstore.collection("Ademo").document(tex_email);
-//                                documentReference.addSnapshotListener(MainActivity.this, new EventListener<DocumentSnapshot>() {
-//                                    @Override
-//                                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                                        String s,s1;
-//                                        String m=et_email.getText().toString();
-//                                        String p=et_pass.getText().toString();
-//
-//
-//                                        s=value.getString("Email");
-//                                        s1=value.getString("Password");
-//
-//
-//                                        if(m.equals(s)&&p.equals(s1)){
-//                                            Toast.makeText(MainActivity.this, "Account user loging done", Toast.LENGTH_SHORT).show();
-//                                            Intent intent1=new Intent(MainActivity.this,Account_Home.class);
-//                                            intent1.putExtra("Teacher",m);
-//
-//                                            startActivity(intent1);
-//
-//
-//                                        }
-//
-//                                    }
-//                                });
+                                DocumentReference documentReference=fstore.collection("Ademo").document(tex_email);
+                                documentReference.addSnapshotListener(MainActivity.this, new EventListener<DocumentSnapshot>() {
+                                    @Override
+                                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                                        String s,s1;
+                                        String m=et_email.getText().toString();
+                                        String p=et_pass.getText().toString();
+
+
+                                        s=value.getString("Email");
+                                        s1=value.getString("Password");
+
+
+                                        if(m.equals(s)&&p.equals(s1)){
+                                            Toast.makeText(MainActivity.this, "Account user loging done", Toast.LENGTH_SHORT).show();
+                                            Intent intent1=new Intent(MainActivity.this,Account_Home.class);
+                                            intent1.putExtra("Teacher",m);
+
+                                            startActivity(intent1);
+
+
+                                        }
+
+                                    }
+                                });
 
 
 
