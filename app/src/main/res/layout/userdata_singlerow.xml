@@ -25,7 +25,7 @@
             android:layout_marginStart="261dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="16dp"
-            android:text="no" />
+            android:text="Delete" />
 
         <TextView
             android:id="@+id/year"

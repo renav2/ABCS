@@ -108,6 +108,8 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_account_reg.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_delete_account.xml" value="0.19010416666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_delete_teacher.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_teacher_profile.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_teachers_reg.xml" value="0.18" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_tool_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_adminhome.xml" value="0.20416666666666666" />
@@ -116,12 +118,14 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_class_wise_sort.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_docs_require.xml" value="0.22" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_payment_wise_sort.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_required_docs_asper.xml" value="0.19010416666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_required_docs_show.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_required_download.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_required_show.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_uplod_documents.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_uplod_teacher_reqdoc.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_userwiser_permision_fetch.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/downelements.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/elements.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/main.xml" value="0.20416666666666666" />
@@ -129,6 +133,7 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/permissiondata_singlerow.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/singlerow.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/teacherdata_singlerow.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/userdata_singlerow.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/menu/main_menu.xml" value="0.22" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/menu/searchmenu.xml" value="0.33" />
         <entry key="..\:/Users/Nikita/AndroidStudioProjects/ABCS/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.2" />

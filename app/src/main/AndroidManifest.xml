@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Admin_profile"
+            android:exported="false" />
+        <activity
             android:name=".admin_delete_account"
             android:exported="false" />
         <activity
