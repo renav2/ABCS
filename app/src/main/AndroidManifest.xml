@@ -17,6 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".admin_delete_account"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_account_reg"
+            android:exported="false" />
+        <activity
+            android:name=".Account_Home"
+            android:exported="false" />
+        <activity
             android:name=".Admin_student_issued_doc"
             android:exported="false" />
         <activity
@@ -255,7 +264,6 @@
         <activity
             android:name=".Teacher_required_download"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true"

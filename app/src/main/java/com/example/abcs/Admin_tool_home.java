@@ -9,18 +9,34 @@ import android.widget.Button;
 
 public class Admin_tool_home extends AppCompatActivity {
 
-    Button teacher_add,teacher_delete,teacher_remove,teacher_log,issuedoc;
+    Button teacher_add,teacher_delete,teacher_remove,acc_log,issuedoc,acc_del;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_tool_home);
 issuedoc=findViewById(R.id.button41);
-
+acc_del=findViewById(R.id.button26);
         teacher_add=findViewById(R.id.button38);
         teacher_delete=findViewById(R.id.button42);
         teacher_remove=findViewById(R.id.button41);
-        teacher_log=findViewById(R.id.login);
+        acc_log=findViewById(R.id.login);
+
+        acc_del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Admin_tool_home.this,admin_delete_account.class);
+                startActivity(intent);
+            }
+        });
+
+        acc_log.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Admin_tool_home.this,Admin_account_reg.class);
+                startActivity(intent);
+            }
+        });
 
         teacher_add.setOnClickListener(new View.OnClickListener() {
             @Override

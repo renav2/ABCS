@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Admin_teachers_reg">
+        tools:context=".Admin_account_reg">
 
         <EditText
             android:id="@+id/te_add"
@@ -18,9 +17,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
-            android:hint="Address"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:hint="Address"
             android:textColorHint="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/te_desg"
             app:layout_constraintEnd_toEndOf="@+id/te_dob"
@@ -81,9 +80,9 @@
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:hint="Email"
+            android:textColorHint="@color/black"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:textColorHint="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/te_mno"
             app:layout_constraintEnd_toEndOf="@+id/te_name"
             app:layout_constraintStart_toStartOf="@+id/te_name"
@@ -96,9 +95,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
-            android:hint="Mobile Number"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:hint="Mobile Number"
             android:textColorHint="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/te_gender"
             app:layout_constraintEnd_toEndOf="@+id/te_email"
@@ -144,9 +143,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
-            android:hint="DOB"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:hint="DOB"
             android:textColorHint="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/te_add"
             app:layout_constraintEnd_toEndOf="@+id/te_empno"
@@ -154,21 +153,46 @@
             app:layout_constraintStart_toStartOf="@+id/te_empno"
             app:layout_constraintTop_toBottomOf="@+id/te_empno" />
 
+        <Spinner
+            android:id="@+id/te_desg"
+            android:layout_width="210dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/desg"
+            app:layout_constraintBottom_toTopOf="@+id/te_br"
+            app:layout_constraintEnd_toEndOf="@+id/te_add"
+            app:layout_constraintStart_toStartOf="@+id/te_add"
+            app:layout_constraintTop_toBottomOf="@+id/te_add"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/te_br"
+            android:layout_width="210dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/brname"
+            app:layout_constraintBottom_toTopOf="@+id/te_pass"
+            app:layout_constraintEnd_toEndOf="@+id/te_desg"
+            app:layout_constraintStart_toStartOf="@+id/te_desg"
+            app:layout_constraintTop_toBottomOf="@+id/te_desg" />
 
         <EditText
             android:id="@+id/te_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:hint="Password"
+            android:textColorHint="@color/black"
             android:inputType="textPassword"
             android:minHeight="32dp"
-            android:textColorHint="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/te_reg"
-            app:layout_constraintEnd_toEndOf="@+id/te_add"
-            app:layout_constraintStart_toStartOf="@+id/te_add"
-            app:layout_constraintTop_toBottomOf="@+id/te_add" />
+            app:layout_constraintEnd_toEndOf="@+id/te_br"
+            app:layout_constraintStart_toStartOf="@+id/te_br"
+            app:layout_constraintTop_toBottomOf="@+id/te_br" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
