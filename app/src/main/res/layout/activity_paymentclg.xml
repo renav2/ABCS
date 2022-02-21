@@ -263,7 +263,8 @@
             android:id="@+id/textView152"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="TextView" />
+            android:text="TextView"
+            tools:visibility="invisible" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

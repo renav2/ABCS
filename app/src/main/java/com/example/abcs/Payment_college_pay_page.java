@@ -73,7 +73,7 @@ String inp;
         pro_userid=auth.getCurrentUser().getUid();
         fstore=FirebaseFirestore.getInstance();
         c_flag.setText(getIntent().getStringExtra("unid2"));
-
+            mmmm.setVisibility(View.INVISIBLE);
 
         DocumentReference documentReference=fstore.collection("demo").document(auth.getCurrentUser().getUid());
         documentReference.addSnapshotListener(Payment_college_pay_page.this, new EventListener<DocumentSnapshot>() {
@@ -4592,23 +4592,6 @@ String inp;
 
 
 
-//            DocumentReference documentReference=fstore.collection("Final_paymnet_data").document(c_flag.getText().toString());
-//            documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-//                @Override
-//                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-//                    String s,s1;
-//                    s=userID.toUpperCase();
-//                    s1=userID.substring(1,7);
-//                    t1.setText(value.getString("Name"));
-//                    t2.setText(value.getString("Email"));
-//                    t3.setText(value.getString("mobile no"));
-//                    t4.setText(value.getString("Branch"));
-//                    //             t5.setText(value.getString("Rollno"));
-//                    t5.setText(value.getString("_Class"));
-//                    t6.setText(s1);
-//
-//                }
-//            });
 
 
         }
@@ -4627,61 +4610,53 @@ String inp;
             @Override
             public void onClick(View v) {
 
-                String txt_installment=pay_instllmen.getSelectedItem().toString();
-                String samount=amount.getText().toString();
-                int amount = Math.round(Float.parseFloat(samount) * 100);
+             if( amount.getText().toString().equals("")) {
+                 Toast.makeText(Payment_college_pay_page.this, "enter amount", Toast.LENGTH_SHORT).show();
+             }
+                else {
 
 
+                 String txt_installment = pay_instllmen.getSelectedItem().toString();
+                 String samount = amount.getText().toString();
+                 int amount = Math.round(Float.parseFloat(samount) * 100);
 
 
+                 if (txt_installment.equals("First") && mmmm.getText().toString().equals("0")) {
+                     makepay(amount);
+                 } else if (txt_installment.equals("First") && mmmm.getText().toString().equals("1")) {
+                     Toast.makeText(Payment_college_pay_page.this, "You use your first installment", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(Payment_college_pay_page.this, "Select installment as Second", Toast.LENGTH_SHORT).show();
+                 } else if (txt_installment.equals("Second")) {
 
 
+                     fstore.collection("Final_paymnet_data").whereEqualTo("Email", auth.getCurrentUser().getEmail()).get()
+                             .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                 @Override
+                                 public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                     List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                                     for (DocumentSnapshot d : list) {
+                                         String totalfee = d.getString("totalfees");
+                                         String alreadypay = d.getString("paidamount");
+                                         String year = d.getString("_class");
+                                         String branch = d.getString("branch");
+                                         String name = d.getString("Name");
+                                         String no = d.getString("mobile_no");
+                                         String uid = d.getString("unicid_assignno");
 
 
+                                         String remainfees = d.getString("remaining_fees");
 
 
-                if(txt_installment.equals("First") && mmmm.getText().toString().equals("0")) {
-                    makepay(amount);
-                }
-                else if(txt_installment.equals("First") && mmmm.getText().toString().equals("1")){
-                    Toast.makeText(Payment_college_pay_page.this, "You use your first installment", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(Payment_college_pay_page.this, "Select installment as Second", Toast.LENGTH_SHORT).show();
-                }
-                else if(txt_installment.equals("Second")){
+                                         // Toast.makeText(Payment_college_pay_page.this,"you need to pay" +remainfees, Toast.LENGTH_SHORT).show();
+                                         cheksecondinstallment(remainfees, totalfee, alreadypay, year, branch, name, no, uid);
+
+                                     }
+                                 }
+                             });
 
 
-                    fstore.collection("Final_paymnet_data").whereEqualTo("Email",auth.getCurrentUser().getEmail()).get()
-                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                                @Override
-                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                                    List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
-                                    for(DocumentSnapshot d:list)
-                                    {
-                                        String totalfee=d.getString("totalfees");
-                                        String alreadypay=d.getString("paidamount");
-                                        String year=d.getString("_class");
-                                          String branch=d.getString("branch");
-                                          String name=d.getString("Name");
-                                            String no=d.getString("mobile_no");
-                                            String uid=d.getString("unicid_assignno");
-
-
-                                       String remainfees=d.getString("remaining_fees");
-
-
-
-                                       // Toast.makeText(Payment_college_pay_page.this,"you need to pay" +remainfees, Toast.LENGTH_SHORT).show();
-                                    cheksecondinstallment(remainfees,totalfee,alreadypay,year,branch,name,no,uid);
-
-                                    }
-                                }
-                            });
-
-
-
-
-
-                }
+                 }
+             }
             }
         });
 

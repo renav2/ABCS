@@ -196,8 +196,13 @@ TextView  unid;
         String tx_class= ex_class.getText().toString();
         String tx_btran=ex_branch.getText().toString();
        String  tx_roll =ex_rollno.getText().toString();
-        String tx_back=back.getText().toString();
+      //  String tx_back=back.getText().toString();
+        String newback=back.getText().toString().replace("...."," ");
 
+       // String s = "23423412342134";
+       // newback = newback.replaceAll("....", "$0</>");
+       // System.out.println(s);
+        String tx_back=newback;
 
 String tx_unid=unid.getText().toString();
 //putting data on universal  payment dadatbase
