@@ -88,7 +88,7 @@ vvasdaas.setVisibility(View.INVISIBLE);
                     email=value.getString("Email");
                     // unicid=value.getString("assignno");
                     branch =value.getString("Branch");
-                    _class=value.getString("Class");
+                    _class=value.getString("_Class");
                     vvasdaas.setText(value.getString("assignno"));
                     pp=vvasdaas.getText().toString();
                     //  vv.setText(unicid);

@@ -247,6 +247,7 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_document_pdf_uplod.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_downlodpdf.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.4" />
@@ -275,7 +276,7 @@
         <entry key="..\:/aaa/app/src/main/res/layout/singlerownotice.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/singlerowpermission.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/student_payment_history_singleline.xml" value="0.4" />
-        <entry key="..\:/aaa/app/src/main/res/layout/support_pay_singlerow21.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/support_pay_singlerow21.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/sutudent_issue_doc_singleline.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/teacherdata_singlerow.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/userdata_singlerow.xml" value="0.536" />
