@@ -4,177 +4,267 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeacherHome">
-
-    <Button
-        android:id="@+id/tprofile"
-        android:layout_width="103dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="36dp"
-        android:text="Profile"
-        app:layout_constraintBottom_toTopOf="@+id/button43"
-        app:layout_constraintEnd_toStartOf="@+id/button44"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
-
-    <Button
-        android:id="@+id/button44"
-        android:layout_width="103dp"
-        android:layout_height="79dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="36dp"
-        android:text="Students"
-        app:layout_constraintBottom_toTopOf="@+id/button49"
-        app:layout_constraintEnd_toStartOf="@+id/button45"
-        app:layout_constraintStart_toEndOf="@+id/tprofile"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
-
-    <Button
-        android:id="@+id/button45"
-        android:layout_width="103dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="82dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="54dp"
-        android:text="Payment"
-        app:layout_constraintBottom_toTopOf="@+id/button50"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button44"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+    tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="406dp"
-        android:layout_height="191dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="82dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/tprofile"
+        android:id="@+id/linearLayout"
+        android:layout_width="392dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/underline"
+        android:layout_marginBottom="19dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/in_tname"
-                android:layout_width="128dp"
-                android:layout_height="match_parent"
-                android:text="Email"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView89"
-                android:layout_width="346dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="16sp" />
-        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:orientation="horizontal">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView91"
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Designation"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView92"
-                android:layout_width="183dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView98"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Department"
-                android:textSize="16sp" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView123"
-                android:layout_width="230dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/in_tname"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Email -"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView89"
+                    android:layout_width="346dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+
+                    android:text="TextView"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView91"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Designation -"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView92"
+                    android:layout_width="346dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:text="TextView"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView98"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:text="Branch -"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView123"
+                    android:layout_width="346dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:text="TextView"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button43"
-        android:layout_width="96dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
-        android:text="Permission"
-        app:layout_constraintEnd_toStartOf="@+id/button49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tprofile" />
-
-    <Button
-        android:id="@+id/button49"
-        android:layout_width="99dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="70dp"
-        android:text="Teacher Required Docs"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/underline"
+        android:layout_marginBottom="13dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button43"
-        app:layout_constraintTop_toBottomOf="@+id/button44" />
-
-    <Button
-        android:id="@+id/button50"
-        android:layout_width="100dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="58dp"
-        android:text="Download Docs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button49"
-        app:layout_constraintTop_toBottomOf="@+id/button45" />
-
-    <Button
-        android:id="@+id/button51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button44"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/tprofile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/edituser"
+                android:layout_marginStart="30dp"
+                />
+            <Button
+                android:id="@+id/button44"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/account"
+                android:layout_marginStart="35dp"
+                />
+            <Button
+                android:id="@+id/button45"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/mpay"
+                android:layout_marginStart="35dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="Profile"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:text="Student"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:text="Payment"
+                android:textColor="@color/black"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button43"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/user"
+                android:layout_marginStart="30dp"
+                />
+            <Button
+                android:id="@+id/button49"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/copy"
+                android:layout_marginStart="35dp"
+                />
+            <Button
+                android:id="@+id/button50"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/file"
+                android:layout_marginStart="35dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="Permission"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:text="Teacher Required Docs"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:text="Download Docs"
+                android:textColor="@color/black"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

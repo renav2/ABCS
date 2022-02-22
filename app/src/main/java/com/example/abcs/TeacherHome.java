@@ -31,7 +31,7 @@ FirebaseAuth auth;
         setContentView(R.layout.activity_teacher_home);
 fstore=FirebaseFirestore.getInstance();
 
-qr=findViewById(R.id.button51);
+
 
         email=findViewById(R.id.textView89);
         dept=findViewById(R.id.textView123);
