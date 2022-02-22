@@ -3,10 +3,15 @@ package com.example.abcs;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +33,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
 import com.squareup.picasso.Picasso;
 
 public class profile_test extends AppCompatActivity {
@@ -42,6 +49,8 @@ public class profile_test extends AppCompatActivity {
     FirebaseUser user;
     String userID;
     StorageReference storageReference;
+    private String LOG_TAG = "GenerateQRCode";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +101,45 @@ public class profile_test extends AppCompatActivity {
    //             t5.setText(value.getString("Rollno"));
                 t5.setText(value.getString("_Class"));
                 t6.setText(s1);
+
+                String a=t1.getText().toString();
+                String b=t2.getText().toString();
+                String c=t3.getText().toString();
+                String d=t4.getText().toString();
+                String e=t5.getText().toString();
+                String f=t6.getText().toString();
+                String g="Email\t\t-\t"+a+"\nName\t-\t"+b+"\nContact.No.\t-\t"+c+"\nBranch\t-\t"
+                        +d+"\nYear\t-\t"+e+"\nID\t-\t"+f+"\t";
+
+                Log.v(LOG_TAG,   g);
+
+                //Find screen size
+                WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
+                Display display = manager.getDefaultDisplay();
+                Point point = new Point();
+                display.getSize(point);
+                int width = point.x;
+                int height = point.y;
+                int smallerDimension = width < height ? width : height;
+                smallerDimension = smallerDimension * 1/4;
+
+                //Encode with a QR Code image
+                QRCodeEncoder qrCodeEncoder = new QRCodeEncoder( g,
+                        null,
+                        Contents.Type.TEXT,
+                        BarcodeFormat.QR_CODE.toString(),
+                        smallerDimension);
+                try {
+                    Bitmap bitmap = qrCodeEncoder.encodeAsBitmap();
+                    //ImageView myImage = (ImageView) findViewById(R.id.qrcode);
+                    qr.setImageBitmap(bitmap);
+
+                } catch (WriterException w) {
+                    w.printStackTrace();
+                }
+
+
+
 
             }
         });

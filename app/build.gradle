@@ -79,6 +79,10 @@ dependencies {
     // (Deprecated) Alternately - Utilities for Maps SDK v3 BETA for Android (does not require Google Play Services)
     implementation 'com.google.maps.android:android-maps-utils-v3:2.3.0'
 
+    //QR code
+    implementation 'com.google.zxing:core:3.3.3'
 
+    //ImageSlider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.6'
 
 }

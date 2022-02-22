@@ -3,10 +3,15 @@ package com.example.abcs;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +33,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
 import com.squareup.picasso.Picasso;
 
 public class Admin_teacher_profile extends AppCompatActivity {
@@ -40,10 +47,14 @@ public class Admin_teacher_profile extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fstore;
     FirebaseUser user;
-    String a;
+    String a,s;
     String userID;
     String teuid;
     StorageReference storageReference;
+
+    private String LOG_TAG = "GenerateQRCode";
+    String all;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,9 +78,7 @@ public class Admin_teacher_profile extends AppCompatActivity {
         storageReference= FirebaseStorage.getInstance().getReference();
         a=e6.getText().toString();
 
-
-
-
+        s=getIntent().getStringExtra("TeacherID");
 
 
 //        fstore .collection("tdemo").whereNotEqualTo("_1Student_remain_fees","0").get()
@@ -89,29 +98,9 @@ public class Admin_teacher_profile extends AppCompatActivity {
 
 
 
-        String s=getIntent().getStringExtra("TeacherID");
 
 
-        DocumentReference documentReference=fstore.collection("tdemo").document(s);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-
-
-                e1.setText(value.getString("Name"));
-                e2.setText(value.getString("Email"));
-                e3.setText(value.getString("Mobile_No"));
-                e4.setText(value.getString("Designation"));
-                //t5.setText(value.getString("Rollno"));
-                e5.setText(value.getString("Department"));
-                e6.setText(value.getString("Empolyee_No"));
-
-            }
-        });
-
-        teuid=e2.getText().toString();
-
-        StorageReference profileRef= storageReference.child("Teachers/"+teuid+"/"+"/Profile.jpg");
+        StorageReference profileRef= storageReference.child("Teachers/"+s+"/"+"/Profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -120,14 +109,77 @@ public class Admin_teacher_profile extends AppCompatActivity {
             }
         });
 
+
+
+        DocumentReference documentReference=fstore.collection("tdemo").document(s);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+
+
+                e1.setText(value.getString("Email"));
+                e2.setText(value.getString("Name"));
+                e3.setText(value.getString("Mobile_No"));
+                e4.setText(value.getString("Designation"));
+                //t5.setText(value.getString("Rollno"));
+                e5.setText(value.getString("Department"));
+                e6.setText(value.getString("Empolyee_No"));
+
+                String a=e1.getText().toString();
+                String b=e2.getText().toString();
+                String c=e3.getText().toString();
+                String d=e4.getText().toString();
+                String e=e5.getText().toString();
+                String f=e6.getText().toString();
+                String g="Email\t\t-\t"+a+"\nName\t-\t"+b+"\nContact.No.\t-\t"+c+"\nDesignation\t-\t"
+                        +d+"\nBranch\t-\t"+e+"\nID\t-\t"+f+"\t";
+
+                Log.v(LOG_TAG,   g);
+
+                //Find screen size
+                WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
+                Display display = manager.getDefaultDisplay();
+                Point point = new Point();
+                display.getSize(point);
+                int width = point.x;
+                int height = point.y;
+                int smallerDimension = width < height ? width : height;
+                smallerDimension = smallerDimension * 1/4;
+
+                //Encode with a QR Code image
+                QRCodeEncoder qrCodeEncoder = new QRCodeEncoder( g,
+                        null,
+                        Contents.Type.TEXT,
+                        BarcodeFormat.QR_CODE.toString(),
+                        smallerDimension);
+                try {
+                    Bitmap bitmap = qrCodeEncoder.encodeAsBitmap();
+                    //ImageView myImage = (ImageView) findViewById(R.id.qrcode);
+                    eqr.setImageBitmap(bitmap);
+
+                } catch (WriterException w) {
+                    w.printStackTrace();
+                }
+
+
+            }
+        });
+
+
+
+
+
         echangeProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //open gallery
                 Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                Toast.makeText(Admin_teacher_profile.this, "Wait for 1 minute to set profile picture", Toast.LENGTH_SHORT).show();
                 startActivityForResult(openGalleryIntent,100);
             }
         });
+
+
     }
 
 
@@ -147,7 +199,7 @@ public class Admin_teacher_profile extends AppCompatActivity {
     }
     private void uploadImageFirebase(Uri imageUri) {
         //upload image to firebase storage
-        StorageReference fileref = storageReference.child("Teachers/"+teuid+"/"+"/Profile.jpg");
+        StorageReference fileref = storageReference.child("Teachers/"+s+"/"+"/Profile.jpg");
         fileref.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {

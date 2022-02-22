@@ -20,17 +20,20 @@
         app:icon="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintBottom_toTopOf="@+id/profile"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/label"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243"
         tools:ignore="MissingConstraints" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label"
         tools:srcCompat="@mipmap/ic_launcher" />
@@ -64,16 +67,18 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="361dp"
-        android:layout_height="315dp"
+        android:layout_width="366dp"
+        android:layout_height="378dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,10 +94,10 @@
                     android:id="@+id/textView62"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:paddingStart="50dp"
-                    android:textColor="@color/black"
                     android:layout_weight="1"
-                    android:text="Email" />
+                    android:paddingStart="50dp"
+                    android:text="Email"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/pemail"
@@ -118,10 +123,10 @@
                     android:id="@+id/textView63"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:paddingStart="50dp"
-                    android:textColor="@color/black"
                     android:layout_weight="1"
-                    android:text="Name" />
+                    android:paddingStart="50dp"
+                    android:text="Name"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/pname"
@@ -147,10 +152,10 @@
                     android:id="@+id/textView64"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:paddingStart="50dp"
                     android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="Mobile no" />
+                    android:paddingStart="50dp"
+                    android:text="Mobile no"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/pcollege"
@@ -176,10 +181,10 @@
                     android:id="@+id/textView65"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:paddingStart="50dp"
                     android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="Branch" />
+                    android:paddingStart="50dp"
+                    android:text="Branch"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/pbranch"
@@ -206,10 +211,10 @@
                     android:id="@+id/textView75"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:paddingStart="50dp"
                     android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="Class" />
+                    android:paddingStart="50dp"
+                    android:text="Class"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/pclass"
@@ -235,10 +240,10 @@
                     android:id="@+id/textView68"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:paddingStart="50dp"
                     android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="Unique id" />
+                    android:paddingStart="50dp"
+                    android:text="Unique id"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/pid"
@@ -256,8 +261,8 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="115dp"
+                android:layout_width="367dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <TextView
@@ -268,8 +273,8 @@
 
                 <ImageView
                     android:id="@+id/qrcode"
-                    android:layout_width="56dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
                     android:layout_weight="1"
                     tools:srcCompat="@tools:sample/avatars" />
 

@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class TeacherHome extends AppCompatActivity {
 
-    Button eprofile,techerspecific_per,students,permission,payment,techredocs,techdocsshow;
+    Button eprofile,techerspecific_per,students,permission,payment,techredocs,techdocsshow,qr;
     TextView email,dept,desg;
 
 FirebaseFirestore fstore;
@@ -30,6 +30,8 @@ FirebaseAuth auth;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_home);
 fstore=FirebaseFirestore.getInstance();
+
+qr=findViewById(R.id.button51);
 
         email=findViewById(R.id.textView89);
         dept=findViewById(R.id.textView123);
@@ -61,6 +63,15 @@ fstore=FirebaseFirestore.getInstance();
                 email.setText(value.getString("Email"));
             }
         });
+
+        qr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(TeacherHome.this,GenerateQRCodeActivity.class);
+                startActivity(intent1);
+            }
+        });
+
         try{
             techredocs.setOnClickListener(new View.OnClickListener() {
                 @Override
