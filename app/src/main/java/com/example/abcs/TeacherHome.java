@@ -64,13 +64,13 @@ qr=findViewById(R.id.button51);
             }
         });
 
-        qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1=new Intent(TeacherHome.this,GenerateQRCodeActivity.class);
-                startActivity(intent1);
-            }
-        });
+//        qr.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent1=new Intent(TeacherHome.this,GenerateQRCodeActivity.class);
+//                startActivity(intent1);
+//            }
+//        });
 
         try{
             techredocs.setOnClickListener(new View.OnClickListener() {
