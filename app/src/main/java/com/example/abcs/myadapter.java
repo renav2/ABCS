@@ -92,82 +92,22 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
                         @Override
                         public void onSuccess(DocumentSnapshot documentSnapshot) {
                             //basic profile things
-
                             String pro_status=documentSnapshot.getString("status");
                            permision_Status.setText(pro_status);
-if(permision_Status.getText().toString().equals("granted")||permision_Status.getText().toString().equals("NOT granted") ){
-    b1p.setVisibility(View.INVISIBLE);
-    b2f.setVisibility(View.INVISIBLE);
-}
-
-                           /// his
-
+                            if(permision_Status.getText().toString().equals("granted")||permision_Status.getText().toString().equals("NOT granted") ){
+                                b1p.setVisibility(View.INVISIBLE);
+                                b2f.setVisibility(View.INVISIBLE);
+                            }
                         }
                     });
-
-//                    fstore.collection("final_permision_status").whereEqualTo("status","pending").get()
-//                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                                @Override
-//                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                                    List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
-//                                    for(DocumentSnapshot d:list)
-//                                    {
-//                                        model obj=d.toObject(model.class);
-//                                        datalist.add(obj);
-//
-//                                        b1p.setVisibility(View.INVISIBLE);
-//                                        b2f.setVisibility(View.INVISIBLE);
-//
-//                                    }
-//
-//                                }
-//                            });
-
-//                    fstore.collection("final_permision_status").whereNotEqualTo("status","NOT granted").get()
-//                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                                @Override
-//                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                                    List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
-//                                    for(DocumentSnapshot d:list)
-//                                    {
-//                                        model obj=d.toObject(model.class);
-//                                        datalist.add(obj);
-//
-//                                        b1p.setVisibility(View.INVISIBLE);
-//                                        b2f.setVisibility(View.INVISIBLE);
-//
-//                                    }
-//
-//                                }
-//                            });
-
-//                    DocumentReference reference = fstore.collection("final_permision_status").document();
-//                    reference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-//                        @Override
-//                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-//                            //basic profile things
-//
-//                            String pro_status=documentSnapshot.getString("status");
-//                           permision_Status.setText(pro_status);
-//
-//
-//                           /// his
-//                            if(permision_Status.getText().toString().equals("granted")){
-////                                Admin_all_user_permision_section mm=new Admin_all_user_permision_section();
-////                                mm.invisi(b1p,b2f);
-//                                b1p.setVisibility(View.INVISIBLE);
-//                                b2f.setVisibility(View.INVISIBLE);
-//                            }else if(permision_Status.getText().toString().equals("NOT granted")){
-//                                b1p.setVisibility(View.INVISIBLE);
-//                                b2f.setVisibility(View.INVISIBLE);
-//
-////                                Admin_all_user_permision_section mm=new Admin_all_user_permision_section();
-////                                mm.invisi(b1p,b2f);
-//                            }
-//                        }
-//                    });
                 }
             }, 100);
+
+
+
+
+
+
             b1p.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

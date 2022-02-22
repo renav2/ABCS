@@ -1,8 +1,12 @@
 package com.example.abcs;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -38,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
    private TextView tv_jump2;
    private TextView resetpass;
    private TextView adminhome;
+   TextView error;
+
    private FirebaseAuth auth;
     FirebaseFirestore fstore;
-
-
     // [END auth_fui_create_launcher]
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //createSignInIntent();
         adminhome=findViewById(R.id.textView39);
+        error=findViewById(R.id.textView154);
         bt_login=findViewById(R.id.btn_login);
         et_email=findViewById(R.id.txt_email);
         et_pass=findViewById(R.id.txt_password);
@@ -57,14 +64,26 @@ public class MainActivity extends AppCompatActivity {
         fstore=FirebaseFirestore.getInstance();
         resetpass=findViewById(R.id.reset);
 
+
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                error.setVisibility(View.INVISIBLE);
+            }
+        }, 100);
+
+
+
+
+
+
 //firbase intialize
         auth = FirebaseAuth.getInstance();
-
-
        //temp jump page for testing purpose
-
-//all button code
-
+        //all button code
         checkCurrentUser();
 
         adminhome.setOnClickListener(new View.OnClickListener() {
@@ -74,11 +93,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
 
             resetpass.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -108,8 +122,6 @@ public class MainActivity extends AppCompatActivity {
                     });
 
 
-
-
                     passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -121,11 +133,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
-
-
-
-                 
-
                         bt_login.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -159,12 +166,11 @@ public class MainActivity extends AppCompatActivity {
 
                                         }
 
+
+
+
                                     }
                                 });
-
-
-
-
 
 //techer login commited
                                 DocumentReference document =fstore.collection("tdemo").document(tex_email);
@@ -190,48 +196,28 @@ public class MainActivity extends AppCompatActivity {
 
                                         }
 
+                                        if(tex_email.equals("Admin")&&  tex_pass.equals("admin")){
+                                            Intent intent1=new Intent(MainActivity.this,Adminhome.class);
+                                            startActivity(intent1);
+                                        }
+
+                                        else if(tex_email.equals("admin@gmail.com")&&  tex_pass.equals("admin1")){
+                                            Intent intent1=new Intent(MainActivity.this,Adminhome.class);
+                                            startActivity(intent1);
+                                        }
+                                        else{
+                                            loginuser(tex_email,tex_pass);
+                                        }
+
+
+
+
+
                                     }
                                 });
 
 
 
-
-
-
-
-
-
-
-
-
-
-//                               fstore .collection("collagefees_1_installment").whereNotEqualTo("_1Student_remain_fees","0").get()
-//                                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                                            @Override
-//                                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                                                List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
-//                                                for(DocumentSnapshot d:list)
-//                                                {
-//                                                    a_search_data obj=d.toObject(a_search_data.class);
-//                                                    datalist.add(obj);
-//                                                }
-//                                                adapter.notifyDataSetChanged();
-//                                            }
-//                                        });
-
-
-                                if(tex_email.equals("Admin")&&  tex_pass.equals("admin")){
-                                    Intent intent1=new Intent(MainActivity.this,Adminhome.class);
-                                    startActivity(intent1);
-                                }
-
-                                else if(tex_email.equals("admin@gmail.com")&&  tex_pass.equals("admin1")){
-                                    Intent intent1=new Intent(MainActivity.this,Adminhome.class);
-                                    startActivity(intent1);
-                                }
-                                else{
-                                loginuser(tex_email,tex_pass);
-                                }
                             }
                         });
 
@@ -243,12 +229,7 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 });
 
-
-
-
-
     }
-
     private void checkCurrentUser() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -262,9 +243,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Login successfully", Toast.LENGTH_SHORT).show();
         }
-
     }
-
     private void loginuser(String _email, String _pass) {
         auth.signInWithEmailAndPassword(_email,_pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
@@ -273,19 +252,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(MainActivity.this,HomeActivity.class);
                 intent.putExtra("home_email",_email);
                intent.putExtra("home_pass",_pass);
-
-
-
                 startActivity(intent);
-
-finish();
 
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MainActivity.this, "login Fail", Toast.LENGTH_SHORT).show();
-                Toast.makeText(MainActivity.this, "Enter Correct Username And Password", Toast.LENGTH_SHORT).show();
+                error.setVisibility(View.VISIBLE);
+//                Toast.makeText(MainActivity.this, "login Fail", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Enter Correct Username And Password", Toast.LENGTH_SHORT).show();
             }
         });
 
