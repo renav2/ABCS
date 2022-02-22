@@ -80,7 +80,7 @@ TextView r;
         verifymsg=findViewById(R.id.VerifyMsg);
         String userID = fAuth.getCurrentUser().getUid();
         FirebaseUser firebaseUser = fAuth.getCurrentUser();
-        welcomename.setText("Welcome "+fAuth.getCurrentUser().getDisplayName());
+       // welcomename.setText("Welcome "+fAuth.getCurrentUser().getDisplayName());
         notificationtext.setVisibility(View.INVISIBLE);
 
 //fetchunic id

@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout17"
         android:layout_width="377dp"
-        android:layout_height="446dp"
+        android:layout_height="500dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="10dp"
@@ -23,6 +23,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/underline"
             android:orientation="horizontal">
 
             <TextView
@@ -46,7 +47,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/underline"
             android:orientation="horizontal">
 
             <TextView
@@ -70,7 +73,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/underline"
             android:orientation="horizontal">
 
             <TextView
@@ -94,7 +99,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/underline"
             android:orientation="horizontal">
 
             <TextView
@@ -118,7 +125,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/underline"
             android:orientation="horizontal">
 
             <TextView
@@ -155,14 +164,16 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="70dp"
                     android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:background="@drawable/underline"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
                         android:id="@+id/textView2"
-                        android:layout_width="157dp"
+                        android:layout_width="170dp"
                         android:paddingTop="10dp"
                         android:layout_height="match_parent"
                         android:text="Upload Documents"
@@ -190,7 +201,9 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/underline"
                 android:orientation="horizontal">
 
                 <TextView
@@ -213,7 +226,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/underline"
             android:orientation="horizontal">
 
             <Button

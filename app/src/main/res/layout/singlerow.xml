@@ -12,7 +12,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/underline"
-        android:layout_height="350dp">
+        android:layout_height="360dp">
 
 
         <TextView
@@ -112,11 +112,11 @@
         <TextView
             android:id="@+id/textView50"
             android:layout_width="124dp"
-            android:layout_height="37dp"
+            android:layout_height="50dp"
             android:layout_alignStart="@+id/t"
             android:layout_alignTop="@+id/year"
             android:layout_alignEnd="@+id/t"
-            android:layout_marginStart="147dp"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="280dp"
             android:layout_marginEnd="133dp"
             android:text="TextView"
