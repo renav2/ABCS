@@ -173,9 +173,6 @@ auth=FirebaseAuth.getInstance();
                         Toast.makeText(Payment_hostel.this, " tracnsaction Successfully ", Toast.LENGTH_SHORT).show();
                     }
                 });
-
-
-
             }
         });
 
