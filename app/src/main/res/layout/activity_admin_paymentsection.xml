@@ -29,7 +29,7 @@
                 android:id="@+id/admin_hostel_record"
                 android:layout_width="90dp"
                 android:layout_height="85dp"
-                android:background="@drawable/hostel22"
+                android:background="@drawable/hostel"
                  />
 
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_weight="1"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:paddingStart="20dp"
                 android:text="HOSTEL PAYMENTS" />
         </LinearLayout>
@@ -64,7 +64,7 @@
                 android:layout_weight="1"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:paddingStart="20dp"
                 android:text="EXAM PAYMENT RECORD" />
         </LinearLayout>
@@ -88,7 +88,7 @@
                 android:layout_weight="1"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:paddingStart="20dp"
                 android:text="SUPPORT PAY" />
         </LinearLayout>
@@ -112,7 +112,7 @@
                 android:layout_weight="1"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:paddingStart="20dp"
                 android:text="COLLEGE PAYMENTS" />
         </LinearLayout>

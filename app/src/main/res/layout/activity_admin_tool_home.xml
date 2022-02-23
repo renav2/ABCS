@@ -6,65 +6,165 @@
     android:layout_height="match_parent"
     tools:context=".Admin_tool_home">
 
-    <Button
-        android:id="@+id/button38"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="167dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="28dp"
-        android:text="add teccher"
-        app:layout_constraintBottom_toTopOf="@+id/button42"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="9dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button41"
-        android:layout_width="175dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="5dp"
-        android:text="You issue document "
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintEnd_toEndOf="@+id/button42"
-        app:layout_constraintStart_toStartOf="@+id/button42"
-        app:layout_constraintTop_toBottomOf="@+id/button42" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
 
-    <Button
-        android:id="@+id/button42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="38dp"
-        android:text="Delete Teacher"
-        app:layout_constraintBottom_toTopOf="@+id/button41"
-        app:layout_constraintEnd_toEndOf="@+id/button38"
-        app:layout_constraintStart_toStartOf="@+id/button38"
-        app:layout_constraintTop_toBottomOf="@+id/button38" />
+            <Button
+                android:id="@+id/button38"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/adduser" />
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="194dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="27dp"
-        android:text="Add Account User"
-        app:layout_constraintBottom_toTopOf="@+id/button26"
-        app:layout_constraintEnd_toEndOf="@+id/button41"
-        app:layout_constraintStart_toStartOf="@+id/button41"
-        app:layout_constraintTop_toBottomOf="@+id/button41" />
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/sdelete" />
 
-    <Button
-        android:id="@+id/button26"
-        android:layout_width="237dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="47dp"
-        android:text="Delete Account User"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/login"
-        app:layout_constraintStart_toStartOf="@+id/login"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Add Teacher"
+                android:layout_marginStart="20dp"
+                android:textAlignment="center"
+                android:textColor="#44109F"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="30dp"
+                android:text="Delete Teacher"
+                android:textAlignment="center"
+                android:textColor="#44109F"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/sadd" />
+
+            <Button
+                android:id="@+id/button42"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/deleteuser" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Add Student"
+                android:layout_marginStart="20dp"
+                android:textAlignment="center"
+                android:textColor="#44109F"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="30dp"
+                android:text="Delete user"
+                android:textAlignment="center"
+                android:textColor="#44109F"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <Button
+                android:id="@+id/button41"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="150dp"
+                android:background="@drawable/file" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="100dp"
+                android:text="You issue document "
+                android:textAlignment="center"
+                android:textColor="#44109F"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,6 +20,9 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_asper_dept_class.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_class_wise_sort.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_clg_paymentrecod.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_collage_payrecod.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_collage_payrecod_classwise.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_delete_account.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_delete_teacher.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_delete_user.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_dept_wise_sort.xml" value="0.19583333333333333" />
