@@ -50,6 +50,10 @@
             android:name=".Admin_document_issued"
             android:exported="false" />
         <activity
+            android:name=".Teacher_Doc_wise_sort"
+            android:exported="false" />
+
+        <activity
             android:name=".Feesructure_issue"
             android:exported="false" />
 
