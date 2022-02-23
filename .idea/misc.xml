@@ -212,6 +212,9 @@
         <entry key="..\:/aa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
+        <entry key="..\:/aaa/app/src/main/res/layout/accountdata_singlerow.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_account_home.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_account_reg.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_clg_paymentrecod.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_collage_payrecod.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_collage_payrecod_classwise.xml" value="0.25" />
@@ -229,6 +232,8 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_teachers_reg.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_view_application.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.264" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_collage_payrecod_sorted_adpt.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_contact_details.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up10.xml" value="0.16" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up12.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up_diploma.xml" value="0.25" />
