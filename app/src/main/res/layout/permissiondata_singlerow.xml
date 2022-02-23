@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@color/white_200"
     app:cardCornerRadius="5dp"
     android:elevation="4dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="380dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/underline"
-        android:layout_height="350dp">
+        android:layout_height="match_parent"
+        android:textAlignment="center">
 
 
         <TextView
@@ -29,9 +31,9 @@
         <TextView
             android:id="@+id/t"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="51dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="169dp"
             android:paddingStart="20dp"
             android:text="Description "
             android:textColor="@color/black"
@@ -53,13 +55,13 @@
             android:id="@+id/year"
             android:layout_width="283dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:paddingStart="100dp"
             android:text="Name"
             android:textAlignment="center"
             android:textColor="#000"
             android:textSize="25dp"
-            android:layout_marginTop="5dp"
             android:textStyle="bold" />
 
         <TextView
@@ -111,16 +113,18 @@
 
         <TextView
             android:id="@+id/textView50"
-            android:layout_width="124dp"
-            android:layout_height="37dp"
+            android:layout_width="145dp"
+            android:layout_height="35dp"
             android:layout_alignStart="@+id/t"
             android:layout_alignTop="@+id/year"
             android:layout_alignEnd="@+id/t"
-            android:layout_marginStart="147dp"
+            android:layout_marginStart="126dp"
             android:layout_marginTop="280dp"
-            android:layout_marginEnd="133dp"
+            android:layout_marginEnd="109dp"
+            android:background="@color/white_500"
             android:text="TextView"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/textView57"
@@ -141,7 +145,8 @@
             android:layout_marginTop="240dp"
             android:ems="10"
             android:gravity="start|top"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView58"
@@ -163,7 +168,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="210dp"
-            android:text="Techer side comments" />
+            android:text="Techer side comments"
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 

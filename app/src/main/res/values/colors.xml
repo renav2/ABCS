@@ -7,8 +7,6 @@
     <color name="teal_700">#102DCA</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="colorStatePressed">#E9FDFAFA</color>
-    <color name="colorStateEnabled">#EFE0E0</color>
-    <color name="colorStateNotEnabled">#9C27B0</color>
+    <color name="white_500">#F5F5F5</color>
+    <color name="white_200">#FFF5E5</color>
 </resources>

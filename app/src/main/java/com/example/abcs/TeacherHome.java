@@ -84,7 +84,10 @@ fstore=FirebaseFirestore.getInstance();
             techdocsshow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent1=new Intent(TeacherHome.this,Teacher_required_download.class);
+                    Intent intent1=new Intent(TeacherHome.this,Teacher_Doc_wise_sort.class);
+                    intent1.putExtra("Email",email.getText().toString());
+                    intent1.putExtra("Designation",desg.getText().toString());
+                    intent1.putExtra("Department",dept.getText().toString());
                     startActivity(intent1);
                 }
             });

@@ -34,7 +34,7 @@ import java.util.List;
 import java.util.Map;
 
 public class uplod_teacher_reqdoc extends AppCompatActivity {
-TextView tname,tdoc,tcom,support1211,vid;
+TextView tname,tdoc,tcom,support1211,vid,br,clas;
 EditText  etstudcomm;
 Button uplodcos;
 FirebaseFirestore fstore;
@@ -42,7 +42,7 @@ FirebaseFirestore fstore;
 FirebaseAuth auth;
     Uri imageuri = null;
     String uservid;
-    String abcd;
+    String abcd,abc,ab,a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,8 @@ FirebaseAuth auth;
         etstudcomm=findViewById(R.id.editTextTextMultiLine3);
         uplodcos=findViewById(R.id.uplodcos);
         support1211=findViewById(R.id.textView126);
+        br=findViewById(R.id.bro);
+        clas=findViewById(R.id.claa);
         vid=findViewById(R.id.vid);
     support1211.setText(getIntent().getStringExtra("uploddocto_specificuplod"));
     String ss=support1211.getText().toString();
@@ -67,11 +69,18 @@ FirebaseAuth auth;
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                tname.setText(value.getString("Teacher_Name"));
+                tname.setText(value.getString("Email"));
                 tdoc.setText(value.getString("reqdoc"));
                 tcom.setText(value.getString("docdesc"));
                 vid.setText(value.getString("Branch"));
+                br.setText(value.getString("Branch"));
+                clas.setText(value.getString("class"));
                 uservid=vid.getText().toString();
+                abcd=tname.getText().toString();
+                abc=br.getText().toString();
+                ab=clas.getText().toString();
+
+
 
             }
         });
@@ -171,7 +180,9 @@ FirebaseAuth auth;
                         Map<String, String> v1 = new HashMap<>();
                         v1.put("url10", myurl);
                         v1.put("uid",auth.getCurrentUser().getDisplayName());
-                        v1.put("vid",uservid);
+                        v1.put("email",abcd);
+                        v1.put("branch",abc);
+                        v1.put("class",ab);
 
 
                         reference.set(v1).addOnSuccessListener(new OnSuccessListener<Void>() {

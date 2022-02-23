@@ -2,17 +2,20 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:background="@color/white_200"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     app:cardCornerRadius="5dp"
     android:elevation="4dp"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:layout_width="386dp"
-        android:layout_height="329dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/underline"
+        android:layout_width="376dp"
+        android:layout_height="324dp"
+
+        android:textAlignment="center"
         android:orientation="vertical">
 
 
@@ -25,9 +28,6 @@
                 android:id="@+id/t1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
                 android:text="Name"
                 android:textAlignment="center"
                 android:textColor="#000"
@@ -45,8 +45,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:text="College Details"
-                android:textColor="@color/black"/>
+                android:background="@color/white_500"
+                android:text=" College Details"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
@@ -60,7 +61,7 @@
                 android:layout_width="197dp"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Admission Type " />
+                android:text=" Admission Type " />
 
             <TextView
                 android:id="@+id/u3"
@@ -68,7 +69,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/u1"
                 android:layout_alignParentStart="true"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -81,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Category" />
+                android:text=" Category" />
 
             <TextView
                 android:id="@+id/u4"
@@ -90,7 +91,7 @@
                 android:layout_below="@+id/u2"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/u3"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -103,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Academic Year" />
+                android:text=" Academic Year" />
 
             <TextView
                 android:id="@+id/u5"
@@ -111,7 +112,7 @@
                 android:layout_height="25dp"
                 android:layout_below="@+id/u3"
                 android:layout_alignParentStart="true"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -124,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Class" />
+                android:text=" Class" />
 
             <TextView
                 android:id="@+id/u6"
@@ -133,7 +134,7 @@
                 android:layout_below="@+id/u4"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/u5"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -146,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="UniqueID" />
+                android:text=" UniqueID" />
 
             <TextView
                 android:id="@+id/u7"
@@ -154,7 +155,7 @@
                 android:layout_height="25dp"
                 android:layout_below="@+id/u5"
                 android:layout_alignParentStart="true"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -166,8 +167,9 @@
                 android:id="@+id/textView145"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Personal Details"
-                android:textColor="@color/black"/>
+                android:background="@color/white_500"
+                android:text=" Personal Details"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -180,7 +182,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Email" />
+                android:text=" Email" />
 
             <TextView
                 android:id="@+id/u1"
@@ -188,7 +190,7 @@
                 android:layout_height="25dp"
                 android:layout_below="@+id/t1"
                 android:layout_alignParentStart="true"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -201,7 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Gender" />
+                android:text=" Gender" />
 
             <TextView
                 android:id="@+id/u9"
@@ -209,7 +211,7 @@
                 android:layout_height="25dp"
                 android:layout_below="@+id/u7"
                 android:layout_alignParentStart="true"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -222,7 +224,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Date of Birth" />
+                android:text=" Date of Birth" />
 
             <TextView
                 android:id="@+id/u8"
@@ -231,7 +233,7 @@
                 android:layout_below="@+id/u6"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/u7"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -244,7 +246,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Mobile Number" />
+                android:text=" Mobile Number" />
 
             <TextView
                 android:id="@+id/u2"
@@ -253,7 +255,7 @@
                 android:layout_below="@+id/t1"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/u1"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
         <LinearLayout
@@ -266,7 +268,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
-                android:text="Address" />
+                android:text=" Address" />
 
             <TextView
                 android:id="@+id/u10"
@@ -275,7 +277,7 @@
                 android:layout_below="@+id/u8"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@+id/u9"
-                android:text="TextView" />
+                android:text=" TextView" />
         </LinearLayout>
 
 

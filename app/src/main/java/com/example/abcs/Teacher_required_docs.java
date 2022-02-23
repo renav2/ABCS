@@ -54,7 +54,7 @@ public class Teacher_required_docs extends AppCompatActivity {
     }
 
     private void sendData() {
-        String txt_name = tename.getText().toString();
+        String txt_email = tename.getText().toString();
         String txt_roll = stroll.getText().toString();
         String txt_branch = branch.getSelectedItem().toString();
         String txt_class = clas.getSelectedItem().toString();
@@ -62,7 +62,7 @@ public class Teacher_required_docs extends AppCompatActivity {
         String txt_docdesc=docdesc.getText().toString();
         DocumentReference reference=fstore.collection("Teacher_required_docs").document(txt_roll);
         Map<String, String> v=new HashMap<>();
-        v.put("Teacher_Name",txt_name);
+        v.put("Email",txt_email);
         v.put("Roll_No",txt_roll);
         v.put("Branch",txt_branch);
         v.put("class",txt_class);

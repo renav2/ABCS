@@ -46,14 +46,15 @@ public class TeacherdownAdpt extends RecyclerView.Adapter<downPdfview> {
     public void onBindViewHolder(@NonNull final downPdfview myViewHolder, @SuppressLint("RecyclerView") final int i) {
 
         myViewHolder.mName.setText(downModels.get(i).getUid());
-        myViewHolder.mLink.setText(downModels.get(i).getUrl());
+        myViewHolder.mLink.setText(downModels.get(i).getUrl10());
+        myViewHolder.udid.setText(downModels.get(i).getEmail());
         bb=myViewHolder.mName.getText().toString();
         abc=myViewHolder.mLink.getText().toString();
         myViewHolder.mDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), abc, Toast.LENGTH_SHORT).show();
-                downloadFile(myViewHolder.mName.getContext(),downModels.get(i).getUrl(),".pdf",DIRECTORY_DOWNLOADS,abc.trim());
+                downloadFile(myViewHolder.mName.getContext(),downModels.get(i).getUid(),".pdf",DIRECTORY_DOWNLOADS,abc.trim());
 
                 //Toast.makeText(mainActivity,myViewHolder.mName.getText().toString() , Toast.LENGTH_SHORT).show();
             }

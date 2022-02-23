@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Teacher_permission_wise_sort">
+    tools:context=".Teacher_Doc_wise_sort">
 
     <LinearLayout
         android:layout_width="254dp"
@@ -103,7 +103,7 @@
                 android:id="@+id/textView181"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:text="YEAR WISE PERMISSION HISTORY"
+                android:text="YEAR WISE Document Required  History"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -194,7 +194,7 @@
                 android:layout_height="match_parent"
                 app:lottie_autoPlay="true"
                 app:lottie_loop="true"
-                app:lottie_rawRes="@raw/permission" />
+                app:lottie_rawRes="@raw/mobilepayment" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

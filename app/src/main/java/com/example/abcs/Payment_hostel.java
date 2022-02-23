@@ -140,10 +140,11 @@ auth=FirebaseAuth.getInstance();
                 mobileno = value.getString("mobile_no");
                 branch = value.getString("Branch");
              //   unicid = c_flag.getText().toString();
-                uplodpayment(name, email, mobileno, branch, _class,samount3,val2);
+                unicid=value.getString("assignno");
+                uplodpayment(name, email, mobileno, branch, _class,samount3,val2,unicid);
             }
 
-            private void uplodpayment(String name, String email, String mobileno, String branch, String _class,String amount,String va) {
+            private void uplodpayment(String name, String email, String mobileno, String branch, String _class,String amount,String va,String unicid) {
 //                String txt_installment = pay_instllmen.getSelectedItem().toString();
 //                String cc = totlef.getText().toString().replaceAll("[^0-9]", "");
 //                int Student_totalfees = Integer.parseInt(cc);
@@ -157,7 +158,7 @@ auth=FirebaseAuth.getInstance();
 
                 DocumentReference reference = fstore.collection("Final_paymnet_data").document(va);
                 Map<String, String> v = new HashMap<>();
-                //v.put("unicid_assignno", unicid);
+                v.put("unicid_assignno", unicid);
                 v.put("Name", name);
                 v.put("mobile_no", mobileno);
                 v.put("Email", email);

@@ -46,7 +46,7 @@ public class PaymentAdpt extends RecyclerView.Adapter<PaymentAdpt.myviewholder> 
         holder.e3.setText(datalist.get(position).getSection());
         holder.e4.setText(datalist.get(position).getPaymentid());
         holder.e5.setText(datalist.get(position).getPaidamount());
-        holder.e6.setText(datalist.get(position).getRemaning_fee());
+        //holder.e6.setText(datalist.get(position).getRemaning_fee());
         holder.e7.setText(datalist.get(position).getUnicid_assignno());
 
 
