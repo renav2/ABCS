@@ -18,7 +18,16 @@ Button clgpayrecord, examrecord,hostelrecord,supportpay;
         examrecord=findViewById(R.id.admin_examrecord);
         hostelrecord=findViewById(R.id.admin_hostel_record);
 
+supportpay=findViewById(R.id.button33);
 
+
+supportpay.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(Admin_paymentsection.this, Admin_support_pay_deptwise.class);
+        startActivity(intent);
+    }
+});
 
 clgpayrecord.setOnClickListener(new View.OnClickListener() {
     @Override
