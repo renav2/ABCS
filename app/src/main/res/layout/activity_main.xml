@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@drawable/bg"
     tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="-42dp"><![CDATA[
 
@@ -45,7 +46,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
                 android:layout_weight="1"
-                android:background="@drawable/text"
+                android:foreground="@drawable/border"
+                android:background="?attr/selectableItemBackground"
                 android:drawableStart="@drawable/ic_baseline_email_24"
                 android:drawablePadding="10dp"
                 android:ems="10"
@@ -80,11 +82,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="40dp"
                     android:layout_weight="1"
-                    android:background="@drawable/text"
                     android:drawableStart="@drawable/ic_lock_24"
                     android:drawablePadding="10dp"
                     android:ems="10"
+                    android:background="?attr/selectableItemBackground"
                     android:hint="Password"
+                    android:foreground="@drawable/underline"
                     android:inputType="textPassword"
                     android:minHeight="48dp"
                     android:paddingStart="10dp"
@@ -113,12 +116,13 @@
 
                 <Button
                     android:id="@+id/btn_login"
-                    android:layout_width="255dp"
+                    android:layout_width="320dp"
                     android:layout_height="48dp"
-                    android:layout_marginHorizontal="70dp"
+                    android:layout_marginHorizontal="40dp"
                     android:text="Log in"
+                    android:foreground="@drawable/border"
                     android:background="?attr/selectableItemBackground"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/purple_700" />
 
 
             </LinearLayout>

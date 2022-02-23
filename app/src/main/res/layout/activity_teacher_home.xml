@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/bg"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -13,7 +14,6 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/underline"
         android:layout_marginBottom="19dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -120,7 +120,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:background="@drawable/underline"
         android:layout_marginBottom="13dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -174,7 +173,7 @@
                 android:layout_marginStart="30dp"
                 android:text="Profile"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
                 />
 
             <TextView
@@ -182,7 +181,8 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="25dp"
                 android:text="Student"
-                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textColor="#44109F"
                 />
 
             <TextView
@@ -190,7 +190,8 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="25dp"
                 android:text="Payment"
-                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textColor="#44109F"
                 />
 
 
@@ -241,7 +242,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:text="Permission"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
                 />
 
             <TextView
@@ -249,7 +250,7 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="25dp"
                 android:text="Teacher Required Docs"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
                 />
 
             <TextView
@@ -257,7 +258,7 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="25dp"
                 android:text="Download Docs"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
                 />
 
 

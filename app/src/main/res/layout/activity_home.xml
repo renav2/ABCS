@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@drawable/bg"
     android:orientation="vertical">
 
     <TextView
@@ -161,7 +162,7 @@
                 android:layout_marginStart="30dp"
                 android:text="Notice    Board"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
                 />
 
             <TextView
@@ -169,7 +170,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="25dp"
                 android:text="Document"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
               />
 
             <TextView
@@ -177,7 +178,8 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="25dp"
                 android:text="Payment"
-                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textColor="#44109F"
              />
 
 
@@ -227,7 +229,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="30dp"
                 android:text="Profile"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
                 android:textAlignment="center"/>
 
             <TextView
@@ -235,7 +237,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="25dp"
                 android:text="Permission"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
               />
 
             <TextView
@@ -243,7 +245,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:text="Notification"
-                android:textColor="@color/black"
+                android:textColor="#44109F"
                 />
 
 
