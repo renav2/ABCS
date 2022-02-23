@@ -15,6 +15,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.List;
 
 public class Payment_home_page extends AppCompatActivity {
 private Button  clgpayjump;
@@ -23,10 +26,12 @@ private Button exam_pay,payhis;
 //TextView  txt_hospen,hospen,txt_clgpen;
 
 
+
 TextView studentf;
     FirebaseFirestore fstore;
     FirebaseAuth auth;
     String pro_userid;
+Button support;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,24 +44,44 @@ studentf=findViewById(R.id.textView7);
 payhis=findViewById(R.id.paymenthistory);
 
 studentf.setText(getIntent().getStringExtra("unicid"));
+support=findViewById(R.id.button52);
 
-
-
-
-
-        auth=FirebaseAuth.getInstance();
-
+support.setVisibility(View.INVISIBLE);
+auth=FirebaseAuth.getInstance();
 //txt_hospen=findViewById(R.id.textView16);
 //txt_clgpen=findViewById(R.id.textView14);
 //hospen=findViewById(R.id.tv_hostelpending);
 
-
+support.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent =new Intent(Payment_home_page.this,support_pay_userwise.class);
+        startActivity(intent);
+    }
+});
 
 
 
         // pro_userid = getIntent().getStringExtra("user_id_home");
         pro_userid=auth.getCurrentUser().getUid();
         fstore=FirebaseFirestore.getInstance();
+
+        fstore.collection("Support_payment_issue").whereEqualTo("Email",auth.getCurrentUser().getEmail()).get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        List<DocumentSnapshot> list=queryDocumentSnapshots.getDocuments();
+                        for(DocumentSnapshot d:list)
+                        {
+                           String issue=d.getString("game");
+                           if(issue.equals("YES")){
+                               support.setVisibility(View.VISIBLE);
+                           }
+                        }
+
+                    }
+                });
+
 
 
         new Handler().postDelayed(new Runnable() {

@@ -115,10 +115,6 @@ TextView ttl;
         ttl.setVisibility(View.INVISIBLE);
 
 
-
-
-
-
                 et1=findViewById(R.id.editTextTextMultiLine5);
                 enteramount=findViewById(R.id.editTextTextPersonName);
                 sub=findViewById(R.id.button18);
@@ -331,23 +327,35 @@ TextView ttl;
         paybutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-if(installments.getSelectedItem().toString().equals("Fourth")){
-    if(enteramount.getText().toString().equals(af3.getText().toString())){
-        samount=enteramount.getText().toString();
-        int amount = Math.round(Float.parseFloat(samount) * 100);
-        makepay(amount);
-    }else{
-        Toast.makeText(Support_pay.this, "This is  your last installment you need to pay "+af3.getText().toString(), Toast.LENGTH_SHORT).show();
-    }
+                    if(enteramount.getText().toString().equals("")){
+                        Toast.makeText(Support_pay.this, "Enter amount ", Toast.LENGTH_SHORT).show();
+                    }
+
+                    else {
+
+                        if (installments.getSelectedItem().toString().equals("Select Installment")) {
+                            Toast.makeText(Support_pay.this, "Select correct instllment ", Toast.LENGTH_SHORT).show();
+                        } else {
 
 
-}else{
-    samount=enteramount.getText().toString();
-    int amount = Math.round(Float.parseFloat(samount) * 100);
-    makepay(amount);
+                            if (installments.getSelectedItem().toString().equals("Fourth")) {
+                                if (enteramount.getText().toString().equals(af3.getText().toString())) {
+                                    samount = enteramount.getText().toString();
+                                    int amount = Math.round(Float.parseFloat(samount) * 100);
+                                    makepay(amount);
+                                } else {
+                                    Toast.makeText(Support_pay.this, "This is  your last installment you need to pay " + af3.getText().toString(), Toast.LENGTH_SHORT).show();
+                                }
 
-}
 
+                            } else {
+                                samount = enteramount.getText().toString();
+                                int amount = Math.round(Float.parseFloat(samount) * 100);
+                                makepay(amount);
+
+                            }
+                        }
+                    }
         //        Toast.makeText(Support_pay.this, b.getText().toString(), Toast.LENGTH_SHORT).show();
                 }
             });
@@ -490,10 +498,10 @@ if(installments.getSelectedItem().toString().equals("Fourth")){
 
                     }
                     if(installments.getSelectedItem().toString().equals("Third")){
-                        v.put("thirdinstrem",af3.getText().toString());
+                        v.put("secrem",af3.getText().toString());
 
                     }if(installments.getSelectedItem().toString().equals("Fourth")){
-                        v.put("fourthrem","0");
+                        v.put("secrem","0");
                     }
 
                     v.put("Section", "supportpay");

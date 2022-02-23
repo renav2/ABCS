@@ -17,14 +17,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
-            android:name=".Teacher_Doc_wise_sort"
+            android:name=".admin_supporpay_final_record"
             android:exported="false" />
         <activity
-            android:name=".A"
+            android:name=".Admin_supportpay_recod_classwise"
             android:exported="false" />
         <activity
-            android:name=".GenerateQRCodeActivity"
+            android:name=".support_pay_userwise"
             android:exported="false" />
+
+        <activity
+            android:name=".Admin_support_pay_deptwise"
+            android:exported="false" />
+
+
         <activity
             android:name=".Admin_profile"
             android:exported="false" />

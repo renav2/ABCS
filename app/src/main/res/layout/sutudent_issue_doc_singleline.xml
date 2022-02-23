@@ -42,7 +42,7 @@
                 android:orientation="horizontal"></LinearLayout>
 
             <TextView
-                android:id="@+id/mobile"
+                android:id="@+id/deptaaaaa"
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"
@@ -80,7 +80,7 @@
                 android:orientation="horizontal"></LinearLayout>
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/installment"
                 android:layout_width="218dp"
                 android:layout_height="wrap_content"
                 android:hint="installment no"

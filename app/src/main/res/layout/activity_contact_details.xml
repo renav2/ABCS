@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -7,8 +8,8 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="580dp"
+        android:layout_width="401dp"
+        android:layout_height="399dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -68,7 +69,7 @@
                 android:id="@+id/button29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                 android:text="call 02172329566"/>
+                android:text="call 02172329566" />
         </LinearLayout>
 
         <LinearLayout
@@ -115,20 +116,21 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="183dp"
-            android:orientation="vertical">
-
-
-            <com.google.android.gms.maps.MapView
-                android:id="@+id/mapView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:transitionName="@string/map_key"
-                tools:ignore="SpeakableTextPresentCheck" />
-        </LinearLayout>
-
     </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ani_social2"
+        android:layout_width="401dp"
+        android:layout_height="186dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.463"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/contactus" />
+
 
 </LinearLayout>

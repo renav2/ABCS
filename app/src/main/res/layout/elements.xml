@@ -24,7 +24,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/installment"
                     android:layout_width="157dp"
                     android:layout_height="13dp"
                     android:textSize="20dp"

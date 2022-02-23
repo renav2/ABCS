@@ -117,7 +117,7 @@
 
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/installment"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:hint="installment no"
@@ -144,7 +144,7 @@
 
 
                 <TextView
-                    android:id="@+id/mobile"
+                    android:id="@+id/deptaaaaa"
                     android:layout_width="172dp"
                     android:layout_height="wrap_content"
                     android:hint="installment no"

@@ -65,8 +65,8 @@ public class A_exam_adpt extends RecyclerView.Adapter<A_exam_adpt.myviewholder>
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
             t=itemView.findViewById(R.id.t);
-            name=itemView.findViewById(R.id.name);
-            rollno=itemView.findViewById(R.id.mobile);
+            name=itemView.findViewById(R.id.installment);
+            rollno=itemView.findViewById(R.id.deptaaaaa);
             fstore=FirebaseFirestore.getInstance();
            examform=itemView.findViewById(R.id.tv_ad_examformno);
             backlog=itemView.findViewById(R.id.tv_ad_backlog);

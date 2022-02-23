@@ -2,7 +2,6 @@ package com.example.abcs;
 
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -96,8 +95,8 @@ String aa;
             super(itemView);
             t1=itemView.findViewById(R.id.year);
             t2=itemView.findViewById(R.id.dept);
-            name=itemView.findViewById(R.id.name);
-            mobileno=itemView.findViewById(R.id.mobile);
+            name=itemView.findViewById(R.id.installment);
+            mobileno=itemView.findViewById(R.id.deptaaaaa);
             fstore=FirebaseFirestore.getInstance();
             assignno=itemView.findViewById(R.id.assignno);
             callnow=itemView.findViewById(R.id.button10);
