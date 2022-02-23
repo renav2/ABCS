@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Admin_paymentsection extends AppCompatActivity {
-Button clgpayrecord, examrecord,hostelrecord;
+Button clgpayrecord, examrecord,hostelrecord,supportpay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

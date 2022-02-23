@@ -61,9 +61,9 @@ public class Admin_Collage_payrecord_adpt extends RecyclerView.Adapter<Admin_Col
             t2=itemView.findViewById(R.id.dept);
             t3=itemView.findViewById(R.id.t3);
             t6=itemView.findViewById(R.id.t6);
-            name=itemView.findViewById(R.id.name);
-            remainpay=itemView.findViewById(R.id.tv_remainpay211);
-            installment=itemView.findViewById(R.id.mobile);
+            name=itemView.findViewById(R.id.installment);
+            remainpay=itemView.findViewById(R.id.remainpay__);
+            installment=itemView.findViewById(R.id.deptaaaaa);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             assignno=itemView.findViewById(R.id.assignno);

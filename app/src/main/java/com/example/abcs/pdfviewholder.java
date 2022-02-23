@@ -16,7 +16,7 @@ public class pdfviewholder extends RecyclerView.ViewHolder {
     public pdfviewholder(@NonNull View itemView) {
         super(itemView);
 
-        mName = itemView.findViewById(R.id.name);
+        mName = itemView.findViewById(R.id.installment);
         mLink = itemView.findViewById(R.id.link);
         mDownload = itemView.findViewById(R.id.down);
 

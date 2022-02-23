@@ -1,8 +1,6 @@
 //package com.example.abcs;
 //
-//public class S_his_adpt {
-//
-//
+//public class suport_adpt {
 //}
 package com.example.abcs;
 
@@ -17,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -24,43 +23,41 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class S_his_adpt extends RecyclerView.Adapter<S_his_adpt.myviewholder>
+public class suport_adpt extends RecyclerView.Adapter<suport_adpt.myviewholder>
 {
 
+    ArrayList<suport_data> datalist;
 
-
-
-
-    ArrayList<S_his_data> datalist;
-
-    public S_his_adpt(ArrayList<S_his_data> datalist) {
+    public suport_adpt(ArrayList<suport_data> datalist) {
         this.datalist = datalist;
     }
 
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.student_payment_history_singleline,parent,false);
+        View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.supportpay_single_row,parent,false);
         return new myviewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
-        holder.t1.setText(datalist.get(position).getSection());
-        holder.section.setText(datalist.get(position).getName());
-        holder.t3.setText(datalist.get(position).getPaymentid());
-        holder.t6.setText(datalist.get(position).getPaidamount());
-        holder.rem.setText(datalist.get(position).getRemaining_fees());
-        holder.dep.setText(datalist.get(position).getBranch());
-        holder.roll.setText(datalist.get(position).getInstallment());
-    //    holder.roll.setText(datalist.get(position).get);
+//       try{
+           holder.name.setText(datalist.get(position).getName());
+//        holder.t2.setText(datalist.get(position).getName());
+       //    holder.paymentid.setText(datalist.get(position).getPaymentid());
+           holder.amount.setText(datalist.get(position).getPaidamount());
+           holder.installmentsno.setText(datalist.get(position).getInstallment());
+           holder.dept.setText(datalist.get(position).getBranch());
+           holder.year.setText(datalist.get(position).get_class());
+        holder.remainpay.setText(datalist.get(position).getSecrem());
+   //     holder.paymentid.setText(datalist.get(position).getPaymentid());
+//       }catch (Exception e){}
 
 
-       // holder.t.setText(datalist.get(position).get_class());
-
-       // holder.id.setText(datalist.get(position).getBranch());
-     //   holder.permision_Status.setText(datalist.get(position));
-       // holder.techercomm.setText(datalist.get(position).getTechersidecomment());
+//        holder.t.setText(datalist.get(position).getComments());
+//        holder.id.setText(datalist.get(position).getPermissionid());
+//        holder.permision_Status.setText(datalist.get(position).getStatus());
+//        holder.techercomm.setText(datalist.get(position).getTechersidecomment());
 
     }
 
@@ -72,31 +69,35 @@ public class S_his_adpt extends RecyclerView.Adapter<S_his_adpt.myviewholder>
     class myviewholder extends RecyclerView.ViewHolder
     {
         // add here
-        TextView t1,section,t3,t6,t,id,techercomm,rem,dep,roll;
+//        TextView t1,t2,t3,t6,t,id,techercomm;
+
+        TextView invoice,name,amount,paymentid,dept,remainpay,installmentsno,year;
+
         // Button b1p,b2f;
         FirebaseFirestore fstore;
         TextView permision_Status;
-        View instalment;
-
 
 
 
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-            id=itemView.findViewById(R.id.textView57);
-            t1=itemView.findViewById(R.id.year);
-            section=itemView.findViewById(R.id.dept);
-            t3=itemView.findViewById(R.id.t3);
-            t6=itemView.findViewById(R.id.t6);
-            t=itemView.findViewById(R.id.t);
-instalment=itemView.findViewById(R.id.ins);
-
-            rem=itemView.findViewById(R.id.remainpay__);
-            dep=itemView.findViewById(R.id.deptaaaaa);
-            roll=itemView.findViewById(R.id.installment);
+            year=itemView.findViewById(R.id.year);
+            name=itemView.findViewById(R.id.dept);
+            amount=itemView.findViewById(R.id.t6);
+            paymentid=itemView.findViewById(R.id.t3);
+            dept=itemView.findViewById(R.id.deptaaaaa);
+            remainpay=itemView.findViewById(R.id.remainpay__);
+            installmentsno=itemView.findViewById(R.id.installment);
 
 
-            techercomm=itemView.findViewById(R.id.tech_comments);
+//            id=itemView.findViewById(R.id.textView57);
+//            t1=itemView.findViewById(R.id.year);
+//            t2=itemView.findViewById(R.id.dept);
+//            t3=itemView.findViewById(R.id.t3);
+//            t6=itemView.findViewById(R.id.t6);
+//
+//            t=itemView.findViewById(R.id.t);
+//            techercomm=itemView.findViewById(R.id.tech_comments);
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
@@ -104,25 +105,6 @@ instalment=itemView.findViewById(R.id.ins);
 
 
 
-//for status
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-
-                }
-            }, 100);
-//            b1p.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    uplod_permision_status_grant(t1,t2,t3,t,t6,id);
-//                }
-//            });
-//            b2f.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    uplod_permision_status_fail(t1,t2,t3,t,t6,id);
-//                }
-//            });
         }
         private void uplod_permision_status_fail(TextView t1, TextView t2, TextView t3, TextView t, TextView t6,TextView id) {
             String txtt1=t1.getText().toString();

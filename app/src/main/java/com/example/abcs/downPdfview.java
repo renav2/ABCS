@@ -17,7 +17,7 @@ public class downPdfview extends RecyclerView.ViewHolder {
     public  downPdfview(@NonNull View itemView) {
         super(itemView);
 
-        mName = itemView.findViewById(R.id.name);
+        mName = itemView.findViewById(R.id.installment);
         mLink = itemView.findViewById(R.id.link);
         udid  =itemView.findViewById(R.id.vuid);
         mDownload = itemView.findViewById(R.id.down);

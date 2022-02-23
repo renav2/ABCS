@@ -5,20 +5,14 @@
 package com.example.abcs;
 
 
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -72,8 +66,8 @@ TextView yr,date,assno,dept,name,doc;
             date=itemView.findViewById(R.id.date123131);
             assno=itemView.findViewById(R.id.assignno);
             dept=itemView.findViewById(R.id.dept);
-            name=itemView.findViewById(R.id.name);
-            doc=itemView.findViewById(R.id.mobile);
+            name=itemView.findViewById(R.id.installment);
+            doc=itemView.findViewById(R.id.deptaaaaa);
 
 
 

@@ -115,10 +115,6 @@ TextView ttl;
         ttl.setVisibility(View.INVISIBLE);
 
 
-
-
-
-
                 et1=findViewById(R.id.editTextTextMultiLine5);
                 enteramount=findViewById(R.id.editTextTextPersonName);
                 sub=findViewById(R.id.button18);
@@ -490,10 +486,10 @@ if(installments.getSelectedItem().toString().equals("Fourth")){
 
                     }
                     if(installments.getSelectedItem().toString().equals("Third")){
-                        v.put("thirdinstrem",af3.getText().toString());
+                        v.put("secrem",af3.getText().toString());
 
                     }if(installments.getSelectedItem().toString().equals("Fourth")){
-                        v.put("fourthrem","0");
+                        v.put("secrem","0");
                     }
 
                     v.put("Section", "supportpay");
