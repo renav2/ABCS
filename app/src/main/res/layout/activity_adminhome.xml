@@ -1,218 +1,578 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        tools:context=".RegisterActivity">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
+            android:id="@+id/linearLayout44"
+            android:layout_width="407dp"
+            android:layout_height="138dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout43"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/button31"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="horizontal">
 
-                android:background="@drawable/deleteuser"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/textView204"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Permission Section" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
-                android:background="@drawable/file"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:id="@+id/linearLayout38"
+                android:layout_width="409dp"
+                android:layout_height="61dp"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/adminper"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/department" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textView159"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
 
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="30dp"
-                android:text="Delete User"
-                android:textAlignment="center"
-                android:textColor="#44109F"
-                android:textSize="14sp"/>
+                <Button
+                    android:id="@+id/btn_viewallpay"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/user" />
 
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="30dp"
-                android:text="Get required document"
-                android:textColor="#44109F"
-                android:textSize="14sp" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textView182"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button34"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
-                android:background="@drawable/customer"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/textView205"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
 
-            <Button
-                android:id="@+id/button13"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
-                android:background="@drawable/notificationbell"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="30dp"
-                android:text="Support"
-                android:textAlignment="center"
-                android:textColor="#44109F"
-                android:textSize="14sp"/>
-
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="30dp"
-                android:textAlignment="center"
-                android:text="Notification Sections"
-                android:textColor="#44109F"
-                android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/textView206"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
+            android:id="@+id/linearLayout43"
+            android:layout_width="399dp"
+            android:layout_height="134dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout45"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout44">
 
-            <Button
-                android:id="@+id/button35"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
-                android:background="@drawable/settings"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/textView201"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Document Section" />
 
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
-                android:background="@drawable/mpay"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal"></LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/linearLayout41"
+                android:layout_width="403dp"
+                android:layout_height="61dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button41"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/file" />
+
+                <TextView
+                    android:id="@+id/textView186"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <Button
+                    android:id="@+id/button19"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/file" />
+
+                <TextView
+                    android:id="@+id/textView187"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView202"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout45"
+            android:layout_width="412dp"
+            android:layout_height="119dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout46"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout43">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView136sdas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Support" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout40"
+                android:layout_width="411dp"
+                android:layout_height="61dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button34"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/customer" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout46"
+            android:layout_width="403dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout47"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout45">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3cvx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Payment Section" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout39"
+                android:layout_width="411dp"
+                android:layout_height="61dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/admin_hostel_record"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/hostel" />
+
+                <TextView
+                    android:id="@+id/textView183"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <Button
+                    android:id="@+id/admin_examrecord"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/exam" />
+
+                <TextView
+                    android:id="@+id/textView184"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <Button
+                    android:id="@+id/button33"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/ic_outline_payments_24" />
+
+                <TextView
+                    android:id="@+id/textView185"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <Button
+                    android:id="@+id/Admin_clg_record"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/ic_baseline_account_balance_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView127gdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView128zsxcz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView129cxvbcx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView134qS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
+            android:id="@+id/linearLayout47"
+            android:layout_width="400dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout42"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout46">
 
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="30dp"
-                android:text="Admin Tool"
-                android:textAlignment="center"
-                android:textColor="#44109F"
-                android:textSize="14sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="30dp"
-                android:text="Payment Sections"
-                android:textAlignment="center"
-                android:textColor="#44109F"
-                android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/textView199"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notification Section" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout37"
+                android:layout_width="411dp"
+                android:layout_height="61dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/notificationbell" />
+
+                <TextView
+                    android:id="@+id/textView134"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <Button
+                    android:id="@+id/button51"
+                    android:layout_width="60dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="Button" />
+
+                <TextView
+                    android:id="@+id/textView136"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView197"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView198"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="10dp"
+            android:id="@+id/linearLayout42"
+            android:layout_width="403dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout47">
 
-            <Button
-                android:id="@+id/adminper"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="40dp"
-                android:background="@drawable/department"
-                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_viewallpay"
-                android:layout_width="90dp"
-                android:layout_height="80dp"
-                android:background="@drawable/user"
-                android:layout_marginStart="90dp"
-                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/textView194"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Admin tool" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout32"
+                    android:layout_width="411dp"
+                    android:layout_height="61dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button42"
+                        android:layout_width="60dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/deleteuser" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/button38"
+                        android:layout_width="60dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/adduser" />
+
+                    <TextView
+                        android:id="@+id/textView127"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_width="60dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/sadd" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView188"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView189"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView190"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout33"
+                    android:layout_width="411dp"
+                    android:layout_height="61dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button31"
+                        android:layout_width="60dp"
+                        android:layout_height="56dp"
+
+                        android:background="@drawable/deleteuser" />
+
+                    <TextView
+                        android:id="@+id/textView128"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/button26"
+                        android:layout_width="60dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/sdelete" />
+
+                    <TextView
+                        android:id="@+id/textView129"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView191"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView192"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView193"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="30dp"
-                android:text="Departments"
-                android:textAlignment="center"
-                android:textColor="#44109F"
-                android:textSize="14sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="30dp"
-                android:text="All Permission"
-                android:textAlignment="center"
-                android:textColor="#44109F"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+</ScrollView>
