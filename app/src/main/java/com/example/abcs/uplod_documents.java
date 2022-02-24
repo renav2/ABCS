@@ -21,7 +21,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class uplod_documents extends AppCompatActivity {
 Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
-TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
+//TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
 TextView supportui;
 String s;
 
@@ -44,21 +44,21 @@ Button feesturct;
         //textview
         supportui=findViewById(R.id.textView121);
         feesturct=findViewById(R.id.button43);
-        tu10 =findViewById(R.id.tenup);
-        td10 =findViewById(R.id.tendown);
-        tu12=findViewById(R.id.up12);
-        td12 =findViewById(R.id.down12);
-        tupdip =findViewById(R.id.updip);
-        tdowndip=findViewById(R.id.downdip);
-        tupfe=findViewById(R.id.upfe);
-        tdownfe=findViewById(R.id.downdfe);
-        tupse=findViewById(R.id.upse);
-        tdownse=findViewById(R.id.downse);
-        tupte =findViewById(R.id.upte);
-        tdownte=findViewById(R.id.downte);
-        tupbe  =findViewById(R.id.upbe);
-        tddownbe=findViewById(R.id.downbe);
-        tupcustom=findViewById(R.id.upcostom);
+       // tu10 =findViewById(R.id.tenup);
+       // td10 =findViewById(R.id.tendown);
+       // tu12=findViewById(R.id.up12);
+       // td12 =findViewById(R.id.down12);
+      //  tupdip =findViewById(R.id.updip);
+      //  tdowndip=findViewById(R.id.downdip);
+       // tupfe=findViewById(R.id.upfe);
+      //  tdownfe=findViewById(R.id.downdfe);
+     //   tupse=findViewById(R.id.upse);
+       // tdownse=findViewById(R.id.downse);
+        //tupte =findViewById(R.id.upte);
+        //tdownte=findViewById(R.id.downte);
+        //tupbe  =findViewById(R.id.upbe);
+        //tddownbe=findViewById(R.id.downbe);
+        //tupcustom=findViewById(R.id.upcostom);
        // tdowncoston=findViewById(R.id.downcustom);
 
         //buttons
@@ -84,7 +84,7 @@ Button feesturct;
       //  Button u10,d10,u12,d12,updip,downdip,upfe,downfe,upse,downse,upte,downte,upbe,ddownbe,upcustom,downcoston;
        //TextView tu10,td10,tu12,td12,tupdip,tdowndip,tupfe,tdownfe,tupse,tdownse,tupte,tdownte,tupbe,tddownbe,tupcustom,tdowncoston;
 
-       td10.setVisibility(View.INVISIBLE);
+    /*   td10.setVisibility(View.INVISIBLE);
         td12.setVisibility(View.INVISIBLE);
         tdowndip.setVisibility(View.INVISIBLE);
         tdownfe.setVisibility(View.INVISIBLE);
@@ -99,7 +99,7 @@ Button feesturct;
         downse.setVisibility(View.INVISIBLE);
         downte.setVisibility(View.INVISIBLE);
         ddownbe.setVisibility(View.INVISIBLE);
-     //   downcoston.setVisibility(View.INVISIBLE);
+     //   downcoston.setVisibility(View.INVISIBLE);*/
 
         supportui.setText(getIntent().getStringExtra("assignno1"));
 
@@ -140,7 +140,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
             public void onSuccess(Uri uri) {
                 _10=uri.toString();
               //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
-                td10.setText(_10);
+               // td10.setText(_10);
                 d10.setVisibility(View.VISIBLE);
                 u10.setVisibility(View.INVISIBLE);
             }
@@ -152,7 +152,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
             public void onSuccess(Uri uri) {
                 _12=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
-                td12.setText(_12);
+               // td12.setText(_12);
                 d12.setVisibility(View.VISIBLE);
                 u12.setVisibility(View.INVISIBLE);
             }
@@ -181,7 +181,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
             public void onSuccess(Uri uri) {
                 _4=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
-                tddownbe.setText(_4);
+               // tddownbe.setText(_4);
                 ddownbe.setVisibility(View.VISIBLE);
                 upbe.setVisibility(View.INVISIBLE);
 
@@ -194,7 +194,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
             public void onSuccess(Uri uri) {
                 _3=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
-                tdownte.setText(_3);
+             //   tdownte.setText(_3);
 
                 downte.setVisibility(View.VISIBLE);
                 upte.setVisibility(View.INVISIBLE);
@@ -208,7 +208,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
             public void onSuccess(Uri uri) {
                 _2=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
-                tdownse.setText(_2);
+              //  tdownse.setText(_2);
 
 
                 downse.setVisibility(View.VISIBLE);
@@ -224,7 +224,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
             public void onSuccess(Uri uri) {
                 _1=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
-                tdownfe.setText(_1);
+              //  tdownfe.setText(_1);
                 downfe.setVisibility(View.VISIBLE);
                 upfe.setVisibility(View.INVISIBLE);
             }
@@ -238,7 +238,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
             public void onSuccess(Uri uri) {
                 _dip=uri.toString();
                 //  Toast.makeText(uplod_documents.this, aaaaaaa, Toast.LENGTH_SHORT).show();
-                tdowndip.setText(_dip);
+            //    tdowndip.setText(_dip);
                 downdip.setVisibility(View.VISIBLE);
                 updip.setVisibility(View.INVISIBLE);
 
