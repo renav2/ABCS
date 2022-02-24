@@ -9,10 +9,10 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:background="@drawable/underline"
-        android:layout_marginTop="5dp"
+        android:layout_height="101dp"
         android:layout_marginLeft="5dp"
-        android:layout_height="101dp">
+        android:layout_marginTop="5dp"
+        android:background="@drawable/underline">
 
 
         <Button
@@ -62,6 +62,12 @@
             android:text="mobile no"
             android:textColor="@color/black"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
     </RelativeLayout>
 

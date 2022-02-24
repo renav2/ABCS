@@ -301,6 +301,7 @@ DocumentReference reference=fstore.collection("demo").document(passss);
         v.put("_Class",txt_yearn);
         v.put("Academic_year",txt_acdy);
         v.put("Password",text_password);
+        v.put("firebaseuid",auth.getCurrentUser().getUid());
         v.put("collagepayemtfees____","0");
 
 

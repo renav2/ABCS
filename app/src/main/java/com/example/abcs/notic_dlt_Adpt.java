@@ -1,4 +1,9 @@
 package com.example.abcs;
+//
+//public class notic_dlt_Adpt {
+//
+//}
+
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,53 +22,54 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 
 
-public class UserDataAdpt extends RecyclerView.Adapter<UserDataAdpt.myviewholder> {
-    ArrayList<UserData> datalist;
-FirebaseFirestore fstore;
-    String id;
+public class notic_dlt_Adpt extends RecyclerView.Adapter<notic_dlt_Adpt.myviewholder> {
+    ArrayList<notice_dlt_data> datalist;
+    FirebaseFirestore fstore;
+String bb;
 
-    public UserDataAdpt(ArrayList<UserData> datalist) {
+
+    public notic_dlt_Adpt(ArrayList<notice_dlt_data> datalist) {
         this.datalist = datalist;
     }
 
     @NonNull
     @Override
     public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.userdata_singlerow, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_notice_delete_singlerow, parent, false);
         return new myviewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
+       holder.tvv1.setText(datalist.get(position).getSubject());
 
-        holder.tvv1.setText(datalist.get(position).getName());
-        holder.tvv2.setText(datalist.get(position).getAssignno());
-        holder.tvv3.setText(datalist.get(position).getMobile_no());
-        holder.firbaid.setText(datalist.get(position).getFirebaseuid());
-holder.firbaid.setVisibility(View.INVISIBLE);
-        id=holder.firbaid.getText().toString();
-        holder.delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fstore=FirebaseFirestore.getInstance();
-                fstore.collection("demo").document(id)
-                        .delete()
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Toast.makeText(v.getContext(), " Delete successfully ", Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
+       bb=holder.tvv1.getText().toString();
 
-                            }
-                        });
+       holder.delete.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               fstore=FirebaseFirestore.getInstance();
+               fstore.collection("Notices").document(bb)
+                       .delete()
+                       .addOnSuccessListener(new OnSuccessListener<Void>() {
+                           @Override
+                           public void onSuccess(Void aVoid) {
+                               Toast.makeText(v.getContext(), bb+" Delete successfully ", Toast.LENGTH_SHORT).show();
+                           }
+                       })
+                       .addOnFailureListener(new OnFailureListener() {
+                           @Override
+                           public void onFailure(@NonNull Exception e) {
+
+                           }
+                       });
 
 
-            }
-        });
+           }
+       });
+//        holder.tvv2.setText(datalist.get(position).getAssignno());
+//        holder.tvv3.setText(datalist.get(position).getMobile_no());
+//holde
 
     }
 
@@ -74,7 +80,7 @@ holder.firbaid.setVisibility(View.INVISIBLE);
 
     class myviewholder extends RecyclerView.ViewHolder {
         // add here
-        TextView tvv1, tvv2, tvv3, t6, t, id, techercomm,firbaid;
+        TextView tvv1;
         // Button b1p,b2f;
         Button delete;
         FirebaseFirestore fstore;
@@ -84,13 +90,10 @@ holder.firbaid.setVisibility(View.INVISIBLE);
         public myviewholder(@NonNull View itemView) {
             super(itemView);
 
-            tvv1 = itemView.findViewById(R.id.year);
-            tvv2 = itemView.findViewById(R.id.dept);
-            tvv3 = itemView.findViewById(R.id.textView58);
-            delete=itemView.findViewById(R.id.btn_fail);
-            firbaid=itemView.findViewById(R.id.textView54);
+            tvv1 = itemView.findViewById(R.id.deptaaaaa);
 
-fstore=FirebaseFirestore.getInstance();
+            delete=itemView.findViewById(R.id.button37);
+
 
 
 //            delete.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +116,7 @@ fstore=FirebaseFirestore.getInstance();
 //                            });
 //                }
 //            });
-//
+
 
 
 
