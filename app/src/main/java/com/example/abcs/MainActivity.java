@@ -259,6 +259,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 error.setVisibility(View.VISIBLE);
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        error.setVisibility(View.INVISIBLE);
+                    }
+                }, 100);
+
 //                Toast.makeText(MainActivity.this, "login Fail", Toast.LENGTH_SHORT).show();
 //                Toast.makeText(MainActivity.this, "Enter Correct Username And Password", Toast.LENGTH_SHORT).show();
             }

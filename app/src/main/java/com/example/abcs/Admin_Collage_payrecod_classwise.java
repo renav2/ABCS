@@ -31,6 +31,16 @@ public class Admin_Collage_payrecod_classwise extends AppCompatActivity {
         cvil.setText(getIntent().getStringExtra("deptcvil"));
         mech.setText(getIntent().getStringExtra("deptmech"));
 
+
+
+        comp.setVisibility(View.INVISIBLE);
+        it.setVisibility(View.INVISIBLE);
+        entc.setVisibility(View.INVISIBLE);
+        cvil.setVisibility(View.INVISIBLE);
+        mech.setVisibility(View.INVISIBLE);
+
+
+
         _1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

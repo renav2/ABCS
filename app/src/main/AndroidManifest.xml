@@ -128,16 +128,7 @@
             android:name=".userwiser_permision_fetch"
             android:exported="false" />
         <activity
-            android:name=".AdminViewApplication"
-            android:exported="false" />
-        <activity
             android:name=".AdminApproveApplications"
-            android:exported="false" />
-        <activity
-            android:name=".AdminPermissionHome"
-            android:exported="false" />
-        <activity
-            android:name=".PreviousApplications"
             android:exported="false" />
         <activity
             android:name=".CreateApplication"
@@ -171,9 +162,6 @@
             android:exported="false" />
         <activity
             android:name=".downlod_notice"
-            android:exported="false" />
-        <activity
-            android:name=".ViewNotifications"
             android:exported="false" />
         <activity
             android:name=".AdminNotificationHome"
