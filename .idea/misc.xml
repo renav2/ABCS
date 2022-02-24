@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/ABCS/app/src/main/res/drawable/border.xml" value="0.1805" />
         <entry key="..\:/ABCS/app/src/main/res/drawable/button_border.xml" value="0.189" />
+        <entry key="..\:/ABCS/app/src/main/res/drawable/ic_baseline_cloud_upload_24.xml" value="0.1995" />
         <entry key="..\:/ABCS/app/src/main/res/drawable/ic_email_24.xml" value="0.1805" />
         <entry key="..\:/ABCS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20185185185185187" />
         <entry key="..\:/ABCS/app/src/main/res/drawable/ic_lock_24.xml" value="0.1805" />
@@ -88,7 +89,7 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_uplodpdf.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_user_permision_ask.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_user_permision_status.xml" value="0.2222222222222222" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_uplod_documents.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_uplod_documents.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_uplod_teacher_reqdoc.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_user_permision_home.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_userwiser_permision_fetch.xml" value="0.19583333333333333" />
@@ -221,16 +222,12 @@
         <entry key="..\:/aa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aa/app/src/main/res/menu/searchmenu.xml" value="0.1" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_account_home.xml" value="0.1" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_payrecod_deptwise.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_paymentsection.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_solver.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_teachers_reg.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_tool_home.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_tool_noticedelete.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_view_application.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up10.xml" value="0.16" />
@@ -254,14 +251,12 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_uplod_teacher_reqdoc.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_userwiser_permision_fetch.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_view_notifications.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/admin_notice_delete_singlerow.xml" value="0.536" />
         <entry key="..\:/aaa/app/src/main/res/layout/admin_search_.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/elements.xml" value="0.264" />
         <entry key="..\:/aaa/app/src/main/res/layout/psinglerow.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/singlerow.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/singlerownotice.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/singlerowpermission.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/sutudent_issue_doc_singleline.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/userdata_singlerow.xml" value="0.536" />
         <entry key="..\:/aaa/app/src/main/res/menu/main_menu.xml" value="0.25" />
       </map>
