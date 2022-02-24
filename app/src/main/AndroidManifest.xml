@@ -20,6 +20,9 @@
             android:name=".Admin_tool_noticedelete"
             android:exported="false" />
         <activity
+            android:name=".A"
+            android:exported="false" />
+        <activity
             android:name=".admin_supporpay_final_record"
             android:exported="false" />
         <activity

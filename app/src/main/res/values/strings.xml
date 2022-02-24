@@ -84,6 +84,13 @@
         <item>SC/NT</item>
     </string-array>
 
+    <string-array name="authority">
+        <item>Select Authority</item>
+        <item>Admin Section</item>
+        <item>Account Section</item>
+        <item>Teacher Section</item>
+
+    </string-array>
 
     <string-array name="ayear">
         <item>Academic year</item>

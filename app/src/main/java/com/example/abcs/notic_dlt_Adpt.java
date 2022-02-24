@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class notic_dlt_Adpt extends RecyclerView.Adapter<notic_dlt_Adpt.myviewholder> {
     ArrayList<notice_dlt_data> datalist;
     FirebaseFirestore fstore;
-String bb;
+String bb,aa;
 
 
     public notic_dlt_Adpt(ArrayList<notice_dlt_data> datalist) {
@@ -42,8 +42,11 @@ String bb;
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
        holder.tvv1.setText(datalist.get(position).getSubject());
+       holder.tvv2.setText(datalist.get(position).getAuthority());
 
+       aa=holder.tvv2.getText().toString();
        bb=holder.tvv1.getText().toString();
+
 
        holder.delete.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -80,7 +83,7 @@ String bb;
 
     class myviewholder extends RecyclerView.ViewHolder {
         // add here
-        TextView tvv1;
+        TextView tvv1,tvv2;
         // Button b1p,b2f;
         Button delete;
         FirebaseFirestore fstore;
@@ -91,7 +94,7 @@ String bb;
             super(itemView);
 
             tvv1 = itemView.findViewById(R.id.deptaaaaa);
-
+            tvv2 = itemView.findViewById(R.id.isca);
             delete=itemView.findViewById(R.id.button37);
 
 

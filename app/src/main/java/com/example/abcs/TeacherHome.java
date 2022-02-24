@@ -26,7 +26,7 @@ import com.squareup.picasso.Picasso;
 
 public class TeacherHome extends AppCompatActivity {
 
-    Button eprofile,techerspecific_per,students,permission,payment,techredocs,techdocsshow,qr;
+    Button eprofile,techerspecific_per,students,permission,payment,techredocs,techdocsshow,qr,upload,view;
     TextView email,dept,desg;
     StorageReference storageReference;
 FirebaseFirestore fstore;
@@ -39,6 +39,8 @@ ImageView img;
         setContentView(R.layout.activity_teacher_home);
 fstore=FirebaseFirestore.getInstance();
 
+        upload=findViewById(R.id.notupload);
+        view=findViewById(R.id.notview);
 
         img=findViewById(R.id.imagete);
         email=findViewById(R.id.textView89);
@@ -93,7 +95,23 @@ fstore=FirebaseFirestore.getInstance();
 //                startActivity(intent1);
 //            }
 //        });
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(TeacherHome.this,AdminNotificationHome.class);
+                startActivity(intent1);
 
+            }
+        });
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(TeacherHome.this,Admin_tool_noticedelete.class);
+                startActivity(intent1);
+
+            }
+        });
         try{
             techredocs.setOnClickListener(new View.OnClickListener() {
                 @Override

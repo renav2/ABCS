@@ -203,8 +203,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
             android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
             android:orientation="horizontal">
 
 
@@ -212,23 +212,22 @@
                 android:id="@+id/button43"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/user"
                 android:layout_marginStart="30dp"
-                />
+                android:background="@drawable/user" />
+
             <Button
                 android:id="@+id/button49"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/copy"
                 android:layout_marginStart="35dp"
-                />
+                android:background="@drawable/copy" />
+
             <Button
                 android:id="@+id/button50"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/file"
                 android:layout_marginStart="35dp"
-                />
+                android:background="@drawable/file" />
 
         </LinearLayout>
 
@@ -266,6 +265,25 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/notupload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Notice Upload " />
+
+            <Button
+                android:id="@+id/notview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Notice View" />
+        </LinearLayout>
 
 
     </LinearLayout>

@@ -113,11 +113,12 @@
                 android:textColor="@color/black"
                 android:text="Issuing Athority" />
 
-            <EditText
+            <Spinner
                 android:id="@+id/aut"
                 android:layout_width="239dp"
                 android:layout_height="match_parent"
                 android:ems="10"
+                android:entries="@array/authority"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:text="" />

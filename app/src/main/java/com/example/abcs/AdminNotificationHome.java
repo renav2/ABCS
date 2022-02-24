@@ -28,9 +28,9 @@ import java.util.Locale;
 import java.util.Map;
 
 public class AdminNotificationHome extends AppCompatActivity {
-    EditText date1,sub,high,descn,aunm;
+    EditText date1,sub,high,descn;
     Switch sw1;
-    Spinner timelog;
+    Spinner timelog,sauth;
     String txt_time;
     TextView tt,url;
 
@@ -39,6 +39,8 @@ public class AdminNotificationHome extends AppCompatActivity {
     // FirebaseAuth fa= FirebaseAuth.getInstance();
     //  String upid=fs.getCurrentUser().getUid();
     Button n, uploddoc;
+    String abc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +49,7 @@ public class AdminNotificationHome extends AppCompatActivity {
             sub= findViewById(R.id.nsub);
             descn= findViewById(R.id.ndesc);
             high=  findViewById(R.id.hi);
-            aunm= findViewById(R.id.aut);
+            sauth= findViewById(R.id.aut);
             n=findViewById(R.id.nb);
 url=findViewById(R.id.textView81);
 
@@ -60,7 +62,11 @@ url=findViewById(R.id.textView81);
         date1.setText(getIntent().getStringExtra("pdf_date"));
         descn.setText(getIntent().getStringExtra("pdf_desc"));
         high.setText(getIntent().getStringExtra("pdf_highlight"));
-        aunm.setText(getIntent().getStringExtra("pdf_authrity"));
+        //sauth.setText(getIntent().getStringExtra("pdf_authrity"));
+
+        abc=sauth.getSelectedItem().toString();
+
+        //sauth.setSelected(getIntent().getStringExtra("abc"));
 
         //tt.setText(getIntent().getStringExtra("pdf_time"));
 
@@ -80,7 +86,7 @@ url=findViewById(R.id.textView81);
                     intent.putExtra("pdf_sub",sub.getText().toString());
                     intent.putExtra("pdf_desc",descn.getText().toString());
                     intent.putExtra("pdf_highlight",high.getText().toString());
-                    intent.putExtra("pdf_authrity",aunm.getText().toString());
+                    intent.putExtra("pdf_authrity",abc.toString());
                     //intent.putExtra("home_pass",_pass);
                     intent.putExtra("pdf_date",date1.getText().toString());
                     startActivity(intent);
@@ -100,7 +106,7 @@ url=findViewById(R.id.textView81);
                     String s_sub= sub.getText().toString();
                     String s_desc= descn.getText().toString();
                     String s_hi= high.getText().toString();
-                    String au = aunm.getText().toString();
+                    String au = sauth.getSelectedItem().toString();
                     String pdfurl=url.getText().toString();
                     if(TextUtils.isEmpty(s_sub) || TextUtils.isEmpty(s_desc)|| TextUtils.isEmpty(s_dt)|| TextUtils.isEmpty(s_hi) || TextUtils.isEmpty(au))
                     {

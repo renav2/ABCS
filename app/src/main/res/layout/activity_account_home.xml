@@ -11,8 +11,6 @@
         android:id="@+id/textView154"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="18dp"
         android:text="TextView"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout35"
@@ -22,11 +20,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout35"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="349dp"
+        android:layout_height="601dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="22dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,21 +38,21 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/upnot"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="50dp"
-                />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:paddingStart="20dp"
                 android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:text="Upload Notice"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>
-
 
 
         <LinearLayout
@@ -67,17 +64,18 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/donot"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="50dp"
-                 />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:paddingStart="20dp"
                 android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
+                android:text=" Delete Notice"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -95,15 +93,15 @@
                 android:id="@+id/pay"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/mpay" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:paddingStart="20dp"
                 android:layout_marginTop="10dp"
+                android:paddingStart="20dp"
                 android:text="Payments"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -121,15 +119,15 @@
                 android:id="@+id/doc"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/file" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:paddingStart="30dp"
                 android:layout_marginTop="10dp"
+                android:paddingStart="30dp"
                 android:text="Issue Documents"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -147,16 +145,16 @@
                 android:id="@+id/pro"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/account" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_marginTop="10dp"
                 android:paddingStart="30dp"
                 android:text="Profile"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
         </LinearLayout>
