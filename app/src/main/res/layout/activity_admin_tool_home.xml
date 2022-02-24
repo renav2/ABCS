@@ -18,34 +18,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout18"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
+        <LinearLayout
+            android:id="@+id/linearLayout18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout3">
 
-        <Button
-            android:id="@+id/button38"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="60dp"
-            android:background="@drawable/adduser" />
+            <Button
+                android:id="@+id/button38"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/adduser" />
 
-        <Button
-            android:id="@+id/button26"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="100dp"
-            android:background="@drawable/sdelete" />
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="100dp"
+                android:background="@drawable/sdelete" />
 
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
+        <LinearLayout
         android:id="@+id/linearLayout27"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

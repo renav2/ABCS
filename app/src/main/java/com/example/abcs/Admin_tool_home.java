@@ -15,14 +15,11 @@ public class Admin_tool_home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_tool_home);
-issuedoc=findViewById(R.id.button41);
-acc_del=findViewById(R.id.button26);
+        issuedoc=findViewById(R.id.button41);
+        acc_del=findViewById(R.id.button26);
         teacher_add=findViewById(R.id.button38);
-
         dlt_notice=findViewById(R.id.button51);
-
         teacher_delete=findViewById(R.id.button42);
-
         acc_log=findViewById(R.id.login);
 
 
