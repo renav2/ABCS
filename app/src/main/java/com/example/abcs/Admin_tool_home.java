@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Admin_tool_home extends AppCompatActivity {
 
-    Button teacher_add,teacher_delete,teacher_remove,acc_log,issuedoc,acc_del;
+    Button teacher_add,teacher_delete,teacher_remove,acc_log,issuedoc,acc_del,dlt_notice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +18,24 @@ public class Admin_tool_home extends AppCompatActivity {
 issuedoc=findViewById(R.id.button41);
 acc_del=findViewById(R.id.button26);
         teacher_add=findViewById(R.id.button38);
+
+        dlt_notice=findViewById(R.id.button51);
+
         teacher_delete=findViewById(R.id.button42);
-        teacher_remove=findViewById(R.id.button41);
+
         acc_log=findViewById(R.id.login);
+
+
+
+        dlt_notice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Admin_tool_home.this,Admin_tool_noticedelete.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         acc_del.setOnClickListener(new View.OnClickListener() {
             @Override

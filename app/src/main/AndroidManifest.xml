@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".Admin_tool_noticedelete"
+            android:exported="false" />
+        <activity
             android:name=".admin_supporpay_final_record"
             android:exported="false" />
         <activity
@@ -25,12 +28,9 @@
         <activity
             android:name=".support_pay_userwise"
             android:exported="false" />
-
         <activity
             android:name=".Admin_support_pay_deptwise"
             android:exported="false" />
-
-
         <activity
             android:name=".Admin_profile"
             android:exported="false" />
@@ -52,7 +52,6 @@
         <activity
             android:name=".Teacher_Doc_wise_sort"
             android:exported="false" />
-
         <activity
             android:name=".Feesructure_issue"
             android:exported="false" />
