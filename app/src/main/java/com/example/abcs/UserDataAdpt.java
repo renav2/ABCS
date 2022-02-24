@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,8 +20,7 @@ import java.util.ArrayList;
 public class UserDataAdpt extends RecyclerView.Adapter<UserDataAdpt.myviewholder> {
     ArrayList<UserData> datalist;
 FirebaseFirestore fstore;
-
-
+    String id;
 
     public UserDataAdpt(ArrayList<UserData> datalist) {
         this.datalist = datalist;
@@ -35,10 +35,35 @@ FirebaseFirestore fstore;
 
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
+
         holder.tvv1.setText(datalist.get(position).getName());
         holder.tvv2.setText(datalist.get(position).getAssignno());
         holder.tvv3.setText(datalist.get(position).getMobile_no());
+        holder.firbaid.setText(datalist.get(position).getFirebaseuid());
+holder.firbaid.setVisibility(View.INVISIBLE);
+        id=holder.firbaid.getText().toString();
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fstore=FirebaseFirestore.getInstance();
+                fstore.collection("demo").document(id)
+                        .delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(v.getContext(), " Delete successfully ", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
 
+                            }
+                        });
+
+
+            }
+        });
 
     }
 
@@ -49,7 +74,7 @@ FirebaseFirestore fstore;
 
     class myviewholder extends RecyclerView.ViewHolder {
         // add here
-        TextView tvv1, tvv2, tvv3, t6, t, id, techercomm;
+        TextView tvv1, tvv2, tvv3, t6, t, id, techercomm,firbaid;
         // Button b1p,b2f;
         Button delete;
         FirebaseFirestore fstore;
@@ -63,30 +88,32 @@ FirebaseFirestore fstore;
             tvv2 = itemView.findViewById(R.id.dept);
             tvv3 = itemView.findViewById(R.id.textView58);
             delete=itemView.findViewById(R.id.btn_fail);
+            firbaid=itemView.findViewById(R.id.textView54);
+
 fstore=FirebaseFirestore.getInstance();
 
 
-            delete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //delete user
-                    fstore.collection("demo").document("4J17vMShwsYYFBTQbJpoEIc8Wvd2")
-                            .delete()
-                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-
-                                }
-                            });
-                }
-            });
-
+//            delete.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    //delete user
+//                    fstore.collection("demo").document("4J17vMShwsYYFBTQbJpoEIc8Wvd2")
+//                            .delete()
+//                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                @Override
+//                                public void onSuccess(Void aVoid) {
+//
+//                                }
+//                            })
+//                            .addOnFailureListener(new OnFailureListener() {
+//                                @Override
+//                                public void onFailure(@NonNull Exception e) {
+//
+//                                }
+//                            });
+//                }
+//            });
+//
 
 
 

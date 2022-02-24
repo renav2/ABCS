@@ -1,9 +1,21 @@
 package com.example.abcs;
 
 public class UserData {
-    String Name,mobile_no,assignno;
+    String Name,mobile_no,assignno,firebaseuid;
     UserData(){
 
+    }
+
+    public String getFirebaseuid() {
+        return firebaseuid;
+    }
+
+    public void setFirebaseuid(String firebaseuid) {
+        this.firebaseuid = firebaseuid;
+    }
+
+    public UserData(String firebaseuid) {
+        this.firebaseuid = firebaseuid;
     }
 
     public UserData(String name, String mobile_no, String assignno) {
