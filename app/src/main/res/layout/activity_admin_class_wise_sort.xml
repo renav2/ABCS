@@ -7,8 +7,8 @@
     tools:context=".Admin_class_wise_sort">
 
     <LinearLayout
-        android:layout_width="231dp"
-        android:layout_height="591dp"
+        android:layout_width="259dp"
+        android:layout_height="521dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="108dp"
@@ -26,63 +26,71 @@
 
             <TextView
                 android:id="@+id/textView99"
-                android:layout_width="94dp"
+                android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/textView103"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView" />
 
             <TextView
                 android:id="@+id/textView102"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textView101"
-                android:layout_width="99dp"
-                android:layout_height="51dp"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textView104"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView" />
 
             <Button
                 android:id="@+id/_1st"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+             android:backgroundTint="@color/white_500"
+                android:textColor="@color/black"
                 android:text="1st" />
+
+            <TextView
+                android:id="@+id/textView101"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
             <Button
                 android:id="@+id/button21"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white_500"
+                android:textColor="@color/black"
                 android:text="2ndyr" />
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
             <Button
                 android:id="@+id/button22"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white_500"
+                android:textColor="@color/black"
                 android:text="3rd" />
-
-            <Button
-                android:id="@+id/button23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4th" />
 
             <TextView
                 android:id="@+id/teacher_dept"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/white_500"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="4th" />
 
             <TextView
                 android:id="@+id/teacher_desg"
@@ -95,6 +103,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Email" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ani_social3"
+                android:layout_width="match_parent"
+                android:layout_height="157dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintVertical_bias="0.463"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/searchforemployee" />
+
+
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

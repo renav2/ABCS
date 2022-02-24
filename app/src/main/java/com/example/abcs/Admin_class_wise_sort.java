@@ -31,16 +31,34 @@ techemail=findViewById(R.id.teacher_email);
     _2=findViewById(R.id.button21);
     _3=findViewById(R.id.button22);
     _4=findViewById(R.id.button23);
+
+    //comp, it,entc,cvil,mech,techdept,techdesg,techemail;
+
+
+
     comp.setText(getIntent().getStringExtra("deptcomp"));
     it.setText(getIntent().getStringExtra("deptit"));
     entc.setText(getIntent().getStringExtra("deptentc"));
     cvil.setText(getIntent().getStringExtra("deptcvil"));
     mech.setText(getIntent().getStringExtra("deptmech"));
-
     //test code for teacher
     techdept.setText(getIntent().getStringExtra("Department"));
     techdesg.setText(getIntent().getStringExtra("Designation"));
     techemail.setText(getIntent().getStringExtra("Email"));
+
+
+
+    comp.setVisibility(View.INVISIBLE);
+    it.setVisibility(View.INVISIBLE);
+    entc.setVisibility(View.INVISIBLE);
+    cvil.setVisibility(View.INVISIBLE);
+    mech.setVisibility(View.INVISIBLE);
+    techdept.setVisibility(View.INVISIBLE);
+    techdesg.setVisibility(View.INVISIBLE);
+    techemail.setVisibility(View.INVISIBLE);
+    //.setVisibility(View.INVISIBLE);
+
+
 
 
     _1.setOnClickListener(new View.OnClickListener() {
