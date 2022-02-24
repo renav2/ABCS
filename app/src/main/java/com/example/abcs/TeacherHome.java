@@ -4,26 +4,34 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 public class TeacherHome extends AppCompatActivity {
 
     Button eprofile,techerspecific_per,students,permission,payment,techredocs,techdocsshow,qr;
     TextView email,dept,desg;
-
+    StorageReference storageReference;
 FirebaseFirestore fstore;
 FirebaseAuth auth;
+ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +40,7 @@ FirebaseAuth auth;
 fstore=FirebaseFirestore.getInstance();
 
 
-
+        img=findViewById(R.id.imagete);
         email=findViewById(R.id.textView89);
         dept=findViewById(R.id.textView123);
         desg=findViewById(R.id.textView92);
@@ -44,6 +52,20 @@ fstore=FirebaseFirestore.getInstance();
         techdocsshow=findViewById(R.id.button50);
 
         email.setText(getIntent().getStringExtra("Teacher"));
+
+        //profile pic
+        storageReference= FirebaseStorage.getInstance().getReference();
+        //currunt user id store in r  & for sring purpose
+        FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
+        StorageReference profileRef= storageReference.child("Teachers/"+email.getText().toString()+"/Profile.jpg");
+        profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).into(img);
+            }
+        });
+
+
 
         DocumentReference documentReference=fstore.collection("tdemo").document(email.getText().toString());
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {

@@ -8,41 +8,57 @@
 
     <LinearLayout
         android:id="@+id/linearLayout24"
-        android:layout_width="382dp"
-        android:layout_height="630dp"
+        android:layout_width="367dp"
+        android:layout_height="580dp"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="127dp"
+        android:layout_marginBottom="23dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView87"
                 android:layout_width="match_parent"
-                android:layout_height="63dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white_500"
                 android:text="Document Required"
                 android:textAlignment="center"
                 android:textSize="25dp"
                 android:textStyle="bold" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="268dp"
-                android:background="@drawable/underline"
-                android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="202dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/underline"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView110"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white_500"
                 android:text="Teacher Detail"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -53,55 +69,68 @@
                 android:id="@+id/tname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:ems="10"
                 android:hint=" Teacher Name"
-                android:textSize="18sp"
                 android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editTextTextMultiLine2"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:textSize="18sp"
-                android:hint=" requred document from student"
-                android:inputType="textMultiLine" />
+                android:hint=" Required document from student"
+                android:inputType="textMultiLine"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editTextTextMultiLine4"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:textSize="18sp"
-                android:hint=" document description"
-                android:inputType="textMultiLine" />
-            </LinearLayout>
+                android:hint=" Document description"
+                android:inputType="textMultiLine"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="268dp"
-            android:background="@drawable/underline"
+            android:layout_height="198dp"
             android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/underline"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView111"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white_500"
                 android:text="Student Detail"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
                 tools:text="Student Detail" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -122,6 +151,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -144,35 +175,40 @@
                 android:id="@+id/srollno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:ems="10"
                 android:hint=" Roll No"
-                android:textSize="18sp"
                 android:inputType="textPersonName"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textSize="18sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="83dp"
-                android:orientation="horizontal">
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView113"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/docs"
-                    android:layout_width="182dp"
-                    android:layout_height="50dp"
-                    android:text="Button" />
+            <TextView
+                android:id="@+id/textView113"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
-                <TextView
-                    android:id="@+id/textView114"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/docs"
+                android:layout_width="182dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:text="Get Document" />
+
+            <TextView
+                android:id="@+id/textView114"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
         </LinearLayout>
 
     </LinearLayout>

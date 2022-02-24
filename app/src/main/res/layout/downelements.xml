@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
     <androidx.cardview.widget.CardView
-        android:layout_width="336dp"
-        android:layout_height="85dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardElevation="7dp">
 
@@ -19,33 +14,60 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="92dp"
-                android:layout_height="match_parent"
+                android:layout_width="228dp"
+                android:layout_height="81dp"
                 android:layout_weight=".75"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/link"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="20dp"
                     android:textAlignment="center"
                     android:textSize="15dp"
                     android:visibility="invisible" />
 
-                <TextView
-                    android:id="@+id/installment"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="20dp"
-                    android:textStyle="normal"
-                    android:visibility="visible" />
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/vuid"
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="94dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="  Student" />
+
+                    <TextView
+                        android:id="@+id/installment"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="29dp"
-                    android:text=" " />
+                    android:layout_height="22dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="  Teacher" />
+
+                    <TextView
+                        android:id="@+id/vuid"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="  "
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -54,13 +76,15 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="17dp"
                 android:layout_weight=".25"
-                android:background="@drawable/ic_baseline_arrow_circle_down_24"
+                android:background="@drawable/down"
                 android:elevation="7dp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-</LinearLayout>

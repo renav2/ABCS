@@ -86,7 +86,7 @@
                     android:ems="10"
                     android:background="?attr/selectableItemBackground"
                     android:hint="Password"
-                    android:foreground="@drawable/underline"
+                    android:foreground="@drawable/border"
                     android:inputType="textPassword"
                     android:minHeight="48dp"
                     android:paddingStart="10dp"
