@@ -250,7 +250,7 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_supportpay_recod_classwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_teachers_reg.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_view_application.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.264" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_adminhome.xml" value="0.4" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_collage_payrecod_sorted_adpt.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_contact_details.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_doc_up10.xml" value="0.16" />
@@ -293,7 +293,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
