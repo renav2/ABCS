@@ -1,7 +1,19 @@
 package com.example.abcs;
 
 public class A_hos_data {
-    String paymentid,paidamount,mobile_no,branch,_class,Section,Name,Email,remaining_fees,installment;
+    String paymentid,paidamount,mobile_no,branch,_class,Section,Name,Email,remaining_fees,installment,unicid_assignno;
+
+    public A_hos_data(String unicid_assignno) {
+        this.unicid_assignno = unicid_assignno;
+    }
+
+    public String getUnicid_assignno() {
+        return unicid_assignno;
+    }
+
+    public void setUnicid_assignno(String unicid_assignno) {
+        this.unicid_assignno = unicid_assignno;
+    }
 
     public A_hos_data(String paymentid, String paidamount, String mobile_no, String branch, String _class, String section, String name, String email, String remaining_fees, String installment) {
         this.paymentid = paymentid;

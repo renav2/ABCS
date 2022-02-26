@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/button36"
-        android:layout_width="263dp"
-        android:layout_height="285dp"
+        android:layout_width="293dp"
+        android:layout_height="61dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="221dp"
         android:text="payment rekated issue"

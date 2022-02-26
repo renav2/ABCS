@@ -10,64 +10,100 @@
         android:id="@+id/linearLayoutCompat"
         android:layout_width="wrap_content"
         android:layout_height="436dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="95dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout56">
 
         <Button
             android:id="@+id/button3"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="300dp"
             android:layout_height="80dp"
-            android:backgroundTint="#AFB7E3"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:text="Information Technology"
             android:layout_marginTop="20dp"
-            android:textSize="18sp" />
+            android:backgroundTint="@color/white_500"
+            android:text="Information Technology"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+
+            />
 
         <Button
             android:id="@+id/button6"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:backgroundTint="#AFB7E3"
-            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-            android:text="Mechanical"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white_500"
+            android:text="Mechanical"
+
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/button8"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:text="Computer"
-            android:backgroundTint="#AFB7E3"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white_500"
+            android:text="Computer"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/button16"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:text="Entc"
-            android:backgroundTint="#AFB7E3"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white_500"
+            android:text="Entc"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/button17"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:text="Civil"
-            android:backgroundTint="#AFB7E3"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white_500"
+            android:text="Civil"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:id="@+id/linearLayout56"
+        android:layout_width="409dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView136"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Select Department"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

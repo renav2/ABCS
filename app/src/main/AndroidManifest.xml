@@ -136,9 +136,6 @@
             android:name=".AdminApproveApplications"
             android:exported="false" />
         <activity
-            android:name=".CreateApplication"
-            android:exported="false" />
-        <activity
             android:name=".doc_up_diploma"
             android:exported="false" />
         <activity

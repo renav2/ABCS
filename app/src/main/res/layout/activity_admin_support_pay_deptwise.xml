@@ -20,9 +20,10 @@
             android:id="@+id/button3"
             android:layout_width="300dp"
             android:layout_height="80dp"
-            android:backgroundTint="#AFB7E3"
+            android:backgroundTint="@color/white_500"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:text="Information Technology"
+            android:textColor="@color/black"
             android:layout_marginTop="20dp"
             android:textSize="18sp" />
 
@@ -30,9 +31,10 @@
             android:id="@+id/button6"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:backgroundTint="#AFB7E3"
+            android:backgroundTint="@color/white_500"
             style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
             android:text="Mechanical"
+            android:textColor="@color/black"
             android:layout_marginTop="20dp"
             android:textSize="18sp" />
 
@@ -41,7 +43,8 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:text="Computer"
-            android:backgroundTint="#AFB7E3"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white_500"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_marginTop="20dp"
             android:textSize="18sp" />
@@ -51,7 +54,8 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:text="Entc"
-            android:backgroundTint="#AFB7E3"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white_500"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_marginTop="20dp"
             android:textSize="18sp" />
@@ -61,7 +65,8 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:text="Civil"
-            android:backgroundTint="#AFB7E3"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white_500"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_marginTop="20dp"
             android:textSize="18sp" />

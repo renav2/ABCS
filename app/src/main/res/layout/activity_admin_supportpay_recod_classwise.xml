@@ -7,8 +7,8 @@
     tools:context=".Admin_supportpay_recod_classwise">
 
     <LinearLayout
-        android:layout_width="165dp"
-        android:layout_height="507dp"
+        android:layout_width="289dp"
+        android:layout_height="473dp"
         android:layout_marginStart="141dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="106dp"
@@ -51,26 +51,34 @@
 
         <Button
             android:id="@+id/_1st"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1st" />
+            android:backgroundTint="@color/white_500"
+            android:text="1st Year"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/button21"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2ndyr" />
+            android:backgroundTint="@color/white_500"
+            android:text="2nd Year"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/button22"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3rd" />
+            android:backgroundTint="@color/white_500"
+            android:text="3rd Year"
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/button23"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="4th" />
+            android:backgroundTint="@color/white_500"
+            android:text="4th Year"
+            android:textColor="@color/black" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

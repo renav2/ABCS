@@ -36,8 +36,8 @@ public class A_hos_adpt extends RecyclerView.Adapter<A_hos_adpt.myviewholder>
         holder.t2.setText(datalist.get(position).getBranch());
         holder.t3.setText(datalist.get(position).getPaymentid());
         holder.t6.setText(datalist.get(position).getPaidamount());
-      //  holder.rollno.setText(datalist.get(position).getPaymentid());
-     //  holder.t.setText(datalist.get(position).getRemaining_fees());
+
+        holder.rollno.setText(datalist.get(position).getUnicid_assignno());
         holder.name.setText(datalist.get(position).getName());
     }
     @Override

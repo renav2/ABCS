@@ -15,6 +15,7 @@ public class College_pay extends AppCompatActivity {
     Button show;
     Spinner a,b,c,d;
     TextView unifee,medicfee,deptfee,tituionfee,totlef,mmmm;
+Button b1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class College_pay extends AppCompatActivity {
         b=findViewById(R.id.cadcat);
         c=findViewById(R.id.cbr);
         d=findViewById(R.id.ccls);
+
 
         mmmm=findViewById(R.id.textView152);
 
@@ -4526,6 +4528,19 @@ public class College_pay extends AppCompatActivity {
 
             }
         });
+
+
+//        String pro_dept=c.getSelectedItem().toString();
+//        //String pro_collagename=documentSnapshot.getString("College_name");
+//        String pro_admisontype=a.getSelectedItem().toString();
+//        String pro_categary=b.getSelectedItem().toString();
+//        String pro_class=d.getSelectedItem().toString();
+//
+//        unifee,medicfee,deptfee,tituionfee,totlef,mmmm;
+
+
+
+
 
     }
 }
