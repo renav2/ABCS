@@ -7,151 +7,234 @@
     tools:context=".Account_Home">
 
 
-    <TextView
-        android:id="@+id/textView154"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout90"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:visibility="invisible"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="29dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="25dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout91"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/textView154"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:paddingStart="10dp"
+                android:text="TextView"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout35"
-        android:layout_width="349dp"
-        android:layout_height="601dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout51"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView154">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout90">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="@drawable/underline"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/border"
             android:backgroundTint="@color/white_500"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/upnot"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp" />
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/folder" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:paddingStart="20dp"
+                android:layout_height="60dp"
+                android:paddingStart="10dp"
                 android:text="Upload Notice"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
-
-        <Button
-            android:id="@+id/fee"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:text="Fee Structure " />
+            android:layout_marginStart="10dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/white_500"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fee"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/receipt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Fee Structure "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout51">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/underline"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/border"
             android:backgroundTint="@color/white_500"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/donot"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp" />
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/delete" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:paddingStart="20dp"
-                android:text=" Delete Notice"
+                android:layout_height="50dp"
+                android:paddingStart="10dp"
+                android:text="Delete Notice"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/underline"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/border"
             android:backgroundTint="@color/white_500"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/pay"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="50dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/mpay" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:paddingStart="20dp"
                 android:text="Payments"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout35">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/underline"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/border"
             android:backgroundTint="@color/white_500"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/doc"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="40dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/file" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:paddingStart="30dp"
-                android:text="Issue Documents"
+                android:layout_height="70dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="Issue         Documents"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/underline"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/border"
             android:backgroundTint="@color/white_500"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/pro"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="50dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/account" />
 
@@ -159,10 +242,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
-                android:paddingStart="30dp"
+                android:paddingStart="10dp"
                 android:text="Profile"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 

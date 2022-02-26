@@ -6,23 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".Admin_document_issued">
 
-    <Button
-        android:id="@+id/button47"
-        android:layout_width="178dp"
-        android:layout_height="52dp"
+    <LinearLayout
+        android:id="@+id/linearLayout55"
+        android:layout_width="395dp"
+        android:layout_height="215dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="74dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="24dp"
-        android:text="bonafide issue"
-        app:layout_constraintBottom_toTopOf="@+id/button48"
-        app:layout_constraintEnd_toEndOf="@+id/button48" />
-
-    <Button
-        android:id="@+id/button48"
-        android:layout_width="180dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="218dp"
-        android:layout_marginEnd="130dp"
-        android:text="feestucture issue"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout53"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button47"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/file" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bonafide issue"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout54"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button48"
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/receipt" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="fee structure issue"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
