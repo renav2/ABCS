@@ -214,11 +214,12 @@
                         android:layout_weight="1"
                         android:background="#a2a2a2"
                         android:padding="10dp"
-                        android:textColor="@color/black"
                         android:paddingStart="20dp"
                         android:text=" Fee Status"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
                         android:textStyle="bold"
-                        android:textSize="16sp" />
+                        android:visibility="invisible" />
 
                     <TextView
                         android:id="@+id/tv_exam_feestatus"
@@ -228,9 +229,10 @@
                         android:background="#d0d0d0"
                         android:paddingStart="20dp"
                         android:text="TextView"
-                        android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
 
                 </LinearLayout>
 
