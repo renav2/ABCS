@@ -91,7 +91,7 @@ Button feesturct;
         tdownse.setVisibility(View.INVISIBLE);
         tdownte.setVisibility(View.INVISIBLE);
         tddownbe.setVisibility(View.INVISIBLE);
-       // tdowncoston.setVisibility(View.INVISIBLE);
+       // tdowncoston.setVisibility(View.INVISIBLE);*/
         d10.setVisibility(View.INVISIBLE);
         d12.setVisibility(View.INVISIBLE);
         downdip.setVisibility(View.INVISIBLE);
@@ -99,7 +99,7 @@ Button feesturct;
         downse.setVisibility(View.INVISIBLE);
         downte.setVisibility(View.INVISIBLE);
         ddownbe.setVisibility(View.INVISIBLE);
-     //   downcoston.setVisibility(View.INVISIBLE);*/
+     //   downcoston.setVisibility(View.INVISIBLE);
 
         supportui.setText(getIntent().getStringExtra("assignno1"));
 

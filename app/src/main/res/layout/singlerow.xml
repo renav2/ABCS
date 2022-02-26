@@ -171,7 +171,7 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:id="@+id/editTextTextMultiLine"
+                android:id="@+id/tech_comments"
                 android:layout_width="263dp"
                 android:layout_height="match_parent"
                 android:ems="10"

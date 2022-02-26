@@ -135,7 +135,7 @@
             android:text="TextView" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/tech_comments"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_alignParentTop="true"

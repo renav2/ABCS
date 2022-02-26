@@ -8,8 +8,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/ani_grant2"
-        android:layout_width="145dp"
-        android:layout_height="182dp"
+        android:layout_width="193dp"
+        android:layout_height="190dp"
 
         android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.0"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/boy_que" />
+        app:lottie_rawRes="@raw/status" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/ani_grant"
@@ -38,25 +38,50 @@
 
     <LinearLayout
         android:id="@+id/linearLayout13"
-        android:layout_width="362dp"
-        android:layout_height="224dp"
+        android:layout_width="360dp"
+        android:layout_height="260dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
         <Button
             android:id="@+id/cbt"
-            android:layout_width="357dp"
-            android:layout_height="107dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/white_500"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             android:text="Ask for permission" />
 
-        <Button
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
             android:id="@+id/pbt"
-            android:layout_width="356dp"
-            android:layout_height="113dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"
+                android:backgroundTint="@color/white_500"
+                android:textColor="@color/black"
             android:text="permission status" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

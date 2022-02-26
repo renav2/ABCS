@@ -77,7 +77,7 @@ public class PermissionAdpt extends RecyclerView.Adapter<PermissionAdpt.myviewho
             fstore=FirebaseFirestore.getInstance();
             permision_Status=itemView.findViewById(R.id.textView50);
             String permision_Status1;
-            techeret=itemView.findViewById(R.id.editTextTextMultiLine);
+            techeret=itemView.findViewById(R.id.tech_comments);
 
 
             b1p.setVisibility(View.VISIBLE);
