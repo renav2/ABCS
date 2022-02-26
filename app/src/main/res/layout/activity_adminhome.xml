@@ -16,7 +16,7 @@
         <LinearLayout
             android:id="@+id/linearLayout44"
             android:layout_width="355dp"
-            android:layout_height="133dp"
+            android:layout_height="140dp"
             android:layout_marginStart="22dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
@@ -48,58 +48,54 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout38"
-                android:layout_width="409dp"
-                android:layout_height="61dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/adminper"
-                    android:layout_width="58dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/department"
                     android:backgroundTint="#FAF5F8" />
 
-                <TextView
-                    android:id="@+id/textView159"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/btn_viewallpay"
                     android:layout_width="60dp"
-                    android:layout_height="56dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="60dp"
                     android:background="@drawable/user"
                     android:backgroundTint="@color/white_500" />
 
-                <TextView
-                    android:id="@+id/textView182"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="31dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView205"
-                    android:layout_width="54dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_weight="1"
-                    android:text="   Sorted" />
+               <TextView
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+                   android:text="Sorted"
+                   android:layout_marginStart="5dp"
+                   android:textSize="14sp"
+                   android:textAlignment="center"
+                   android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/textView206"
-                    android:layout_width="2dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="  United " />
+                    android:text="United"
+                    android:layout_marginStart="40dp"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"/>
+
+
             </LinearLayout>
         </LinearLayout>
 
@@ -107,7 +103,7 @@
         <LinearLayout
             android:id="@+id/linearLayout43"
             android:layout_width="355dp"
-            android:layout_height="133dp"
+            android:layout_height="140dp"
             android:layout_marginStart="22dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
@@ -134,35 +130,28 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout41"
-                android:layout_width="403dp"
+                android:layout_width="match_parent"
                 android:layout_height="61dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button41"
                     android:layout_width="60dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/file" />
 
-                <TextView
-                    android:id="@+id/textView186"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
 
                 <Button
                     android:id="@+id/button19"
                     android:layout_width="60dp"
-                    android:layout_height="48dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="60dp"
                     android:background="@drawable/file" />
 
-                <TextView
-                    android:id="@+id/textView187"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -172,17 +161,23 @@
 
                 <TextView
                     android:id="@+id/textView202"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="   Issued  " />
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="5dp"
+                    android:text="Issued" />
 
                 <TextView
                     android:id="@+id/textView207"
-                    android:layout_width="424dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="                    Required  " />
+                    android:layout_marginStart="40dp"
+                    android:text="Required"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -190,7 +185,7 @@
         <LinearLayout
             android:id="@+id/linearLayout45"
             android:layout_width="355dp"
-            android:layout_height="133dp"
+            android:layout_height="140dp"
             android:layout_marginStart="22dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
@@ -225,14 +220,14 @@
                 android:id="@+id/linearLayout40"
                 android:layout_width="411dp"
                 android:layout_height="61dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button34"
                     android:layout_width="60dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/customer" />
             </LinearLayout>
 
@@ -243,17 +238,20 @@
 
                 <TextView
                     android:id="@+id/textView200"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="  Payment " />
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="center"
+                    android:text="Payment" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout46"
             android:layout_width="355dp"
-            android:layout_height="233dp"
+            android:layout_height="280dp"
             android:layout_marginStart="22dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
@@ -289,45 +287,34 @@
                 android:id="@+id/linearLayout39"
                 android:layout_width="411dp"
                 android:layout_height="61dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/admin_hostel_record"
                     android:layout_width="60dp"
-                    android:layout_height="56dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/hostel" />
 
-                <TextView
-                    android:id="@+id/textView183"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
 
                 <Button
                     android:id="@+id/admin_examrecord"
                     android:layout_width="60dp"
-                    android:layout_height="56dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="60dp"
                     android:background="@drawable/exam" />
 
-                <TextView
-                    android:id="@+id/textView184"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
 
                 <Button
                     android:id="@+id/button33"
                     android:layout_width="60dp"
-                    android:layout_height="56dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="60dp"
                     android:background="@drawable/ic_outline_payments_24" />
 
-                <TextView
-                    android:id="@+id/textView203"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -338,24 +325,32 @@
 
                 <TextView
                     android:id="@+id/textView127gdf"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="  Hostel" />
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:text="Hostel" />
 
                 <TextView
                     android:id="@+id/textView129cxvbcx"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="                         Exams" />
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:layout_marginStart="40dp"
+                    android:textColor="@color/black"
+                    android:text="Exams" />
 
                 <TextView
                     android:id="@+id/textView134qS"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="                         Concession" />
+                   android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="40dp"
+                    android:textAlignment="center"
+                    android:text="Concession" />
             </LinearLayout>
 
             <LinearLayout
@@ -370,29 +365,29 @@
 
                 <Button
                     android:id="@+id/Admin_clg_record"
-                    android:layout_width="58dp"
-                    android:layout_height="61dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/ic_baseline_account_balance_24" />
 
-                <TextView
-                    android:id="@+id/textView195"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView185"
-                android:layout_width="match_parent"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="  Collage" />
+                android:layout_marginStart="5dp"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="Collage" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout47"
             android:layout_width="355dp"
-            android:layout_height="133dp"
+            android:layout_height="140dp"
             android:layout_marginStart="22dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
@@ -426,37 +421,22 @@
                 android:id="@+id/linearLayout37"
                 android:layout_width="411dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button13"
                     android:layout_width="60dp"
-                    android:layout_height="56dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="15dp"
                     android:background="@drawable/notificationbell" />
-
-                <TextView
-                    android:id="@+id/textView134"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/button51"
                     android:layout_width="60dp"
                     android:layout_height="53dp"
-                    android:background="@drawable/deletemessage" />
-
-                <TextView
-                    android:id="@+id/textView208"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:id="@+id/textView136"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_marginStart="60dp"
+                    android:background="@drawable/rubbish" />
 
 
             </LinearLayout>
@@ -468,23 +448,25 @@
 
                 <TextView
                     android:id="@+id/textView197"
-                    android:layout_width="72dp"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="  Send" />
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginStart="5dp"
+                    android:textAlignment="center"
+                    android:text="Send" />
 
                 <TextView
                     android:id="@+id/textView209"
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="   Delete" />
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:layout_marginStart="40dp"
+                    android:textColor="@color/black"
+                    android:text="Delete" />
 
-                <TextView
-                    android:id="@+id/textView198"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -537,44 +519,33 @@
                     android:id="@+id/linearLayout32"
                     android:layout_width="411dp"
                     android:layout_height="61dp"
+                    android:layout_marginTop="15dp"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/button42"
                         android:layout_width="60dp"
-                        android:layout_height="56dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="15dp"
                         android:background="@drawable/deleteuser" />
 
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
 
                     <Button
                         android:id="@+id/button38"
                         android:layout_width="60dp"
-                        android:layout_height="56dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="60dp"
                         android:background="@drawable/adduser" />
 
-                    <TextView
-                        android:id="@+id/textView127"
-                        android:layout_width="22dp"
-                        android:layout_height="24dp"
-                        android:layout_weight="1" />
 
                     <Button
                         android:id="@+id/login"
                         android:layout_width="60dp"
-                        android:layout_height="56dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="60dp"
                         android:background="@drawable/sadd" />
 
-                    <TextView
-                        android:id="@+id/textView196"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+
 
                 </LinearLayout>
 
@@ -585,24 +556,33 @@
 
                     <TextView
                         android:id="@+id/textView188"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="   Teacher -" />
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginStart="1dp"
+                        android:textAlignment="center"
+                        android:text="Teacher -" />
 
                     <TextView
                         android:id="@+id/textView189"
-                        android:layout_width="109dp"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="         Teacher +" />
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:text="Teacher +" />
 
                     <TextView
                         android:id="@+id/textView190"
-                        android:layout_width="70dp"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="     Accountant  +" />
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginStart="15dp"
+                        android:textAlignment="center"
+                        android:text="Accountant+" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -614,48 +594,45 @@
                     <Button
                         android:id="@+id/button31"
                         android:layout_width="60dp"
-                        android:layout_height="56dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="15dp"
                         android:background="@drawable/deleteuser" />
 
-                    <TextView
-                        android:id="@+id/textView128"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
 
                     <Button
                         android:id="@+id/button26"
                         android:layout_width="60dp"
-                        android:layout_height="56dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="60dp"
                         android:background="@drawable/sdelete" />
 
-                    <TextView
-                        android:id="@+id/textView129"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="24dp"
+                    android:layout_height="30dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView191"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="    User -" />
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/black"
+                        android:text="User -" />
 
                     <TextView
                         android:id="@+id/textView192"
-                        android:layout_width="wrap_content"
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="                       Accountant -" />
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginStart="40dp"
+                        android:textAlignment="center"
+                        android:text="Accountant -" />
 
                 </LinearLayout>
 
