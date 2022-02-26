@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".College_pay">
+
+    <LinearLayout
+        android:id="@+id/linearLayout48"
+        android:layout_width="363dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView193"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="College Fee Structure"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="349dp"
+            android:layout_height="210dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/cadtype"
+                android:textAlignment="center"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:entries="@array/adtype" />
+
+            <Spinner
+                android:id="@+id/cadcat"
+                android:textAlignment="center"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:entries="@array/ctype" />
+
+            <Spinner
+                android:id="@+id/cbr"
+                android:textAlignment="center"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:entries="@array/brname" />
+
+            <Spinner
+                android:id="@+id/ccls"
+                android:textAlignment="center"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:entries="@array/cyear" />
+
+            <Button
+                android:id="@+id/cshow"
+                android:layout_marginStart="65dp"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:text="Fee Structure" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout49"
+        android:layout_width="359dp"
+        android:layout_height="352dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout48">
+
+        <LinearLayout
+            android:id="@+id/linearLayout25"
+            android:layout_width="336dp"
+            android:layout_height="281dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="231dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#a2a2a2"
+                    android:text="Sections"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview36"
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:background="#d0d0d0"
+                    android:text=" Amount"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview32"
+                    android:layout_width="148dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#a2a2a2"
+                    android:text=" University Fee"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_rem_alrdypay"
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:background="#d0d0d0"
+                    android:paddingStart="15dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="216dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#a2a2a2"
+                    android:text=" Medical fees"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_rem_remain"
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:background="#d0d0d0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="184dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#a2a2a2"
+                    android:text=" Department fees"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_deppartmentfees"
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:background="#d0d0d0"
+                    android:paddingStart="20dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="172dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#a2a2a2"
+                    android:text=" Tuition fees "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_totalfees"
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:background="#d0d0d0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="172dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#a2a2a2"
+                    android:text=" TOTAL"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_totalfees1"
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:background="#d0d0d0"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView152"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="TextView"
+                tools:visibility="invisible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button35"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Share" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

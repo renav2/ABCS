@@ -49,7 +49,7 @@ public class Admin_teachers_reg extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_teachers_reg);
+        setContentView(R.layout.activity_admin_account_reg);
 
         fstore=FirebaseFirestore.getInstance();
         storageReference= FirebaseStorage.getInstance().getReference();

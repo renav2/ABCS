@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Account_Home extends AppCompatActivity {
 
-    Button profile,payment,document,del,up;
+    Button profile,payment,document,del,up,FEE;
     TextView mail;
 
     @Override
@@ -20,6 +20,7 @@ public class Account_Home extends AppCompatActivity {
 
         mail=findViewById(R.id.textView154);
 
+        FEE=findViewById(R.id.fee);
         del=findViewById(R.id.donot);
         up=findViewById(R.id.upnot);
         profile=findViewById(R.id.pro);
@@ -27,6 +28,15 @@ public class Account_Home extends AppCompatActivity {
         document=findViewById(R.id.doc);
 
         mail.setText(getIntent().getStringExtra("Teacher_email"));
+
+        FEE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Account_Home.this,College_pay.class);
+                intent.putExtra("Account",mail.getText().toString());
+                startActivity(intent);
+            }
+        });
 
         up.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -17,15 +17,16 @@
             android:id="@+id/linearLayout44"
             android:layout_width="355dp"
             android:layout_height="133dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="209dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/underline"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout43"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout52">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -36,21 +37,29 @@
                     android:id="@+id/textView204"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:text="Permission Section" />
+                    android:backgroundTint="@color/white_500"
+                    android:text="  Permission Section"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout38"
                 android:layout_width="409dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/adminper"
-                    android:layout_width="60dp"
-                    android:layout_height="56dp"
-                    android:background="@drawable/department" />
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/department"
+                    android:backgroundTint="#FAF5F8" />
 
                 <TextView
                     android:id="@+id/textView159"
@@ -62,7 +71,8 @@
                     android:id="@+id/btn_viewallpay"
                     android:layout_width="60dp"
                     android:layout_height="56dp"
-                    android:background="@drawable/user" />
+                    android:background="@drawable/user"
+                    android:backgroundTint="@color/white_500" />
 
                 <TextView
                     android:id="@+id/textView182"
@@ -80,15 +90,16 @@
                     android:id="@+id/textView205"
                     android:layout_width="54dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
                     android:layout_weight="1"
-                    android:text="Sorted permission" />
+                    android:text="   Sorted" />
 
                 <TextView
                     android:id="@+id/textView206"
-                    android:layout_width="wrap_content"
+                    android:layout_width="2dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Permission all request " />
+                    android:text="  United " />
             </LinearLayout>
         </LinearLayout>
 
@@ -97,10 +108,11 @@
             android:id="@+id/linearLayout43"
             android:layout_width="355dp"
             android:layout_height="133dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/underline"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout45"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,23 +123,27 @@
                 android:id="@+id/textView201"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Document Section" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="@color/white_500"
+                android:text="  Document Section"
+                android:textColor="@color/black" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:orientation="horizontal"></LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout41"
                 android:layout_width="403dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button41"
                     android:layout_width="60dp"
                     android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
                     android:background="@drawable/file" />
 
                 <TextView
@@ -159,14 +175,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="   Issued  " />
 
                 <TextView
                     android:id="@+id/textView207"
                     android:layout_width="424dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="                    Required  " />
             </LinearLayout>
         </LinearLayout>
 
@@ -175,37 +191,48 @@
             android:id="@+id/linearLayout45"
             android:layout_width="355dp"
             android:layout_height="133dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="22dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/underline"
             android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout46"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout43">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView136sdas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="2dp"
                     android:layout_weight="1"
-                    android:text="Support" />
+                    android:backgroundTint="@color/white_500"
+                    android:text="  Support"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout40"
                 android:layout_width="411dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button34"
                     android:layout_width="60dp"
                     android:layout_height="48dp"
+                    android:layout_marginStart="5dp"
                     android:background="@drawable/customer" />
             </LinearLayout>
 
@@ -219,18 +246,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Support ticket solved " />
+                    android:text="  Payment " />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout46"
-            android:layout_width="366dp"
-            android:layout_height="229dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="21dp"
-            android:layout_marginBottom="9dp"
+            android:layout_width="355dp"
+            android:layout_height="233dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/underline"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout47"
             app:layout_constraintEnd_toEndOf="parent"
@@ -239,27 +267,36 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView3cvx"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="2dp"
                     android:layout_weight="1"
-                    android:text="Payment Section" />
+                    android:backgroundTint="@color/white_500"
+                    android:text="  Payment Section"
+
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout39"
                 android:layout_width="411dp"
                 android:layout_height="61dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/admin_hostel_record"
                     android:layout_width="60dp"
                     android:layout_height="56dp"
+                    android:layout_marginStart="5dp"
                     android:background="@drawable/hostel" />
 
                 <TextView
@@ -304,21 +341,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Hostel" />
+                    android:text="  Hostel" />
 
                 <TextView
                     android:id="@+id/textView129cxvbcx"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Exams" />
+                    android:text="                         Exams" />
 
                 <TextView
                     android:id="@+id/textView134qS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Support pay" />
+                    android:text="                         Concession" />
             </LinearLayout>
 
             <LinearLayout
@@ -335,6 +372,7 @@
                     android:id="@+id/Admin_clg_record"
                     android:layout_width="58dp"
                     android:layout_height="61dp"
+                    android:layout_marginStart="5dp"
                     android:background="@drawable/ic_baseline_account_balance_24" />
 
                 <TextView
@@ -348,32 +386,40 @@
                 android:id="@+id/textView185"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Collage" />
+                android:text="  Collage" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout47"
             android:layout_width="355dp"
             android:layout_height="133dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="18dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/underline"
             android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout42"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout46">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="23dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/textView199"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="2dp"
                     android:layout_weight="1"
-                    android:text="Notification Section" />
+                    android:text="Notice Section"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -396,9 +442,8 @@
 
                 <Button
                     android:id="@+id/button51"
-                    android:layout_width="12dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_width="60dp"
+                    android:layout_height="53dp"
                     android:background="@drawable/deletemessage" />
 
                 <TextView
@@ -423,17 +468,17 @@
 
                 <TextView
                     android:id="@+id/textView197"
-                    android:layout_width="84dp"
+                    android:layout_width="72dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="ADD" />
+                    android:text="  Send" />
 
                 <TextView
                     android:id="@+id/textView209"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Delete" />
+                    android:text="   Delete" />
 
                 <TextView
                     android:id="@+id/textView198"
@@ -447,8 +492,11 @@
             android:id="@+id/linearLayout42"
             android:layout_width="355dp"
             android:layout_height="226dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/underline"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -469,15 +517,20 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="21dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textView210"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="2dp"
                         android:layout_weight="1"
-                        android:text="Admin tool" />
+                        android:text="  Admin tool"
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -490,6 +543,7 @@
                         android:id="@+id/button42"
                         android:layout_width="60dp"
                         android:layout_height="56dp"
+                        android:layout_marginStart="5dp"
                         android:background="@drawable/deleteuser" />
 
                     <TextView
@@ -534,21 +588,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Teacher delet" />
+                        android:text="   Teacher -" />
 
                     <TextView
                         android:id="@+id/textView189"
-                        android:layout_width="wrap_content"
+                        android:layout_width="109dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="         Teacher +" />
 
                     <TextView
                         android:id="@+id/textView190"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:text="     Accountant  +" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -561,7 +615,7 @@
                         android:id="@+id/button31"
                         android:layout_width="60dp"
                         android:layout_height="56dp"
-
+                        android:layout_marginStart="5dp"
                         android:background="@drawable/deleteuser" />
 
                     <TextView
@@ -594,18 +648,43 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Delete user" />
+                        android:text="    User -" />
 
                     <TextView
                         android:id="@+id/textView192"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Delete accountant" />
+                        android:text="                       Accountant -" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout52"
+            android:layout_width="355dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout44"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ani_social"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/admin" />
+
 
         </LinearLayout>
 

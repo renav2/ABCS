@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABCS">
         <activity
+            android:name=".College_pay"
+            android:exported="false" />
+        <activity
             android:name=".Admin_tool_noticedelete"
             android:exported="false" />
         <activity
