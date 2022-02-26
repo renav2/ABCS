@@ -8,10 +8,9 @@
 
 
     <LinearLayout
-        android:layout_width="364dp"
-        android:layout_height="672dp"
+        android:layout_width="335dp"
+        android:layout_height="602dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,29 +19,33 @@
 
         <LinearLayout
             android:layout_width="374dp"
-            android:layout_height="45dp"
+            android:layout_height="35dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView101"
-                android:layout_width="367dp"
-                android:layout_height="41dp"
-                android:text="Notice Section"
+                android:layout_width="327dp"
+                android:layout_height="match_parent"
+                android:background="@color/white_500"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Notice Board"
                 android:textAlignment="center"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="572dp"
+            android:layout_height="537dp"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycle101"
-                android:layout_width="349dp"
-                android:layout_height="555dp"
-                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </LinearLayout>

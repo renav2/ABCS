@@ -17,7 +17,7 @@
         android:layout_marginBottom="23dp"
         android:onClick="logout"
         app:icon="@drawable/logout"
-          app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -132,6 +132,7 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:paddingStart="50dp"
+                    android:textColor="@color/black"
                     android:text="Email" />
 
                 <TextView
@@ -159,6 +160,7 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:paddingStart="50dp"
+                    android:textColor="@color/black"
                     android:text="Name" />
 
                 <TextView
@@ -186,7 +188,8 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:paddingStart="50dp"
-                    android:text="Mobile no" />
+                    android:textColor="@color/black"
+                    android:text="Mobile Number" />
 
                 <TextView
                     android:id="@+id/o_mno"
@@ -213,6 +216,7 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:paddingStart="50dp"
+                    android:textColor="@color/black"
                     android:text="Designation" />
 
                 <TextView
@@ -241,6 +245,7 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:paddingStart="50dp"
+                    android:textColor="@color/black"
                     android:text="Branch" />
 
                 <TextView
@@ -268,6 +273,7 @@
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:paddingStart="50dp"
+                    android:textColor="@color/black"
                     android:text="Unique id" />
 
                 <TextView
