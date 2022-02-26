@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout17"
         android:layout_width="377dp"
-        android:layout_height="500dp"
+        android:layout_height="600dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="10dp"
@@ -37,7 +37,7 @@
 
             <EditText
                 android:id="@+id/nsub"
-                android:layout_width="241dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -63,7 +63,7 @@
 
             <EditText
                 android:id="@+id/ndesc"
-                android:layout_width="241dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="start|top"
@@ -74,9 +74,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:paddingTop="10dp"
             android:background="@drawable/underline"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
             <TextView
                 android:id="@+id/textView94"
@@ -84,12 +84,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:paddingTop="5dp"
-                android:textColor="@color/black"
-                android:text="Highlight of Notice" />
+                android:text="Highlight of Notice"
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/hi"
-                android:layout_width="241dp"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -115,7 +115,7 @@
 
             <Spinner
                 android:id="@+id/aut"
-                android:layout_width="239dp"
+                android:layout_width="220dp"
                 android:layout_height="match_parent"
                 android:ems="10"
                 android:entries="@array/authority"
@@ -142,7 +142,7 @@
 
             <EditText
                 android:id="@+id/ndt"
-                android:layout_width="242dp"
+                android:layout_width="220dp"
                 android:layout_height="match_parent"
                 android:ems="10"
                 android:inputType="date"
@@ -160,7 +160,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="70dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -175,7 +175,6 @@
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="170dp"
-                        android:paddingTop="10dp"
                         android:layout_height="match_parent"
                         android:text="Upload Documents"
                         android:textColor="@color/black"
@@ -202,7 +201,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="50dp"
                 android:paddingTop="10dp"
                 android:background="@drawable/underline"
                 android:orientation="horizontal">
@@ -218,7 +217,7 @@
 
                 <TextView
                     android:id="@+id/textView81"
-                    android:layout_width="242dp"
+                    android:layout_width="220dp"
                     android:layout_height="50dp"
                     android:paddingStart="20dp"
                     android:text="TextView" />
@@ -229,7 +228,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:paddingTop="10dp"
-            android:background="@drawable/underline"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
             <Button
