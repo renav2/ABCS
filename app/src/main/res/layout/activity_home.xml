@@ -204,14 +204,6 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="35dp"
                 android:background="@drawable/user"/>
-            <Button
-                android:id="@+id/uplod"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="35dp"
-                android:background="@drawable/sms"/>
-
-
 
 
         </LinearLayout>
@@ -238,14 +230,6 @@
                 android:text="Permission"
                 android:textColor="#44109F"
               />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:text="Notification"
-                android:textColor="#44109F"
-                />
 
 
         </LinearLayout>

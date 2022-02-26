@@ -41,7 +41,7 @@ import java.util.List;
 //import com.squareup.picass.Picasso;
 
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission, uplod,logout,collagenotoi,studentdoc,vereifyemail;
+private Button  paymentpage, profile, permission,logout,collagenotoi,studentdoc,vereifyemail;
     TextView logO,verifymsg,support, notificationtext,welcomename,unicid;
 //TextView useremailid;
 ImageView profilepic;
@@ -205,7 +205,7 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
         FirebaseUser user1 = FirebaseAuth.getInstance().getCurrentUser();
         r.setText(user1.getUid());
         String User_ID=r.getText().toString();
-        uplod=findViewById(R.id.uplod);
+
 
         StorageReference profileRef= storageReference.child("Users/"+fAuth.getCurrentUser().getUid()+"/Profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -214,13 +214,7 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
                 Picasso.get().load(uri).into(profilepic);
             }
         });
-        uplod.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-           //     startActivity(new Intent(getApplicationContext(),ViewNotifications.class));
-                finish();
-            }
-        });
+
 //uplod.setOnClickListener(new View.OnClickListener() {
 //    @Override
 //    public void onClick(View v) {
