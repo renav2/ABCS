@@ -4,9 +4,6 @@
      android:id="@+id/logO"
      android:title="LogOut"
  />
- <item
-     android:id="@+id/log1"
-     android:title="support"
-     />
+
 
 </menu>

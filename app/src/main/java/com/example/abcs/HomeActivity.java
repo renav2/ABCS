@@ -74,7 +74,7 @@ supportbtn=findViewById(R.id.button12);
         unicid=findViewById(R.id.textView116);
 
 
-        logO=findViewById(R.id.log1);
+
         studentdoc=findViewById(R.id.button4);
         collagenotoi=findViewById(R.id.button5);
         vereifyemail=findViewById(R.id.resend_code);
@@ -280,10 +280,7 @@ collagenotoi.setOnClickListener(new View.OnClickListener() {
                signout();
                return true;
 
-           case R.id.log1:
-               Intent intent= new Intent(HomeActivity.this, Support_section.class);
-               startActivity(intent);
-               return true;
+
 
            default:
                return super.onOptionsItemSelected(item);
