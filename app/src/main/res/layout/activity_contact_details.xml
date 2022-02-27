@@ -46,18 +46,18 @@
 
             <TextView
                 android:id="@+id/textView114"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_weight="1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
                 android:textColor="@color/black"
                 android:textSize="16dp"
+                android:paddingTop="5dp"
                 android:text="  Email" />
 
             <Button
                 android:id="@+id/button28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
                 android:text="sits@sinhgad.edu" />
         </LinearLayout>
 
@@ -67,7 +67,8 @@
             android:layout_height="37dp"
             android:textColor="@color/black"
             android:layout_marginEnd="5dp"
-            android:text="  Contact Numbers" />
+            android:textAlignment="center"
+            android:text="Contact Numbers" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,13 +81,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:text="  Account section" />
+                android:text="Account section" />
 
             <Button
                 android:id="@+id/button29"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_call_24"
                 android:text="call 02172329566" />
         </LinearLayout>
 
@@ -102,12 +106,15 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_weight="1"
-                android:text="  Student Section" />
+                android:textAlignment="center"
+                android:text="Student Section" />
 
             <Button
                 android:id="@+id/button30"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_call_24"
                 android:text="call 02172329566" />
         </LinearLayout>
 
@@ -122,8 +129,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textAlignment="center"
                 android:textColor="@color/black"
-                android:text="  Address" />
+                android:text="Address" />
 
             <TextView
                 android:id="@+id/editTextTextMultiLine2"

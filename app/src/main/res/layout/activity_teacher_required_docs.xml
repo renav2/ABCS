@@ -75,7 +75,7 @@
                 android:hint=" Teacher Name"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/editTextTextMultiLine2"
@@ -87,7 +87,7 @@
                 android:gravity="start|top"
                 android:hint=" Required document from student"
                 android:inputType="textMultiLine"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/editTextTextMultiLine4"
@@ -99,7 +99,7 @@
                 android:gravity="start|top"
                 android:hint=" Document description"
                 android:inputType="textMultiLine"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -142,7 +142,7 @@
 
                 <Spinner
                     android:id="@+id/sbranch"
-                    android:layout_width="215dp"
+                    android:layout_width="200dp"
                     android:layout_height="48dp"
                     android:entries="@array/brname"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -164,7 +164,7 @@
 
                 <Spinner
                     android:id="@+id/sclass"
-                    android:layout_width="215dp"
+                    android:layout_width="200dp"
                     android:layout_height="48dp"
                     android:entries="@array/cyear"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -181,13 +181,13 @@
                 android:hint=" Roll No"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="80dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
@@ -200,7 +200,7 @@
             <Button
                 android:id="@+id/docs"
                 android:layout_width="182dp"
-                android:layout_height="50dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="5dp"
                 android:text="Get Document" />
 

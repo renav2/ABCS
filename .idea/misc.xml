@@ -13,9 +13,12 @@
         <entry key="..\:/ABCS/app/src/main/res/drawable/underline.xml" value="0.1805" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTactivity_main.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTelements.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/accountdata_singlerow.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_a.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_account_home.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin1st_installment.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_account_reg.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_application_history.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_approve_applications.xml" value="0.19583333333333333" />
@@ -38,37 +41,47 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_payrecod_deptwise.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_permision_section.xml" value="0.20972222222222223" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_permission_home.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_profile.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_sort_studentdata_classwise.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_sort_studentdata_deptwise.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_student_issued_doc.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_supporpay_final_record.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_support_pay_deptwise.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_support_paymentsection.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_support_solver.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_supportpay_recod_classwise.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_teacher_profile.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_teachers_reg.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_tool_home.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_tool_noticedelete.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_view_application.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_view_specific_user.xml" value="0.2222222222222222" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_zero_pay_student.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_adminhome.xml" value="0.22" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_bonafide_issue.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_collage_fees_payment.xml" value="0.25416666666666665" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_collage_payrecod_sorted_adpt.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_college_pay.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_contact_details.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_create_application.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_db_test.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_doc_up10.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_doc_up_diploma.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_doc_up_te.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_document_support.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_downlod_notice.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_downlodpdf.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_feesructure_issue.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_hostelrecord_class_wise.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_hotel_record_dept_wise.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_p12.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.25" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_examfees_invoice.xml" value="0.4" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_examfees_invoice.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_hostel.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_hostel_fees_invoice.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_payment_invoi.xml" value="0.264" />
@@ -82,10 +95,20 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_register2.xml" value="0.264" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_social_media_login.xml" value="0.25" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_student_payment_history.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_support_pay.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_support_pay_userwise.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_support_payment_record.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_support_section.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_asper_dept_class.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_asper_dept_payment.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_asper_dept_permission.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_doc_wise_sort.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_home.xml" value="0.16666666666666666" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_payment_wise_sort.xml" value="0.2" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_permission_wise_sort.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_required_docs.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/activity_teacher_required_download.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_data_uplod.xml" value="0.25" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_main.xml" value="0.20416666666666666" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_test_uplodpdf.xml" value="0.2222222222222222" />
@@ -97,6 +120,7 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_userwiser_permision_fetch.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_view_notifications.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/admin_exampay_singleline.xml" value="0.19583333333333333" />
+        <entry key="..\:/ABCS/app/src/main/res/layout/admin_notice_delete_singlerow.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/admin_search_.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/adminpay_installment1_line.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/adminpay_installment2_line.xml" value="0.19583333333333333" />
