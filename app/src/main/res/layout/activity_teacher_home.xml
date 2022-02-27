@@ -33,7 +33,6 @@
             android:layout_height="150dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/underline"
             android:layout_marginEnd="8dp"
             android:orientation="vertical">
 
