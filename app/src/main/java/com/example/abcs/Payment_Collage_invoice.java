@@ -168,7 +168,7 @@ Insta=findViewById(R.id.deptaaaaa);
 
 
                 String pro_name= documentSnapshot.getString("Name");
-                String pro_rollno=documentSnapshot.getString("Rollno");
+                String pro_rollno=documentSnapshot.getString("assignno");
                 String pro_dept=documentSnapshot.getString("Branch");
                 String pro_class=documentSnapshot.getString("_Class");
                 //setdata

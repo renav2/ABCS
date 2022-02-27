@@ -141,7 +141,7 @@
                 android:ems="10"
                 android:hint="Describe your permission"
                 android:inputType="textPersonName"
-                android:textColorHint="@color/black" />
+                android:textColorHint="@color/cardview_dark_background" />
         </LinearLayout>
 
         <LinearLayout

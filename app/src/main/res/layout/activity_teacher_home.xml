@@ -11,9 +11,8 @@
         android:layout_width="392dp"
         android:layout_height="190dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="19dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,8 +23,8 @@
             android:id="@+id/imagete"
             android:layout_width="120dp"
             android:layout_height="150dp"
-            android:layout_marginStart="20dp"
             android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
@@ -118,15 +117,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="404dp"
+        android:layout_height="411dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="13dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -134,8 +132,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="15dp"
             android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
             android:orientation="horizontal">
 
 
@@ -143,23 +141,22 @@
                 android:id="@+id/tprofile"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/edituser"
                 android:layout_marginStart="30dp"
-                />
+                android:background="@drawable/edituser" />
+
             <Button
                 android:id="@+id/button44"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/account"
                 android:layout_marginStart="35dp"
-                />
+                android:background="@drawable/account" />
+
             <Button
                 android:id="@+id/button45"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/mpay"
                 android:layout_marginStart="35dp"
-                />
+                android:background="@drawable/mpay" />
 
         </LinearLayout>
 
@@ -176,8 +173,7 @@
                 android:layout_marginStart="30dp"
                 android:text="Profile"
                 android:textAlignment="center"
-                android:textColor="#44109F"
-                />
+                android:textColor="#44109F" />
 
             <TextView
                 android:layout_width="86dp"
@@ -185,8 +181,7 @@
                 android:layout_marginStart="25dp"
                 android:text="Student"
                 android:textAlignment="center"
-                android:textColor="#44109F"
-                />
+                android:textColor="#44109F" />
 
             <TextView
                 android:layout_width="85dp"
@@ -194,8 +189,7 @@
                 android:layout_marginStart="25dp"
                 android:text="Payment"
                 android:textAlignment="center"
-                android:textColor="#44109F"
-                />
+                android:textColor="#44109F" />
 
 
         </LinearLayout>
@@ -244,24 +238,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:text="Permission"
-                android:textColor="#44109F"
-                />
+                android:textColor="#44109F" />
 
             <TextView
                 android:layout_width="86dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="25dp"
-                android:text="Teacher Required Docs"
-                android:textColor="#44109F"
-                />
+                android:text=" Required Docs"
+                android:textColor="#44109F" />
 
             <TextView
                 android:layout_width="85dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="25dp"
                 android:text="Download Docs"
-                android:textColor="#44109F"
-                />
+                android:textColor="#44109F" />
 
 
         </LinearLayout>
@@ -279,15 +270,15 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="30dp"
-                android:background="@drawable/folder"/>
+                android:background="@drawable/folder" />
 
             <Button
                 android:id="@+id/notview"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="35dp"
-                android:background="@drawable/delete"/>
+                android:layout_marginTop="5dp"
+                android:background="@drawable/delete" />
 
 
         </LinearLayout>
@@ -302,17 +293,15 @@
                 android:layout_marginStart="30dp"
                 android:text="Upload notice"
                 android:textAlignment="center"
-                android:textColor="#44109F"
-                />
+                android:textColor="#44109F" />
 
             <TextView
                 android:layout_width="95dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="30dp"
                 android:text="Delete notice"
                 android:textAlignment="center"
-                android:textColor="#44109F"
-                />
+                android:textColor="#44109F" />
 
 
         </LinearLayout>

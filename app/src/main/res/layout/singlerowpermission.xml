@@ -9,12 +9,12 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="377dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/underline"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/underline"
         android:padding="15dp">
 
 

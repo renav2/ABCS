@@ -8,12 +8,12 @@
 
     <Button
         android:id="@+id/del10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Delete 10th"
         android:backgroundTint="@color/white_500"
+        android:text="Delete 10th"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/del12"
         app:layout_constraintEnd_toEndOf="@+id/textView119"
@@ -22,30 +22,32 @@
 
     <TextView
         android:id="@+id/textView119"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="339dp"
+        android:layout_height="54dp"
         android:layout_marginStart="146dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="208dp"
         android:layout_marginBottom="34dp"
         android:background="@drawable/border"
+        android:backgroundTint="@color/white_500"
         android:text="  Uploaded Documents  "
-        android:backgroundTint="#ffebcd"
-        android:textSize="20sp"
+
+        android:textAlignment="center"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/del10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/del12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Delete 12th"
         android:backgroundTint="@color/white_500"
+        android:text="Delete 12th"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/deldip"
         app:layout_constraintEnd_toEndOf="@+id/del10"
@@ -54,8 +56,8 @@
 
     <Button
         android:id="@+id/deldip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Delete Diploma"
@@ -69,8 +71,8 @@
 
     <Button
         android:id="@+id/delfe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Delete FE"
@@ -84,8 +86,8 @@
 
     <Button
         android:id="@+id/delse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Delete SE"
@@ -98,8 +100,8 @@
 
     <Button
         android:id="@+id/delte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Delete TE"
@@ -113,8 +115,8 @@
 
     <Button
         android:id="@+id/delbe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Delete BE"

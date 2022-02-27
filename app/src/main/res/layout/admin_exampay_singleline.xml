@@ -8,11 +8,11 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="361dp"
-        android:layout_height="375dp"
+        android:layout_width="340dp"
+        android:layout_height="394dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/underline"
+
         android:padding="1dp">
 
 
@@ -189,9 +189,9 @@
                 android:textAlignment="gravity">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="181dp"
                     android:layout_height="wrap_content"
-                    android:text="Backlog examform NO:"
+                    android:text="Backlog form NO:"
                     android:textAlignment="gravity"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
@@ -201,7 +201,7 @@
                     android:id="@+id/tv_ad_backlog"
                     android:layout_width="171dp"
                     android:layout_height="wrap_content"
-                    android:hint="installment no"
+                    android:text="No Backlog"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
