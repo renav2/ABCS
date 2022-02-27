@@ -9,10 +9,10 @@
     <Button
         android:id="@+id/button36"
         android:layout_width="293dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="68dp"
+        android:layout_height="70dp"
         android:layout_marginTop="221dp"
         android:text="payment rekated issue"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
