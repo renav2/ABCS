@@ -41,7 +41,7 @@ import java.util.List;
 //import com.squareup.picass.Picasso;
 
 public class HomeActivity extends AppCompatActivity {
-private Button  paymentpage, profile, permission,logout,collagenotoi,studentdoc,vereifyemail;
+private Button  paymentpage, profile, permission,logout,collagenotoi,studentdoc,vereifyemail,supportbtn;
     TextView logO,verifymsg,support, notificationtext,welcomename,unicid;
 //TextView useremailid;
 ImageView profilepic;
@@ -69,6 +69,7 @@ TextView r;
         notificationtext=findViewById(R.id.textView2);
         welcomename=findViewById(R.id.textView115);
 
+supportbtn=findViewById(R.id.button12);
 
         unicid=findViewById(R.id.textView116);
 
@@ -84,6 +85,18 @@ TextView r;
         notificationtext.setVisibility(View.INVISIBLE);
 
 //fetchunic id
+
+        supportbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this, Support_section.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
         DocumentReference documentReference=fstore.collection("demo").document(userID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
