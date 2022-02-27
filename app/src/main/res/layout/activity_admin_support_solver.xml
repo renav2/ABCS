@@ -12,7 +12,7 @@
         android:layout_height="61dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="221dp"
-        android:text="payment rekated issue"
+        android:text="payment related issue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -133,9 +133,6 @@ android:icon="@mipmap/newicon"
             android:name=".userwiser_permision_fetch"
             android:exported="false" />
         <activity
-            android:name=".AdminApproveApplications"
-            android:exported="false" />
-        <activity
             android:name=".doc_up_diploma"
             android:exported="false" />
         <activity
