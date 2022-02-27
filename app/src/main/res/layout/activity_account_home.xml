@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
-
+            android:id="@+id/acimage"
             android:layout_width="120dp"
             android:layout_height="150dp"
             android:layout_centerVertical="true"
@@ -37,12 +37,15 @@
             android:orientation="vertical">
 
             <TextView
-
+                android:id="@+id/enam"
                 android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:textSize="14sp" />
+                android:layout_marginTop="2dp"
+                android:paddingStart="10dp"
+                android:text="Email "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
 
             <TextView
@@ -73,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout90">
 
         <LinearLayout
-            android:layout_width="190dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:background="@drawable/border"
@@ -91,13 +94,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:paddingStart="10dp"
-                android:text="Upload Notice"
+                android:text="Notice"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:background="@drawable/border"
@@ -114,7 +117,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Fee Structure "
+                android:text="Structure "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -125,9 +128,9 @@
         android:id="@+id/linearLayout50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="28dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -136,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout51">
 
         <LinearLayout
-            android:layout_width="190dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:background="@drawable/border"
@@ -154,14 +157,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:paddingStart="10dp"
-                android:text="Delete Notice"
+                android:text="Notice"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:background="@drawable/border"
@@ -178,7 +181,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="Payments"
+                android:text=" Payment"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -199,7 +202,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout35">
 
         <LinearLayout
-            android:layout_width="190dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:background="@drawable/border"
@@ -218,13 +221,13 @@
                 android:layout_height="70dp"
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
-                android:text="Issue         Documents"
+                android:text="Issued"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:background="@drawable/border"

@@ -51,7 +51,7 @@
             android:layout_marginTop="36dp"
             android:layout_marginEnd="182dp"
             android:layout_marginBottom="16dp"
-            android:text="Teacher Registration"
+            android:text="Accountant Registration"
             android:textColor="#090808"
             android:textSize="24sp"
             android:textStyle="bold"
