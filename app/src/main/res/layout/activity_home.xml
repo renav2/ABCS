@@ -189,7 +189,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:orientation="horizontal">
 
             <Button
@@ -208,8 +208,8 @@
 
             <Button
                 android:id="@+id/button12"
-                android:layout_width="106dp"
-                android:layout_height="match_parent"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_marginStart="35dp"
                 android:layout_weight="1"
                 android:background="@drawable/support50" />
@@ -239,6 +239,14 @@
                 android:text="Permission"
                 android:textColor="#44109F"
               />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="45dp"
+                android:text="Support"
+                android:textColor="#44109F"
+                />
 
 
         </LinearLayout>
