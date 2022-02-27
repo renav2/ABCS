@@ -32,13 +32,9 @@
 
     <string-array name="clgname">
         <item>College Name</item>
-        <item>SCOE</item>
-        <item>SKN</item>
-        <item>NBN  </item>
-        <item>SAE</item>
+
         <item>SITS</item>
-        <item>SIT</item>
-        <item>RMD</item>
+
     </string-array>
 
 
@@ -129,7 +125,7 @@
 
     //all permision
     <string-array name="PermiosonSection">
-        <item>Select section </item>
+        <item>Select section</item>
         <item>Collage</item>
         <item>hostel</item>
         <item>dept</item>
