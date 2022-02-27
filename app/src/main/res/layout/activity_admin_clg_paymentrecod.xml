@@ -17,20 +17,39 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.515">
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="match_parent"
+            android:layout_width="80dp"
             android:layout_height="80dp"
-            android:text="Sorted data" />
+            android:background="@drawable/datawarehouse" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:text="Sorted data"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/button9"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:text="0 pay student" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/mpay" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:text="0 pay student"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
     </LinearLayout>
 
