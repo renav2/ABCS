@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
    private TextView tv_jump;
    private TextView tv_jump2;
    private TextView resetpass;
-   private TextView adminhome;
+
    TextView error;
 
    private FirebaseAuth auth;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //createSignInIntent();
-        adminhome=findViewById(R.id.textView39);
+
         error=findViewById(R.id.textView154);
         bt_login=findViewById(R.id.btn_login);
         et_email=findViewById(R.id.txt_email);
@@ -86,13 +86,6 @@ public class MainActivity extends AppCompatActivity {
         //all button code
         checkCurrentUser();
 
-        adminhome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Adminhome.class);
-                startActivity(intent);
-            }
-        });
 
             resetpass.setOnClickListener(new View.OnClickListener() {
                 @Override
