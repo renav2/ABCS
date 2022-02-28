@@ -208,11 +208,10 @@
 
             <Button
                 android:id="@+id/button12"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="35dp"
-                android:layout_weight="1"
-                android:background="@drawable/support50" />
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/customersupport" />
 
 
         </LinearLayout>
@@ -243,7 +242,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="30dp"
                 android:text="Support"
                 android:textColor="#44109F"
                 />
