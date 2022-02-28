@@ -82,6 +82,9 @@ dependencies {
     //QR code
     implementation 'com.google.zxing:core:3.3.3'
 
+    implementation "com.google.android.material:material:1.6.0-alpha03"
+
+
     //ImageSlider
 
 
