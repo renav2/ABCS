@@ -24,7 +24,7 @@ Button teacher_add,teacher_delete,teacher_remove,acc_log,issuedoc,acc_del,dlt_no
         setContentView(R.layout.activity_adminhome);
         btnpay=findViewById(R.id.btn_viewallpay);
 //        tests=findViewById(R.id.button18);
-
+    //    adminper
         apermission =  findViewById(R.id.adminper);
         notification=findViewById(R.id.button13);
         teacher=findViewById(R.id.button19);
