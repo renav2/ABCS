@@ -31,7 +31,7 @@
                 android:id="@+id/textView128"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Year"
+                android:text="Select Year  please "
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:textColor="@color/black"

@@ -19,12 +19,12 @@ public class Admin_dept_wise_sort extends AppCompatActivity {
         it=findViewById(R.id.button3);
         entc=findViewById(R.id.button16);
         cvil=findViewById(R.id.button17);
-                mech=findViewById(R.id.button6);
+        mech=findViewById(R.id.button6);
 
         comp .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_class_wise_sort.class);
+                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_sort_studentdata_classwise.class);
                 intent.putExtra("deptcomp","Comp");
                 startActivity(intent);
             }
@@ -33,7 +33,7 @@ public class Admin_dept_wise_sort extends AppCompatActivity {
         it.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_class_wise_sort.class);
+                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_sort_studentdata_classwise.class);
                 intent.putExtra("deptit","IT");
                 startActivity(intent);
             }
@@ -42,7 +42,7 @@ public class Admin_dept_wise_sort extends AppCompatActivity {
         entc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_class_wise_sort.class);
+                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_sort_studentdata_classwise.class);
                 intent.putExtra("deptentc","ENTC");
                 startActivity(intent);
             }
@@ -52,7 +52,7 @@ public class Admin_dept_wise_sort extends AppCompatActivity {
         cvil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_class_wise_sort.class);
+                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_sort_studentdata_classwise.class);
                 intent.putExtra("deptcvil","Civil");
                 startActivity(intent);
             }
@@ -62,7 +62,7 @@ public class Admin_dept_wise_sort extends AppCompatActivity {
         mech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_class_wise_sort.class);
+                Intent intent=new Intent(Admin_dept_wise_sort.this,Admin_sort_studentdata_classwise.class);
                 intent.putExtra("deptmech","Mech");
                 startActivity(intent);
             }

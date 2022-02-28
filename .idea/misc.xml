@@ -287,10 +287,12 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_collage_payrecod.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_collage_payrecod_classwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_sort_studentdata_classwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_sort_studentdata_deptwise.xml" value="0.25" />
+        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_student_issued_doc.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_supporpay_final_record.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_pay_deptwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_paymentsection.xml" value="0.25" />

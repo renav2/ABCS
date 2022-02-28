@@ -97,6 +97,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>
                             if(permision_Status.getText().toString().equals("granted")||permision_Status.getText().toString().equals("NOT granted") ){
                                 b1p.setVisibility(View.INVISIBLE);
                                 b2f.setVisibility(View.INVISIBLE);
+                                techeret.setVisibility(View.INVISIBLE);
                             }
                         }
                     });

@@ -64,7 +64,7 @@ techemail=findViewById(R.id.teacher_email);
     _1.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent=new Intent(Admin_class_wise_sort.this,Admin_all_user_permision_section.class);
+            Intent intent=new Intent(Admin_class_wise_sort.this,admin_supporpay_final_record.class);
             //  intent.putExtra("deptnname","IT");
 
            // Toast.makeText(Admin_class_wise_sort.this, comp.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -98,7 +98,7 @@ techemail=findViewById(R.id.teacher_email);
     _2.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent=new Intent(Admin_class_wise_sort.this,Admin_all_user_permision_section.class);
+            Intent intent=new Intent(Admin_class_wise_sort.this,admin_supporpay_final_record.class);
             //  intent.putExtra("deptnname","IT");
            // intent.putExtra("class2","SE");
 
@@ -130,7 +130,7 @@ techemail=findViewById(R.id.teacher_email);
     _3.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent=new Intent(Admin_class_wise_sort.this,Admin_all_user_permision_section.class);
+            Intent intent=new Intent(Admin_class_wise_sort.this,admin_supporpay_final_record.class);
             //  intent.putExtra("deptnname","IT");
           //  intent.putExtra("class3","TE");
             if(comp.getText().toString().equals("Comp")){
@@ -158,7 +158,7 @@ techemail=findViewById(R.id.teacher_email);
     _4.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent=new Intent(Admin_class_wise_sort.this,Admin_all_user_permision_section.class);
+            Intent intent=new Intent(Admin_class_wise_sort.this,admin_supporpay_final_record.class);
             //  intent.putExtra("deptnname","IT");
        //     intent.putExtra("class4","BE");
 
