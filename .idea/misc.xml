@@ -122,8 +122,10 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/drawable/underline.xml" value="0.2203125" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_account_home.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_account_reg.xml" value="0.2" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_class_wise_sort.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_collage_payrecod.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_delete_teacher.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_dept_wise_sort.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_document_issued.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_exam_payrecord.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_hostel_payrecord.xml" value="0.20416666666666666" />
@@ -143,7 +145,7 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_document_support.xml" value="0.22" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_downlodpdf.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_fee_structure.xml" value="0.25" />
-        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_hotel_record_dept_wise.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
