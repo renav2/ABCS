@@ -12,7 +12,6 @@
         <entry key="..\:/ABCS/app/src/main/res/drawable/underline.xml" value="0.1805" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTactivity_main.xml" value="0.2222222222222222" />
         <entry key="..\:/ABCS/app/src/main/res/layout/TSTelements.xml" value="0.2222222222222222" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_account_home.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin1st_installment.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin2nd_installment.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_allrempay.xml" value="0.2222222222222222" />
@@ -27,7 +26,6 @@
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_delete_teacher.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_delete_user.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_dept_wise_sort.xml" value="0.19583333333333333" />
-        <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_document_issued.xml" value="0.2" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_exam_payrecord.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_hostel_payrecord.xml" value="0.19583333333333333" />
         <entry key="..\:/ABCS/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.19583333333333333" />
@@ -134,7 +132,7 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_student_issued_doc.xml" value="0.20416666666666666" />
-        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_supporpay_final_record.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_supporpay_final_record.xml" value="0.22" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_support_paymentsection.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_teacher_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_admin_teachers_reg.xml" value="0.2" />
@@ -149,7 +147,7 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_fee_structure.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_hotel_record_dept_wise.xml" value="0.20416666666666666" />
-        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.20416666666666666" />
@@ -161,6 +159,7 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_support_pay.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_support_pay_userwise.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_asper_dept_payment.xml" value="0.2" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_class_wise_sort.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_doc_wise_sort.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_home.xml" value="0.21" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_teacher_payment_wise_sort.xml" value="0.20416666666666666" />

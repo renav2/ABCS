@@ -103,7 +103,7 @@
                 android:id="@+id/textView181"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:text="YEAR WISE PERMISSION HISTORY"
+                android:text="YEAR WISE HISTORY"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
