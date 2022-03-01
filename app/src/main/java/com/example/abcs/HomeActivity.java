@@ -151,6 +151,56 @@ try{
 
                 }
             });
+
+
+
+            DocumentReference documentReference1=fstore.collection("Support_payment_issue").document(unicid.getText().toString());
+            documentReference1.addSnapshotListener(HomeActivity.this, new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                    String s,s1;
+
+                   String aa=value.getString("game");
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        NotificationChannel channel = new NotificationChannel("myCh", "My channel", NotificationManager.IMPORTANCE_DEFAULT);
+                        NotificationManager manager = getSystemService(NotificationManager.class);
+                        manager.createNotificationChannel(channel);
+                    }
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(HomeActivity.this, "myCh")
+                            .setSmallIcon(android.R.drawable.stat_notify_sync)
+
+                            .setContentTitle("Support pay ")
+                            .setContentText("Extra installment given ");
+                    notification = builder.build();
+                    notificationManagerCompat = NotificationManagerCompat.from(HomeActivity.this);
+
+                    //String  bb=notificationtext.getText().toString();
+
+                    if(aa.equals("YES")){
+                        notificationManagerCompat.notify(0, notification);
+                    }else{
+
+                    }
+                    //   notificationManagerCompat.notify(0, notification);
+
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }, 1000);
 }catch (Exception e){}
