@@ -147,7 +147,7 @@
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_fee_structure.xml" value="0.25" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_hotel_record_dept_wise.xml" value="0.20416666666666666" />
-        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_payment.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_payment_collage_fullfee_or_remainfee.xml" value="0.20416666666666666" />
         <entry key="..\:/Backup/ProjectBE/app/src/main/res/layout/activity_payment_exam_fees.xml" value="0.20416666666666666" />
@@ -286,12 +286,10 @@
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_collage_payrecod.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_collage_payrecod_classwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_notification_home.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_payment_alldata.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_paymentsection.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_search_remainpay.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_sort_studentdata_classwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_sort_studentdata_deptwise.xml" value="0.25" />
-        <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_student_issued_doc.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_supporpay_final_record.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_pay_deptwise.xml" value="0.25" />
         <entry key="..\:/aaa/app/src/main/res/layout/activity_admin_support_paymentsection.xml" value="0.25" />

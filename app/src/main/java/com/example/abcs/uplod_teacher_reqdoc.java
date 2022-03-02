@@ -198,6 +198,7 @@ FirebaseAuth auth;
                                             @Override
                                             public void onSuccess(Void aVoid) {
                                                 Toast.makeText(uplod_teacher_reqdoc.this, "...............", Toast.LENGTH_SHORT).show();
+                                                finish();
                                             }
                                         })
                                         .addOnFailureListener(new OnFailureListener() {

@@ -198,6 +198,7 @@ domesile.setOnClickListener(new View.OnClickListener() {
 
                 downte.setVisibility(View.VISIBLE);
                 upte.setVisibility(View.INVISIBLE);
+
             }
         });
 

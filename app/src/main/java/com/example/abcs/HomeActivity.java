@@ -47,7 +47,7 @@ private Button  paymentpage, profile, permission,logout,collagenotoi,studentdoc,
 ImageView profilepic;
     FirebaseAuth fAuth;
     FirebaseFirestore fstore;
-TextView r;
+TextView r,usme;
     StorageReference storageReference;
     String user;
 
@@ -68,10 +68,11 @@ TextView r;
         logO=findViewById(R.id.logO);
         notificationtext=findViewById(R.id.textView2);
         welcomename=findViewById(R.id.textView115);
-
+        usme=findViewById(R.id.textView208);
 supportbtn=findViewById(R.id.button12);
 
         unicid=findViewById(R.id.textView116);
+
 
 
 
@@ -94,8 +95,7 @@ supportbtn=findViewById(R.id.button12);
             }
         });
 
-
-
+        usme.setText(fAuth.getCurrentUser().getDisplayName());
 
         DocumentReference documentReference=fstore.collection("demo").document(userID);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
