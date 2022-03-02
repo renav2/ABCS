@@ -11,17 +11,14 @@
         android:id="@+id/pay_in"
         android:layout_width="348dp"
         android:layout_height="48dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="4dp"
         android:layout_weight="1"
         android:entries="@array/installment"
         app:layout_constraintBottom_toTopOf="@+id/txt_paynow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout25"
-        tools:ignore="MissingConstraints"
-        />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/paynow"
@@ -38,17 +35,19 @@
         android:id="@+id/txt_paynow"
         android:layout_width="363dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="4dp"
         android:digits="0123456789"
         android:ems="10"
-        android:textSize="18dp"
         android:hint="Enter The Amount You Want To Pay Now"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:textColorHint="#7929292B"
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/paynow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.395"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView6"

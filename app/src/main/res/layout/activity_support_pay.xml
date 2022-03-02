@@ -97,7 +97,7 @@
         android:layout_marginBottom="25dp"
         android:ems="10"
         android:hint="Enter your amount"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/button32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
